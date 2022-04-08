@@ -6,7 +6,7 @@ const { PRODUCTION } = require('./constants');
 const config = require('./config');
 const helmet = require('helmet');
 const { dbUri } = require('./database');
-const { routesLogger } = require("./core/Logger");
+const { routesLogger } = require('./core/Logger');
 
 const {
   errorHandler,
@@ -36,7 +36,7 @@ app.use(morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream }));
 app.use(logVisited);
 
 /* ROUTES */
-app.use("/v1", require('./http/routes'));
+app.use('/v1', require('./http/routes'));
 
 /* EXCEPTION HANDLERS */
 app.use(errorHandler);

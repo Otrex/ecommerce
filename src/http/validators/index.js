@@ -36,7 +36,6 @@ class ResendVerificationEmailValidator extends GenericValidator {
   };
 }
 
-
 class InitPasswordResetValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -67,8 +66,6 @@ class CreateDropOffValidator extends GenericValidator {
     },
   };
 }
-
-
 
 module.exports = {
   LoginValidator,

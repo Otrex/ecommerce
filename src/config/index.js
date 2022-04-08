@@ -7,7 +7,7 @@ module.exports = {
     secret: process.env.APP_SECRET,
     name: process.env.APP_NAME || name,
     env: process.env.APP_ENV,
-    bcryptRounds: 10
+    bcryptRounds: 10,
   },
   db: {
     name:
@@ -20,7 +20,8 @@ module.exports = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     uri: process.env.DB_URI,
-    authSource: "admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
+    authSource:
+      'admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false',
   },
   session: {
     ttl: +(process.env.SESSION_TTL || 1 * 24 * 60 * 60),

@@ -4,7 +4,7 @@ const timestamp = require('./plugins/timestamp');
 const timedTokenSchema = new mongoose.Schema({
   accountId: {
     type: mongoose.Types.ObjectId,
-    ref: "Account"
+    ref: 'Account',
   },
   type: {
     type: String,
@@ -18,10 +18,10 @@ const timedTokenSchema = new mongoose.Schema({
   expiryTimestamp: {
     type: Number,
   },
-  
+
   isUsed: {
     type: Boolean,
-    default: false
+    default: false,
   },
 });
 

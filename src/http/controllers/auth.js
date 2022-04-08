@@ -6,7 +6,7 @@ const {
   VerifyEmailValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,
-  ResendVerificationEmailValidator
+  ResendVerificationEmailValidator,
 } = require('../validators');
 
 class AuthController {
