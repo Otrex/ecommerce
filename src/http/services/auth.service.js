@@ -1,5 +1,5 @@
 const config = require('../../config');
-const { APP_ENV, TOKEN_FLAG } = require('../../constants');
+const { APP_ENV, TOKEN_FLAG, ACCOUNT_TYPES } = require('../../constants');
 const uuid = require('uuid').v4;
 const { ServiceError } = require('../lib/exceptions');
 const ObjectId = require('mongoose').Types.ObjectId;
@@ -69,7 +69,7 @@ class AuthService {
 
     const timedToken = await generateTimedToken('register', account._id, 5);
 
-    if (type === 'client' && config.app.env !== APP_ENV.TEST) {
+    if (type === ACCOUNT_TYPES.CUSTOMER && config.app.env !== APP_ENV.TEST) {
       verification.addTo(account.email).addData({
         account,
         timedToken,

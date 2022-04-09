@@ -8,7 +8,7 @@ module.exports = {
   },
   TOKEN_FLAG: {
     AUTH: 'auth',
-    EMAIL_VERIFY: 'email_verification'
+    EMAIL_VERIFY: 'email_verification',
   },
   MESSAGE: {
     ERROR: {
