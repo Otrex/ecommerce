@@ -7,10 +7,11 @@ const {
   ServiceError,
   NotFoundError,
 } = require('../http/lib/exceptions');
-const { errorLogger } = require('../core/Logger');
+const Logger = require('../core/Logger');
+
+const log = new Logger();
 
 const errorHandler = (err, req, res, next) => {
-  console.log(err.name);
   if (res.headersSent) {
     return next(err);
   }
@@ -31,7 +32,7 @@ const errorHandler = (err, req, res, next) => {
         errors: err.errors,
       });
     default:
-      errorLogger.error(err.message, {
+      log.error(err.message, {
         url: req.originalUrl,
         method: req.method,
         body: req.body,
@@ -43,9 +44,6 @@ const errorHandler = (err, req, res, next) => {
         ...(config.app.env === 'development' || config.app.env === 'test'
           ? { stack: err.stack }
           : {}),
-        // ...([AppEnvironmentEnum.LOCAL, AppEnvironmentEnum.DEVELOPMENT].includes(config.app.env)
-        //   ? { stack: err.stack }
-        //   : {}),
       });
   }
 };
@@ -58,7 +56,8 @@ const pageNotFound = (req, res, next) => {
 };
 
 const logVisited = (req, res, next) => {
-  console.log(`VISITING :: ${req.url}`);
+  log.setScope('route');
+  log.info(req.url);
   next();
 };
 

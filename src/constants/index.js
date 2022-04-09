@@ -1,6 +1,11 @@
 module.exports = {
   DEVELOPMENT: 'development',
   PRODUCTION: 'production',
+  ACCOUNT_TYPES: {
+    CUSTOMER: 'customer',
+    VENDOR: 'vendor',
+    ADMIN: 'admin',
+  },
   MESSAGE: {
     ERROR: {
       LOGIN: 'email or password incorrect',

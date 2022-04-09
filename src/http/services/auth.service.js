@@ -7,10 +7,10 @@ const { mailer, mails } = require('../mails');
 const models = require('../models');
 const {
   bcryptHash,
-  getTimeToken,
+  getTimedToken,
   bcryptCompare,
   generateToken,
-  generateTimedToken
+  generateTimedToken,
 } = require('../../scripts/utils');
 const { DateUpdate } = require('../../core/Utils');
 
@@ -27,11 +27,7 @@ class AuthService {
     if (!passwordMatch) throw new ServiceError('password incorrect');
     await models.Account.updateOne(
       { _id: account._id },
-      {
-        lastLoggedIn: new Date(),
-        sessionID: req.sessionID,
-        ip: req.headers.ip,
-      }
+      { lastLoggedIn: new Date() }
     );
     return { account: await models.Account.findById(account._id) };
   };
@@ -57,15 +53,13 @@ class AuthService {
     };
     const account = await models.Account.create(accountData);
 
-    const timedToken = await generateTimedToken('register', account._id, 5)
+    const timedToken = await generateTimedToken('register', account._id, 5);
 
     if (type === 'client' && config.app.env !== APP_ENV.TEST) {
-      verification
-        .addTo(account.email)
-        .addData({
-          account,
-          timedToken,
-        });
+      verification.addTo(account.email).addData({
+        account,
+        timedToken,
+      });
 
       mailer.send(verification);
     }
@@ -82,7 +76,7 @@ class AuthService {
     if (account.isVerified) {
       throw new ServiceError('account has already been verified');
     }
-    const timedToken = getTimeToken('register', token, account._id)
+    const timedToken = await getTimedToken('register', token, account._id);
 
     if (!timedToken) {
       throw new ServiceError('invalid or expired token');
@@ -91,8 +85,8 @@ class AuthService {
     await models.Account.updateOne(
       { _id: account._id },
       {
-        isVerified: true,
-        verifiedAt: new Date(),
+        isEmailVerified: true,
+        verifiedEmailAt: new Date(),
       }
     );
 
@@ -153,7 +147,7 @@ class AuthService {
   static resendEmailToken = async ({ accountId }) => {
     const account = await models.Account.findById(accountId);
     if (!account) throw new ServiceError('account does not exist');
-    if (account.isVerified) {
+    if (account.isEmailVerified) {
       throw new ServiceError('account has already been verified');
     }
 
@@ -164,14 +158,12 @@ class AuthService {
       type: 'register',
     });
 
-    const timedToken = await generateTimedToken('register', account.id, 5)
+    const timedToken = await generateTimedToken('register', account.id, 5);
 
-    verification
-      .addTo(account.email)
-      .addData({
-        account,
-        timedToken,
-      });
+    verification.addTo(account.email).addData({
+      account,
+      timedToken,
+    });
 
     mailer.send(verification);
 

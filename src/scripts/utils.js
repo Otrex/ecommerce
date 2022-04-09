@@ -19,9 +19,11 @@ exports.generateToken = (length) => {
     .substr(0, length);
 };
 
-exports.generateNumbers = (length) => {
+const generateNumbers = (length) => {
   return Math.floor(Math.random() * (Math.pow(10, length) - 1));
 };
+
+exports.generateNumbers = generateNumbers;
 
 exports.generateHash = (seed) => {
   const data = seed.toString() + Date.now().toString();
@@ -89,11 +91,11 @@ exports.paginateResponse = (data = [[], 0], page, take) => {
       lastPage,
     },
   };
-}
+};
 
 exports.calcSkip = ({ page, take }) => {
   return (page - 1) * take;
-}
+};
 
 /**
  * This creates the response for a typical pagination endpoint
@@ -108,19 +110,19 @@ exports.generateTimedToken = async (type, accountId, nod = 4) => {
     accountId,
     type,
   });
-}
+};
 
 /**
  * This creates the response for a typical pagination endpoint
  * @param type eg 'register'
  * @param token string
- * @param accountId ObjectId 
+ * @param accountId ObjectId
  */
- exports.getTimedToken = async (type, token, accountId) => {
+exports.getTimedToken = async (type, token, accountId) => {
   return models.TimedToken.findOne({
     expiryTimestamp: { $gte: Date.now() },
     accountId,
     type,
     token,
   });
-}
+};

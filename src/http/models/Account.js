@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { ACCOUNT_TYPES } = require('../../constants');
 const timestamp = require('./plugins/timestamp');
 
 const accountSchema = new mongoose.Schema({
@@ -30,17 +31,13 @@ const accountSchema = new mongoose.Schema({
     select: false,
   },
 
-  isVerified: {
+  isEmailVerified: {
     type: Boolean,
     default: false,
   },
 
-  verifiedAt: {
+  verifiedEmailAt: {
     type: Date,
-  },
-
-  ip: {
-    type: String,
   },
 
   lastLoggedIn: {
@@ -48,16 +45,22 @@ const accountSchema = new mongoose.Schema({
     default: new Date(),
   },
 
-  sessionID: {
-    type: String,
-  },
-
   profileImage: { type: String },
 
   type: {
     type: String,
-    enum: ['rider', 'client'],
-    default: 'client',
+    enum: Object.values(ACCOUNT_TYPES),
+    default: ACCOUNT_TYPES.CUSTOMER,
+  },
+
+  isActive: {
+    type: Boolean,
+    default: false,
+  },
+
+  isSuperAdmin: {
+    type: Boolean,
+    default: false,
   },
 });
 

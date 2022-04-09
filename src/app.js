@@ -6,7 +6,7 @@ const { PRODUCTION } = require('./constants');
 const config = require('./config');
 const helmet = require('helmet');
 const { dbUri } = require('./database');
-const { routesLogger } = require('./core/Logger');
+const Logger = require('./core/Logger');
 
 const {
   errorHandler,
@@ -16,6 +16,7 @@ const {
 
 // create the server
 const app = express();
+const log = new Logger();
 
 /* MIDDLEWARES */
 app.use(cors());
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 if (config.app.env !== PRODUCTION) app.use(logVisited);
 
 const stream = {
-  write: (text) => routesLogger.http(text.trim()),
+  write: log.info.bind(log),
 };
 
 app.use(morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream }));

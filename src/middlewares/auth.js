@@ -1,22 +1,31 @@
-const { AuthenticationError } = require('../http/lib/exceptions');
+const {
+  AuthenticationError,
+  AuthorizationError,
+} = require('../http/lib/exceptions');
+const { ObjectId } = require('../http/types');
 const models = require('../http/models');
+const { ACCOUNT_TYPES } = require('../constants');
 
 module.exports = {
-  deSerialize: async (req, res, next) => {
-    try {
-      const { sessionID } = req;
-      const account = await models.Account.findOne({ sessionID });
-      if (!account) {
+  authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
+    return (req, res, next) => {
+      const { account } = req.session;
+      if (!userTypes.includes(account.type)) {
         return next(
-          new AuthenticationError('session does not exist or has expired')
+          new AuthorizationError('user not authorized to access this route')
         );
       }
-      req.session.account = account;
-      console.log(req.session);
       next();
-    } catch (err) {
-      return next(err);
+    };
+  },
+  isAdmin: (req, res, next) => {
+    const { account } = req.session;
+    if (!account.isSuperAdmin) {
+      return next(
+        new AuthorizationError('user not authorized to access this route')
+      );
     }
+    next();
   },
   authentication: (tokenFlag = 'AUTH') => {
     return async (req, res, next) => {
@@ -43,7 +52,9 @@ module.exports = {
           );
         }
 
-        const account = await accountRepo.getaccountById(accountId);
+        const account = await models.Account.findOne({
+          _id: new ObjectId(accountId),
+        });
 
         if (!account || tokenFlag === 'AUTH') {
           return next(new AuthenticationError('token is invalid'));

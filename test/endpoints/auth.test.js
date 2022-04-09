@@ -1,4 +1,4 @@
-const { connect } = require('../../src/database');
+const { DB } = require('../../src/database');
 const supertest = require('supertest');
 const app = require('../../src/app');
 const faker = require('faker');
@@ -10,8 +10,15 @@ const userClient = {
   email: faker.internet.email(),
   password: faker.internet.password(),
 };
+
+let db;
 beforeAll(async () => {
-  await connect();
+  db = new DB();
+  await db.connect();
+});
+
+afterAll(async () => {
+  await db.disconnect();
 });
 
 describe('Registration', () => {
@@ -23,6 +30,7 @@ describe('Registration', () => {
       phoneNumber: faker.phone.phoneNumber(),
       type: 'client',
     });
+    console.log(res.body, res.error);
 
     expect(res.status).toEqual(200);
     userClient.accountId = res.body.data._id;
@@ -36,6 +44,7 @@ describe('Email verification', () => {
       token,
       accountId,
     });
+    console.log(res.body, res.error);
     expect(res.status).toEqual(200);
   });
 });
