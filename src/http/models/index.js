@@ -1,7 +1,7 @@
 module.exports = {
   Account: require('./Account'),
-  DropOff: require('./DropOff'),
+  Product: require('./Product'),
   TimedToken: require('./TimedToken'),
-  ItemWeight: require('./ItemWeight'),
-  ItemCategory: require('./ItemCategory'),
+  ItemWeight: require('./Address'),
+  ItemCategory: require('./Customer'),
 };

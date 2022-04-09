@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const timestamp = require('./plugins/timestamp');
 
 const addressSchema = new Schema({
   lat: {

@@ -1,10 +1,11 @@
+const { ACCOUNT_TYPES } = require('../../constants');
 const GenericValidator = require('./core');
 
 class LoginValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     email: { type: 'email' },
-    type: { type: 'enum', values: ['client', 'rider'] },
+    type: { type: 'enum', values: Object.values(ACCOUNT_TYPES) },
     password: { type: 'string', trim: true, min: 5 },
   };
 }
@@ -17,7 +18,7 @@ class RegisterValidator extends GenericValidator {
     firstName: { type: 'string', trim: true, min: 1 },
     lastName: { type: 'string', trim: true, min: 1 },
     phoneNumber: { type: 'string', trim: true, min: 6 },
-    type: { type: 'enum', values: ['client', 'rider'] },
+    type: { type: 'enum', values: Object.values(ACCOUNT_TYPES) },
   };
 }
 
@@ -40,7 +41,7 @@ class InitPasswordResetValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     email: { type: 'email' },
-    type: { type: 'enum', values: ['client', 'rider'] },
+    type: { type: 'enum', values: Object.values(ACCOUNT_TYPES) },
   };
 }
 

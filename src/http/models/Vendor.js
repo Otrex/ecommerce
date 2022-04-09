@@ -33,7 +33,7 @@ const vendorSchema = new mongoose.Schema({
 
   address: {
     type: mongoose.Types.ObjectId,
-    ref: Address
+    ref: Address,
   },
 });
 

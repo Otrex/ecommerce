@@ -6,6 +6,10 @@ module.exports = {
     VENDOR: 'vendor',
     ADMIN: 'admin',
   },
+  TOKEN_FLAG: {
+    AUTH: 'auth',
+    EMAIL_VERIFY: 'email_verification'
+  },
   MESSAGE: {
     ERROR: {
       LOGIN: 'email or password incorrect',

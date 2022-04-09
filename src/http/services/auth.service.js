@@ -1,5 +1,5 @@
 const config = require('../../config');
-const { APP_ENV } = require('../../constants');
+const { APP_ENV, TOKEN_FLAG } = require('../../constants');
 const uuid = require('uuid').v4;
 const { ServiceError } = require('../lib/exceptions');
 const ObjectId = require('mongoose').Types.ObjectId;
@@ -11,6 +11,7 @@ const {
   bcryptCompare,
   generateToken,
   generateTimedToken,
+  generateJWTToken,
 } = require('../../scripts/utils');
 const { DateUpdate } = require('../../core/Utils');
 
@@ -29,7 +30,20 @@ class AuthService {
       { _id: account._id },
       { lastLoggedIn: new Date() }
     );
-    return { account: await models.Account.findById(account._id) };
+
+    let token;
+    if (account.isEmailVerified) {
+      token = await generateJWTToken({
+        accountId: account._id,
+        flag: TOKEN_FLAG.AUTH,
+      });
+    } else {
+      token = await generateJWTToken({
+        accountId: account._id,
+        flag: TOKEN_FLAG.EMAIL_VERIFY,
+      });
+    }
+    return { account: await models.Account.findById(account._id), token };
   };
 
   static register = async ({
@@ -91,9 +105,13 @@ class AuthService {
     );
 
     await models.TimedToken.remove({ _id: timedToken._id });
-
+    const token = await generateJWTToken({
+      accountId: account._id,
+      flag: TOKEN_FLAG.AUTH,
+    });
     return {
       message: 'account has been verified',
+      token,
     };
   };
 

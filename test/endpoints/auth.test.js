@@ -5,6 +5,7 @@ const faker = require('faker');
 const server = supertest(app);
 const { getToken } = require('../utils');
 const { seed } = require('../../src/scripts/seeds');
+const { ACCOUNT_TYPES } = require('../../src/constants');
 
 const userClient = {
   email: faker.internet.email(),
@@ -28,7 +29,7 @@ describe('Registration', () => {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       phoneNumber: faker.phone.phoneNumber(),
-      type: 'client',
+      type: 'customer',
     });
     console.log(res.body, res.error);
 
@@ -53,11 +54,11 @@ describe('Login', () => {
   it('login client', async () => {
     const res = await server.post('/v1/auth/login').send({
       ...userClient,
-      type: 'client',
+      type: ACCOUNT_TYPES.CUSTOMER,
     });
 
+    console.log(res.body, res.error);
     expect(res.status).toEqual(200);
-    console.log(res.body);
     // userClient.accountId = res.body.data._id;
   });
 });
@@ -66,11 +67,11 @@ describe('Forgot Password', () => {
   it('forgot password client', async () => {
     const res = await server.post('/v1/auth/forgot-password').send({
       ...userClient,
-      type: 'client',
+      type: ACCOUNT_TYPES.CUSTOMER,
     });
 
+    console.log(res.body, res.error);
     expect(res.status).toEqual(200);
-    console.log(res.body);
     userClient.resetToken = res.body.token;
   });
 });

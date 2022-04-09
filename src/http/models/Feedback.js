@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const timestamp = require('./plugins/timestamp');
 
 const { Schema } = mongoose;
 const feedbackSchema = new Schema({
@@ -11,7 +10,7 @@ const feedbackSchema = new Schema({
   },
   customer: {
     type: mongoose.Types.ObjectId,
-    ref: 'Customer'
+    ref: 'Customer',
   },
 });
 

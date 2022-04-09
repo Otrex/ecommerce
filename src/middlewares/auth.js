@@ -4,7 +4,7 @@ const {
 } = require('../http/lib/exceptions');
 const { ObjectId } = require('../http/types');
 const models = require('../http/models');
-const { ACCOUNT_TYPES } = require('../constants');
+const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../constants');
 
 module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
@@ -27,7 +27,7 @@ module.exports = {
     }
     next();
   },
-  authentication: (tokenFlag = 'AUTH') => {
+  authentication: (tokenFlag = TOKEN_FLAG.AUTH) => {
     return async (req, res, next) => {
       try {
         const authorization = req.header('authorization') || '';

@@ -6,7 +6,7 @@ const moment = require('moment');
 
 const models = require('../http/models');
 
-exports.generateToken = (length) => {
+const generateToken = (length) => {
   return crypto
     .randomBytes(length * 3)
     .toString('base64')
@@ -22,8 +22,6 @@ exports.generateToken = (length) => {
 const generateNumbers = (length) => {
   return Math.floor(Math.random() * (Math.pow(10, length) - 1));
 };
-
-exports.generateNumbers = generateNumbers;
 
 exports.generateHash = (seed) => {
   const data = seed.toString() + Date.now().toString();
@@ -45,7 +43,7 @@ exports.generateJWTToken = async (
 ) => {
   const jwtPayload = {
     ...payload,
-    counter: generateRandomCode(36),
+    counter: generateToken(36),
   };
   const options = { expiresIn: expiresIn || '720h' };
 
@@ -126,3 +124,6 @@ exports.getTimedToken = async (type, token, accountId) => {
     token,
   });
 };
+
+exports.generateNumbers = generateNumbers;
+exports.generateToken = generateToken;
