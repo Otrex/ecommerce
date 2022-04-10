@@ -32,18 +32,25 @@ class AuthService {
     );
 
     let token;
+    let type;
     if (account.isEmailVerified) {
+      type = TOKEN_FLAG.AUTH
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.AUTH,
-      });
+      }); 
     } else {
+      type = TOKEN_FLAG.EMAIL_VERIFY
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.EMAIL_VERIFY,
       });
     }
-    return { account: await models.Account.findById(account._id), token };
+    return { 
+      account: await models.Account.findById(account._id), 
+      token,
+      type
+    };
   };
 
   static register = async ({
@@ -105,13 +112,13 @@ class AuthService {
     );
 
     await models.TimedToken.remove({ _id: timedToken._id });
-    const token = await generateJWTToken({
+    const loginToken = await generateJWTToken({
       accountId: account._id,
       flag: TOKEN_FLAG.AUTH,
     });
     return {
       message: 'account has been verified',
-      token,
+      token: loginToken,
     };
   };
 
