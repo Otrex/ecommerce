@@ -38,6 +38,7 @@ app.use(logVisited);
 
 /* ROUTES */
 app.use('/v1', require('./http/routes'));
+app.use('/healthz', (req, res) => res.send('Ok'));
 
 /* EXCEPTION HANDLERS */
 app.use(errorHandler);
