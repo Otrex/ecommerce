@@ -5,6 +5,7 @@ const {
   RegisterValidator,
   VerifyEmailValidator,
   PasswordResetValidator,
+  CustomerRegisterValidator,
   InitPasswordResetValidator,
   ResendVerificationEmailValidator,
 } = require('../validators');
@@ -15,9 +16,14 @@ class AuthController {
     handler: AuthService.login,
   });
 
-  static register = requestHandler({
+  static registerCustomer = requestHandler({
+    validator: CustomerRegisterValidator,
+    handler: AuthService.registerCustomer,
+  });
+
+  static registerBusiness = requestHandler({
     validator: RegisterValidator,
-    handler: AuthService.register,
+    handler: AuthService.registerBusiness,
   });
 
   static verifyEmail = requestHandler({

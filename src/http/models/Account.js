@@ -13,7 +13,6 @@ const accountSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
-    unique: true,
   },
   email: {
     type: String,

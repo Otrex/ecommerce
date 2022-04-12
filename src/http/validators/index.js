@@ -22,6 +22,17 @@ class RegisterValidator extends GenericValidator {
   };
 }
 
+class CustomerRegisterValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    email: { type: 'email' },
+    password: { type: 'string', trim: true, min: 5 },
+    firstName: { type: 'string', trim: true, min: 1 },
+    lastName: { type: 'string', trim: true, min: 1 },
+    gender: { type: 'string', trim: true, min: 4 },
+  };
+}
+
 class VerifyEmailValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -75,5 +86,6 @@ module.exports = {
   PasswordResetValidator,
   InitPasswordResetValidator,
   ResendVerificationEmailValidator,
+  CustomerRegisterValidator,
   VerifyEmailValidator,
 };

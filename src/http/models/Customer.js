@@ -12,6 +12,9 @@ const customerSchema = new Schema({
     type: mongoose.Types.ObjectId,
     ref: Address,
   },
+  gender: {
+    type: String
+  }
 });
 
 customerSchema.plugin(timestamp);

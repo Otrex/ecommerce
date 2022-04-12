@@ -1,10 +1,10 @@
-const config = require('../../config');
 const { APP_ENV, TOKEN_FLAG, ACCOUNT_TYPES } = require('../../constants');
-const uuid = require('uuid').v4;
 const { ServiceError } = require('../lib/exceptions');
 const ObjectId = require('mongoose').Types.ObjectId;
 const { mailer, mails } = require('../mails');
+const config = require('../../config');
 const models = require('../models');
+const uuid = require('uuid').v4;
 const {
   bcryptHash,
   getTimedToken,
@@ -16,6 +16,7 @@ const {
 const { DateUpdate } = require('../../core/Utils');
 
 const { verification } = mails;
+
 class AuthService {
   static login = async ({ email, password, type }, req) => {
     const account = await models.Account.findOne(
@@ -46,21 +47,62 @@ class AuthService {
         flag: TOKEN_FLAG.EMAIL_VERIFY,
       });
     }
+    const _account = await models.Account.findById(account._id)
     return { 
-      account: await models.Account.findById(account._id), 
-      type: tokenType,
-      token,
+      data: {
+        account: _account.toJSON(), 
+        type: tokenType,
+        token,
+      }
     };
   };
 
-  static register = async ({
+  static registerCustomer = async ({
     email,
     password,
     firstName,
     lastName,
-    phoneNumber,
-    type,
+    gender,
   }) => {
+    const accountExist = await models.Account.findOne({ email });
+    if (accountExist) throw new ServiceError('account already exist');
+
+    const account = await models.Account.create({
+      password: await bcryptHash(password),
+      type: ACCOUNT_TYPES.CUSTOMER,
+      firstName,
+      lastName,
+      email,
+    });
+
+    await models.Customer.create({
+      accountId: account._id,
+      gender
+    });
+
+    const timedToken = await generateTimedToken('register', account._id, 5);
+
+    if (config.app.env !== APP_ENV.TEST) {
+      verification.addTo(account.email).addData({
+        account,
+        timedToken,
+      });
+
+      mailer.send(verification);
+    }
+
+    return {
+      message: 'proceed to verifying your account',
+    };
+  };
+
+  // TODO
+  static registerBusiness = async ({
+    sellerDetails,
+    businessDetails,
+    paymentDetails
+  }) => {
+    const {} = sellerDetails;
     const accountExist = await models.Account.findOne({ email });
     if (accountExist) throw new ServiceError('account already exist');
 
@@ -69,7 +111,7 @@ class AuthService {
       email,
       firstName,
       lastName,
-      phoneNumber,
+      gender,
       password: await bcryptHash(password),
     };
     const account = await models.Account.create(accountData);
@@ -86,7 +128,6 @@ class AuthService {
     }
 
     return {
-      data: await models.Account.findById(account._id),
       message: 'proceed to verifying your account',
     };
   };
