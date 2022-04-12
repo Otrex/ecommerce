@@ -32,15 +32,15 @@ class AuthService {
     );
 
     let token;
-    let type;
+    let tokenType;
     if (account.isEmailVerified) {
-      type = TOKEN_FLAG.AUTH
+      tokenType = TOKEN_FLAG.AUTH
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.AUTH,
       }); 
     } else {
-      type = TOKEN_FLAG.EMAIL_VERIFY
+      tokenType = TOKEN_FLAG.EMAIL_VERIFY
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.EMAIL_VERIFY,
@@ -48,8 +48,8 @@ class AuthService {
     }
     return { 
       account: await models.Account.findById(account._id), 
+      type: tokenType,
       token,
-      type
     };
   };
 
