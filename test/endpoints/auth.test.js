@@ -6,6 +6,7 @@ const server = supertest(app);
 const { getToken } = require('../utils');
 const { seed } = require('../../src/scripts/seeds');
 const { ACCOUNT_TYPES } = require('../../src/constants');
+const { assert } = require('chai');
 
 const userClient = {
   email: faker.internet.email(),
@@ -33,7 +34,7 @@ describe('Registration', () => {
     });
     console.log(res.body, res.error);
 
-    expect(res.status).toEqual(200);
+    assert(res.status).toEqual(200);
     userClient.accountId = res.body.data._id;
   });
 });
