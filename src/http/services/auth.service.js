@@ -96,29 +96,47 @@ class AuthService {
     };
   };
 
-  // TODO
   static registerBusiness = async ({
     sellerDetails,
     businessDetails,
     paymentDetails
   }) => {
-    const {} = sellerDetails;
+    const {
+      fullName,
+      phoneNumber,
+      email,
+      password,
+    } = sellerDetails;
+
     const accountExist = await models.Account.findOne({ email });
     if (accountExist) throw new ServiceError('account already exist');
 
-    const accountData = {
-      type,
-      email,
+    const [firstName, lastName] = fullName.split(' ');
+
+    const account = await models.Account.create({
+      password: await bcryptHash(password),
+      type: ACCOUNT_TYPES.BUSINESS,
+      phoneNumber,
       firstName,
       lastName,
-      gender,
-      password: await bcryptHash(password),
-    };
-    const account = await models.Account.create(accountData);
+      email,
+    });
+
+    const { address } = businessDetails;
+    const business = await models.Business.create({
+      ...businessDetails,
+      accountId: account._id,
+      address: await models.Address.create({ ...address })
+    })
+
+    await models.BusinessPayment.create({
+      businessId: business._id,
+      ...paymentDetails,
+    })
 
     const timedToken = await generateTimedToken('register', account._id, 5);
 
-    if (type === ACCOUNT_TYPES.CUSTOMER && config.app.env !== APP_ENV.TEST) {
+    if (config.app.env !== APP_ENV.TEST) {
       verification.addTo(account.email).addData({
         account,
         timedToken,
@@ -132,6 +150,7 @@ class AuthService {
     };
   };
 
+  // TODO
   static verifyEmail = async ({ token, accountId }) => {
     const account = await models.Account.findById(accountId);
     if (!account) throw new ServiceError('account does not exist');

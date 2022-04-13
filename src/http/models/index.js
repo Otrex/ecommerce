@@ -3,5 +3,7 @@ module.exports = {
   Product: require('./Product'),
   Customer: require('./Customer'),
   TimedToken: require('./TimedToken'),
-  ItemWeight: require('./Address'),
+  Address: require('./Address'),
+  Business: require('./Business'),
+  BusinessPayment: require('./BusinessPayment'),
 };

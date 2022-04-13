@@ -8,7 +8,7 @@ const addressSchema = new Schema({
   long: {
     type: Number,
   },
-  value: {
+  label: {
     type: String,
   },
 });

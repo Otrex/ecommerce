@@ -3,7 +3,7 @@ module.exports = {
   PRODUCTION: 'production',
   ACCOUNT_TYPES: {
     CUSTOMER: 'customer',
-    VENDOR: 'vendor',
+    BUSINESS: 'business',
     ADMIN: 'admin',
   },
   TOKEN_FLAG: {

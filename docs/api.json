@@ -56,11 +56,147 @@
                 }
               },
               "example": {
-                "email": "Lois38@yahoo.com",
-                "password": "SFxE3ggwQqg6Bzf",
-                "firstName": "Florence",
-                "lastName": "Bergnaum",
+                "email": "Sincere69@yahoo.com",
+                "password": "F4o1s5TvQMiRHX7",
+                "firstName": "Leonardo",
+                "lastName": "Gutmann",
                 "gender": "male"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "proceed to verifying your account"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/register/vendor": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sellerDetails": {
+                    "type": "object",
+                    "properties": {
+                      "email": {
+                        "type": "string"
+                      },
+                      "password": {
+                        "type": "string"
+                      },
+                      "phoneNumber": {
+                        "type": "string"
+                      },
+                      "fullName": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "businessDetails": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "cacNumber": {
+                        "type": "string"
+                      },
+                      "state": {
+                        "type": "string"
+                      },
+                      "lga": {
+                        "type": "string"
+                      },
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "long": {
+                            "type": "number"
+                          },
+                          "label": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "paymentDetails": {
+                    "type": "object",
+                    "properties": {
+                      "accountNumber": {
+                        "type": "string"
+                      },
+                      "bank": {
+                        "type": "string"
+                      },
+                      "accountName": {
+                        "type": "string"
+                      },
+                      "payoutFrequency": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "sellerDetails": {
+                  "email": "Seamus54@yahoo.com",
+                  "password": "HHD3__Oib8T0dTm",
+                  "phoneNumber": "+2345678765456",
+                  "fullName": "Jovan Spinka"
+                },
+                "businessDetails": {
+                  "type": "Profit-focused demand-driven project",
+                  "name": "Ergonomic client-driven software",
+                  "cacNumber": "Managed zero defect portal",
+                  "state": "Mississippi",
+                  "lga": "Connecticut",
+                  "address": {
+                    "lat": 324.43,
+                    "long": 2424.42,
+                    "label": "Lao People's Democratic Republic"
+                  }
+                },
+                "paymentDetails": {
+                  "accountNumber": "456789000987",
+                  "bank": "Synergized demand-driven array",
+                  "accountName": "Kenneth Metz",
+                  "payoutFrequency": 5
+                }
               }
             }
           }
@@ -114,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Lois38@yahoo.com",
-                "password": "SFxE3ggwQqg6Bzf",
+                "email": "Sincere69@yahoo.com",
+                "password": "F4o1s5TvQMiRHX7",
                 "type": "customer"
               }
             }
@@ -191,20 +327,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-12T11:26:03.177Z",
+                      "lastLoggedIn": "2022-04-13T20:22:10.337Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "625561ca60e5be3e88cc0e4b",
-                      "firstName": "Florence",
-                      "lastName": "Bergnaum",
-                      "email": "Lois38@yahoo.com",
-                      "updatedAt": "2022-04-12T12:26:02+01:00",
-                      "createdAt": "2022-04-12T12:26:02+01:00",
+                      "_id": "625730f0ad99d3685e46f70f",
+                      "firstName": "Leonardo",
+                      "lastName": "Gutmann",
+                      "email": "Sincere69@yahoo.com",
+                      "updatedAt": "2022-04-13T21:22:08+01:00",
+                      "createdAt": "2022-04-13T21:22:08+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjU1NjFjYTYwZTViZTNlODhjYzBlNGIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IktCbWJadDdZNUZBYUk2cXNPaXVrNml0cWxrUXlQTzBXakpVRyIsImlhdCI6MTY0OTc2Mjc2MywiZXhwIjoxNjQ5ODQ5MTYzfQ._qpPp4TKdkj9M83u9xt-2jg37XQF7jxZJZl7Il0uFmA"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjU3MzBmMGFkOTlkMzY4NWU0NmY3MGYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlFOSVFWdFJMUUpQOEZBeElXaldGcjlXMjFkSXFQNVVLQlZ2RiIsImlhdCI6MTY0OTg4MTMzMCwiZXhwIjoxNjQ5OTY3NzMwfQ.IZenGnhshVAgaj8qwDLo3m_IPDl2o8QtLNBtcFl21-A"
                   }
                 }
               }

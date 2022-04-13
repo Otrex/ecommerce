@@ -1,0 +1,22 @@
+sellers details
+  - fullname
+  - phoneNumber
+  - email
+  - password
+
+Business details
+  - name
+  - type
+  - cacNumber
+  - state
+  - lga
+  - address
+    - long
+    - lat
+    - label
+
+Payment details
+  - accountNumber
+  - bank
+  - accountName
+  - payoutFrequency

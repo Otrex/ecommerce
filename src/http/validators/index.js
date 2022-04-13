@@ -33,6 +33,44 @@ class CustomerRegisterValidator extends GenericValidator {
   };
 }
 
+class BusinessRegisterValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    sellerDetails: {
+      type: 'object', props: {
+        fullName: { type: 'string', trim: true, min: 5 },
+        phoneNumber: { type: 'string', trim: true, min: 5 },
+        email: { type: 'string', trim: true, min: 5 },
+        password: { type: 'string', trim: true, min: 5 },
+      }
+    },
+    businessDetails: {
+      type: 'object', props: {
+        type: { type: 'string', trim: true, min: 5 },
+        name: { type: 'string', trim: true, min: 5 },
+        cacNumber: { type: 'string', trim: true, min: 5 },
+        state: { type: 'string', trim: true, min: 5 },
+        lga: { type: 'string', trim: true, min: 5 },
+        address: {
+          type: 'object', props: {
+            lat: { type: 'number', convert: true },
+            label: { type: 'string', trim: true, min: 5 },
+            long: { type: 'number', convert: true },
+          }
+        },
+      }
+    },
+    paymentDetails: {
+      type: 'object', props: {
+        accountNumber: { type: 'string', trim: true, min: 5 },
+        bank: { type: 'string', trim: true, min: 5 },
+        accountName: { type: 'string', trim: true, min: 5 },
+        payoutFrequency: { type: 'number', convert: true }
+      }
+    }
+  };
+}
+
 class VerifyEmailValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -87,5 +125,6 @@ module.exports = {
   InitPasswordResetValidator,
   ResendVerificationEmailValidator,
   CustomerRegisterValidator,
+  BusinessRegisterValidator,
   VerifyEmailValidator,
 };
