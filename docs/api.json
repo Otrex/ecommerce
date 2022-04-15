@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Shemar97@gmail.com",
-                "password": "St60AeBD_F7or0C",
-                "firstName": "Frederique",
-                "lastName": "Sauer",
+                "email": "Bailee.Haag@yahoo.com",
+                "password": "c6vFhcXEyZTYWu9",
+                "firstName": "Wellington",
+                "lastName": "Von",
                 "gender": "male"
               }
             }
@@ -174,27 +174,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Kobe12@gmail.com",
-                  "password": "lHUQBzGqk7m0DML",
+                  "email": "Samanta38@yahoo.com",
+                  "password": "3QUEHAmPsyl_6Pm",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Macy Lang"
+                  "fullName": "Ahmed Klein"
                 },
                 "businessDetails": {
-                  "type": "Grass-roots system-worthy groupware",
-                  "name": "Multi-channelled empowering solution",
-                  "cacNumber": "Optimized static intranet",
-                  "state": "Oklahoma",
-                  "lga": "South Dakota",
+                  "type": "Polarised directional internet solution",
+                  "name": "Integrated maximized parallelism",
+                  "cacNumber": "Centralized executive time-frame",
+                  "state": "Alabama",
+                  "lga": "Arizona",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Philippines"
+                    "label": "Ghana"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Switchable reciprocal moratorium",
-                  "accountName": "Charlie Waters",
+                  "bank": "Cross-group non-volatile firmware",
+                  "accountName": "Orie Sanford",
                   "payoutFrequency": 5
                 }
               }
@@ -250,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Shemar97@gmail.com",
-                "password": "St60AeBD_F7or0C",
+                "email": "Bailee.Haag@yahoo.com",
+                "password": "c6vFhcXEyZTYWu9",
                 "type": "customer"
               }
             }
@@ -327,20 +327,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-15T23:38:47.232Z",
+                      "lastLoggedIn": "2022-04-15T23:49:42.938Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "625a02068c9c3927d3830138",
-                      "firstName": "Frederique",
-                      "lastName": "Sauer",
-                      "email": "Shemar97@gmail.com",
-                      "updatedAt": "2022-04-16T00:38:46+01:00",
-                      "createdAt": "2022-04-16T00:38:46+01:00",
+                      "_id": "625a0495b89e772aec050316",
+                      "firstName": "Wellington",
+                      "lastName": "Von",
+                      "email": "Bailee.Haag@yahoo.com",
+                      "updatedAt": "2022-04-16T00:49:41+01:00",
+                      "createdAt": "2022-04-16T00:49:41+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjVhMDIwNjhjOWMzOTI3ZDM4MzAxMzgiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkgzZVhlQVhRelA5eTMxRjhnUTNXYUFoSHRtSGV5Zk9hZjk5biIsImlhdCI6MTY1MDA2NTkyNywiZXhwIjoxNjUwMTUyMzI3fQ.nneoYF0Zx1Wm1Md1_6UT3lzHGJyGW2KZPDLp6KSAGKU"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjVhMDQ5NWI4OWU3NzJhZWMwNTAzMTYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkRxU3BVcjdqRFJjM25DRU5GYjQ1S2hEQURjbTBLcXc2MGUzbSIsImlhdCI6MTY1MDA2NjU4MiwiZXhwIjoxNjUwMTUyOTgyfQ.RuBuMgjoY7dhlVbigmNbZN9Q8La9qPbwJBudAgn0-3c"
                   }
                 }
               }
@@ -388,23 +388,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "625a02048c9c3927d383012a",
-                      "name": "Food",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "625a02048c9c3927d383012c",
-                      "name": "Livestock",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "625a02048c9c3927d383012e",
+                      "_id": "625a0493b89e772aec050308",
                       "name": "Clothings",
                       "__v": 0
                     },
                     {
-                      "_id": "625a02048c9c3927d3830130",
+                      "_id": "625a0493b89e772aec05030a",
                       "name": "Phones",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "625a0493b89e772aec050304",
+                      "name": "Food",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "625a0493b89e772aec050306",
+                      "name": "Livestock",
                       "__v": 0
                     }
                   ]
@@ -461,15 +461,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Fantastic Granite Keyboard",
-                "categoryId": "625a02048c9c3927d383012a",
+                "name": "Intelligent Plastic Car",
+                "categoryId": "625a0493b89e772aec050308",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-15T23:38:47.364Z",
+                "expiryDate": "2022-04-15T23:49:43.066Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Eveniet quidem doloribus assumenda nisi soluta nemo quia eos. Architecto rerum dolorem unde corrupti nemo quis qui. In pariatur illo nulla rerum et repudiandae unde voluptatem. Cupiditate est consequatur alias. Voluptatem ratione inventore voluptas iure repudiandae ut est."
+                "description": "Perferendis placeat debitis placeat qui non. Neque pariatur nihil voluptas eos perferendis. Id voluptate necessitatibus omnis harum praesentium."
               }
             }
           }
@@ -543,13 +543,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "625a02078c9c3927d3830155",
-                    "name": "Fantastic Granite Keyboard",
+                    "_id": "625a0497b89e772aec050333",
+                    "name": "Intelligent Plastic Car",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-15T23:38:47.364Z",
-                    "description": "Eveniet quidem doloribus assumenda nisi soluta nemo quia eos. Architecto rerum dolorem unde corrupti nemo quis qui. In pariatur illo nulla rerum et repudiandae unde voluptatem. Cupiditate est consequatur alias. Voluptatem ratione inventore voluptas iure repudiandae ut est.",
-                    "createdAt": "Sat Apr 16 2022 00:38:47 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-16T00:38:47+01:00",
+                    "expiryDate": "2022-04-15T23:49:43.066Z",
+                    "description": "Perferendis placeat debitis placeat qui non. Neque pariatur nihil voluptas eos perferendis. Id voluptate necessitatibus omnis harum praesentium.",
+                    "createdAt": "Sat Apr 16 2022 00:49:43 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-16T00:49:43+01:00",
                     "__v": 0
                   }
                 }

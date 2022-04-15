@@ -49,7 +49,6 @@ exports.seedAdmin = async () => {
       emailVerifiedAt: new Date(),
       email: config.admin.email,
       password: '1234',
-      emailV
     });
   }
 
