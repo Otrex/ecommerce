@@ -1,5 +1,6 @@
 const { NotFoundError } = require('../lib/exceptions');
 const models = require('../models');
+const { omit } = require('lodash');
 const ObjectId = require('mongoose').Types.ObjectId;
 
 class ProductService {
@@ -40,7 +41,12 @@ class ProductService {
       category: category._id,
     });
 
-    return { data: product };
+    return { 
+      data: omit(product.toObject(), [
+        'feedbackId',
+        'creatorId',
+      ]) 
+    };
   };
 
   static getProducts_Business = async ({ account }) => {

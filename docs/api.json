@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Sincere69@yahoo.com",
-                "password": "F4o1s5TvQMiRHX7",
-                "firstName": "Leonardo",
-                "lastName": "Gutmann",
+                "email": "Shemar97@gmail.com",
+                "password": "St60AeBD_F7or0C",
+                "firstName": "Frederique",
+                "lastName": "Sauer",
                 "gender": "male"
               }
             }
@@ -174,27 +174,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Seamus54@yahoo.com",
-                  "password": "HHD3__Oib8T0dTm",
+                  "email": "Kobe12@gmail.com",
+                  "password": "lHUQBzGqk7m0DML",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Jovan Spinka"
+                  "fullName": "Macy Lang"
                 },
                 "businessDetails": {
-                  "type": "Profit-focused demand-driven project",
-                  "name": "Ergonomic client-driven software",
-                  "cacNumber": "Managed zero defect portal",
-                  "state": "Mississippi",
-                  "lga": "Connecticut",
+                  "type": "Grass-roots system-worthy groupware",
+                  "name": "Multi-channelled empowering solution",
+                  "cacNumber": "Optimized static intranet",
+                  "state": "Oklahoma",
+                  "lga": "South Dakota",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Lao People's Democratic Republic"
+                    "label": "Philippines"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Synergized demand-driven array",
-                  "accountName": "Kenneth Metz",
+                  "bank": "Switchable reciprocal moratorium",
+                  "accountName": "Charlie Waters",
                   "payoutFrequency": 5
                 }
               }
@@ -250,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Sincere69@yahoo.com",
-                "password": "F4o1s5TvQMiRHX7",
+                "email": "Shemar97@gmail.com",
+                "password": "St60AeBD_F7or0C",
                 "type": "customer"
               }
             }
@@ -327,20 +327,230 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-13T20:22:10.337Z",
+                      "lastLoggedIn": "2022-04-15T23:38:47.232Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "625730f0ad99d3685e46f70f",
-                      "firstName": "Leonardo",
-                      "lastName": "Gutmann",
-                      "email": "Sincere69@yahoo.com",
-                      "updatedAt": "2022-04-13T21:22:08+01:00",
-                      "createdAt": "2022-04-13T21:22:08+01:00",
+                      "_id": "625a02068c9c3927d3830138",
+                      "firstName": "Frederique",
+                      "lastName": "Sauer",
+                      "email": "Shemar97@gmail.com",
+                      "updatedAt": "2022-04-16T00:38:46+01:00",
+                      "createdAt": "2022-04-16T00:38:46+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjU3MzBmMGFkOTlkMzY4NWU0NmY3MGYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlFOSVFWdFJMUUpQOEZBeElXaldGcjlXMjFkSXFQNVVLQlZ2RiIsImlhdCI6MTY0OTg4MTMzMCwiZXhwIjoxNjQ5OTY3NzMwfQ.IZenGnhshVAgaj8qwDLo3m_IPDl2o8QtLNBtcFl21-A"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjVhMDIwNjhjOWMzOTI3ZDM4MzAxMzgiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkgzZVhlQVhRelA5eTMxRjhnUTNXYUFoSHRtSGV5Zk9hZjk5biIsImlhdCI6MTY1MDA2NTkyNywiZXhwIjoxNjUwMTUyMzI3fQ.nneoYF0Zx1Wm1Md1_6UT3lzHGJyGW2KZPDLp6KSAGKU"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/info/categories": {
+      "get": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "_id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": [
+                    {
+                      "_id": "625a02048c9c3927d383012a",
+                      "name": "Food",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "625a02048c9c3927d383012c",
+                      "name": "Livestock",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "625a02048c9c3927d383012e",
+                      "name": "Clothings",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "625a02048c9c3927d3830130",
+                      "name": "Phones",
+                      "__v": 0
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/products": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "imageUrl": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "categoryId": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "quantity": {
+                    "type": "number"
+                  },
+                  "expiryDate": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "minimumOrder": {
+                    "type": "number"
+                  },
+                  "handlingFee": {
+                    "type": "number"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "imageUrl": "http://placeimg.com/640/480",
+                "name": "Fantastic Granite Keyboard",
+                "categoryId": "625a02048c9c3927d383012a",
+                "price": 500,
+                "weight": 30,
+                "quantity": 10,
+                "expiryDate": "2022-04-15T23:38:47.364Z",
+                "minimumOrder": 0,
+                "handlingFee": 10,
+                "description": "Eveniet quidem doloribus assumenda nisi soluta nemo quia eos. Architecto rerum dolorem unde corrupti nemo quis qui. In pariatur illo nulla rerum et repudiandae unde voluptatem. Cupiditate est consequatur alias. Voluptatem ratione inventore voluptas iure repudiandae ut est."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "price": {
+                          "type": "number"
+                        },
+                        "weight": {
+                          "type": "number"
+                        },
+                        "quantity": {
+                          "type": "number"
+                        },
+                        "minimumOrder": {
+                          "type": "number"
+                        },
+                        "handlingFee": {
+                          "type": "number"
+                        },
+                        "status": {
+                          "type": "string"
+                        },
+                        "_id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "imageUrl": {
+                          "type": "string"
+                        },
+                        "expiryDate": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "updatedAt": {
+                          "type": "string"
+                        },
+                        "__v": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "price": 500,
+                    "weight": 30,
+                    "quantity": 10,
+                    "minimumOrder": 0,
+                    "handlingFee": 10,
+                    "status": "pending",
+                    "_id": "625a02078c9c3927d3830155",
+                    "name": "Fantastic Granite Keyboard",
+                    "imageUrl": "http://placeimg.com/640/480",
+                    "expiryDate": "2022-04-15T23:38:47.364Z",
+                    "description": "Eveniet quidem doloribus assumenda nisi soluta nemo quia eos. Architecto rerum dolorem unde corrupti nemo quis qui. In pariatur illo nulla rerum et repudiandae unde voluptatem. Cupiditate est consequatur alias. Voluptatem ratione inventore voluptas iure repudiandae ut est.",
+                    "createdAt": "Sat Apr 16 2022 00:38:47 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-16T00:38:47+01:00",
+                    "__v": 0
                   }
                 }
               }

@@ -23,12 +23,12 @@ class CreateProductValidator extends GenericValidator {
     imageUrl: { type: 'url', trim: true, min: 5 },
     name: { type: 'string', trim: true, min: 5 },
     categoryId: { type: 'string', trim: true, min: 5 },
-    price: { type: 'number', min: 1, positive: true },
-    weight: { type: 'number', min: 1, positive: true },
-    quantity: { type: 'number', min: 1, positive: true },
-    expiryDate: { type: 'date', min: 1 },
-    minimumOrder: { type: 'number', min: 1, positive: true },
-    handlingFee: { type: 'number', min: 1, positive: true },
+    price: { type: 'number', positive: true },
+    weight: { type: 'number', positive: true },
+    quantity: { type: 'number', positive: true },
+    expiryDate: { type: 'date', convert: true },
+    minimumOrder: { type: 'number', min: 0 },
+    handlingFee: { type: 'number', min: 0 },
     description: { type: 'string', trim: true, min: 5 },
   };
 }
@@ -81,7 +81,7 @@ class BusinessRegisterValidator extends GenericValidator {
         type: { type: 'string', trim: true, min: 5 },
         name: { type: 'string', trim: true, min: 5 },
         cacNumber: { type: 'string', trim: true, min: 5 },
-        state: { type: 'string', trim: true, min: 5 },
+        state: { type: 'string', trim: true },
         lga: { type: 'string', trim: true, min: 5 },
         address: {
           type: 'object',

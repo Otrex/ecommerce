@@ -2,7 +2,6 @@ const supertest = require('supertest');
 const app = require('../../src/app');
 const faker = require('faker');
 const { getToken } = require('../utils');
-const { seed } = require('../../src/scripts/seeds');
 const { ACCOUNT_TYPES } = require('../../src/constants');
 const { documentation } = require('../setup');
 const { assert } = require('chai');
@@ -87,17 +86,17 @@ describe('Authentication', () => {
   });
 });
 
-// describe('Email verification', () => {
-//   it('email verify client', async () => {
-//     const { token, accountId } = await getToken(userClient);
-//     const res = await server.post('/v1/auth/verify-email').send({
-//       token,
-//       accountId,
-//     });
-//     console.log(res.body, res.error);
-//     assert.equal(res.status, 200);
-//   });
-// });
+describe('Email verification', () => {
+  it('email verify client', async () => {
+    const { token, accountId } = await getToken(userClient);
+    const res = await server.post('/v1/auth/verify-email').send({
+      token,
+      accountId,
+    });
+    console.log(res.body, res.error);
+    assert.equal(res.status, 200);
+  });
+});
 
 // describe('Login', () => {
 //   it('login client', async () => {

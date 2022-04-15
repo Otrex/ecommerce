@@ -16,7 +16,6 @@ router
 router
   .route('/files/generate-upload-url')
   .get(
-    authentication(TOKEN_FLAG.AUTH),
     InfoController.generateSignedURL
   );
 

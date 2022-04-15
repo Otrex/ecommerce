@@ -36,7 +36,6 @@ const stream = {
 app.use(
   morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream })
 );
-app.use(logVisited);
 
 /* ROUTES */
 app.use('/v1', require('./http/routes'));

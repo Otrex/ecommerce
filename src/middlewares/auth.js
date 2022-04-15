@@ -5,6 +5,7 @@ const {
 const { ObjectId } = require('../http/types');
 const models = require('../http/models');
 const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../constants');
+const { decodeToken } = require('../scripts/utils')
 
 module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
@@ -45,7 +46,7 @@ module.exports = {
           );
         }
 
-        const { accountId, flag, counter } = await utils.decodeToken(
+        const { accountId, flag, counter } = await decodeToken(
           token
         );
 
