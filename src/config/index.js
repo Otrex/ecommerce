@@ -31,4 +31,14 @@ module.exports = {
     from: process.env.APP_EMAIL,
     sgKey: process.env.SENDGRID_KEY,
   },
+  admin: {
+    email: process.env.ADMIN_EMAIL,
+    password: process.env.ADMIN_PASSWORD
+  },
+  s3: {
+    endpoint: process.env.S3_ENDPOINT,
+    accessKey: process.env.S3_ACCESS_KEY,
+    secretKey: process.env.S3_SECRET_KEY,
+    bucket: process.env.S3_BUCKET,
+  },
 };

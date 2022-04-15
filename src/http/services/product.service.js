@@ -1,8 +1,8 @@
 const models = require('../models');
 const ObjectId = require('mongoose').Types.ObjectId;
 
-class DropOffService {
-  static createDropOff = async ({ items }) => {
+class ProductService {
+  static createProduct = async ({ items }) => {
     const newItems = items.map((item) => ({
       quantity: item.quantity,
       weightId: ObjectId(item.weightId),
@@ -20,4 +20,4 @@ class DropOffService {
   };
 }
 
-module.exports = DropOffService;
+module.exports = ProductService;

@@ -1,13 +1,21 @@
 const mongoose = require('mongoose');
 const timestamp = require('./plugins/timestamp');
+const { PRODUCT_STATUS } = require('../../constants');
 
 const productSchema = new mongoose.Schema(
   {
     creatorId: {
       type: mongoose.Types.ObjectId,
+      ref: 'Business',
     },
     imageUrl: String,
     name: String,
+    feedbackId: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'FeedBack',
+      }
+    ],
     categoryId: {
       type: mongoose.Types.ObjectId,
       ref: 'Category',
@@ -16,32 +24,31 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    orderNo: {
+    weight: {
       type: Number,
       default: 0,
     },
-    state: {
+    quantity: {
+      type: Number,
+      default: 0,
+    },
+    expiryDate: {
+      type: Date,
+    },
+    minimumOrder: {
+      type: Number,
+      default: 0,
+    },
+    handlingFee: {
+      type: Number,
+      default: 0,
+    },
+    description: {
       type: String,
-      enum: ['drafted', 'submited'],
     },
     status: {
       type: String,
-      enum: ['completed', 'saved'],
-    },
-    timeline: [
-      {
-        time: {
-          type: Date,
-        },
-        status: {
-          type: String,
-          enum: ['user', 'admin'],
-        },
-      },
-    ],
-
-    confirmation: {
-      boolean: false,
+      enum: Object.values(PRODUCT_STATUS),
     },
   },
   { timestamps: true }

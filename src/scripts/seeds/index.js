@@ -1,7 +1,9 @@
 const seeder = require('mongoose-seed');
+const Account = require('../../http/models/Account')
 const { dbUri } = require('../../database');
-
-const models = ['ItemCategory', 'ItemWeight'];
+const config = require('../../config');
+const bcryptHash = require('../utils');
+const models = ['admin', 'ItemWeight'];
 
 const data = [
   {
@@ -26,6 +28,25 @@ exports.seed = () => {
   });
 };
 
+exports.seedAdmin = async () => {
+  let account = await Account.findOne({
+    email: config.admin.email
+  });
+
+  if (!account) {
+    account = await Account.create({
+      isSuperAdmin: true,
+      email: config.admin.email,
+      password: '1234',
+    })
+  }
+
+  await Account.findByIdAndUpdate(account._id, {
+    password: await bcryptHash(config.admin.password),
+  })
+}
+
 if (require.main === module) {
+  seedAdmin();
   seed();
 }

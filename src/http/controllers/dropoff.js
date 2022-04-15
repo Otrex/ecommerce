@@ -1,5 +1,5 @@
 const RequestHandler = require('.');
-const DropOffService = require('../services/dropoff.service');
+const DropOffService = require('../services/product.service');
 const { CreateDropOffValidator } = require('../validators');
 
 class DropOffController {

@@ -6,6 +6,11 @@ module.exports = {
     BUSINESS: 'business',
     ADMIN: 'admin',
   },
+  PRODUCT_STATUS: {
+    APROVED: 'aproved',
+    PENDING: 'pending',
+    DISSAPROVED: 'dissaproved',
+  },
   TOKEN_FLAG: {
     AUTH: 'auth',
     EMAIL_VERIFY: 'email_verification',
