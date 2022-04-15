@@ -1,4 +1,7 @@
-const { ValidationError, ServiceError } = require('../../lib/exceptions');
+const {
+  ValidationError,
+  ServiceError,
+} = require('../../lib/exceptions');
 const Validator = require('fastest-validator');
 const { MESSAGE } = require('../../../constants');
 

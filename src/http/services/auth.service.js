@@ -1,4 +1,8 @@
-const { APP_ENV, TOKEN_FLAG, ACCOUNT_TYPES } = require('../../constants');
+const {
+  APP_ENV,
+  TOKEN_FLAG,
+  ACCOUNT_TYPES,
+} = require('../../constants');
 const { ServiceError } = require('../lib/exceptions');
 const ObjectId = require('mongoose').Types.ObjectId;
 const { mailer, mails } = require('../mails');
@@ -25,7 +29,10 @@ class AuthService {
       { select: '+password' }
     );
     if (!account) throw new ServiceError('account does not exist');
-    const passwordMatch = await bcryptCompare(password, account.password);
+    const passwordMatch = await bcryptCompare(
+      password,
+      account.password
+    );
     if (!passwordMatch) throw new ServiceError('password incorrect');
     await models.Account.updateOne(
       { _id: account._id },
@@ -35,25 +42,25 @@ class AuthService {
     let token;
     let tokenType;
     if (account.isEmailVerified) {
-      tokenType = TOKEN_FLAG.AUTH
+      tokenType = TOKEN_FLAG.AUTH;
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.AUTH,
-      }); 
+      });
     } else {
-      tokenType = TOKEN_FLAG.EMAIL_VERIFY
+      tokenType = TOKEN_FLAG.EMAIL_VERIFY;
       token = await generateJWTToken({
         accountId: account._id,
         flag: TOKEN_FLAG.EMAIL_VERIFY,
       });
     }
-    const _account = await models.Account.findById(account._id)
-    return { 
+    const _account = await models.Account.findById(account._id);
+    return {
       data: {
-        account: _account.toJSON(), 
+        account: _account.toJSON(),
         type: tokenType,
         token,
-      }
+      },
     };
   };
 
@@ -77,10 +84,14 @@ class AuthService {
 
     await models.Customer.create({
       accountId: account._id,
-      gender
+      gender,
     });
 
-    const timedToken = await generateTimedToken('register', account._id, 5);
+    const timedToken = await generateTimedToken(
+      'register',
+      account._id,
+      5
+    );
 
     if (config.app.env !== APP_ENV.TEST) {
       verification.addTo(account.email).addData({
@@ -99,14 +110,9 @@ class AuthService {
   static registerBusiness = async ({
     sellerDetails,
     businessDetails,
-    paymentDetails
+    paymentDetails,
   }) => {
-    const {
-      fullName,
-      phoneNumber,
-      email,
-      password,
-    } = sellerDetails;
+    const { fullName, phoneNumber, email, password } = sellerDetails;
 
     const accountExist = await models.Account.findOne({ email });
     if (accountExist) throw new ServiceError('account already exist');
@@ -126,15 +132,19 @@ class AuthService {
     const business = await models.Business.create({
       ...businessDetails,
       accountId: account._id,
-      address: await models.Address.create({ ...address })
-    })
+      address: await models.Address.create({ ...address }),
+    });
 
     await models.BusinessPayment.create({
       businessId: business._id,
       ...paymentDetails,
-    })
+    });
 
-    const timedToken = await generateTimedToken('register', account._id, 5);
+    const timedToken = await generateTimedToken(
+      'register',
+      account._id,
+      5
+    );
 
     if (config.app.env !== APP_ENV.TEST) {
       verification.addTo(account.email).addData({
@@ -157,7 +167,11 @@ class AuthService {
     if (account.isVerified) {
       throw new ServiceError('account has already been verified');
     }
-    const timedToken = await getTimedToken('register', token, account._id);
+    const timedToken = await getTimedToken(
+      'register',
+      token,
+      account._id
+    );
 
     if (!timedToken) {
       throw new ServiceError('invalid or expired token');
@@ -199,7 +213,11 @@ class AuthService {
     };
   };
 
-  static resetPassword = async ({ token, confirmPassword, password }) => {
+  static resetPassword = async ({
+    token,
+    confirmPassword,
+    password,
+  }) => {
     if (confirmPassword !== password) {
       throw new ServiceError('password does not match');
     }
@@ -243,7 +261,11 @@ class AuthService {
       type: 'register',
     });
 
-    const timedToken = await generateTimedToken('register', account.id, 5);
+    const timedToken = await generateTimedToken(
+      'register',
+      account.id,
+      5
+    );
 
     verification.addTo(account.email).addData({
       account,

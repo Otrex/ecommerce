@@ -1,10 +1,23 @@
 const express = require('express');
 const InfoController = require('../controllers/info');
-const { authentication } = require('../../middlewares/auth');
+const { authentication, isAdmin } = require('../../middlewares/auth');
+const { TOKEN_FLAG } = require('../../constants');
 const router = express.Router();
 
-router.use(authentication);
-router.get('/categories', InfoController.getCategories);
-router.get('/weights', InfoController.getWeights);
+router
+  .route('/categories')
+  .get(InfoController.getCategories)
+  .post(
+    authentication(TOKEN_FLAG.AUTH),
+    isAdmin,
+    InfoController.addCategory
+  );
+
+router
+  .route('/files/generate-upload-url')
+  .get(
+    authentication(TOKEN_FLAG.AUTH),
+    InfoController.generateSignedURL
+  );
 
 module.exports = router;

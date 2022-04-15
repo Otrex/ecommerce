@@ -2,7 +2,9 @@ const path = require('path');
 const config = require('../../config');
 const sgMail = require('@sendgrid/mail');
 const { Mail, MailerTemplateSetup } = require('mail-template-sender');
-const { SendGridProvider } = require('mail-template-sender/providers');
+const {
+  SendGridProvider,
+} = require('mail-template-sender/providers');
 
 sgMail.setApiKey(config.email.sgKey);
 const sgProvider = new SendGridProvider(sgMail);

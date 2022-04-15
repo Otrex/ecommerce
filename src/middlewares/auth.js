@@ -10,9 +10,12 @@ module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
     return (req, res, next) => {
       const { account } = req.session;
+      if (account.isSuperAdmin) next();
       if (!userTypes.includes(account.type)) {
         return next(
-          new AuthorizationError('user not authorized to access this route')
+          new AuthorizationError(
+            'user not authorized to access this route'
+          )
         );
       }
       next();
@@ -22,7 +25,9 @@ module.exports = {
     const { account } = req.session;
     if (!account.isSuperAdmin) {
       return next(
-        new AuthorizationError('user not authorized to access this route')
+        new AuthorizationError(
+          'user not authorized to access this route'
+        )
       );
     }
     next();
@@ -40,15 +45,21 @@ module.exports = {
           );
         }
 
-        const { accountId, flag, counter } = await utils.decodeToken(token);
+        const { accountId, flag, counter } = await utils.decodeToken(
+          token
+        );
 
         if (!accountId) {
-          return next(new AuthenticationError('unable to verify token'));
+          return next(
+            new AuthenticationError('unable to verify token')
+          );
         }
 
         if (flag !== tokenFlag) {
           return next(
-            new AuthenticationError(`token is not valid for ${tokenFlag}`)
+            new AuthenticationError(
+              `token is not valid for ${tokenFlag}`
+            )
           );
         }
 

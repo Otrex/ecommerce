@@ -14,7 +14,7 @@ const productSchema = new mongoose.Schema(
       {
         type: mongoose.Types.ObjectId,
         ref: 'FeedBack',
-      }
+      },
     ],
     categoryId: {
       type: mongoose.Types.ObjectId,
@@ -49,6 +49,7 @@ const productSchema = new mongoose.Schema(
     status: {
       type: String,
       enum: Object.values(PRODUCT_STATUS),
+      default: PRODUCT_STATUS.PENDING,
     },
   },
   { timestamps: true }

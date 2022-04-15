@@ -1,22 +1,58 @@
+const { NotFoundError } = require('../lib/exceptions');
 const models = require('../models');
 const ObjectId = require('mongoose').Types.ObjectId;
 
 class ProductService {
-  static createProduct = async ({ items }) => {
-    const newItems = items.map((item) => ({
-      quantity: item.quantity,
-      weightId: ObjectId(item.weightId),
-      categoryId: ObjectId(item.categoryId),
-    }));
+  static createProduct = async ({
+    account,
+    imageUrl,
+    name,
+    categoryId,
+    price,
+    weight,
+    quantity,
+    expiryDate,
+    minimumOrder,
+    handlingFee,
+    description,
+  }) => {
+    const vendor = await models.Business.findOne({
+      accountId: account._id,
+    });
+    if (!vendor) throw new NotFoundError('vendor not found');
 
-    const dropOff = new models.DropOff();
-    dropOff.orderNo = Math.floor(Math.random() * 999999);
+    const category = await models.Category.findOne({
+      _id: ObjectId(categoryId),
+    });
+    if (!category) throw new NotFoundError('category not found');
 
-    newItems.forEach((item) => {
-      dropOff.items.push(item);
+    const product = await models.Product.create({
+      name,
+      price,
+      weight,
+      quantity,
+      imageUrl,
+      expiryDate,
+      description,
+      handlingFee,
+      minimumOrder,
+      creatorId: vendor._id,
+      category: category._id,
     });
 
-    return { data: await dropOff.save() };
+    return { data: product };
+  };
+
+  static getProducts_Business = async ({ account }) => {
+    const vendor = await models.Business.findOne({
+      accountId: account._id,
+    });
+    if (!vendor) throw new NotFoundError('vendor not found');
+
+    // TODO paginate
+    const products = await models.Product.find({
+      creatorId: vendor._id,
+    });
   };
 }
 

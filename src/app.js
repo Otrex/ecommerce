@@ -33,7 +33,9 @@ const stream = {
   write: log.info.bind(log),
 };
 
-app.use(morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream }));
+app.use(
+  morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream })
+);
 app.use(logVisited);
 
 /* ROUTES */

@@ -13,8 +13,8 @@ const customerSchema = new Schema({
     ref: Address,
   },
   gender: {
-    type: String
-  }
+    type: String,
+  },
 });
 
 customerSchema.plugin(timestamp);

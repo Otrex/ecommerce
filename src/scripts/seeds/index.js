@@ -1,24 +1,22 @@
 const seeder = require('mongoose-seed');
-const Account = require('../../http/models/Account')
+const Account = require('../../http/models/Account');
 const { dbUri } = require('../../database');
 const config = require('../../config');
 const bcryptHash = require('../utils');
-const models = ['admin', 'ItemWeight'];
+const models = ['Category'];
 
 const data = [
   {
-    model: 'ItemCategory',
-    documents: require('./data/itemCategory.js'),
-  },
-  {
-    model: 'ItemWeight',
-    documents: require('./data/itemWeight.js'),
+    model: 'Category',
+    documents: require('./data/categories.js'),
   },
 ];
 
 exports.seed = () => {
   seeder.connect(dbUri, () => {
-    seeder.loadModels(models.map((model) => `./src/models/${model}.js`));
+    seeder.loadModels(
+      models.map((model) => `./src/models/${model}.js`)
+    );
 
     seeder.clearModels(models, () => {
       seeder.populateModels(data, () => {
@@ -30,7 +28,7 @@ exports.seed = () => {
 
 exports.seedAdmin = async () => {
   let account = await Account.findOne({
-    email: config.admin.email
+    email: config.admin.email,
   });
 
   if (!account) {
@@ -38,13 +36,13 @@ exports.seedAdmin = async () => {
       isSuperAdmin: true,
       email: config.admin.email,
       password: '1234',
-    })
+    });
   }
 
   await Account.findByIdAndUpdate(account._id, {
     password: await bcryptHash(config.admin.password),
-  })
-}
+  });
+};
 
 if (require.main === module) {
   seedAdmin();

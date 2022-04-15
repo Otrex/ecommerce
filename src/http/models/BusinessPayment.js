@@ -15,14 +15,18 @@ const businessPaymentSchema = new Schema({
     type: String,
   },
   accountName: {
-    type: String
+    type: String,
   },
-  payoutFrequency: { // in days
-    type: Number
-  }
+  payoutFrequency: {
+    // in days
+    type: Number,
+  },
 });
 
 businessPaymentSchema.plugin(timestamp);
 
-const businessPaymentModel = mongoose.model('BusinessPayment', businessPaymentSchema);
+const businessPaymentModel = mongoose.model(
+  'BusinessPayment',
+  businessPaymentSchema
+);
 module.exports = businessPaymentModel;

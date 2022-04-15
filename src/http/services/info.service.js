@@ -2,11 +2,12 @@ const models = require('../models');
 
 class InfoService {
   static getCategories = async () => ({
-    data: await models.ItemCategory.find({}),
+    data: await models.Category.find({}),
   });
-
-  static getWeights = async () => ({
-    data: await models.ItemWeight.find({}),
+  static addCategory = async ({ name }) => ({
+    data: await models.Category.create({
+      name,
+    }),
   });
 }
 

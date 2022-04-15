@@ -40,7 +40,7 @@ describe('Authentication', () => {
           phoneNumber: '+2345678765456',
           fullName: [
             faker.name.firstName(),
-            faker.name.lastName()
+            faker.name.lastName(),
           ].join(' '),
         },
         businessDetails: {
@@ -60,10 +60,10 @@ describe('Authentication', () => {
           bank: faker.company.catchPhrase(),
           accountName: [
             faker.name.firstName(),
-            faker.name.lastName()
+            faker.name.lastName(),
           ].join(' '),
-          payoutFrequency: 5
-        }
+          payoutFrequency: 5,
+        },
       });
 
       console.log(res.body, res.error);

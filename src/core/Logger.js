@@ -95,19 +95,31 @@ class Logger {
       }
       switch (level) {
         case 'error':
-          console.error(this.specifiedColor || colours.fg.red, ...output);
+          console.error(
+            this.specifiedColor || colours.fg.red,
+            ...output
+          );
           break;
 
         case 'warn':
-          console.warn(this.specifiedColor || colours.fg.yellow, ...output);
+          console.warn(
+            this.specifiedColor || colours.fg.yellow,
+            ...output
+          );
           break;
 
         case 'info':
-          console.log(this.specifiedColor || colours.fg.blue, ...output);
+          console.log(
+            this.specifiedColor || colours.fg.blue,
+            ...output
+          );
           break;
 
         default:
-          console.log(this.specifiedColor || colours.reset, ...output);
+          console.log(
+            this.specifiedColor || colours.reset,
+            ...output
+          );
           break;
       }
     }

@@ -27,6 +27,9 @@ const timedTokenSchema = new mongoose.Schema({
 
 timedTokenSchema.plugin(timestamp);
 
-const timedTokenModel = mongoose.model('TimedToken', timedTokenSchema);
+const timedTokenModel = mongoose.model(
+  'TimedToken',
+  timedTokenSchema
+);
 
 module.exports = timedTokenModel;

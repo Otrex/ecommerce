@@ -40,7 +40,9 @@ class DB {
       });
       log
         .useColor('cyan')
-        .info(`mongodb connected:: @${this.connection.connection.host}`);
+        .info(
+          `mongodb connected:: @${this.connection.connection.host}`
+        );
       return this;
     } catch (err) {
       log.error('mongodb failed to connect', err);

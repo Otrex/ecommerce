@@ -22,7 +22,7 @@ const mochaHooks = {
     if (!nock.isDone()) {
       global.console.error(
         'Not all nock interceptors were used',
-        nock.pendingMocks(),
+        nock.pendingMocks()
       );
       nock.cleanAll();
     }
@@ -31,5 +31,5 @@ const mochaHooks = {
 
 module.exports = {
   documentation,
-  mochaHooks
-}
+  mochaHooks,
+};

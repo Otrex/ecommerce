@@ -41,7 +41,8 @@ const errorHandler = (err, req, res, next) => {
       return res.status(500).send({
         status: 'error',
         message: 'an error occurred',
-        ...(config.app.env === 'development' || config.app.env === 'test'
+        ...(config.app.env === 'development' ||
+        config.app.env === 'test'
           ? { stack: err.stack }
           : {}),
       });

@@ -14,7 +14,14 @@ class Documentator {
   pathToTempFile;
   shouldDocument = true;
 
-  constructor(fileName, title, url, port, version = '1.0.0', storageLocation) {
+  constructor(
+    fileName,
+    title,
+    url,
+    port,
+    version = '1.0.0',
+    storageLocation
+  ) {
     this.fileName = fileName;
     this.fileName = fileName;
     this.storageLocation = storageLocation;
@@ -54,7 +61,8 @@ class Documentator {
     this.shouldDocument = false;
   }
   terminalDocumentingControl() {
-    if (!process.argv.includes('generate:documentation')) this.switchOff();
+    if (!process.argv.includes('generate:documentation'))
+      this.switchOff();
   }
   store(key, value) {
     this.xstore[key] = value;
@@ -112,7 +120,10 @@ class Documentator {
   getHeaderParameters(headers) {
     return Object.keys(headers)
       .filter(
-        (key) => !['User-Agent', 'Content-Type', 'Authorization'].includes(key)
+        (key) =>
+          !['User-Agent', 'Content-Type', 'Authorization'].includes(
+            key
+          )
       )
       .map((header) => ({
         in: 'header',
@@ -191,7 +202,9 @@ class Documentator {
         .split('/')
         .slice(1)
         .map((segment, index) => {
-          const param = options.pathParameters.find((p) => p.index === index);
+          const param = options.pathParameters.find(
+            (p) => p.index === index
+          );
           if (param) {
             return `{${param.name}}`;
           }
@@ -204,7 +217,9 @@ class Documentator {
 
   retrieveEndpoints() {
     if (!this.shouldDocument) return;
-    const data = JSON.parse(fs.readFileSync(this.pathToTempFile, 'utf8'));
+    const data = JSON.parse(
+      fs.readFileSync(this.pathToTempFile, 'utf8')
+    );
     // console.log(data)
     this.endpoints = data;
   }

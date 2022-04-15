@@ -3,10 +3,8 @@ const router = express.Router();
 
 router.use('/auth', require('./auth'));
 
-router.use('/dropoff', require('./dropoff'));
+router.use('/products', require('./product'));
 
 router.use('/info', require('./info'));
-
-// router.use('/items', require('./items'));
 
 module.exports = router;
