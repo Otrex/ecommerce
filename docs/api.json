@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Bailee.Haag@yahoo.com",
-                "password": "c6vFhcXEyZTYWu9",
-                "firstName": "Wellington",
-                "lastName": "Von",
+                "email": "Grayson.Ortiz@yahoo.com",
+                "password": "CQrD6goiyI2PoJ8",
+                "firstName": "Mortimer",
+                "lastName": "Hessel",
                 "gender": "male"
               }
             }
@@ -174,27 +174,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Samanta38@yahoo.com",
-                  "password": "3QUEHAmPsyl_6Pm",
+                  "email": "Cierra.Feest@yahoo.com",
+                  "password": "gub_e7Vh9tqa16r",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Ahmed Klein"
+                  "fullName": "Erling Pfannerstill"
                 },
                 "businessDetails": {
-                  "type": "Polarised directional internet solution",
-                  "name": "Integrated maximized parallelism",
-                  "cacNumber": "Centralized executive time-frame",
-                  "state": "Alabama",
-                  "lga": "Arizona",
+                  "type": "Realigned static adapter",
+                  "name": "Versatile tertiary moratorium",
+                  "cacNumber": "Persistent solution-oriented internet solution",
+                  "state": "Nevada",
+                  "lga": "Oregon",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Ghana"
+                    "label": "Samoa"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Cross-group non-volatile firmware",
-                  "accountName": "Orie Sanford",
+                  "bank": "Multi-channelled contextually-based neural-net",
+                  "accountName": "Derick O'Conner",
                   "payoutFrequency": 5
                 }
               }
@@ -250,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Bailee.Haag@yahoo.com",
-                "password": "c6vFhcXEyZTYWu9",
+                "email": "Grayson.Ortiz@yahoo.com",
+                "password": "CQrD6goiyI2PoJ8",
                 "type": "customer"
               }
             }
@@ -327,20 +327,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-15T23:49:42.938Z",
+                      "lastLoggedIn": "2022-04-20T23:23:20.742Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "625a0495b89e772aec050316",
-                      "firstName": "Wellington",
-                      "lastName": "Von",
-                      "email": "Bailee.Haag@yahoo.com",
-                      "updatedAt": "2022-04-16T00:49:41+01:00",
-                      "createdAt": "2022-04-16T00:49:41+01:00",
+                      "_id": "626095e77f883b21c2d8d0ed",
+                      "firstName": "Mortimer",
+                      "lastName": "Hessel",
+                      "email": "Grayson.Ortiz@yahoo.com",
+                      "updatedAt": "2022-04-21T00:23:19+01:00",
+                      "createdAt": "2022-04-21T00:23:19+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjVhMDQ5NWI4OWU3NzJhZWMwNTAzMTYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkRxU3BVcjdqRFJjM25DRU5GYjQ1S2hEQURjbTBLcXc2MGUzbSIsImlhdCI6MTY1MDA2NjU4MiwiZXhwIjoxNjUwMTUyOTgyfQ.RuBuMgjoY7dhlVbigmNbZN9Q8La9qPbwJBudAgn0-3c"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjYwOTVlNzdmODgzYjIxYzJkOGQwZWQiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IktqOG9yZGhJTk8xNm1aUzZjVVRyUnpSNTNYalFjR3FtaUhEVyIsImlhdCI6MTY1MDQ5NzAwMCwiZXhwIjoxNjUwNTgzNDAwfQ.8zA2-XmugoUrBmA6wa4EnL8fldyScV_UlbRHp0UfgG0"
                   }
                 }
               }
@@ -388,23 +388,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "625a0493b89e772aec050308",
-                      "name": "Clothings",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "625a0493b89e772aec05030a",
-                      "name": "Phones",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "625a0493b89e772aec050304",
+                      "_id": "626095e57f883b21c2d8d0db",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "625a0493b89e772aec050306",
+                      "_id": "626095e57f883b21c2d8d0dd",
                       "name": "Livestock",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "626095e57f883b21c2d8d0df",
+                      "name": "Clothings",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "626095e57f883b21c2d8d0e1",
+                      "name": "Phones",
                       "__v": 0
                     }
                   ]
@@ -461,15 +461,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Intelligent Plastic Car",
-                "categoryId": "625a0493b89e772aec050308",
+                "name": "Small Wooden Cheese",
+                "categoryId": "626095e57f883b21c2d8d0db",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-15T23:49:43.066Z",
+                "expiryDate": "2022-04-20T23:23:21.061Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Perferendis placeat debitis placeat qui non. Neque pariatur nihil voluptas eos perferendis. Id voluptate necessitatibus omnis harum praesentium."
+                "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis."
               }
             }
           }
@@ -543,14 +543,161 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "625a0497b89e772aec050333",
-                    "name": "Intelligent Plastic Car",
+                    "_id": "626095e97f883b21c2d8d110",
+                    "name": "Small Wooden Cheese",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-15T23:49:43.066Z",
-                    "description": "Perferendis placeat debitis placeat qui non. Neque pariatur nihil voluptas eos perferendis. Id voluptate necessitatibus omnis harum praesentium.",
-                    "createdAt": "Sat Apr 16 2022 00:49:43 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-16T00:49:43+01:00",
+                    "expiryDate": "2022-04-20T23:23:21.061Z",
+                    "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis.",
+                    "createdAt": "Thu Apr 21 2022 00:23:21 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-21T00:23:21+01:00",
                     "__v": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "feedbackId": {
+                            "type": "array",
+                            "items": {}
+                          },
+                          "price": {
+                            "type": "number"
+                          },
+                          "weight": {
+                            "type": "number"
+                          },
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "minimumOrder": {
+                            "type": "number"
+                          },
+                          "handlingFee": {
+                            "type": "number"
+                          },
+                          "status": {
+                            "type": "string"
+                          },
+                          "_id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "imageUrl": {
+                            "type": "string"
+                          },
+                          "expiryDate": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "creatorId": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    },
+                    "pageData": {
+                      "type": "object",
+                      "properties": {
+                        "total": {
+                          "type": "number"
+                        },
+                        "currentPage": {
+                          "type": "number"
+                        },
+                        "nextPage": {},
+                        "prevPage": {},
+                        "lastPage": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": [
+                    {
+                      "feedbackId": [],
+                      "price": 500,
+                      "weight": 30,
+                      "quantity": 10,
+                      "minimumOrder": 0,
+                      "handlingFee": 10,
+                      "status": "pending",
+                      "_id": "626095e97f883b21c2d8d110",
+                      "name": "Small Wooden Cheese",
+                      "imageUrl": "http://placeimg.com/640/480",
+                      "expiryDate": "2022-04-20T23:23:21.061Z",
+                      "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis.",
+                      "creatorId": "626095e77f883b21c2d8d0e9",
+                      "createdAt": "Thu Apr 21 2022 00:23:21 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-04-21T00:23:21+01:00",
+                      "__v": 0
+                    }
+                  ],
+                  "pageData": {
+                    "total": 1,
+                    "currentPage": 1,
+                    "nextPage": null,
+                    "prevPage": null,
+                    "lastPage": 1
                   }
                 }
               }

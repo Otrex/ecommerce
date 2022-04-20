@@ -1,6 +1,9 @@
 const RequestHandler = require('.');
 const ProductService = require('../services/product.service');
-const { CreateProductValidator } = require('../validators');
+const { 
+  CreateProductValidator, 
+  GetBusinessProductValidator 
+} = require('../validators');
 
 class ProductController {
   static createProduct = RequestHandler({
@@ -9,6 +12,7 @@ class ProductController {
   });
 
   static getProduct_Business = RequestHandler({
+    validator: GetBusinessProductValidator,
     handler: ProductService.getProducts_Business,
   });
 }

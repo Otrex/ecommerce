@@ -1,6 +1,11 @@
 const { ACCOUNT_TYPES } = require('../../constants');
 const GenericValidator = require('./core');
 
+const paginationSchemaFragment = {
+  page: { type: 'number', convert: true, min: 1 },
+  limit: { type: 'number', convert: true, min: 1 }
+}
+
 class LoginValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -61,6 +66,14 @@ class CustomerRegisterValidator extends GenericValidator {
     lastName: { type: 'string', trim: true, min: 1 },
     gender: { type: 'string', trim: true, min: 4 },
   };
+}
+
+class GetBusinessProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+    status: { type: 'string', min: 0, trim: true }
+  }
 }
 
 class BusinessRegisterValidator extends GenericValidator {
@@ -158,6 +171,7 @@ module.exports = {
   PasswordResetValidator,
   InitPasswordResetValidator,
   ResendVerificationEmailValidator,
+  GetBusinessProductValidator,
   CustomerRegisterValidator,
   BusinessRegisterValidator,
   CreateProductValidator,

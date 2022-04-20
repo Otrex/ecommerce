@@ -60,5 +60,16 @@ describe('Product', () => {
       assert.equal(res.status, 200);
       documentation.addEndpoint(res);
     });
+
+    it('get products', async () => {
+      const res = await server.get('/v1/products?status=approved,disapproved,pending&page=1&limit=20')
+        .set({'Authorization': `Bearer ${result.token}`});
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res);
+    })
   });
+
+  
 });

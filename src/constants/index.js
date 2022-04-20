@@ -7,9 +7,9 @@ module.exports = {
     ADMIN: 'admin',
   },
   PRODUCT_STATUS: {
-    APROVED: 'aproved',
+    APROVED: 'approved',
     PENDING: 'pending',
-    DISSAPROVED: 'dissaproved',
+    DISSAPROVED: 'disapproved',
   },
   TOKEN_FLAG: {
     AUTH: 'auth',

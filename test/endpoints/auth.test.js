@@ -112,30 +112,30 @@ describe('Email verification', () => {
 //   });
 // });
 
-// describe('Forgot Password', () => {
-//   it('forgot password client', async () => {
-//     const res = await server.post('/v1/auth/forgot-password').send({
-//       ...userClient,
-//       type: ACCOUNT_TYPES.CUSTOMER,
-//     });
+describe('Forgot Password', () => {
+  it('forgot password client', async () => {
+    const res = await server.post('/v1/auth/forgot-password').send({
+      ...userClient,
+      type: ACCOUNT_TYPES.CUSTOMER,
+    });
 
-//     console.log(res.body, res.error);
-//     assert.equal(res.status, 200);
-//     userClient.resetToken = res.body.token;
-//   });
-// });
+    console.log(res.body, res.error);
+    assert.equal(res.status, 200);
+    userClient.resetToken = res.body.token;
+  });
+});
 
-// describe('Reset Password', () => {
-//   it('reset password client', async () => {
-//     const password = '12345rrr';
-//     const res = await server.post('/v1/auth/reset-password').send({
-//       token: userClient.resetToken,
-//       confirmPassword: password,
-//       password,
-//     });
+describe('Reset Password', () => {
+  it('reset password client', async () => {
+    const password = '12345rrr';
+    const res = await server.post('/v1/auth/reset-password').send({
+      token: userClient.resetToken,
+      confirmPassword: password,
+      password,
+    });
 
-//     assert.equal(res.status, 200);
-//     console.log(res.body);
-//     // userClient.accountId = res.body.data._id;
-//   });
-// });
+    assert.equal(res.status, 200);
+    console.log(res.body);
+    // userClient.accountId = res.body.data._id;
+  });
+});
