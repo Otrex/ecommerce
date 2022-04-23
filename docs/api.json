@@ -27,7 +27,7 @@
     }
   ],
   "paths": {
-    "/v1/auth/register/buyer": {
+    "/v1/auth/buyer/register": {
       "post": {
         "description": "",
         "tags": [],
@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Grayson.Ortiz@yahoo.com",
-                "password": "CQrD6goiyI2PoJ8",
-                "firstName": "Mortimer",
-                "lastName": "Hessel",
+                "email": "Jesus.Cartwright38@gmail.com",
+                "password": "VXkUIc8EGXhnKOl",
+                "firstName": "Verner",
+                "lastName": "Jerde",
                 "gender": "male"
               }
             }
@@ -91,7 +91,7 @@
         }
       }
     },
-    "/v1/auth/register/vendor": {
+    "/v1/auth/vendor/register": {
       "post": {
         "description": "",
         "tags": [],
@@ -174,27 +174,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Cierra.Feest@yahoo.com",
-                  "password": "gub_e7Vh9tqa16r",
+                  "email": "Anais.Langworth20@yahoo.com",
+                  "password": "6bDDboVRHAGCz_W",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Erling Pfannerstill"
+                  "fullName": "Alf Block"
                 },
                 "businessDetails": {
-                  "type": "Realigned static adapter",
-                  "name": "Versatile tertiary moratorium",
-                  "cacNumber": "Persistent solution-oriented internet solution",
-                  "state": "Nevada",
-                  "lga": "Oregon",
+                  "type": "Switchable dynamic data-warehouse",
+                  "name": "Inverse multi-tasking database",
+                  "cacNumber": "Virtual maximized throughput",
+                  "state": "Kentucky",
+                  "lga": "North Carolina",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Samoa"
+                    "label": "Papua New Guinea"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Multi-channelled contextually-based neural-net",
-                  "accountName": "Derick O'Conner",
+                  "bank": "Progressive bi-directional website",
+                  "accountName": "Lura Considine",
                   "payoutFrequency": 5
                 }
               }
@@ -250,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Grayson.Ortiz@yahoo.com",
-                "password": "CQrD6goiyI2PoJ8",
+                "email": "Jesus.Cartwright38@gmail.com",
+                "password": "VXkUIc8EGXhnKOl",
                 "type": "customer"
               }
             }
@@ -327,20 +327,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-20T23:23:20.742Z",
+                      "lastLoggedIn": "2022-04-23T22:31:53.843Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "626095e77f883b21c2d8d0ed",
-                      "firstName": "Mortimer",
-                      "lastName": "Hessel",
-                      "email": "Grayson.Ortiz@yahoo.com",
-                      "updatedAt": "2022-04-21T00:23:19+01:00",
-                      "createdAt": "2022-04-21T00:23:19+01:00",
+                      "_id": "62647e58c0c2f62aa3601da2",
+                      "firstName": "Verner",
+                      "lastName": "Jerde",
+                      "email": "Jesus.Cartwright38@gmail.com",
+                      "updatedAt": "2022-04-23T23:31:52+01:00",
+                      "createdAt": "2022-04-23T23:31:52+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjYwOTVlNzdmODgzYjIxYzJkOGQwZWQiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IktqOG9yZGhJTk8xNm1aUzZjVVRyUnpSNTNYalFjR3FtaUhEVyIsImlhdCI6MTY1MDQ5NzAwMCwiZXhwIjoxNjUwNTgzNDAwfQ.8zA2-XmugoUrBmA6wa4EnL8fldyScV_UlbRHp0UfgG0"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY0N2U1OGMwYzJmNjJhYTM2MDFkYTIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkxGWkNyc0JLWnVKNGphdW8yZzgxTndzWUpUMXlzVjhLejlQVSIsImlhdCI6MTY1MDc1MzExMywiZXhwIjoxNjUwODM5NTEzfQ.CVEw3AkFsQOLrQS89uDv25ZcAcMf8euCumrtBttRKDE"
                   }
                 }
               }
@@ -388,23 +388,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "626095e57f883b21c2d8d0db",
+                      "_id": "62647e57c0c2f62aa3601d8e",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "626095e57f883b21c2d8d0dd",
+                      "_id": "62647e57c0c2f62aa3601d90",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "626095e57f883b21c2d8d0df",
-                      "name": "Clothings",
+                      "_id": "62647e57c0c2f62aa3601d94",
+                      "name": "Phones",
                       "__v": 0
                     },
                     {
-                      "_id": "626095e57f883b21c2d8d0e1",
-                      "name": "Phones",
+                      "_id": "62647e57c0c2f62aa3601d92",
+                      "name": "Clothings",
                       "__v": 0
                     }
                   ]
@@ -415,7 +415,70 @@
         }
       }
     },
-    "/v1/products": {
+    "/v1/admin/info/categories": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "optio quo beatae"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "__v": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "_id": "62647e5ac0c2f62aa3601dc5",
+                    "name": "optio quo beatae",
+                    "__v": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/vendor/products": {
       "post": {
         "description": "",
         "tags": [],
@@ -461,15 +524,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Small Wooden Cheese",
-                "categoryId": "626095e57f883b21c2d8d0db",
+                "name": "Refined Granite Pants",
+                "categoryId": "62647e57c0c2f62aa3601d8e",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-20T23:23:21.061Z",
+                "expiryDate": "2022-04-23T22:31:54.273Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis."
+                "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem."
               }
             }
           }
@@ -543,13 +606,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "626095e97f883b21c2d8d110",
-                    "name": "Small Wooden Cheese",
+                    "_id": "62647e5ac0c2f62aa3601dca",
+                    "name": "Refined Granite Pants",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-20T23:23:21.061Z",
-                    "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis.",
-                    "createdAt": "Thu Apr 21 2022 00:23:21 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-21T00:23:21+01:00",
+                    "expiryDate": "2022-04-23T22:31:54.273Z",
+                    "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem.",
+                    "createdAt": "Sat Apr 23 2022 23:31:54 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-23T23:31:54+01:00",
                     "__v": 0
                   }
                 }
@@ -681,14 +744,14 @@
                       "minimumOrder": 0,
                       "handlingFee": 10,
                       "status": "pending",
-                      "_id": "626095e97f883b21c2d8d110",
-                      "name": "Small Wooden Cheese",
+                      "_id": "62647e5ac0c2f62aa3601dca",
+                      "name": "Refined Granite Pants",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-04-20T23:23:21.061Z",
-                      "description": "Ipsum et soluta sunt officiis dolor quae. Itaque magnam doloribus porro reiciendis culpa velit veritatis deleniti quia. Dicta non dolorem laborum. Suscipit eum deleniti id quo consequuntur quis.",
-                      "creatorId": "626095e77f883b21c2d8d0e9",
-                      "createdAt": "Thu Apr 21 2022 00:23:21 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-04-21T00:23:21+01:00",
+                      "expiryDate": "2022-04-23T22:31:54.273Z",
+                      "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem.",
+                      "creatorId": "62647e58c0c2f62aa3601d9c",
+                      "createdAt": "Sat Apr 23 2022 23:31:54 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-04-23T23:31:54+01:00",
                       "__v": 0
                     }
                   ],

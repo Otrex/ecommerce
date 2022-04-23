@@ -5,8 +5,10 @@ const { TOKEN_FLAG } = require('../../constants');
 const router = express.Router();
 
 router
-  .route('/categories')
-  .get(InfoController.getCategories)
+  .route('/info/categories')
+  .get(InfoController.getCategories);
+
+router.route('/admin/info/categories')
   .post(
     authentication(TOKEN_FLAG.AUTH),
     isAdmin,
@@ -14,9 +16,7 @@ router
   );
 
 router
-  .route('/files/generate-upload-url')
-  .get(
-    InfoController.generateSignedURL
-  );
+  .route('/info/files/generate-upload-url')
+  .get(InfoController.generateSignedURL);
 
 module.exports = router;

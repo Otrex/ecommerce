@@ -16,19 +16,25 @@ const userBusiness = {
   type: ACCOUNT_TYPES.BUSINESS
 };
 
+const adminData = {
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  type: ACCOUNT_TYPES.ADMIN,
+  isSuperAdmin: true
+};
+
+
+let admin;
 let result;
 let categories;
 before(async () => {
   result = await createAccountReturnToken(userBusiness);
+  admin = await createAccountReturnToken(adminData);
   categories = await models.Category.find({});
   console.log(categories);
 });
 
 describe('Product', () => {
-  // const {
-  //   token: businessToken,
-  //   // account: businessAccount 
-  // } = result;
   describe('Categories', () => { 
     it('get categories', async () => {
       const res = await server.get('/v1/info/categories')
@@ -38,10 +44,22 @@ describe('Product', () => {
       assert.equal(res.status, 200);
       documentation.addEndpoint(res);
     })
+
+    it('add categories', async () => {
+      const res = await server.post('/v1/admin/info/categories')
+        .set({'Authorization': `Bearer ${admin.token}`})
+        .send({
+          name: faker.lorem.words()
+        });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res);
+    })
   });
   describe('Product', () => {
     it('create product', async () => {
-      const res = await server.post('/v1/products')
+      const res = await server.post('/v1/vendor/products')
         .set({'Authorization': `Bearer ${result.token}`})
         .send({
           imageUrl: faker.image.imageUrl(),
@@ -62,7 +80,7 @@ describe('Product', () => {
     });
 
     it('get products', async () => {
-      const res = await server.get('/v1/products?status=approved,disapproved,pending&page=1&limit=20')
+      const res = await server.get('/v1/vendor/products?status=approved,disapproved,pending&page=1&limit=20')
         .set({'Authorization': `Bearer ${result.token}`});
 
       console.log(res.body, res.error);

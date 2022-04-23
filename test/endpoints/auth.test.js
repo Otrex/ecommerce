@@ -20,7 +20,7 @@ const userBusiness = {
 describe('Authentication', () => {
   describe('Registration', () => {
     it('register client', async () => {
-      const res = await server.post('/v1/auth/register/buyer').send({
+      const res = await server.post('/v1/auth/buyer/register').send({
         ...userClient,
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
@@ -33,7 +33,7 @@ describe('Authentication', () => {
     });
 
     it('register business', async () => {
-      const res = await server.post('/v1/auth/register/vendor').send({
+      const res = await server.post('/v1/auth/vendor/register').send({
         sellerDetails: {
           ...userBusiness,
           phoneNumber: '+2345678765456',

@@ -10,7 +10,7 @@ const router = express.Router();
 router.use(authentication());
 
 router
-  .route('/')
+  .route('/vendor/products')
   .get(
     authorization([ACCOUNT_TYPES.BUSINESS]),
     ProductController.getProduct_Business
