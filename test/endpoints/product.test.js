@@ -31,7 +31,6 @@ before(async () => {
   result = await createAccountReturnToken(userBusiness);
   admin = await createAccountReturnToken(adminData);
   categories = await models.Category.find({});
-  console.log(categories);
 });
 
 describe('Product', () => {

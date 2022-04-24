@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Jesus.Cartwright38@gmail.com",
-                "password": "VXkUIc8EGXhnKOl",
-                "firstName": "Verner",
-                "lastName": "Jerde",
+                "email": "Noelia86@gmail.com",
+                "password": "SaUH0PhNKZMaLrD",
+                "firstName": "Justina",
+                "lastName": "Marvin",
                 "gender": "male"
               }
             }
@@ -174,27 +174,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Anais.Langworth20@yahoo.com",
-                  "password": "6bDDboVRHAGCz_W",
+                  "email": "Melisa25@gmail.com",
+                  "password": "GMLe49sXZhrSR3G",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Alf Block"
+                  "fullName": "Larry Hamill"
                 },
                 "businessDetails": {
-                  "type": "Switchable dynamic data-warehouse",
-                  "name": "Inverse multi-tasking database",
-                  "cacNumber": "Virtual maximized throughput",
-                  "state": "Kentucky",
-                  "lga": "North Carolina",
+                  "type": "Multi-lateral full-range toolset",
+                  "name": "Multi-layered mobile Graphic Interface",
+                  "cacNumber": "Multi-lateral stable data-warehouse",
+                  "state": "Tennessee",
+                  "lga": "Virginia",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Papua New Guinea"
+                    "label": "Russian Federation"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Progressive bi-directional website",
-                  "accountName": "Lura Considine",
+                  "bank": "Enhanced executive paradigm",
+                  "accountName": "Rafael Hansen",
                   "payoutFrequency": 5
                 }
               }
@@ -250,8 +250,8 @@
                 }
               },
               "example": {
-                "email": "Jesus.Cartwright38@gmail.com",
-                "password": "VXkUIc8EGXhnKOl",
+                "email": "Noelia86@gmail.com",
+                "password": "SaUH0PhNKZMaLrD",
                 "type": "customer"
               }
             }
@@ -327,21 +327,530 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-23T22:31:53.843Z",
+                      "lastLoggedIn": "2022-04-24T19:51:35.149Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "62647e58c0c2f62aa3601da2",
-                      "firstName": "Verner",
-                      "lastName": "Jerde",
-                      "email": "Jesus.Cartwright38@gmail.com",
-                      "updatedAt": "2022-04-23T23:31:52+01:00",
-                      "createdAt": "2022-04-23T23:31:52+01:00",
+                      "_id": "6265aa460cb2f565914763a5",
+                      "firstName": "Justina",
+                      "lastName": "Marvin",
+                      "email": "Noelia86@gmail.com",
+                      "updatedAt": "2022-04-24T20:51:34+01:00",
+                      "createdAt": "2022-04-24T20:51:34+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY0N2U1OGMwYzJmNjJhYTM2MDFkYTIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkxGWkNyc0JLWnVKNGphdW8yZzgxTndzWUpUMXlzVjhLejlQVSIsImlhdCI6MTY1MDc1MzExMywiZXhwIjoxNjUwODM5NTEzfQ.CVEw3AkFsQOLrQS89uDv25ZcAcMf8euCumrtBttRKDE"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY1YWE0NjBjYjJmNTY1OTE0NzYzYTUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlZHNjU3Tmt1QTdtT2pobzZxT3pzWUJHVXA5Q3J5Y21IbGpHWSIsImlhdCI6MTY1MDgyOTg5NSwiZXhwIjoxNjUwOTE2Mjk1fQ.aPuwZ1YQ_XXH56PjYDOYym1c_2KC1s-XlzbRXlLPaSI"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/verify-email": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string"
+                  },
+                  "accountId": {
+                    "type": "object",
+                    "properties": {
+                      "_bsontype": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "object",
+                        "properties": {
+                          "0": {
+                            "type": "number"
+                          },
+                          "1": {
+                            "type": "number"
+                          },
+                          "2": {
+                            "type": "number"
+                          },
+                          "3": {
+                            "type": "number"
+                          },
+                          "4": {
+                            "type": "number"
+                          },
+                          "5": {
+                            "type": "number"
+                          },
+                          "6": {
+                            "type": "number"
+                          },
+                          "7": {
+                            "type": "number"
+                          },
+                          "8": {
+                            "type": "number"
+                          },
+                          "9": {
+                            "type": "number"
+                          },
+                          "10": {
+                            "type": "number"
+                          },
+                          "11": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "token": "66247",
+                "accountId": "6265aa460cb2f565914763a5"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "account has been verified",
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY1YWE0NjBjYjJmNTY1OTE0NzYzYTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJFdGF0a21YVTBVRDROZDVzMEV4eGRpU1FBWWZiT3VZUjQxTjIiLCJpYXQiOjE2NTA4Mjk4OTUsImV4cCI6MTY1MDkxNjI5NX0.Ut-Ma9Cv-R3GQChnMIwprVB-gWbp4-uR8TSs2M8e_zY"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/forgot-password": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "accountId": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "email": "Noelia86@gmail.com",
+                "password": "SaUH0PhNKZMaLrD",
+                "accountId": "6265aa460cb2f565914763a5",
+                "type": "customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "please continue to reset your password",
+                  "token": "lJZMENT9rQ2QrI94f6390e-d4c0-43b5-aef8-58f44f761d47"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/reset-password": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "token": {
+                    "type": "string"
+                  },
+                  "confirmPassword": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "token": "lJZMENT9rQ2QrI94f6390e-d4c0-43b5-aef8-58f44f761d47",
+                "confirmPassword": "12345rrr",
+                "password": "12345rrr"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "password reset successful!!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/buyer/cart": {
+      "put": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productId": {
+                    "type": "object",
+                    "properties": {
+                      "_bsontype": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "object",
+                        "properties": {
+                          "0": {
+                            "type": "number"
+                          },
+                          "1": {
+                            "type": "number"
+                          },
+                          "2": {
+                            "type": "number"
+                          },
+                          "3": {
+                            "type": "number"
+                          },
+                          "4": {
+                            "type": "number"
+                          },
+                          "5": {
+                            "type": "number"
+                          },
+                          "6": {
+                            "type": "number"
+                          },
+                          "7": {
+                            "type": "number"
+                          },
+                          "8": {
+                            "type": "number"
+                          },
+                          "9": {
+                            "type": "number"
+                          },
+                          "10": {
+                            "type": "number"
+                          },
+                          "11": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "quantity": {
+                    "type": "number"
+                  }
+                }
+              },
+              "example": {
+                "productId": "6265aa450cb2f56591476399",
+                "quantity": 10
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "_id": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          },
+                          "product": {
+                            "type": "object",
+                            "properties": {
+                              "price": {
+                                "type": "number"
+                              },
+                              "weight": {
+                                "type": "number"
+                              },
+                              "_id": {
+                                "type": "string"
+                              },
+                              "imageUrl": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "description": {
+                                "type": "string"
+                              },
+                              "category": {
+                                "type": "object",
+                                "properties": {
+                                  "_id": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "__v": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "item has been added to cart successfully",
+                  "data": [
+                    {
+                      "quantity": 10,
+                      "_id": "6265aa470cb2f565914763c8",
+                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "__v": 0,
+                      "product": {
+                        "price": 10000,
+                        "weight": 20,
+                        "_id": "6265aa450cb2f56591476399",
+                        "imageUrl": "http://placeimg.com/640/480",
+                        "name": "voluptatem reiciendis est",
+                        "description": "Et minus exercitationem velit reprehenderit quo fugit amet hic. Ut omnis dolorum perspiciatis ad aliquid tenetur. Et nemo repellendus reprehenderit expedita. Assumenda adipisci quia.",
+                        "category": {
+                          "_id": "6265aa430cb2f56591476386",
+                          "name": "Food",
+                          "__v": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "_id": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          },
+                          "product": {
+                            "type": "object",
+                            "properties": {
+                              "price": {
+                                "type": "number"
+                              },
+                              "weight": {
+                                "type": "number"
+                              },
+                              "_id": {
+                                "type": "string"
+                              },
+                              "imageUrl": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "description": {
+                                "type": "string"
+                              },
+                              "category": {
+                                "type": "object",
+                                "properties": {
+                                  "_id": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "__v": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": [
+                    {
+                      "quantity": 10,
+                      "_id": "6265aa470cb2f565914763c8",
+                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "__v": 0,
+                      "product": {
+                        "price": 10000,
+                        "weight": 20,
+                        "_id": "6265aa450cb2f56591476399",
+                        "imageUrl": "http://placeimg.com/640/480",
+                        "name": "voluptatem reiciendis est",
+                        "description": "Et minus exercitationem velit reprehenderit quo fugit amet hic. Ut omnis dolorum perspiciatis ad aliquid tenetur. Et nemo repellendus reprehenderit expedita. Assumenda adipisci quia.",
+                        "category": {
+                          "_id": "6265aa430cb2f56591476386",
+                          "name": "Food",
+                          "__v": 0
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -388,23 +897,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "62647e57c0c2f62aa3601d8e",
+                      "_id": "6265aa430cb2f56591476386",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "62647e57c0c2f62aa3601d90",
+                      "_id": "6265aa440cb2f56591476388",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "62647e57c0c2f62aa3601d94",
-                      "name": "Phones",
+                      "_id": "6265aa440cb2f5659147638a",
+                      "name": "Clothings",
                       "__v": 0
                     },
                     {
-                      "_id": "62647e57c0c2f62aa3601d92",
-                      "name": "Clothings",
+                      "_id": "6265aa440cb2f5659147638c",
+                      "name": "Phones",
                       "__v": 0
                     }
                   ]
@@ -432,7 +941,7 @@
                 }
               },
               "example": {
-                "name": "optio quo beatae"
+                "name": "dolore sequi et"
               }
             }
           }
@@ -467,8 +976,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "62647e5ac0c2f62aa3601dc5",
-                    "name": "optio quo beatae",
+                    "_id": "6265aa470cb2f565914763d7",
+                    "name": "dolore sequi et",
                     "__v": 0
                   }
                 }
@@ -524,15 +1033,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Refined Granite Pants",
-                "categoryId": "62647e57c0c2f62aa3601d8e",
+                "name": "Generic Wooden Bike",
+                "categoryId": "6265aa430cb2f56591476386",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-23T22:31:54.273Z",
+                "expiryDate": "2022-04-24T19:51:35.743Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem."
+                "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla."
               }
             }
           }
@@ -555,6 +1064,9 @@
                           "type": "number"
                         },
                         "weight": {
+                          "type": "number"
+                        },
+                        "quantityLeft": {
                           "type": "number"
                         },
                         "quantity": {
@@ -602,17 +1114,18 @@
                   "data": {
                     "price": 500,
                     "weight": 30,
+                    "quantityLeft": 10,
                     "quantity": 10,
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "62647e5ac0c2f62aa3601dca",
-                    "name": "Refined Granite Pants",
+                    "_id": "6265aa470cb2f565914763dc",
+                    "name": "Generic Wooden Bike",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-23T22:31:54.273Z",
-                    "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem.",
-                    "createdAt": "Sat Apr 23 2022 23:31:54 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-23T23:31:54+01:00",
+                    "expiryDate": "2022-04-24T19:51:35.743Z",
+                    "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla.",
+                    "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-24T20:51:35+01:00",
                     "__v": 0
                   }
                 }
@@ -663,14 +1176,13 @@
                       "items": {
                         "type": "object",
                         "properties": {
-                          "feedbackId": {
-                            "type": "array",
-                            "items": {}
-                          },
                           "price": {
                             "type": "number"
                           },
                           "weight": {
+                            "type": "number"
+                          },
+                          "quantityLeft": {
                             "type": "number"
                           },
                           "quantity": {
@@ -698,9 +1210,6 @@
                             "type": "string"
                           },
                           "description": {
-                            "type": "string"
-                          },
-                          "creatorId": {
                             "type": "string"
                           },
                           "createdAt": {
@@ -737,21 +1246,20 @@
                   "status": "success",
                   "data": [
                     {
-                      "feedbackId": [],
                       "price": 500,
                       "weight": 30,
+                      "quantityLeft": 10,
                       "quantity": 10,
                       "minimumOrder": 0,
                       "handlingFee": 10,
                       "status": "pending",
-                      "_id": "62647e5ac0c2f62aa3601dca",
-                      "name": "Refined Granite Pants",
+                      "_id": "6265aa470cb2f565914763dc",
+                      "name": "Generic Wooden Bike",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-04-23T22:31:54.273Z",
-                      "description": "Est adipisci architecto est voluptatem non. Veniam expedita incidunt totam enim corporis aspernatur officiis in quia. Voluptatem iusto debitis eos esse. Nisi fugiat delectus. Ullam voluptatem nobis esse autem et et facilis sit qui. Deleniti et corrupti et voluptatem.",
-                      "creatorId": "62647e58c0c2f62aa3601d9c",
-                      "createdAt": "Sat Apr 23 2022 23:31:54 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-04-23T23:31:54+01:00",
+                      "expiryDate": "2022-04-24T19:51:35.743Z",
+                      "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla.",
+                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-04-24T20:51:35+01:00",
                       "__v": 0
                     }
                   ],

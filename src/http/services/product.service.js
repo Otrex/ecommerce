@@ -39,6 +39,7 @@ class ProductService {
       handlingFee,
       minimumOrder,
       creatorId: vendor._id,
+      quantityLeft: quantity,
       category: category._id,
     });
 
@@ -73,7 +74,7 @@ class ProductService {
     });
 
     const _products = products.map(product => ({
-      ...omit(product, ['feedbackId', 'creatorId']),
+      ...omit(product.toJSON(), ['feedbackId', 'creatorId']),
     }))
 
     return paginateResponse([_products, count], page, limit)

@@ -28,6 +28,10 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    quantityLeft: {
+      type: Number,
+      default: 0,
+    },
     quantity: {
       type: Number,
       default: 0,
@@ -56,4 +60,4 @@ const productSchema = new mongoose.Schema(
 );
 
 productSchema.plugin(timestamp);
-module.exports = mongoose.model('product', productSchema);
+module.exports = mongoose.model('Product', productSchema);

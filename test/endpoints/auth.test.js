@@ -95,6 +95,7 @@ describe('Email verification', () => {
     });
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
+    documentation.addEndpoint(res);
   });
 });
 
@@ -122,6 +123,7 @@ describe('Forgot Password', () => {
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
     userClient.resetToken = res.body.token;
+    documentation.addEndpoint(res);
   });
 });
 
@@ -136,6 +138,7 @@ describe('Reset Password', () => {
 
     assert.equal(res.status, 200);
     console.log(res.body);
+    documentation.addEndpoint(res);
     // userClient.accountId = res.body.data._id;
   });
 });

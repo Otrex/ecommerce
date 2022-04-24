@@ -4,9 +4,16 @@ const {
 } = require('../../lib/exceptions');
 const Validator = require('fastest-validator');
 const { MESSAGE } = require('../../../constants');
+const  { ObjectID } = require("mongodb") 
 
 class GenericValidator {
-  validator = new Validator();
+  validator = new Validator({
+    defaults: {
+      objectID: {
+        ObjectID
+      }
+    }
+  });
   check(data) {
     // console.log(data, this.schema)
     if (Object.entries(data).length < 1)

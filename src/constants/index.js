@@ -7,9 +7,14 @@ module.exports = {
     ADMIN: 'admin',
   },
   PRODUCT_STATUS: {
-    APROVED: 'approved',
+    APPROVED: 'approved',
     PENDING: 'pending',
-    DISSAPROVED: 'disapproved',
+    DISSAPPROVED: 'disapproved',
+  },
+  ORDER_STATUS: {
+    SHIPPED: 'shipped',
+    PENDING: 'pending',
+    COMPLETED: 'completed'
   },
   TOKEN_FLAG: {
     AUTH: 'auth',

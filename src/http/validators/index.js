@@ -164,9 +164,22 @@ class CreateDropOffValidator extends GenericValidator {
   };
 }
 
+class AddToCartValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    productId: "objectID",
+    quantity: {
+      type: 'number', 
+      positive: true, 
+      integer: true 
+    },
+  }
+}
+
 module.exports = {
   LoginValidator,
   RegisterValidator,
+  AddToCartValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,
