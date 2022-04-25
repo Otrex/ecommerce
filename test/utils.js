@@ -3,7 +3,7 @@ const models = require('../src/http/models');
 const { generateJWTToken } = require('../src/scripts/utils');
 const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../src/constants')
 
-exports.getToken = async ({ accountId }, type = 'register') => {
+exports.getToken = async ({ accountId }, type = TOKEN_FLAG.EMAIL_VERIFY) => {
   return models.TimedToken.findOne({
     accountId: ObjectId(accountId),
     type,

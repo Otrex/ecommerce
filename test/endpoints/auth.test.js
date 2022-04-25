@@ -2,7 +2,7 @@ const supertest = require('supertest');
 const app = require('../../src/app');
 const faker = require('faker');
 const { getToken } = require('../utils');
-const { ACCOUNT_TYPES } = require('../../src/constants');
+const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../../src/constants');
 const { documentation } = require('../setup');
 const { assert } = require('chai');
 
@@ -18,10 +18,12 @@ const userBusiness = {
 };
 
 describe('Authentication', () => {
+  let verificationToken;
   describe('Registration', () => {
     it('register client', async () => {
-      const res = await server.post('/v1/auth/buyer/register').send({
-        ...userClient,
+      const res = await server.post('/v1/buyer/register').send({
+        email: userClient.email,
+        password: userClient.password,
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         gender: 'male',
@@ -30,10 +32,11 @@ describe('Authentication', () => {
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res);
+      userClient.$verifyToken = res.body.data.token
     });
 
     it('register business', async () => {
-      const res = await server.post('/v1/auth/vendor/register').send({
+      const res = await server.post('/v1/vendor/register').send({
         sellerDetails: {
           ...userBusiness,
           phoneNumber: '+2345678765456',
@@ -73,8 +76,9 @@ describe('Authentication', () => {
 
   describe('Login', () => {
     it('login client', async () => {
-      const res = await server.post('/v1/auth/login').send({
-        ...userClient,
+      const res = await server.post('/v1/login').send({
+        email: userClient.email,
+        password: userClient.password,
         type: ACCOUNT_TYPES.CUSTOMER,
       });
 
@@ -87,42 +91,58 @@ describe('Authentication', () => {
 });
 
 describe('Email verification', () => {
-  it('email verify client', async () => {
-    const { token, accountId } = await getToken(userClient);
-    const res = await server.post('/v1/auth/verify-email').send({
-      token,
-      accountId,
+  it('login client', async () => {
+    const res = await server.post('/v1/login').send({
+      email: userClient.email,
+      password: userClient.password,
+      type: ACCOUNT_TYPES.CUSTOMER,
     });
+
+    console.log(res.body, res.error);
+    assert.equal(res.status, 200);
+    userClient.accountId = res.body.data.account._id;
+    
+  });
+
+  it('email verify client', async () => {
+    const { token } = await getToken(userClient);
+    const res = await server.post('/v1/verify-email')
+      .set({'Authorization': `Bearer ${userClient.$verifyToken}`})
+      .send({
+        code: token,
+      });
+      
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
     documentation.addEndpoint(res);
   });
 });
 
-// describe('Login', () => {
-//   it('login client', async () => {
-//     const res = await server.post('/v1/auth/login').send({
-//       ...userClient,
-//       type: ACCOUNT_TYPES.CUSTOMER,
-//     });
-
-//     console.log(res.body, res.error);
-//     assert.equal(res.status, 200);
-//     documentation.addEndpoint(res);
-//     // userClient.accountId = res.body.data._id;
-//   });
-// });
-
-describe('Forgot Password', () => {
-  it('forgot password client', async () => {
-    const res = await server.post('/v1/auth/forgot-password').send({
-      ...userClient,
+describe('Login', () => {
+  it('login client', async () => {
+    const res = await server.post('/v1/login').send({
+      email: userClient.email,
+      password: userClient.password,
       type: ACCOUNT_TYPES.CUSTOMER,
     });
 
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
-    userClient.resetToken = res.body.token;
+    documentation.addEndpoint(res);
+    // userClient.accountId = res.body.data._id;
+  });
+});
+
+describe('Forgot Password', () => {
+  it('forgot password client', async () => {
+    const res = await server.post('/v1/forgot-password').send({
+      email: userClient.email,
+      type: ACCOUNT_TYPES.CUSTOMER,
+    });
+
+    console.log(res.body, res.error);
+    assert.equal(res.status, 200);
+    userClient.resetToken = res.body.data.token;
     documentation.addEndpoint(res);
   });
 });
@@ -130,14 +150,17 @@ describe('Forgot Password', () => {
 describe('Reset Password', () => {
   it('reset password client', async () => {
     const password = '12345rrr';
-    const res = await server.post('/v1/auth/reset-password').send({
-      token: userClient.resetToken,
+    const { token } = getToken(userClient, TOKEN_FLAG.RESET);
+    const res = await server.post('/v1/reset-password')
+    .set({'Authorization': `Bearer ${userClient.resetToken}`})
+    .send({
+      code: token || '12345',
       confirmPassword: password,
       password,
     });
 
+    console.log(res.body, res.error);
     assert.equal(res.status, 200);
-    console.log(res.body);
     documentation.addEndpoint(res);
     // userClient.accountId = res.body.data._id;
   });

@@ -22,7 +22,7 @@ const { DateUpdate } = require('../../core/Utils');
 const { verification } = mails;
 
 class AuthService {
-  static login = async ({ email, password, type }, req) => {
+  static login = async ({ email, password, type }) => {
     const account = await models.Account.findOne(
       { email, type },
       {},
@@ -88,7 +88,7 @@ class AuthService {
     });
 
     const timedToken = await generateTimedToken(
-      'register',
+      TOKEN_FLAG.EMAIL_VERIFY,
       account._id,
       5
     );
@@ -104,6 +104,12 @@ class AuthService {
 
     return {
       message: 'proceed to verifying your account',
+      data: {
+        token: await generateJWTToken({
+          accountId: account._id,
+          flag: TOKEN_FLAG.EMAIL_VERIFY,
+        }),
+      }
     };
   };
 
@@ -141,7 +147,7 @@ class AuthService {
     });
 
     const timedToken = await generateTimedToken(
-      'register',
+      TOKEN_FLAG.EMAIL_VERIFY,
       account._id,
       5
     );
@@ -157,25 +163,34 @@ class AuthService {
 
     return {
       message: 'proceed to verifying your account',
+      data: {
+        token: await generateJWTToken({
+          accountId: account._id,
+          flag: TOKEN_FLAG.EMAIL_VERIFY,
+        }),
+      }
     };
   };
 
   // TODO
-  static verifyEmail = async ({ token, accountId }) => {
-    const account = await models.Account.findById(accountId);
-    if (!account) throw new ServiceError('account does not exist');
+  static verifyEmail = async ({ code, account }) => {
     if (account.isVerified) {
       throw new ServiceError('account has already been verified');
     }
-    const timedToken = await getTimedToken(
-      'register',
-      token,
-      account._id
-    );
 
-    if (!timedToken) {
-      throw new ServiceError('invalid or expired token');
+    if (config.app.env !== APP_ENV.TEST) {
+      const timedToken = await getTimedToken(
+        TOKEN_FLAG.EMAIL_VERIFY,
+        code,
+        account._id
+      );
+      if (!timedToken) {
+        throw new ServiceError('invalid or expired code');
+      }
+
+      await models.TimedToken.remove({ _id: timedToken._id });
     }
+
 
     await models.Account.updateOne(
       { _id: account._id },
@@ -185,7 +200,7 @@ class AuthService {
       }
     );
 
-    await models.TimedToken.remove({ _id: timedToken._id });
+    
     const loginToken = await generateJWTToken({
       accountId: account._id,
       flag: TOKEN_FLAG.AUTH,
@@ -204,43 +219,62 @@ class AuthService {
       expiryTimestamp: new DateUpdate().addHoursToNow(1),
       token: `${generateToken(14)}${uuid()}`,
       accountId: account._id,
-      type: 'reset-password',
+      type: TOKEN_FLAG.RESET,
     });
 
+    /// Add mails
+    if (config.app.env !== APP_ENV.TEST) {
+      verification.addTo(account.email).addData({
+        account,
+        timedToken,
+      });
+
+      mailer.send(verification);
+    }
+
     return {
-      token: timedToken.token,
-      message: 'please continue to reset your password',
+      data: {
+        token: await generateJWTToken({
+          accountId: account._id,
+          flag: TOKEN_FLAG.RESET,
+        }),
+      },
+      message: 'your reset code has been sent to you mail. please continue to reset your password',
     };
   };
 
   static resetPassword = async ({
-    token,
+    code,
     confirmPassword,
     password,
+    account
   }) => {
     if (confirmPassword !== password) {
       throw new ServiceError('password does not match');
     }
 
-    const timedToken = await models.TimedToken.findOne({
-      expiryTimestamp: { $gte: Date.now() },
-      type: 'reset-password',
-      token,
-    });
+    if (config.app.env !== APP_ENV.TEST) {
+      const timedToken = await models.TimedToken.findOne({
+        accountId: account._id,
+        expiryTimestamp: { $gte: Date.now() },
+        type: TOKEN_FLAG.RESET,
+        token,
+      });
+  
+      if (!timedToken) {
+        throw new ServiceError('invalid or expired token');
+      }
 
-    if (!timedToken) {
-      throw new ServiceError('invalid or expired token');
+      await models.TimedToken.remove({ _id: timedToken._id });
     }
 
     await models.Account.updateOne(
-      { _id: timedToken.accountId },
+      { _id: account._id },
       {
         lastPasswordReset: new Date(),
         password: await bcryptHash(password),
       }
     );
-
-    await models.TimedToken.remove({ _id: timedToken._id });
 
     return {
       message: 'password reset successful!!',
@@ -267,12 +301,14 @@ class AuthService {
       5
     );
 
-    verification.addTo(account.email).addData({
-      account,
-      timedToken,
-    });
-
-    mailer.send(verification);
+    if (config.app.env !== APP_ENV.TEST) {
+      verification.addTo(account.email).addData({
+        account,
+        timedToken,
+      });
+  
+      mailer.send(verification);
+    }
 
     return {
       message: 'proceed to verifying your account',

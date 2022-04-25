@@ -19,6 +19,7 @@ module.exports = {
   TOKEN_FLAG: {
     AUTH: 'auth',
     EMAIL_VERIFY: 'email_verification',
+    RESET: 'password_reset'
   },
   MESSAGE: {
     ERROR: {

@@ -50,6 +50,8 @@ module.exports = {
           token
         );
 
+        console.log(flag)
+
         if (!accountId) {
           return next(
             new AuthenticationError('unable to verify token')

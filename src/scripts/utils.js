@@ -1,5 +1,10 @@
 const crypto = require('crypto');
 const config = require('../config');
+const {
+  APP_ENV,
+  TOKEN_FLAG,
+  ACCOUNT_TYPES,
+} = require('../constants');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const moment = require('moment');

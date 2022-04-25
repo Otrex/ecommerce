@@ -121,15 +121,13 @@ class BusinessRegisterValidator extends GenericValidator {
 class VerifyEmailValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
-    accountId: { type: 'string' },
-    token: { type: 'string', trim: true, min: 4, max: 5 },
+    code: { type: 'string', trim: true, min: 4, max: 5 },
   };
 }
 
 class ResendVerificationEmailValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
-    accountId: { type: 'string' },
   };
 }
 
@@ -146,7 +144,7 @@ class PasswordResetValidator extends GenericValidator {
     $$strict: 'remove',
     password: { type: 'string', trim: true, min: 5 },
     confirmPassword: { type: 'string', trim: true, min: 5 },
-    token: { type: 'string', trim: true, min: 10 },
+    code: { type: 'string', trim: true, min: 4 },
   };
 }
 

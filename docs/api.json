@@ -27,7 +27,7 @@
     }
   ],
   "paths": {
-    "/v1/auth/buyer/register": {
+    "/v1/buyer/register": {
       "post": {
         "description": "",
         "tags": [],
@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Noelia86@gmail.com",
-                "password": "SaUH0PhNKZMaLrD",
-                "firstName": "Justina",
-                "lastName": "Marvin",
+                "email": "Geoffrey_Keebler98@yahoo.com",
+                "password": "AMB2ecKh8ShrN1f",
+                "firstName": "Demarco",
+                "lastName": "Streich",
                 "gender": "male"
               }
             }
@@ -78,12 +78,23 @@
                     },
                     "message": {
                       "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "token": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
                 "example": {
                   "status": "success",
-                  "message": "proceed to verifying your account"
+                  "message": "proceed to verifying your account",
+                  "data": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjcwTmh6czNTeEJTYUkxemdzY0c3cE1kaGhndFJobFBRVVp3WiIsImlhdCI6MTY1MDkxMTY4MiwiZXhwIjoxNjUwOTk4MDgyfQ.myzSy3HgpRNbEXILmnZGtqa2fmvl9Ifyi-BM_g1ShlU"
+                  }
                 }
               }
             }
@@ -91,7 +102,7 @@
         }
       }
     },
-    "/v1/auth/vendor/register": {
+    "/v1/vendor/register": {
       "post": {
         "description": "",
         "tags": [],
@@ -174,27 +185,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Melisa25@gmail.com",
-                  "password": "GMLe49sXZhrSR3G",
+                  "email": "Nikki27@gmail.com",
+                  "password": "YgZ9KvEGHiiiR5d",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Larry Hamill"
+                  "fullName": "Shakira Turner"
                 },
                 "businessDetails": {
-                  "type": "Multi-lateral full-range toolset",
-                  "name": "Multi-layered mobile Graphic Interface",
-                  "cacNumber": "Multi-lateral stable data-warehouse",
-                  "state": "Tennessee",
-                  "lga": "Virginia",
+                  "type": "Customer-focused incremental orchestration",
+                  "name": "Monitored optimizing leverage",
+                  "cacNumber": "Object-based neutral database",
+                  "state": "New York",
+                  "lga": "North Dakota",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Russian Federation"
+                    "label": "Barbados"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Enhanced executive paradigm",
-                  "accountName": "Rafael Hansen",
+                  "bank": "User-friendly scalable toolset",
+                  "accountName": "Polly Mohr",
                   "payoutFrequency": 5
                 }
               }
@@ -214,12 +225,23 @@
                     },
                     "message": {
                       "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "token": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
                 "example": {
                   "status": "success",
-                  "message": "proceed to verifying your account"
+                  "message": "proceed to verifying your account",
+                  "data": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMzk2ZjkwMzIxODkyZjljNGYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InB1eTJLc3h2eEtDVWhoUGliTmxMM3JZc2pRNWw0RzZuSFducyIsImlhdCI6MTY1MDkxMTY4MywiZXhwIjoxNjUwOTk4MDgzfQ.YbYdn1o53q_HsbAcQrvt91tadq-ytfaZcqvgcw1v0-g"
+                  }
                 }
               }
             }
@@ -227,7 +249,7 @@
         }
       }
     },
-    "/v1/auth/login": {
+    "/v1/login": {
       "post": {
         "description": "",
         "tags": [],
@@ -250,8 +272,8 @@
                 }
               },
               "example": {
-                "email": "Noelia86@gmail.com",
-                "password": "SaUH0PhNKZMaLrD",
+                "email": "Geoffrey_Keebler98@yahoo.com",
+                "password": "AMB2ecKh8ShrN1f",
                 "type": "customer"
               }
             }
@@ -309,6 +331,9 @@
                             },
                             "__v": {
                               "type": "number"
+                            },
+                            "verifiedEmailAt": {
+                              "type": "string"
                             }
                           }
                         },
@@ -326,21 +351,22 @@
                   "status": "success",
                   "data": {
                     "account": {
-                      "isEmailVerified": false,
-                      "lastLoggedIn": "2022-04-24T19:51:35.149Z",
+                      "isEmailVerified": true,
+                      "lastLoggedIn": "2022-04-25T18:34:44.007Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "6265aa460cb2f565914763a5",
-                      "firstName": "Justina",
-                      "lastName": "Marvin",
-                      "email": "Noelia86@gmail.com",
-                      "updatedAt": "2022-04-24T20:51:34+01:00",
-                      "createdAt": "2022-04-24T20:51:34+01:00",
-                      "__v": 0
+                      "_id": "6266e9c296f90321892f9c48",
+                      "firstName": "Demarco",
+                      "lastName": "Streich",
+                      "email": "Geoffrey_Keebler98@yahoo.com",
+                      "updatedAt": "2022-04-25T19:34:42+01:00",
+                      "createdAt": "2022-04-25T19:34:42+01:00",
+                      "__v": 0,
+                      "verifiedEmailAt": "2022-04-25T18:34:43.897Z"
                     },
-                    "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY1YWE0NjBjYjJmNTY1OTE0NzYzYTUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlZHNjU3Tmt1QTdtT2pobzZxT3pzWUJHVXA5Q3J5Y21IbGpHWSIsImlhdCI6MTY1MDgyOTg5NSwiZXhwIjoxNjUwOTE2Mjk1fQ.aPuwZ1YQ_XXH56PjYDOYym1c_2KC1s-XlzbRXlLPaSI"
+                    "type": "auth",
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiI4Q3ZvaFhINVRRcE9GbEFjNVVZcmRDM01FemxBenVsREEzR0wiLCJpYXQiOjE2NTA5MTE2ODQsImV4cCI6MTY1MDk5ODA4NH0.RdjyLzTc3gKjgcvDn-hy798wRp7Ycu9UxQCi-Ca_J1Q"
                   }
                 }
               }
@@ -349,7 +375,7 @@
         }
       }
     },
-    "/v1/auth/verify-email": {
+    "/v1/verify-email": {
       "post": {
         "description": "",
         "tags": [],
@@ -360,63 +386,13 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "token": {
+                  "code": {
                     "type": "string"
-                  },
-                  "accountId": {
-                    "type": "object",
-                    "properties": {
-                      "_bsontype": {
-                        "type": "string"
-                      },
-                      "id": {
-                        "type": "object",
-                        "properties": {
-                          "0": {
-                            "type": "number"
-                          },
-                          "1": {
-                            "type": "number"
-                          },
-                          "2": {
-                            "type": "number"
-                          },
-                          "3": {
-                            "type": "number"
-                          },
-                          "4": {
-                            "type": "number"
-                          },
-                          "5": {
-                            "type": "number"
-                          },
-                          "6": {
-                            "type": "number"
-                          },
-                          "7": {
-                            "type": "number"
-                          },
-                          "8": {
-                            "type": "number"
-                          },
-                          "9": {
-                            "type": "number"
-                          },
-                          "10": {
-                            "type": "number"
-                          },
-                          "11": {
-                            "type": "number"
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               },
               "example": {
-                "token": "66247",
-                "accountId": "6265aa460cb2f565914763a5"
+                "code": "38551"
               }
             }
           }
@@ -443,7 +419,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY1YWE0NjBjYjJmNTY1OTE0NzYzYTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJFdGF0a21YVTBVRDROZDVzMEV4eGRpU1FBWWZiT3VZUjQxTjIiLCJpYXQiOjE2NTA4Mjk4OTUsImV4cCI6MTY1MDkxNjI5NX0.Ut-Ma9Cv-R3GQChnMIwprVB-gWbp4-uR8TSs2M8e_zY"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJjMUV3REVRZ3FMYk0zbTE0eHd6elVZemdwclFBaGJiTmdaa2oiLCJpYXQiOjE2NTA5MTE2ODMsImV4cCI6MTY1MDk5ODA4M30.OhyCF3roa68HrmLkkUNc-YPIwi8a3SjTJF-hZIE-Cns"
                 }
               }
             }
@@ -451,7 +427,7 @@
         }
       }
     },
-    "/v1/auth/forgot-password": {
+    "/v1/forgot-password": {
       "post": {
         "description": "",
         "tags": [],
@@ -465,21 +441,13 @@
                   "email": {
                     "type": "string"
                   },
-                  "password": {
-                    "type": "string"
-                  },
-                  "accountId": {
-                    "type": "string"
-                  },
                   "type": {
                     "type": "string"
                   }
                 }
               },
               "example": {
-                "email": "Noelia86@gmail.com",
-                "password": "SaUH0PhNKZMaLrD",
-                "accountId": "6265aa460cb2f565914763a5",
+                "email": "Geoffrey_Keebler98@yahoo.com",
                 "type": "customer"
               }
             }
@@ -499,15 +467,22 @@
                     "message": {
                       "type": "string"
                     },
-                    "token": {
-                      "type": "string"
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "token": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
                 "example": {
                   "status": "success",
-                  "message": "please continue to reset your password",
-                  "token": "lJZMENT9rQ2QrI94f6390e-d4c0-43b5-aef8-58f44f761d47"
+                  "message": "your reset code has been sent to you mail. please continue to reset your password",
+                  "data": {
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiTzNTRTVsTDNvTFVpSjFkN0VoakJHOEZNYzVzaWhxaWkxZ1lXIiwiaWF0IjoxNjUwOTExNjg0LCJleHAiOjE2NTA5OTgwODR9.oc2DfuyTM3X0Q4E2MTk5J1sCUH4Qs0ZyTUEJe5xsDUo"
+                  }
                 }
               }
             }
@@ -515,7 +490,7 @@
         }
       }
     },
-    "/v1/auth/reset-password": {
+    "/v1/reset-password": {
       "post": {
         "description": "",
         "tags": [],
@@ -526,7 +501,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "token": {
+                  "code": {
                     "type": "string"
                   },
                   "confirmPassword": {
@@ -538,7 +513,7 @@
                 }
               },
               "example": {
-                "token": "lJZMENT9rQ2QrI94f6390e-d4c0-43b5-aef8-58f44f761d47",
+                "code": "12345",
                 "confirmPassword": "12345rrr",
                 "password": "12345rrr"
               }
@@ -637,7 +612,7 @@
                 }
               },
               "example": {
-                "productId": "6265aa450cb2f56591476399",
+                "productId": "6266e9c196f90321892f9c3c",
                 "quantity": 10
               }
             }
@@ -725,19 +700,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6265aa470cb2f565914763c8",
-                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6266e9c496f90321892f9c6f",
+                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6265aa450cb2f56591476399",
+                        "_id": "6266e9c196f90321892f9c3c",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "voluptatem reiciendis est",
-                        "description": "Et minus exercitationem velit reprehenderit quo fugit amet hic. Ut omnis dolorum perspiciatis ad aliquid tenetur. Et nemo repellendus reprehenderit expedita. Assumenda adipisci quia.",
+                        "name": "est accusamus officiis",
+                        "description": "Omnis eligendi non neque aut consequuntur. Accusantium accusantium rerum repellendus ipsum aut illo et quis. Et quos est voluptatem mollitia aut esse sit. Ut odit aut similique est consequatur repellendus.",
                         "category": {
-                          "_id": "6265aa430cb2f56591476386",
+                          "_id": "6266e9c096f90321892f9c29",
                           "name": "Food",
                           "__v": 0
                         }
@@ -832,19 +807,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6265aa470cb2f565914763c8",
-                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6266e9c496f90321892f9c6f",
+                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6265aa450cb2f56591476399",
+                        "_id": "6266e9c196f90321892f9c3c",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "voluptatem reiciendis est",
-                        "description": "Et minus exercitationem velit reprehenderit quo fugit amet hic. Ut omnis dolorum perspiciatis ad aliquid tenetur. Et nemo repellendus reprehenderit expedita. Assumenda adipisci quia.",
+                        "name": "est accusamus officiis",
+                        "description": "Omnis eligendi non neque aut consequuntur. Accusantium accusantium rerum repellendus ipsum aut illo et quis. Et quos est voluptatem mollitia aut esse sit. Ut odit aut similique est consequatur repellendus.",
                         "category": {
-                          "_id": "6265aa430cb2f56591476386",
+                          "_id": "6266e9c096f90321892f9c29",
                           "name": "Food",
                           "__v": 0
                         }
@@ -897,22 +872,22 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "6265aa430cb2f56591476386",
+                      "_id": "6266e9c096f90321892f9c29",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "6265aa440cb2f56591476388",
+                      "_id": "6266e9c096f90321892f9c2b",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "6265aa440cb2f5659147638a",
+                      "_id": "6266e9c096f90321892f9c2d",
                       "name": "Clothings",
                       "__v": 0
                     },
                     {
-                      "_id": "6265aa440cb2f5659147638c",
+                      "_id": "6266e9c096f90321892f9c2f",
                       "name": "Phones",
                       "__v": 0
                     }
@@ -941,7 +916,7 @@
                 }
               },
               "example": {
-                "name": "dolore sequi et"
+                "name": "maiores at voluptatem"
               }
             }
           }
@@ -976,8 +951,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "6265aa470cb2f565914763d7",
-                    "name": "dolore sequi et",
+                    "_id": "6266e9c496f90321892f9c7e",
+                    "name": "maiores at voluptatem",
                     "__v": 0
                   }
                 }
@@ -1033,15 +1008,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Generic Wooden Bike",
-                "categoryId": "6265aa430cb2f56591476386",
+                "name": "Incredible Rubber Chips",
+                "categoryId": "6266e9c096f90321892f9c29",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-24T19:51:35.743Z",
+                "expiryDate": "2022-04-25T18:34:44.665Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla."
+                "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui."
               }
             }
           }
@@ -1119,13 +1094,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "6265aa470cb2f565914763dc",
-                    "name": "Generic Wooden Bike",
+                    "_id": "6266e9c496f90321892f9c83",
+                    "name": "Incredible Rubber Chips",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-24T19:51:35.743Z",
-                    "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla.",
-                    "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-24T20:51:35+01:00",
+                    "expiryDate": "2022-04-25T18:34:44.665Z",
+                    "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui.",
+                    "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-04-25T19:34:44+01:00",
                     "__v": 0
                   }
                 }
@@ -1253,13 +1228,13 @@
                       "minimumOrder": 0,
                       "handlingFee": 10,
                       "status": "pending",
-                      "_id": "6265aa470cb2f565914763dc",
-                      "name": "Generic Wooden Bike",
+                      "_id": "6266e9c496f90321892f9c83",
+                      "name": "Incredible Rubber Chips",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-04-24T19:51:35.743Z",
-                      "description": "Autem voluptas molestiae. Repudiandae possimus reiciendis sit corrupti nulla.",
-                      "createdAt": "Sun Apr 24 2022 20:51:35 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-04-24T20:51:35+01:00",
+                      "expiryDate": "2022-04-25T18:34:44.665Z",
+                      "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui.",
+                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-04-25T19:34:44+01:00",
                       "__v": 0
                     }
                   ],
