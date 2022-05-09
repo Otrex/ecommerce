@@ -16,6 +16,11 @@ module.exports = {
     PENDING: 'pending',
     COMPLETED: 'completed'
   },
+  TRANSACTION_STATUS: {
+    SUCCESS: 'success',
+    PENDING: 'pending',
+    COMPLETED: 'completed'
+  },
   TOKEN_FLAG: {
     AUTH: 'auth',
     EMAIL_VERIFY: 'email_verification',

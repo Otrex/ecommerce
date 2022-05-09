@@ -3,6 +3,7 @@ const models = require('../models');
 const { omit } = require('lodash');
 const { calcSkip, paginateResponse } = require('../../scripts/utils');
 const ObjectId = require('mongoose').Types.ObjectId;
+const { PRODUCT_STATUS } = require('../../constants');
 
 class ProductService {
   static createProduct = async ({
@@ -79,6 +80,45 @@ class ProductService {
 
     return paginateResponse([_products, count], page, limit)
   };
+
+  static approveProduct = async ({ productId }) => {
+    const product = await models.Product.findOne({ _id: productId });
+    if (!product) throw new NotFoundError('produt not found');
+
+    await models.Product.findByIdAndUpdate(product._id, {
+      status: PRODUCT_STATUS.APPROVED
+    });
+
+    return {
+      message: 'product has been approved'
+    }
+  }
+
+  static likeProduct = async ({ account, productId }) => {
+    const product = await models.Product.findOne({ _id: productId });
+    if (!product) throw new NotFoundError('produt not found');
+
+    const customer = await models.Customer.findOne({
+      accountId: account._id,
+    });
+
+    if (!customer) throw new NotFoundError('customer not found');
+
+    const isliked = await models.CustomerFavorite.findOne({
+      productId: new ObjectId(productId),
+      customerId: customer._id
+    });
+
+    if (isliked) throw new ServiceError('product is already liked')
+    await models.CustomerFavorite.create({
+      productId: new ObjectId(productId),
+      customerId: customer._id
+    })
+
+    return {
+      message: 'product has been liked successfully'
+    }
+  }
 }
 
 module.exports = ProductService;

@@ -5,6 +5,7 @@ const supertest = require('supertest');
 const models = require('../../src/http/models');
 const { ACCOUNT_TYPES, PRODUCT_STATUS } = require('../../src/constants')
 
+const { nockPaystackInitiateTransactionEndpoint, nockPayStacInitiateResolveEndpoint } = require('../nocks');
 const { documentation } = require('../setup');
 const { assert } = require('chai');
 
@@ -27,6 +28,8 @@ let vendor;
 let products;
 let categories;
 before(async () => {
+  nockPaystackInitiateTransactionEndpoint();
+  nockPayStacInitiateResolveEndpoint();
   categories = await models.Category.find({});
   buyer = await createAccountReturnToken(userCustomer);
   vendor = await createAccountReturnToken(userBusiness);
@@ -76,7 +79,9 @@ describe('Cart', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Buyer']
+      });
     });
 
     it('get carts items saved', async () => {
@@ -85,7 +90,21 @@ describe('Cart', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Buyer']
+      });
+    })
+
+    it('checkout cart items saved', async () => {
+      const res = await server.post('/v1/buyer/cart/checkout')
+        .set({'Authorization': `Bearer ${buyer.token}`})
+        .send({});
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Buyer']
+      });
     })
   });
 });

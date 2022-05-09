@@ -15,7 +15,6 @@ const errorHandler = (err, req, res, next) => {
   if (res.headersSent) {
     return next(err);
   }
-
   switch (err.name) {
     case ServiceError.name:
     case NotFoundError.name:
@@ -38,6 +37,7 @@ const errorHandler = (err, req, res, next) => {
         body: req.body,
         stack: err.stack,
       });
+
       return res.status(500).send({
         status: 'error',
         message: 'an error occurred',

@@ -1,11 +1,13 @@
 module.exports = {
+  Cart: require('./Cart'),
+  Address: require('./Address'),
   Account: require('./Account'),
   Product: require('./Product'),
+  Business: require('./Business'),
   Customer: require('./Customer'),
-  Cart: require('./Cart'),
   Category: require('./Category'),
   TimedToken: require('./TimedToken'),
-  Address: require('./Address'),
-  Business: require('./Business'),
+  Transaction: require('./Transaction'),
   BusinessPayment: require('./BusinessPayment'),
+  CustomerFavorite: require('./CustomerFavorite'),
 };

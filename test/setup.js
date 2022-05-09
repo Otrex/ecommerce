@@ -6,6 +6,7 @@ const nock = require('nock');
 
 const db = new DB();
 const documentation = Documentator.getInstance();
+
 const mochaHooks = {
   async beforeAll() {
     await db.connect();

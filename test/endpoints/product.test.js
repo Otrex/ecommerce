@@ -10,6 +10,12 @@ const { assert } = require('chai');
 
 const server = supertest(app);
 
+const userCustomer = {
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  type: ACCOUNT_TYPES.CUSTOMER
+};
+
 const userBusiness = {
   email: faker.internet.email(),
   password: faker.internet.password(),
@@ -23,12 +29,13 @@ const adminData = {
   isSuperAdmin: true
 };
 
-
+let buyer;
 let admin;
 let result;
 let categories;
 before(async () => {
   result = await createAccountReturnToken(userBusiness);
+  buyer = await createAccountReturnToken(userCustomer);
   admin = await createAccountReturnToken(adminData);
   categories = await models.Category.find({});
 });
@@ -41,7 +48,9 @@ describe('Product', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Categories']
+      });
     })
 
     it('add categories', async () => {
@@ -53,10 +62,13 @@ describe('Product', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Categories/Admin']
+      });
     })
   });
   describe('Product', () => {
+    let product;
     it('create product', async () => {
       const res = await server.post('/v1/vendor/products')
         .set({'Authorization': `Bearer ${result.token}`})
@@ -75,8 +87,47 @@ describe('Product', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      product = res.body.data;
+      documentation.addEndpoint(res, {
+        tags: ['Product/Vendor'],
+      });
     });
+
+    it('it should approve product', async () => {
+      const res = await server.post(`/v1/admin/products/${product._id}/approve`)
+        .set({'Authorization': `Bearer ${admin.token}`})
+        .send({});
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Admin'],
+        pathParameters: [
+          {
+            index: 3,
+            name: 'productId',
+          },
+        ],
+      });
+    })
+
+    it('it should like product', async () => {
+      const res = await server.post(`/v1/buyer/products/${product._id}/like`)
+        .set({'Authorization': `Bearer ${buyer.token}`})
+        .send({});
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Buyer'],
+        pathParameters: [
+          {
+            index: 3,
+            name: 'productId',
+          },
+        ],
+      });
+    })
 
     it('get products', async () => {
       const res = await server.get('/v1/vendor/products?status=approved,disapproved,pending&page=1&limit=20')
@@ -84,7 +135,9 @@ describe('Product', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Vendor'],
+      });
     })
   });
 

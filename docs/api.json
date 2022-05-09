@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Geoffrey_Keebler98@yahoo.com",
-                "password": "AMB2ecKh8ShrN1f",
-                "firstName": "Demarco",
-                "lastName": "Streich",
+                "email": "Raegan_Block@gmail.com",
+                "password": "lqtjr_naqqdpazT",
+                "firstName": "Manley",
+                "lastName": "Pollich",
                 "gender": "male"
               }
             }
@@ -93,7 +93,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjcwTmh6czNTeEJTYUkxemdzY0c3cE1kaGhndFJobFBRVVp3WiIsImlhdCI6MTY1MDkxMTY4MiwiZXhwIjoxNjUwOTk4MDgyfQ.myzSy3HgpRNbEXILmnZGtqa2fmvl9Ifyi-BM_g1ShlU"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5YWEzMzk1MmJlYjNkNWM5NjlkMWYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjNXZGFPdnJwU1h3MXlvU3loZk85MXVwcU1qbDkzd3U0c0F6OCIsImlhdCI6MTY1MjE0MDU5NiwiZXhwIjoxNjUyMjI2OTk2fQ.QUFaTr1grsYzkZWeTzGNTQg6pKS0NdRBFCF3LkC9ODs"
                   }
                 }
               }
@@ -185,27 +185,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Nikki27@gmail.com",
-                  "password": "YgZ9KvEGHiiiR5d",
+                  "email": "Elva_Kulas28@yahoo.com",
+                  "password": "zEesM0ipBOgvmja",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Shakira Turner"
+                  "fullName": "Krista Watsica"
                 },
                 "businessDetails": {
-                  "type": "Customer-focused incremental orchestration",
-                  "name": "Monitored optimizing leverage",
-                  "cacNumber": "Object-based neutral database",
-                  "state": "New York",
-                  "lga": "North Dakota",
+                  "type": "Synergistic explicit algorithm",
+                  "name": "Self-enabling zero defect process improvement",
+                  "cacNumber": "Cross-group stable utilisation",
+                  "state": "Ohio",
+                  "lga": "Alabama",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Barbados"
+                    "label": "United States Minor Outlying Islands"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "User-friendly scalable toolset",
-                  "accountName": "Polly Mohr",
+                  "bank": "Distributed transitional local area network",
+                  "accountName": "Stefanie Johnson",
                   "payoutFrequency": 5
                 }
               }
@@ -240,7 +240,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMzk2ZjkwMzIxODkyZjljNGYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InB1eTJLc3h2eEtDVWhoUGliTmxMM3JZc2pRNWw0RzZuSFducyIsImlhdCI6MTY1MDkxMTY4MywiZXhwIjoxNjUwOTk4MDgzfQ.YbYdn1o53q_HsbAcQrvt91tadq-ytfaZcqvgcw1v0-g"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5YWEzNDk1MmJlYjNkNWM5NjlkMjYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImVueE5QZUpIZk8yYW10RUYxaGl3QkNPNVRsOEhTaDhENkxZdSIsImlhdCI6MTY1MjE0MDU5NiwiZXhwIjoxNjUyMjI2OTk2fQ.Kz_EF-x969ai_-XifHMKBtcmlodAvcdZtW_6opoKCsE"
                   }
                 }
               }
@@ -272,8 +272,8 @@
                 }
               },
               "example": {
-                "email": "Geoffrey_Keebler98@yahoo.com",
-                "password": "AMB2ecKh8ShrN1f",
+                "email": "Raegan_Block@gmail.com",
+                "password": "lqtjr_naqqdpazT",
                 "type": "customer"
               }
             }
@@ -352,21 +352,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-04-25T18:34:44.007Z",
+                      "lastLoggedIn": "2022-05-09T23:56:37.199Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "6266e9c296f90321892f9c48",
-                      "firstName": "Demarco",
-                      "lastName": "Streich",
-                      "email": "Geoffrey_Keebler98@yahoo.com",
-                      "updatedAt": "2022-04-25T19:34:42+01:00",
-                      "createdAt": "2022-04-25T19:34:42+01:00",
+                      "_id": "6279aa33952beb3d5c969d1f",
+                      "firstName": "Manley",
+                      "lastName": "Pollich",
+                      "email": "Raegan_Block@gmail.com",
+                      "updatedAt": "2022-05-10T00:56:35+01:00",
+                      "createdAt": "2022-05-10T00:56:35+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-04-25T18:34:43.897Z"
+                      "verifiedEmailAt": "2022-05-09T23:56:37.090Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiI4Q3ZvaFhINVRRcE9GbEFjNVVZcmRDM01FemxBenVsREEzR0wiLCJpYXQiOjE2NTA5MTE2ODQsImV4cCI6MTY1MDk5ODA4NH0.RdjyLzTc3gKjgcvDn-hy798wRp7Ycu9UxQCi-Ca_J1Q"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5YWEzMzk1MmJlYjNkNWM5NjlkMWYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJQR3JIZXl5REo2eG9LUmM2UlRpYlpiY3hmRnZYdGo4VWsybFYiLCJpYXQiOjE2NTIxNDA1OTcsImV4cCI6MTY1MjIyNjk5N30.VESd4vYwhRvqc4LZ3R6Ijz1aFKyYATJovjECNHkMPbE"
                   }
                 }
               }
@@ -392,7 +392,7 @@
                 }
               },
               "example": {
-                "code": "38551"
+                "code": "47977"
               }
             }
           }
@@ -419,7 +419,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJjMUV3REVRZ3FMYk0zbTE0eHd6elVZemdwclFBaGJiTmdaa2oiLCJpYXQiOjE2NTA5MTE2ODMsImV4cCI6MTY1MDk5ODA4M30.OhyCF3roa68HrmLkkUNc-YPIwi8a3SjTJF-hZIE-Cns"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5YWEzMzk1MmJlYjNkNWM5NjlkMWYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiI0dnNSc2RIU3RSbDJqZjZoTXhjb1FuWGJESE9lVWVwbllOSUMiLCJpYXQiOjE2NTIxNDA1OTcsImV4cCI6MTY1MjIyNjk5N30.M2Qd7yoWqc74wmsZIwpMT2w_nW56ea3LMbz3IueBv2o"
                 }
               }
             }
@@ -447,7 +447,7 @@
                 }
               },
               "example": {
-                "email": "Geoffrey_Keebler98@yahoo.com",
+                "email": "Raegan_Block@gmail.com",
                 "type": "customer"
               }
             }
@@ -481,7 +481,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjY2ZTljMjk2ZjkwMzIxODkyZjljNDgiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiTzNTRTVsTDNvTFVpSjFkN0VoakJHOEZNYzVzaWhxaWkxZ1lXIiwiaWF0IjoxNjUwOTExNjg0LCJleHAiOjE2NTA5OTgwODR9.oc2DfuyTM3X0Q4E2MTk5J1sCUH4Qs0ZyTUEJe5xsDUo"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5YWEzMzk1MmJlYjNkNWM5NjlkMWYiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiZzN6VzdKWHNINnFDNFpMYkdFZkFMUWVFOWZkdWVWcU93UjRoIiwiaWF0IjoxNjUyMTQwNTk3LCJleHAiOjE2NTIyMjY5OTd9.-r_kt6vRnWLvp_JKilDP9h-fKjxpXAmWQ9CbcH_Q6S0"
                   }
                 }
               }
@@ -549,7 +549,9 @@
     "/v1/buyer/cart": {
       "put": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Cart/Buyer"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -612,7 +614,7 @@
                 }
               },
               "example": {
-                "productId": "6266e9c196f90321892f9c3c",
+                "productId": "6279aa33952beb3d5c969d0f",
                 "quantity": 10
               }
             }
@@ -700,19 +702,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6266e9c496f90321892f9c6f",
-                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6279aa35952beb3d5c969d46",
+                      "createdAt": "Tue May 10 2022 00:56:37 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 00:56:37 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6266e9c196f90321892f9c3c",
+                        "_id": "6279aa33952beb3d5c969d0f",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "est accusamus officiis",
-                        "description": "Omnis eligendi non neque aut consequuntur. Accusantium accusantium rerum repellendus ipsum aut illo et quis. Et quos est voluptatem mollitia aut esse sit. Ut odit aut similique est consequatur repellendus.",
+                        "name": "odit ipsam nobis",
+                        "description": "Dolor natus ut dolore voluptas consequatur id incidunt. Odit in accusamus iste voluptatem quaerat quia nobis vel. Optio rerum molestiae vel sint in. Corrupti architecto qui error dolor excepturi consequatur autem eius.",
                         "category": {
-                          "_id": "6266e9c096f90321892f9c29",
+                          "_id": "6279aa31952beb3d5c969cfa",
                           "name": "Food",
                           "__v": 0
                         }
@@ -727,7 +729,9 @@
       },
       "get": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Cart/Buyer"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -807,19 +811,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6266e9c496f90321892f9c6f",
-                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6279aa35952beb3d5c969d46",
+                      "createdAt": "Tue May 10 2022 00:56:37 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 00:56:37 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6266e9c196f90321892f9c3c",
+                        "_id": "6279aa33952beb3d5c969d0f",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "est accusamus officiis",
-                        "description": "Omnis eligendi non neque aut consequuntur. Accusantium accusantium rerum repellendus ipsum aut illo et quis. Et quos est voluptatem mollitia aut esse sit. Ut odit aut similique est consequatur repellendus.",
+                        "name": "odit ipsam nobis",
+                        "description": "Dolor natus ut dolore voluptas consequatur id incidunt. Odit in accusamus iste voluptatem quaerat quia nobis vel. Optio rerum molestiae vel sint in. Corrupti architecto qui error dolor excepturi consequatur autem eius.",
                         "category": {
-                          "_id": "6266e9c096f90321892f9c29",
+                          "_id": "6279aa31952beb3d5c969cfa",
                           "name": "Food",
                           "__v": 0
                         }
@@ -833,10 +837,64 @@
         }
       }
     },
+    "/v1/buyer/cart/checkout": {
+      "post": {
+        "description": "",
+        "tags": [
+          "Cart/Buyer"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "authorizationUrl": {
+                      "type": "string"
+                    },
+                    "accessCode": {
+                      "type": "string"
+                    },
+                    "transactionId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "authorizationUrl": "https://checkout.paystack.com/2rw46ag0z3g8pif",
+                  "accessCode": "2rw46ag0z3g8pif",
+                  "transactionId": "6279aa35952beb3d5c969d56"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/info/categories": {
       "get": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Categories"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -872,22 +930,22 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "6266e9c096f90321892f9c29",
+                      "_id": "6279aa31952beb3d5c969cfa",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "6266e9c096f90321892f9c2b",
+                      "_id": "6279aa31952beb3d5c969cfc",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "6266e9c096f90321892f9c2d",
+                      "_id": "6279aa31952beb3d5c969cfe",
                       "name": "Clothings",
                       "__v": 0
                     },
                     {
-                      "_id": "6266e9c096f90321892f9c2f",
+                      "_id": "6279aa31952beb3d5c969d00",
                       "name": "Phones",
                       "__v": 0
                     }
@@ -902,7 +960,9 @@
     "/v1/admin/info/categories": {
       "post": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Categories/Admin"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -916,7 +976,7 @@
                 }
               },
               "example": {
-                "name": "maiores at voluptatem"
+                "name": "asperiores voluptas iste"
               }
             }
           }
@@ -951,8 +1011,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "6266e9c496f90321892f9c7e",
-                    "name": "maiores at voluptatem",
+                    "_id": "6279aa37952beb3d5c969d5d",
+                    "name": "asperiores voluptas iste",
                     "__v": 0
                   }
                 }
@@ -965,7 +1025,9 @@
     "/v1/vendor/products": {
       "post": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Product/Vendor"
+        ],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1008,15 +1070,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Incredible Rubber Chips",
-                "categoryId": "6266e9c096f90321892f9c29",
+                "name": "Unbranded Wooden Chips",
+                "categoryId": "6279aa31952beb3d5c969cfa",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-04-25T18:34:44.665Z",
+                "expiryDate": "2022-05-09T23:56:39.052Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui."
+                "description": "Quam architecto velit laborum voluptas quis eos distinctio ullam. Ipsam eos repudiandae dolor dolorem expedita rem. Et nihil molestias consectetur ut accusamus voluptatibus voluptas cumque. Et aut repellat. Sed porro consequatur quia nulla eveniet quia aliquid rerum et."
               }
             }
           }
@@ -1094,13 +1156,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "6266e9c496f90321892f9c83",
-                    "name": "Incredible Rubber Chips",
+                    "_id": "6279aa37952beb3d5c969d62",
+                    "name": "Unbranded Wooden Chips",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-04-25T18:34:44.665Z",
-                    "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui.",
-                    "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-04-25T19:34:44+01:00",
+                    "expiryDate": "2022-05-09T23:56:39.052Z",
+                    "description": "Quam architecto velit laborum voluptas quis eos distinctio ullam. Ipsam eos repudiandae dolor dolorem expedita rem. Et nihil molestias consectetur ut accusamus voluptatibus voluptas cumque. Et aut repellat. Sed porro consequatur quia nulla eveniet quia aliquid rerum et.",
+                    "createdAt": "Tue May 10 2022 00:56:39 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-10T00:56:39+01:00",
                     "__v": 0
                   }
                 }
@@ -1111,7 +1173,9 @@
       },
       "get": {
         "description": "",
-        "tags": [],
+        "tags": [
+          "Product/Vendor"
+        ],
         "parameters": [
           {
             "in": "query",
@@ -1227,14 +1291,14 @@
                       "quantity": 10,
                       "minimumOrder": 0,
                       "handlingFee": 10,
-                      "status": "pending",
-                      "_id": "6266e9c496f90321892f9c83",
-                      "name": "Incredible Rubber Chips",
+                      "status": "approved",
+                      "_id": "6279aa37952beb3d5c969d62",
+                      "name": "Unbranded Wooden Chips",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-04-25T18:34:44.665Z",
-                      "description": "Amet molestiae ut est veniam praesentium enim. Et voluptatem odit assumenda. Porro doloremque et molestiae deleniti quaerat. Fuga consequatur qui est et laborum autem nulla. Error ratione consequuntur non qui.",
-                      "createdAt": "Mon Apr 25 2022 19:34:44 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-04-25T19:34:44+01:00",
+                      "expiryDate": "2022-05-09T23:56:39.052Z",
+                      "description": "Quam architecto velit laborum voluptas quis eos distinctio ullam. Ipsam eos repudiandae dolor dolorem expedita rem. Et nihil molestias consectetur ut accusamus voluptatibus voluptas cumque. Et aut repellat. Sed porro consequatur quia nulla eveniet quia aliquid rerum et.",
+                      "createdAt": "Tue May 10 2022 00:56:39 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 00:56:39 GMT+0100 (West Africa Standard Time)",
                       "__v": 0
                     }
                   ],
@@ -1245,6 +1309,114 @@
                     "prevPage": null,
                     "lastPage": 1
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/products/{productId}/approve": {
+      "post": {
+        "description": "",
+        "tags": [
+          "Product/Admin"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "productId",
+            "description": "",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "product has been approved"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/buyer/products/{productId}/like": {
+      "post": {
+        "description": "",
+        "tags": [
+          "Product/Buyer"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "productId",
+            "description": "",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "product has been liked successfully"
                 }
               }
             }

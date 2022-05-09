@@ -23,6 +23,12 @@ exports.createAccountReturnToken = async (data = {}) => {
     })
   }
 
+  if (data.type === ACCOUNT_TYPES.CUSTOMER) {
+    await models.Customer.create({
+      accountId: account._id
+    })
+  }
+
   const token = await generateJWTToken({
     accountId: account._id,
     flag: TOKEN_FLAG.AUTH,

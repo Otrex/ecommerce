@@ -13,6 +13,10 @@ class CartController {
   static getCart = RequestHandler({
     handler: CartService.getCart,
   });
+
+  static checkoutCart = RequestHandler({
+    handler: CartService.checkoutCart,
+  });
 }
 
 module.exports = CartController;

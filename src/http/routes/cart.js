@@ -20,4 +20,11 @@ router
     CartController.addToCart
   );
 
+router
+  .route('/buyer/cart/checkout')
+  .post(
+    authorization([ACCOUNT_TYPES.CUSTOMER]),
+    CartController.checkoutCart
+  )
+
 module.exports = router;

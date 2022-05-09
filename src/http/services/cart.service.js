@@ -5,6 +5,11 @@ const {
 const models = require('../models');
 const { omit } = require('lodash');
 const { PRODUCT_STATUS } = require('../../constants');
+const Paystack = require('paystack-api-ts').default;
+const config = require('../../config');
+
+
+const paystack = new Paystack(config.paystack.key);
 
 class CartService {
   static getCart = async ({ account }) => {
@@ -77,6 +82,35 @@ class CartService {
       ...data,
       message: 'item has been added to cart successfully'
     }
+  }
+
+  static checkoutCart = async ({ account }) => {
+    const {data} = await CartService.getCart({ account });
+    if (!data.length) throw new ServiceError('no item in cart');
+
+    const amount = data.reduce((total, cart) => (
+      total + (cart.quantity * cart.product.price)
+    ), 0);
+
+    const transaction = await models.Transaction.create({
+      amount
+    });
+    
+    const paymentInit = await paystack.transaction.initialize({
+      metadata: { transactionId: transaction._id },
+      amount: `${amount * 100}`,
+      email: account.email,
+    });
+
+    await models.Transaction.findByIdAndUpdate(transaction._id, {
+      reference: paymentInit.reference,
+    });
+
+    return {
+      authorizationUrl: paymentInit.authorizationUrl,
+      accessCode: paymentInit.accessCode,
+      transactionId: transaction.id,
+    };
   }
 }
 

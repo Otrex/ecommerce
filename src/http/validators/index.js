@@ -22,6 +22,15 @@ class AddCategoryValidator extends GenericValidator {
   };
 }
 
+class ApproveProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    productId: { type: 'string', trim: true, min: 5 }
+  }
+}
+
+class LikeProductValidator extends ApproveProductValidator {}
+
 class CreateProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -178,6 +187,7 @@ module.exports = {
   LoginValidator,
   RegisterValidator,
   AddToCartValidator,
+  LikeProductValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,
@@ -185,6 +195,7 @@ module.exports = {
   GetBusinessProductValidator,
   CustomerRegisterValidator,
   BusinessRegisterValidator,
+  ApproveProductValidator,
   CreateProductValidator,
   AddCategoryValidator,
   SignedURLValidator,
