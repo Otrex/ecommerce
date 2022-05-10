@@ -4,6 +4,7 @@ const {
   LikeProductValidator,
   CreateProductValidator,
   ApproveProductValidator,
+  GetProductDetailsValidator,
   GetBusinessProductValidator,
   GetFavoriteProductValidator,
   GetProductByCategoryValidator,
@@ -38,6 +39,11 @@ class ProductController {
   static likeProduct = RequestHandler({
     validator: LikeProductValidator,
     handler: ProductService.likeProduct,
+  });
+
+  static getProductDetails =  RequestHandler({
+    validator: GetProductDetailsValidator,
+    handler: ProductService.getProductDetails,
   });
 }
 

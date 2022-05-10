@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Jayden61@gmail.com",
-                "password": "2kxxIf9evfVQeQm",
-                "firstName": "Jeff",
-                "lastName": "Reynolds",
+                "email": "Jarred.Muller61@yahoo.com",
+                "password": "BZ2xH0IDDftq2Q_",
+                "firstName": "Hayden",
+                "lastName": "Strosin",
                 "gender": "male"
               }
             }
@@ -93,7 +93,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjc0NGFjNjY2OTRjYzFjMDc2ODYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImF4S1J4enZMMXpjNWNSbm13S1FhMksxaDVOQkQ0M0dzazZncSIsImlhdCI6MTY1MjE0Mzk0MCwiZXhwIjoxNjUyMjMwMzQwfQ.Is60E6uTQxI1pzud6vWmU3NSZOvIH8pA8v9qvIZlA9Q"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlEzemg1b1hkRnhWbnk2SlJ1Zk1Jd1VaRHRBNUs2MzE4QVdGYiIsImlhdCI6MTY1MjE0NDU0MCwiZXhwIjoxNjUyMjMwOTQwfQ.EOphWZxgHZ33CANOUFqNzFDRXXgkhMvbPqbL-VmFOgw"
                   }
                 }
               }
@@ -185,27 +185,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Lilly_Gleason91@hotmail.com",
-                  "password": "MiJCpi_LETdHSi2",
+                  "email": "Monserrat90@yahoo.com",
+                  "password": "8OQ2TISBrajjhvI",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Julio Crist"
+                  "fullName": "Austin Runolfsson"
                 },
                 "businessDetails": {
-                  "type": "Programmable empowering Graphical User Interface",
-                  "name": "Optional uniform internet solution",
-                  "cacNumber": "Extended disintermediate paradigm",
-                  "state": "New Jersey",
-                  "lga": "Mississippi",
+                  "type": "Versatile eco-centric benchmark",
+                  "name": "Organic responsive policy",
+                  "cacNumber": "Automated global structure",
+                  "state": "Mississippi",
+                  "lga": "Nebraska",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Uruguay"
+                    "label": "Gambia"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Future-proofed global capacity",
-                  "accountName": "Nichole Swaniawski",
+                  "bank": "Mandatory demand-driven algorithm",
+                  "accountName": "Haylie Haag",
                   "payoutFrequency": 5
                 }
               }
@@ -240,7 +240,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjc0NGFjNjY2OTRjYzFjMDc2OGQiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InRISUNMb0dhVVBWWWNHVkpQZFBzc09SV3Q0M0c1amM1emVwaSIsImlhdCI6MTY1MjE0Mzk0MSwiZXhwIjoxNjUyMjMwMzQxfQ.Lt6O9hLb2uM1UHhs0JUP-YAj02BpKTn3D9yV9BvTwHA"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMWMiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImU3bE9UblppQjVPMWNHUk81N05BN0FlRlhRd3FVMThWQ2pnbiIsImlhdCI6MTY1MjE0NDU0MSwiZXhwIjoxNjUyMjMwOTQxfQ.rB8YK5Bn2WuVmc-I3wPyEJGTIfTxqh2pG7ixoTP2FI8"
                   }
                 }
               }
@@ -272,8 +272,8 @@
                 }
               },
               "example": {
-                "email": "Jayden61@gmail.com",
-                "password": "2kxxIf9evfVQeQm",
+                "email": "Jarred.Muller61@yahoo.com",
+                "password": "BZ2xH0IDDftq2Q_",
                 "type": "customer"
               }
             }
@@ -352,21 +352,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-10T00:52:21.619Z",
+                      "lastLoggedIn": "2022-05-10T01:02:21.551Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "6279b744ac66694cc1c07686",
-                      "firstName": "Jeff",
-                      "lastName": "Reynolds",
-                      "email": "Jayden61@gmail.com",
-                      "updatedAt": "2022-05-10T01:52:20+01:00",
-                      "createdAt": "2022-05-10T01:52:20+01:00",
+                      "_id": "6279b99c997e4b4fcf4cbe15",
+                      "firstName": "Hayden",
+                      "lastName": "Strosin",
+                      "email": "Jarred.Muller61@yahoo.com",
+                      "updatedAt": "2022-05-10T02:02:20+01:00",
+                      "createdAt": "2022-05-10T02:02:20+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-05-10T00:52:21.514Z"
+                      "verifiedEmailAt": "2022-05-10T01:02:21.433Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjc0NGFjNjY2OTRjYzFjMDc2ODYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJoZlJjWWNvbHZrOXdnSTdiUjB2ZVFNZUxvUFljcXFiakpNcnMiLCJpYXQiOjE2NTIxNDM5NDEsImV4cCI6MTY1MjIzMDM0MX0.v3Vowen1DXVvL7ykys_fO3gmBL8KV_SOHD08LmSB-bU"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJjbWNwUW9WREJibXBacXY2WWE1czZUSUxGdzRzYUI3dnJnM1AiLCJpYXQiOjE2NTIxNDQ1NDEsImV4cCI6MTY1MjIzMDk0MX0.owua2-sHje0R3GCw3X2GIadbr4XDLtshzFbJrv1rqUs"
                   }
                 }
               }
@@ -392,7 +392,7 @@
                 }
               },
               "example": {
-                "code": "85520"
+                "code": "45279"
               }
             }
           }
@@ -419,7 +419,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjc0NGFjNjY2OTRjYzFjMDc2ODYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJlVUhiamM5MjlCam95OTBCc3JrTXJleWQwQ3Z5dVBoSkRUdnIiLCJpYXQiOjE2NTIxNDM5NDEsImV4cCI6MTY1MjIzMDM0MX0.zgA7Ju1HabKmcdhSQcK-NkPkuKouJ02PSPK_MEc0IN4"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJaZDRkUVJ1bzVPd2x0QlFFZU81U05GcHpvdWVXMDFCQkEzcnQiLCJpYXQiOjE2NTIxNDQ1NDEsImV4cCI6MTY1MjIzMDk0MX0.iFTn94gy8zHCbLIqgBzLY5afowZ5MV_UyqVQWpATwmU"
                 }
               }
             }
@@ -447,7 +447,7 @@
                 }
               },
               "example": {
-                "email": "Jayden61@gmail.com",
+                "email": "Jarred.Muller61@yahoo.com",
                 "type": "customer"
               }
             }
@@ -481,7 +481,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjc0NGFjNjY2OTRjYzFjMDc2ODYiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiSjZrVmpxdWY0ZU9NY3R0MFVHcUFrcDdwaFhXNmhEMDFmVHFxIiwiaWF0IjoxNjUyMTQzOTQxLCJleHAiOjE2NTIyMzAzNDF9.70s0pQQiv9xItFVlQzTUFu9KqBv8CtXVVcfB8bAAfAw"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiRlc4WEI1UmlKbUNmZ1NZM2VhWFoxcjkzcVFvWVN4emJrSnRjIiwiaWF0IjoxNjUyMTQ0NTQxLCJleHAiOjE2NTIyMzA5NDF9.Qx5-g_Yq6w5Ha4dJMlORLwqQJyvIT8xh6f_DfdgqbsY"
                   }
                 }
               }
@@ -614,7 +614,7 @@
                 }
               },
               "example": {
-                "productId": "6279b743ac66694cc1c07676",
+                "productId": "6279b99b997e4b4fcf4cbe05",
                 "quantity": 10
               }
             }
@@ -702,19 +702,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6279b745ac66694cc1c076ad",
-                      "createdAt": "Tue May 10 2022 01:52:21 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 01:52:22 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6279b99d997e4b4fcf4cbe3c",
+                      "createdAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6279b743ac66694cc1c07676",
+                        "_id": "6279b99b997e4b4fcf4cbe05",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "cum deserunt dolorem",
-                        "description": "Illum voluptatibus est vel impedit aut voluptatem ipsa explicabo. Dicta quia est voluptas maiores dolorum ullam.",
+                        "name": "eum excepturi dolor",
+                        "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
                         "category": {
-                          "_id": "6279b742ac66694cc1c07661",
+                          "_id": "6279b999997e4b4fcf4cbdf0",
                           "name": "Food",
                           "__v": 0
                         }
@@ -811,19 +811,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6279b745ac66694cc1c076ad",
-                      "createdAt": "Tue May 10 2022 01:52:21 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 01:52:22 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6279b99d997e4b4fcf4cbe3c",
+                      "createdAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6279b743ac66694cc1c07676",
+                        "_id": "6279b99b997e4b4fcf4cbe05",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "cum deserunt dolorem",
-                        "description": "Illum voluptatibus est vel impedit aut voluptatem ipsa explicabo. Dicta quia est voluptas maiores dolorum ullam.",
+                        "name": "eum excepturi dolor",
+                        "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
                         "category": {
-                          "_id": "6279b742ac66694cc1c07661",
+                          "_id": "6279b999997e4b4fcf4cbdf0",
                           "name": "Food",
                           "__v": 0
                         }
@@ -879,9 +879,9 @@
                 },
                 "example": {
                   "status": "success",
-                  "authorizationUrl": "https://checkout.paystack.com/0p5ny6v54rmqcb3",
-                  "accessCode": "0p5ny6v54rmqcb3",
-                  "transactionId": "6279b746ac66694cc1c076bd"
+                  "authorizationUrl": "https://checkout.paystack.com/f63k058akc8ao21",
+                  "accessCode": "f63k058akc8ao21",
+                  "transactionId": "6279b99e997e4b4fcf4cbe4c"
                 }
               }
             }
@@ -930,23 +930,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "6279b742ac66694cc1c07661",
+                      "_id": "6279b999997e4b4fcf4cbdf0",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "6279b742ac66694cc1c07663",
+                      "_id": "6279b999997e4b4fcf4cbdf4",
+                      "name": "Clothings",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "6279b999997e4b4fcf4cbdf2",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "6279b742ac66694cc1c07667",
+                      "_id": "6279b999997e4b4fcf4cbdf6",
                       "name": "Phones",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "6279b742ac66694cc1c07665",
-                      "name": "Clothings",
                       "__v": 0
                     }
                   ]
@@ -976,7 +976,7 @@
                 }
               },
               "example": {
-                "name": "quos aut sed"
+                "name": "nisi voluptatem quaerat"
               }
             }
           }
@@ -1011,8 +1011,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "6279b748ac66694cc1c076c4",
-                    "name": "quos aut sed",
+                    "_id": "6279b99e997e4b4fcf4cbe53",
+                    "name": "nisi voluptatem quaerat",
                     "__v": 0
                   }
                 }
@@ -1070,15 +1070,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Incredible Fresh Hat",
-                "categoryId": "6279b742ac66694cc1c07661",
+                "name": "Gorgeous Soft Towels",
+                "categoryId": "6279b999997e4b4fcf4cbdf0",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-05-10T00:52:24.949Z",
+                "expiryDate": "2022-05-10T01:02:22.975Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Dolores dolorum eligendi voluptatum numquam qui. Facilis aperiam praesentium placeat. Et est temporibus maxime qui illum necessitatibus et facilis. Atque hic maxime nulla rerum et tempora."
+                "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores."
               }
             }
           }
@@ -1156,13 +1156,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "6279b748ac66694cc1c076c9",
-                    "name": "Incredible Fresh Hat",
+                    "_id": "6279b99e997e4b4fcf4cbe58",
+                    "name": "Gorgeous Soft Towels",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-10T00:52:24.949Z",
-                    "description": "Dolores dolorum eligendi voluptatum numquam qui. Facilis aperiam praesentium placeat. Et est temporibus maxime qui illum necessitatibus et facilis. Atque hic maxime nulla rerum et tempora.",
-                    "createdAt": "Tue May 10 2022 01:52:24 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-05-10T01:52:24+01:00",
+                    "expiryDate": "2022-05-10T01:02:22.975Z",
+                    "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
+                    "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-10T02:02:22+01:00",
                     "__v": 0
                   }
                 }
@@ -1292,13 +1292,13 @@
                       "minimumOrder": 0,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b748ac66694cc1c076c9",
-                      "name": "Incredible Fresh Hat",
+                      "_id": "6279b99e997e4b4fcf4cbe58",
+                      "name": "Gorgeous Soft Towels",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-05-10T00:52:24.949Z",
-                      "description": "Dolores dolorum eligendi voluptatum numquam qui. Facilis aperiam praesentium placeat. Et est temporibus maxime qui illum necessitatibus et facilis. Atque hic maxime nulla rerum et tempora.",
-                      "createdAt": "Tue May 10 2022 01:52:24 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 01:52:25 GMT+0100 (West Africa Standard Time)",
+                      "expiryDate": "2022-05-10T01:02:22.975Z",
+                      "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
+                      "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Tue May 10 2022 02:02:23 GMT+0100 (West Africa Standard Time)",
                       "__v": 0
                     }
                   ],
@@ -1424,6 +1424,121 @@
         }
       }
     },
+    "/v1/public/products/{productId}": {
+      "get": {
+        "description": "",
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "productId",
+            "description": "",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "feedbackId": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "price": {
+                          "type": "number"
+                        },
+                        "weight": {
+                          "type": "number"
+                        },
+                        "quantityLeft": {
+                          "type": "number"
+                        },
+                        "quantity": {
+                          "type": "number"
+                        },
+                        "minimumOrder": {
+                          "type": "number"
+                        },
+                        "handlingFee": {
+                          "type": "number"
+                        },
+                        "status": {
+                          "type": "string"
+                        },
+                        "_id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "imageUrl": {
+                          "type": "string"
+                        },
+                        "expiryDate": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "creatorId": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "updatedAt": {
+                          "type": "string"
+                        },
+                        "__v": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "feedbackId": [],
+                    "price": 500,
+                    "weight": 30,
+                    "quantityLeft": 10,
+                    "quantity": 10,
+                    "minimumOrder": 0,
+                    "handlingFee": 10,
+                    "status": "approved",
+                    "_id": "6279b99e997e4b4fcf4cbe58",
+                    "name": "Gorgeous Soft Towels",
+                    "imageUrl": "http://placeimg.com/640/480",
+                    "expiryDate": "2022-05-10T01:02:22.975Z",
+                    "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
+                    "creatorId": "6279b99b997e4b4fcf4cbe0b",
+                    "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "Tue May 10 2022 02:02:23 GMT+0100 (West Africa Standard Time)",
+                    "__v": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/buyer/products/favorites": {
       "get": {
         "description": "",
@@ -1508,10 +1623,10 @@
                     {
                       "feedbackId": [],
                       "price": 500,
-                      "_id": "6279b748ac66694cc1c076c9",
-                      "name": "Incredible Fresh Hat",
+                      "_id": "6279b99e997e4b4fcf4cbe58",
+                      "name": "Gorgeous Soft Towels",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "description": "Dolores dolorum eligendi voluptatum numquam qui. Facilis aperiam praesentium placeat. Et est temporibus maxime qui illum necessitatibus et facilis. Atque hic maxime nulla rerum et tempora."
+                      "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores."
                     }
                   ],
                   "pageData": {
@@ -1532,7 +1647,7 @@
       "get": {
         "description": "",
         "tags": [
-          "Product/Public"
+          "Product"
         ],
         "parameters": [
           {
@@ -1655,14 +1770,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b743ac66694cc1c07676",
+                      "_id": "6279b99b997e4b4fcf4cbe05",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "cum deserunt dolorem",
-                      "categoryId": "6279b742ac66694cc1c07661",
-                      "expiryDate": "2022-05-10T00:52:19.727Z",
-                      "description": "Illum voluptatibus est vel impedit aut voluptatem ipsa explicabo. Dicta quia est voluptas maiores dolorum ullam.",
-                      "createdAt": "Tue May 10 2022 01:52:19 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-10T01:52:19+01:00",
+                      "name": "eum excepturi dolor",
+                      "categoryId": "6279b999997e4b4fcf4cbdf0",
+                      "expiryDate": "2022-05-10T01:02:19.468Z",
+                      "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
+                      "createdAt": "Tue May 10 2022 02:02:19 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-10T02:02:19+01:00",
                       "__v": 0
                     },
                     {
@@ -1673,14 +1788,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b743ac66694cc1c07677",
+                      "_id": "6279b99b997e4b4fcf4cbe06",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "id ad voluptatem",
-                      "categoryId": "6279b742ac66694cc1c07661",
-                      "expiryDate": "2022-05-10T00:52:19.727Z",
-                      "description": "Enim ipsam animi non esse. Quis dolorem nobis et debitis perspiciatis. Nemo veniam sed sunt ut. Vero temporibus veniam sed quam nobis. Voluptas deleniti neque facilis at repellat quod tempore consequuntur. Quae id aliquid et consequatur repellat nam illum earum adipisci.",
-                      "createdAt": "Tue May 10 2022 01:52:19 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-10T01:52:19+01:00",
+                      "name": "consequatur et repellendus",
+                      "categoryId": "6279b999997e4b4fcf4cbdf0",
+                      "expiryDate": "2022-05-10T01:02:19.468Z",
+                      "description": "At id vel doloremque iusto magni sed in qui aut. Commodi adipisci esse perferendis qui. Assumenda voluptatem est et sunt pariatur similique. Eos veritatis pariatur omnis qui optio et assumenda cumque. Et ducimus enim. Laborum iusto alias.",
+                      "createdAt": "Tue May 10 2022 02:02:19 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-10T02:02:19+01:00",
                       "__v": 0
                     }
                   ],

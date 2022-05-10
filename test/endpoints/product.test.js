@@ -134,6 +134,23 @@ describe('Product', () => {
       });
     });
 
+    it('it get product details', async () => {
+      const res = await server
+        .get(`/v1/public/products/${product._id}`)
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product'],
+        pathParameters: [
+          {
+            index: 3,
+            name: 'productId',
+          },
+        ],
+      });
+    });
+
     it('get favorite products', async () => {
       const res = await server
         .get('/v1/buyer/products/favorites?page=1&limit=20')
@@ -167,7 +184,7 @@ describe('Product', () => {
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
-        tags: ['Product/Public'],
+        tags: ['Product'],
         pathParameters: [
           {
             index: 3,

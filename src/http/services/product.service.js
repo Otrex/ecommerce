@@ -98,7 +98,7 @@ class ProductService {
 
   static likeProduct = async ({ account, productId }) => {
     const product = await models.Product.findOne({ _id: productId });
-    if (!product) throw new NotFoundError('produt not found');
+    if (!product) throw new NotFoundError('product not found');
 
     const customer = await models.Customer.findOne({
       accountId: account._id,
@@ -172,6 +172,15 @@ class ProductService {
     }));
 
     return paginateResponse([_products, count], page, limit);
+  }
+
+  static getProductDetails = async ({ productId }) => {
+    const product = await models.Product.findOne({ _id: productId });
+    if (!product) throw new NotFoundError('product not found');
+
+    return {
+      data: product
+    }
   }
 }
 

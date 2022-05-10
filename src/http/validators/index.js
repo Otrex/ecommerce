@@ -30,6 +30,7 @@ class ApproveProductValidator extends GenericValidator {
 }
 
 class LikeProductValidator extends ApproveProductValidator {}
+class GetProductDetailsValidator extends ApproveProductValidator {}
 
 class CreateProductValidator extends GenericValidator {
   schema = {
@@ -207,6 +208,7 @@ module.exports = {
   CreateDropOffValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,
+  GetProductDetailsValidator,
   GetFavoriteProductValidator,
   GetProductByCategoryValidator,
   ResendVerificationEmailValidator,
