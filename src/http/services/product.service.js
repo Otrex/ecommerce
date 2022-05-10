@@ -1,4 +1,4 @@
-const { NotFoundError } = require('../lib/exceptions');
+const { NotFoundError, ServiceError } = require('../lib/exceptions');
 const models = require('../models');
 const { omit } = require('lodash');
 const { calcSkip, paginateResponse } = require('../../scripts/utils');
