@@ -109,7 +109,7 @@ class AuthService {
           accountId: account._id,
           flag: TOKEN_FLAG.EMAIL_VERIFY,
         }),
-      }
+      },
     };
   };
 
@@ -168,7 +168,7 @@ class AuthService {
           accountId: account._id,
           flag: TOKEN_FLAG.EMAIL_VERIFY,
         }),
-      }
+      },
     };
   };
 
@@ -191,7 +191,6 @@ class AuthService {
       await models.TimedToken.remove({ _id: timedToken._id });
     }
 
-
     await models.Account.updateOne(
       { _id: account._id },
       {
@@ -200,7 +199,6 @@ class AuthService {
       }
     );
 
-    
     const loginToken = await generateJWTToken({
       accountId: account._id,
       flag: TOKEN_FLAG.AUTH,
@@ -239,7 +237,8 @@ class AuthService {
           flag: TOKEN_FLAG.RESET,
         }),
       },
-      message: 'your reset code has been sent to you mail. please continue to reset your password',
+      message:
+        'your reset code has been sent to you mail. please continue to reset your password',
     };
   };
 
@@ -247,7 +246,7 @@ class AuthService {
     code,
     confirmPassword,
     password,
-    account
+    account,
   }) => {
     if (confirmPassword !== password) {
       throw new ServiceError('password does not match');
@@ -260,7 +259,7 @@ class AuthService {
         type: TOKEN_FLAG.RESET,
         token,
       });
-  
+
       if (!timedToken) {
         throw new ServiceError('invalid or expired token');
       }
@@ -306,7 +305,7 @@ class AuthService {
         account,
         timedToken,
       });
-  
+
       mailer.send(verification);
     }
 

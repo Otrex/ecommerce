@@ -4,11 +4,10 @@ const { authentication, isAdmin } = require('../../middlewares/auth');
 const { TOKEN_FLAG } = require('../../constants');
 const router = express.Router();
 
-router
-  .route('/info/categories')
-  .get(InfoController.getCategories);
+router.route('/info/categories').get(InfoController.getCategories);
 
-router.route('/admin/info/categories')
+router
+  .route('/admin/info/categories')
   .post(
     authentication(TOKEN_FLAG.AUTH),
     isAdmin,

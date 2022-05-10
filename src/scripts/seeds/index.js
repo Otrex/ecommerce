@@ -3,7 +3,7 @@ const Account = require('../../http/models/Account');
 const Category = require('../../http/models/Category');
 const { dbUri } = require('../../database');
 const config = require('../../config');
-const {bcryptHash} = require('../utils');
+const { bcryptHash } = require('../utils');
 const models = ['Category'];
 
 // const data = [
@@ -29,13 +29,15 @@ const models = ['Category'];
 
 const checkOrInsert = async (model, data) => {
   const d = await model.findOne(data);
-  if (!d) await model.create(data)
-}
+  if (!d) await model.create(data);
+};
 
 const categories = require('./data/categories.js');
 exports.seedCategories = async () => {
-  await Promise.all(categories.map((cat ) => checkOrInsert(Category, cat)));
-}
+  await Promise.all(
+    categories.map((cat) => checkOrInsert(Category, cat))
+  );
+};
 
 exports.seedAdmin = async () => {
   let account = await Account.findOne({

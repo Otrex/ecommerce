@@ -25,6 +25,6 @@ router
   .post(
     authorization([ACCOUNT_TYPES.CUSTOMER]),
     CartController.checkoutCart
-  )
+  );
 
 module.exports = router;

@@ -61,7 +61,7 @@ exports.nockPayStacInitiateResolveEndpoint = () => {
 
 exports.nockPaystackInitiateTransactionEndpoint = async (
   server,
-  trx,
+  trx
 ) => {
   nock('https://api.paystack.co')
     .defaultReplyHeaders({

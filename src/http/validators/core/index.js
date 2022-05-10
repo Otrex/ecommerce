@@ -4,15 +4,15 @@ const {
 } = require('../../lib/exceptions');
 const Validator = require('fastest-validator');
 const { MESSAGE } = require('../../../constants');
-const  { ObjectID } = require("mongodb") 
+const { ObjectID } = require('mongodb');
 
 class GenericValidator {
   validator = new Validator({
     defaults: {
       objectID: {
-        ObjectID
-      }
-    }
+        ObjectID,
+      },
+    },
   });
   check(data) {
     // console.log(data, this.schema)

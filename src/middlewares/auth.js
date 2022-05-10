@@ -5,7 +5,7 @@ const {
 const { ObjectId } = require('../http/types');
 const models = require('../http/models');
 const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../constants');
-const { decodeToken } = require('../scripts/utils')
+const { decodeToken } = require('../scripts/utils');
 
 module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
@@ -46,11 +46,9 @@ module.exports = {
           );
         }
 
-        const { accountId, flag, counter } = await decodeToken(
-          token
-        );
+        const { accountId, flag, counter } = await decodeToken(token);
 
-        console.log(flag)
+        console.log(flag);
 
         if (!accountId) {
           return next(

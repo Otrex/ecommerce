@@ -3,8 +3,8 @@ const GenericValidator = require('./core');
 
 const paginationSchemaFragment = {
   page: { type: 'number', convert: true, min: 1 },
-  limit: { type: 'number', convert: true, min: 1 }
-}
+  limit: { type: 'number', convert: true, min: 1 },
+};
 
 class LoginValidator extends GenericValidator {
   schema = {
@@ -25,8 +25,8 @@ class AddCategoryValidator extends GenericValidator {
 class ApproveProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
-    productId: { type: 'string', trim: true, min: 5 }
-  }
+    productId: { type: 'string', trim: true, min: 5 },
+  };
 }
 
 class LikeProductValidator extends ApproveProductValidator {}
@@ -81,8 +81,24 @@ class GetBusinessProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     ...paginationSchemaFragment,
-    status: { type: 'string', min: 0, trim: true }
-  }
+    status: { type: 'string', min: 0, trim: true },
+  };
+}
+
+
+class GetProductByCategoryValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+    categoryId: { type: 'string', min: 0, trim: true },
+  };
+}
+
+class GetFavoriteProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+  };
 }
 
 class BusinessRegisterValidator extends GenericValidator {
@@ -174,13 +190,13 @@ class CreateDropOffValidator extends GenericValidator {
 class AddToCartValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
-    productId: "objectID",
+    productId: 'objectID',
     quantity: {
-      type: 'number', 
-      positive: true, 
-      integer: true 
+      type: 'number',
+      positive: true,
+      integer: true,
     },
-  }
+  };
 }
 
 module.exports = {
@@ -191,6 +207,8 @@ module.exports = {
   CreateDropOffValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,
+  GetFavoriteProductValidator,
+  GetProductByCategoryValidator,
   ResendVerificationEmailValidator,
   GetBusinessProductValidator,
   CustomerRegisterValidator,

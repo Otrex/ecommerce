@@ -14,17 +14,17 @@ module.exports = {
   ORDER_STATUS: {
     SHIPPED: 'shipped',
     PENDING: 'pending',
-    COMPLETED: 'completed'
+    COMPLETED: 'completed',
   },
   TRANSACTION_STATUS: {
     SUCCESS: 'success',
     PENDING: 'pending',
-    COMPLETED: 'completed'
+    COMPLETED: 'completed',
   },
   TOKEN_FLAG: {
     AUTH: 'auth',
     EMAIL_VERIFY: 'email_verification',
-    RESET: 'password_reset'
+    RESET: 'password_reset',
   },
   MESSAGE: {
     ERROR: {

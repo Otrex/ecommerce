@@ -16,5 +16,8 @@ const customerFavoriteSchema = new Schema({
 
 customerFavoriteSchema.plugin(timestamp);
 
-const customerFavoriteModel = mongoose.model('CustomerFavorite', customerFavoriteSchema);
+const customerFavoriteModel = mongoose.model(
+  'CustomerFavorite',
+  customerFavoriteSchema
+);
 module.exports = customerFavoriteModel;

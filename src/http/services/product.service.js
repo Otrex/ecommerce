@@ -44,15 +44,17 @@ class ProductService {
       category: category._id,
     });
 
-    return { 
-      data: omit(product.toObject(), [
-        'feedbackId',
-        'creatorId',
-      ]) 
+    return {
+      data: omit(product.toObject(), ['feedbackId', 'creatorId']),
     };
   };
 
-  static getProducts_Business = async ({ account, status, limit, page }) => {
+  static getProducts_Business = async ({
+    account,
+    status,
+    limit,
+    page,
+  }) => {
     const vendor = await models.Business.findOne({
       accountId: account._id,
     });
@@ -63,22 +65,22 @@ class ProductService {
     const query = {
       creatorId: vendor._id,
       status: {
-        $in: statusArray
-      }
+        $in: statusArray,
+      },
     };
 
     const skip = calcSkip({ page, limit });
     const count = await models.Product.count(query);
     const products = await models.Product.find(query, null, {
       skip,
-      limit
+      limit,
     });
 
-    const _products = products.map(product => ({
+    const _products = products.map((product) => ({
       ...omit(product.toJSON(), ['feedbackId', 'creatorId']),
-    }))
+    }));
 
-    return paginateResponse([_products, count], page, limit)
+    return paginateResponse([_products, count], page, limit);
   };
 
   static approveProduct = async ({ productId }) => {
@@ -86,13 +88,13 @@ class ProductService {
     if (!product) throw new NotFoundError('produt not found');
 
     await models.Product.findByIdAndUpdate(product._id, {
-      status: PRODUCT_STATUS.APPROVED
+      status: PRODUCT_STATUS.APPROVED,
     });
 
     return {
-      message: 'product has been approved'
-    }
-  }
+      message: 'product has been approved',
+    };
+  };
 
   static likeProduct = async ({ account, productId }) => {
     const product = await models.Product.findOne({ _id: productId });
@@ -106,18 +108,70 @@ class ProductService {
 
     const isliked = await models.CustomerFavorite.findOne({
       productId: new ObjectId(productId),
-      customerId: customer._id
+      customerId: customer._id,
     });
 
-    if (isliked) throw new ServiceError('product is already liked')
+    if (isliked) throw new ServiceError('product is already liked');
     await models.CustomerFavorite.create({
       productId: new ObjectId(productId),
-      customerId: customer._id
-    })
+      customerId: customer._id,
+    });
 
     return {
-      message: 'product has been liked successfully'
-    }
+      message: 'product has been liked successfully',
+    };
+  };
+
+  static getFavorites = async ({ account, page, limit }) => {
+    const customer = await models.Customer.findOne({
+      accountId: account._id,
+    });
+
+    if (!customer) throw new NotFoundError('customer not found');
+
+    // TODO add feeback ratings
+    const skip = calcSkip({ page, limit });
+    const clause = { customerId: customer._id };
+    const count = await models.CustomerFavorite.count(clause);
+    const result = await models.CustomerFavorite.find(clause, null, {
+      limit,
+      skip,
+    })
+      .populate({
+        path: 'productId',
+        select: [
+          'price',
+          'name',
+          'feedbackId',
+          'imageUrl',
+          'description',
+          '_id',
+        ],
+      })
+      .exec();
+
+    const _result = result.map((r) => ({
+      ...r.productId._doc,
+    }));
+
+    return paginateResponse([_result, count], page, limit);
+  };
+
+
+  static getProductByCategory = async ({ categoryId, page, limit }) => {
+    const category = await models.Category.findById(categoryId);
+    if (!category) throw new NotFoundError('category not found');
+
+    const skip = calcSkip({ page, limit });
+    const clause = { categoryId: category._id };
+    const products = await models.Product.find(clause, null, { skip, limit });
+    const count = await models.Product.count(clause);
+
+    const _products = products.map((product) => ({
+      ...omit(product.toJSON(), ['feedbackId', 'creatorId' ]),
+    }));
+
+    return paginateResponse([_products, count], page, limit);
   }
 }
 

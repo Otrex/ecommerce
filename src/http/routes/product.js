@@ -22,10 +22,14 @@ router
 
 router
   .route('/admin/products/:productId/approve')
-  .post(ProductController.approveProduct)
+  .post(ProductController.approveProduct);
+
+router
+  .route('/buyer/products/favorites')
+  .get(ProductController.getFavorites);
 
 router
   .route('/buyer/products/:productId/like')
-  .post(ProductController.likeProduct)
+  .post(ProductController.likeProduct);
 
 module.exports = router;

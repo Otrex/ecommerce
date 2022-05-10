@@ -32,7 +32,7 @@ describe('Authentication', () => {
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res);
-      userClient.$verifyToken = res.body.data.token
+      userClient.$verifyToken = res.body.data.token;
     });
 
     it('register business', async () => {
@@ -101,17 +101,17 @@ describe('Email verification', () => {
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
     userClient.accountId = res.body.data.account._id;
-    
   });
 
   it('email verify client', async () => {
     const { token } = await getToken(userClient);
-    const res = await server.post('/v1/verify-email')
-      .set({'Authorization': `Bearer ${userClient.$verifyToken}`})
+    const res = await server
+      .post('/v1/verify-email')
+      .set({ Authorization: `Bearer ${userClient.$verifyToken}` })
       .send({
         code: token,
       });
-      
+
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
     documentation.addEndpoint(res);
@@ -151,13 +151,14 @@ describe('Reset Password', () => {
   it('reset password client', async () => {
     const password = '12345rrr';
     const { token } = getToken(userClient, TOKEN_FLAG.RESET);
-    const res = await server.post('/v1/reset-password')
-    .set({'Authorization': `Bearer ${userClient.resetToken}`})
-    .send({
-      code: token || '12345',
-      confirmPassword: password,
-      password,
-    });
+    const res = await server
+      .post('/v1/reset-password')
+      .set({ Authorization: `Bearer ${userClient.resetToken}` })
+      .send({
+        code: token || '12345',
+        confirmPassword: password,
+        password,
+      });
 
     console.log(res.body, res.error);
     assert.equal(res.status, 200);

@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const timestamp = require('./plugins/timestamp');
-const { ORDER_STATUS, TRANSACTION_STATUS } = require('../../constants');
+const {
+  ORDER_STATUS,
+  TRANSACTION_STATUS,
+} = require('../../constants');
 
 const TransactionSchema = new mongoose.Schema(
   {
@@ -14,8 +17,8 @@ const TransactionSchema = new mongoose.Schema(
       default: TRANSACTION_STATUS.PENDING,
     },
     reference: {
-      type: String
-    }
+      type: String,
+    },
   },
   { timestamps: true }
 );

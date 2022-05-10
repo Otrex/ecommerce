@@ -42,6 +42,6 @@ module.exports = {
     bucket: process.env.S3_BUCKET,
   },
   paystack: {
-    key: process.env.PAYSTACK_KEY
-  }
+    key: process.env.PAYSTACK_KEY,
+  },
 };
