@@ -15,6 +15,7 @@ module.exports = {
     SHIPPED: 'shipped',
     PENDING: 'pending',
     COMPLETED: 'completed',
+    CANCELLED: 'cancelled'
   },
   TRANSACTION_STATUS: {
     SUCCESS: 'success',
@@ -33,9 +34,6 @@ module.exports = {
         NO_SCHEMA: 'no schema available for validation',
       },
       ALREADY_EXISTS: 'user with this email already exists',
-    },
-    SUCCESS: {
-      registration: '',
     },
   },
   APP_ENV: {

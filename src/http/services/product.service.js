@@ -1,9 +1,9 @@
 const { NotFoundError, ServiceError } = require('../lib/exceptions');
+const { calcSkip, paginateResponse } = require('../../scripts/utils');
+const { PRODUCT_STATUS } = require('../../constants');
+const ObjectId = require('mongoose').Types.ObjectId;
 const models = require('../models');
 const { omit } = require('lodash');
-const { calcSkip, paginateResponse } = require('../../scripts/utils');
-const ObjectId = require('mongoose').Types.ObjectId;
-const { PRODUCT_STATUS } = require('../../constants');
 
 class ProductService {
   static createProduct = async ({
@@ -163,7 +163,7 @@ class ProductService {
     if (!category) throw new NotFoundError('category not found');
 
     const skip = calcSkip({ page, limit });
-    const clause = { categoryId: category._id };
+    const clause = { categoryId: category._id, status: PRODUCT_STATUS.APPROVED };
     const products = await models.Product.find(clause, null, { skip, limit });
     const count = await models.Product.count(clause);
 
@@ -181,6 +181,20 @@ class ProductService {
     return {
       data: product
     }
+  }
+
+  static disapproveProduct = async ({ productId, reason }) => {
+    const product = await models.Product.findOne({ _id: productId });
+    if (!product) throw new NotFoundError('product not found');
+
+    await models.Product.findByIdAndUpdate(product._id, {
+      status: PRODUCT_STATUS.DISSAPPROVED,
+      reasonForDisapproval: reason
+    });
+
+    return {
+      message: 'product has been approved',
+    };
   }
 }
 

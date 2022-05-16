@@ -1,4 +1,5 @@
 const ObjectId = require('mongoose').Types.ObjectId;
+const { bcryptHash } = require('../src/scripts/utils')
 const models = require('../src/http/models');
 const { generateJWTToken } = require('../src/scripts/utils');
 const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../src/constants');
@@ -16,6 +17,7 @@ exports.getToken = async (
 exports.createAccountReturnToken = async (data = {}) => {
   const account = await models.Account.create({
     ...data,
+    password: await bcryptHash(data.password),
     isEmailVerified: true,
     emailVerifiedAt: new Date(),
   });

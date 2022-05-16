@@ -50,6 +50,9 @@ const productSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    reasonForDisapproval : {
+      type: String,
+    },
     status: {
       type: String,
       enum: Object.values(PRODUCT_STATUS),

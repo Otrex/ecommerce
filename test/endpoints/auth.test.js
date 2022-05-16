@@ -5,6 +5,7 @@ const { getToken } = require('../utils');
 const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../../src/constants');
 const { documentation } = require('../setup');
 const { assert } = require('chai');
+const { createAccountReturnToken } = require('../utils');
 
 const server = supertest(app);
 const userClient = {
@@ -15,6 +16,13 @@ const userClient = {
 const userBusiness = {
   email: faker.internet.email(),
   password: faker.internet.password(),
+};
+
+const adminData = {
+  email: faker.internet.email(),
+  password: faker.internet.password(),
+  type: ACCOUNT_TYPES.ADMIN,
+  isSuperAdmin: true,
 };
 
 describe('Authentication', () => {
@@ -86,6 +94,39 @@ describe('Authentication', () => {
       assert.equal(res.status, 200);
       documentation.addEndpoint(res);
       userClient.accountId = res.body.data.account._id;
+    });
+    it('login client', async () => {
+      const res = await server.post('/v1/buyer/login').send({
+        email: userClient.email,
+        password: userClient.password,
+      });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res);
+      userClient.accountId = res.body.data.account._id;
+    });
+    it('login admin', async () => {
+      await createAccountReturnToken(adminData);
+      const res = await server.post('/v1/admin/login').send({
+        email: adminData.email,
+        password: adminData.password,
+      });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res);
+    });
+    it('login vendor', async () => {
+      const res = await server.post('/v1/vendor/login').send({
+        email: userBusiness.email,
+        password: userBusiness.password,
+      });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res);
+      userBusiness.accountId = res.body.data.account._id;
     });
   });
 });

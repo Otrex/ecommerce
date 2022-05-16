@@ -33,6 +33,10 @@ module.exports = {
     }
     next();
   },
+  addType: (type) => (req, res, next) => {
+    req.body.type = type;
+    next()
+  },
   authentication: (tokenFlag = TOKEN_FLAG.AUTH) => {
     return async (req, res, next) => {
       try {

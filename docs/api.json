@@ -56,10 +56,10 @@
                 }
               },
               "example": {
-                "email": "Jarred.Muller61@yahoo.com",
-                "password": "BZ2xH0IDDftq2Q_",
-                "firstName": "Hayden",
-                "lastName": "Strosin",
+                "email": "Derrick.Reilly89@hotmail.com",
+                "password": "RsIqKRfI5Swi0ve",
+                "firstName": "Vida",
+                "lastName": "Torp",
                 "gender": "male"
               }
             }
@@ -93,7 +93,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlEzemg1b1hkRnhWbnk2SlJ1Zk1Jd1VaRHRBNUs2MzE4QVdGYiIsImlhdCI6MTY1MjE0NDU0MCwiZXhwIjoxNjUyMjMwOTQwfQ.EOphWZxgHZ33CANOUFqNzFDRXXgkhMvbPqbL-VmFOgw"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NGJlODMxYTM2MjBiZTEzNTYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IldBZDhVWVpSUTU0V2JtZ3ZnMUxBaVFRUmVjdEJ2aWtIaEpEMSIsImlhdCI6MTY1MjcyNzk1NiwiZXhwIjoxNjUyODE0MzU2fQ.-o1jA2NriNa8opd6Fn7-hpw8iFuzf_OXeiXB57oN28k"
                   }
                 }
               }
@@ -185,27 +185,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Monserrat90@yahoo.com",
-                  "password": "8OQ2TISBrajjhvI",
+                  "email": "Hilda_Reinger82@hotmail.com",
+                  "password": "th0uTLvNNIic5TM",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Austin Runolfsson"
+                  "fullName": "Citlalli Schiller"
                 },
                 "businessDetails": {
-                  "type": "Versatile eco-centric benchmark",
-                  "name": "Organic responsive policy",
-                  "cacNumber": "Automated global structure",
-                  "state": "Mississippi",
-                  "lga": "Nebraska",
+                  "type": "Ameliorated human-resource standardization",
+                  "name": "Multi-layered empowering product",
+                  "cacNumber": "Secured impactful archive",
+                  "state": "North Dakota",
+                  "lga": "Kansas",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Gambia"
+                    "label": "Madagascar"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Mandatory demand-driven algorithm",
-                  "accountName": "Haylie Haag",
+                  "bank": "Future-proofed regional capacity",
+                  "accountName": "Clinton Prohaska",
                   "payoutFrequency": 5
                 }
               }
@@ -240,7 +240,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMWMiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImU3bE9UblppQjVPMWNHUk81N05BN0FlRlhRd3FVMThWQ2pnbiIsImlhdCI6MTY1MjE0NDU0MSwiZXhwIjoxNjUyMjMwOTQxfQ.rB8YK5Bn2WuVmc-I3wPyEJGTIfTxqh2pG7ixoTP2FI8"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NWJlODMxYTM2MjBiZTEzNWQiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjZ6REVkbmh6SHRQa2F4d0IwdXQ2cWxqOEJHTUZSVXZORUJydCIsImlhdCI6MTY1MjcyNzk1NywiZXhwIjoxNjUyODE0MzU3fQ.v3fs-g60WVUDKxWwT2DAP-gw3BiWHPCEOWO9x2eUj1M"
                   }
                 }
               }
@@ -272,8 +272,8 @@
                 }
               },
               "example": {
-                "email": "Jarred.Muller61@yahoo.com",
-                "password": "BZ2xH0IDDftq2Q_",
+                "email": "Derrick.Reilly89@hotmail.com",
+                "password": "RsIqKRfI5Swi0ve",
                 "type": "customer"
               }
             }
@@ -352,21 +352,371 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-10T01:02:21.551Z",
+                      "lastLoggedIn": "2022-05-16T19:05:58.381Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "6279b99c997e4b4fcf4cbe15",
-                      "firstName": "Hayden",
-                      "lastName": "Strosin",
-                      "email": "Jarred.Muller61@yahoo.com",
-                      "updatedAt": "2022-05-10T02:02:20+01:00",
-                      "createdAt": "2022-05-10T02:02:20+01:00",
+                      "_id": "6282a094be831a3620be1356",
+                      "firstName": "Vida",
+                      "lastName": "Torp",
+                      "email": "Derrick.Reilly89@hotmail.com",
+                      "updatedAt": "2022-05-16T20:05:56+01:00",
+                      "createdAt": "2022-05-16T20:05:56+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-05-10T01:02:21.433Z"
+                      "verifiedEmailAt": "2022-05-16T19:05:58.259Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJjbWNwUW9WREJibXBacXY2WWE1czZUSUxGdzRzYUI3dnJnM1AiLCJpYXQiOjE2NTIxNDQ1NDEsImV4cCI6MTY1MjIzMDk0MX0.owua2-sHje0R3GCw3X2GIadbr4XDLtshzFbJrv1rqUs"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NGJlODMxYTM2MjBiZTEzNTYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJlZTdkRGwyT0NydWdTelczdDNRZlp3YkFpZTdva0NiNzZaNFMiLCJpYXQiOjE2NTI3Mjc5NTgsImV4cCI6MTY1MjgxNDM1OH0.HncBW3s1tQkU47JP7Gx1oHm8kzEsWC9hL9gtolF8Lfc"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/buyer/login": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "email": "Derrick.Reilly89@hotmail.com",
+                "password": "RsIqKRfI5Swi0ve"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "account": {
+                          "type": "object",
+                          "properties": {
+                            "isEmailVerified": {
+                              "type": "boolean"
+                            },
+                            "lastLoggedIn": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "isActive": {
+                              "type": "boolean"
+                            },
+                            "isSuperAdmin": {
+                              "type": "boolean"
+                            },
+                            "_id": {
+                              "type": "string"
+                            },
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "updatedAt": {
+                              "type": "string"
+                            },
+                            "createdAt": {
+                              "type": "string"
+                            },
+                            "__v": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "token": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "account": {
+                      "isEmailVerified": false,
+                      "lastLoggedIn": "2022-05-16T19:05:57.728Z",
+                      "type": "customer",
+                      "isActive": false,
+                      "isSuperAdmin": false,
+                      "_id": "6282a094be831a3620be1356",
+                      "firstName": "Vida",
+                      "lastName": "Torp",
+                      "email": "Derrick.Reilly89@hotmail.com",
+                      "updatedAt": "2022-05-16T20:05:56+01:00",
+                      "createdAt": "2022-05-16T20:05:56+01:00",
+                      "__v": 0
+                    },
+                    "type": "email_verification",
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NGJlODMxYTM2MjBiZTEzNTYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkI5SzhlbFN4UXBVRUIwUVZkZk82aXRVOVFySFhYVnBTNDhPVyIsImlhdCI6MTY1MjcyNzk1NywiZXhwIjoxNjUyODE0MzU3fQ.ZJRu0qfRb30Umr0tqSz-0aQWx4KGFOPuBC8bXRgiReg"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/login": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "email": "Arvel96@gmail.com",
+                "password": "wFWLy31vvZTk7QT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "account": {
+                          "type": "object",
+                          "properties": {
+                            "isEmailVerified": {
+                              "type": "boolean"
+                            },
+                            "lastLoggedIn": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "isActive": {
+                              "type": "boolean"
+                            },
+                            "isSuperAdmin": {
+                              "type": "boolean"
+                            },
+                            "_id": {
+                              "type": "string"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "updatedAt": {
+                              "type": "string"
+                            },
+                            "createdAt": {
+                              "type": "string"
+                            },
+                            "__v": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "token": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "account": {
+                      "isEmailVerified": true,
+                      "lastLoggedIn": "2022-05-16T19:05:57.962Z",
+                      "type": "admin",
+                      "isActive": false,
+                      "isSuperAdmin": true,
+                      "_id": "6282a095be831a3620be136d",
+                      "email": "Arvel96@gmail.com",
+                      "updatedAt": "2022-05-16T20:05:57+01:00",
+                      "createdAt": "2022-05-16T20:05:57+01:00",
+                      "__v": 0
+                    },
+                    "type": "auth",
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NWJlODMxYTM2MjBiZTEzNmQiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiI1NmhvcmdxWXE4VVJHNkZVczdnWlBRZFNtdXZJOVBoZ1I5YmgiLCJpYXQiOjE2NTI3Mjc5NTcsImV4cCI6MTY1MjgxNDM1N30.66CbRS8u88SaDU8QhfvO_NX8MSM5NNrGv7kdE_fONWA"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/vendor/login": {
+      "post": {
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "email": "Hilda_Reinger82@hotmail.com",
+                "password": "th0uTLvNNIic5TM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "account": {
+                          "type": "object",
+                          "properties": {
+                            "isEmailVerified": {
+                              "type": "boolean"
+                            },
+                            "lastLoggedIn": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "isActive": {
+                              "type": "boolean"
+                            },
+                            "isSuperAdmin": {
+                              "type": "boolean"
+                            },
+                            "_id": {
+                              "type": "string"
+                            },
+                            "phoneNumber": {
+                              "type": "string"
+                            },
+                            "firstName": {
+                              "type": "string"
+                            },
+                            "lastName": {
+                              "type": "string"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "updatedAt": {
+                              "type": "string"
+                            },
+                            "createdAt": {
+                              "type": "string"
+                            },
+                            "__v": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "token": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "account": {
+                      "isEmailVerified": false,
+                      "lastLoggedIn": "2022-05-16T19:05:58.074Z",
+                      "type": "business",
+                      "isActive": false,
+                      "isSuperAdmin": false,
+                      "_id": "6282a095be831a3620be135d",
+                      "phoneNumber": "+2345678765456",
+                      "firstName": "Citlalli",
+                      "lastName": "Schiller",
+                      "email": "Hilda_Reinger82@hotmail.com",
+                      "updatedAt": "2022-05-16T20:05:57+01:00",
+                      "createdAt": "2022-05-16T20:05:57+01:00",
+                      "__v": 0
+                    },
+                    "type": "email_verification",
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NWJlODMxYTM2MjBiZTEzNWQiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImlUTTZZQ0tyUFZoYmtWaUN5OEV3TFpxa0pma3pRczU1dTVwTSIsImlhdCI6MTY1MjcyNzk1OCwiZXhwIjoxNjUyODE0MzU4fQ.XJaP06tnfYFhlzGVqV34pDJ6OL13YChOXowPyZamyF0"
                   }
                 }
               }
@@ -392,7 +742,7 @@
                 }
               },
               "example": {
-                "code": "45279"
+                "code": "86414"
               }
             }
           }
@@ -419,7 +769,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJaZDRkUVJ1bzVPd2x0QlFFZU81U05GcHpvdWVXMDFCQkEzcnQiLCJpYXQiOjE2NTIxNDQ1NDEsImV4cCI6MTY1MjIzMDk0MX0.iFTn94gy8zHCbLIqgBzLY5afowZ5MV_UyqVQWpATwmU"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NGJlODMxYTM2MjBiZTEzNTYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJ1MlQ2Z0tvQTFPZ3NjTEhqT2hIMEpZUzhsQzBzYUZLNDBPanYiLCJpYXQiOjE2NTI3Mjc5NTgsImV4cCI6MTY1MjgxNDM1OH0.KiG_DqzYYv-OrLN3DZMx0e_CA-_AyB-qUa-had9ZEZI"
                 }
               }
             }
@@ -447,7 +797,7 @@
                 }
               },
               "example": {
-                "email": "Jarred.Muller61@yahoo.com",
+                "email": "Derrick.Reilly89@hotmail.com",
                 "type": "customer"
               }
             }
@@ -481,7 +831,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjc5Yjk5Yzk5N2U0YjRmY2Y0Y2JlMTUiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiRlc4WEI1UmlKbUNmZ1NZM2VhWFoxcjkzcVFvWVN4emJrSnRjIiwiaWF0IjoxNjUyMTQ0NTQxLCJleHAiOjE2NTIyMzA5NDF9.Qx5-g_Yq6w5Ha4dJMlORLwqQJyvIT8xh6f_DfdgqbsY"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjgyYTA5NGJlODMxYTM2MjBiZTEzNTYiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiZ2tZZnp3Q1U1bWFsWjBIY3Z0bE1JVDV0RGhJN3dyOTR4U0ozIiwiaWF0IjoxNjUyNzI3OTU4LCJleHAiOjE2NTI4MTQzNTh9.BblAAsbwHuKseKC2Wjb2RXaEe9TQ-wZ_gkKh4nTjCdY"
                   }
                 }
               }
@@ -614,7 +964,7 @@
                 }
               },
               "example": {
-                "productId": "6279b99b997e4b4fcf4cbe05",
+                "productId": "6282a093be831a3620be1346",
                 "quantity": 10
               }
             }
@@ -702,20 +1052,20 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6279b99d997e4b4fcf4cbe3c",
-                      "createdAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6282a096be831a3620be1388",
+                      "createdAt": "Mon May 16 2022 20:05:58 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon May 16 2022 20:05:58 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6279b99b997e4b4fcf4cbe05",
+                        "_id": "6282a093be831a3620be1346",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "eum excepturi dolor",
-                        "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
+                        "name": "quia sapiente qui",
+                        "description": "Fuga sint id voluptas illo dicta dolor blanditiis accusantium. Consequuntur nisi ut quas illum ut sed quia sapiente. Excepturi minus ipsa labore aut.",
                         "category": {
-                          "_id": "6279b999997e4b4fcf4cbdf0",
-                          "name": "Food",
+                          "_id": "6282a091be831a3620be1337",
+                          "name": "Phones",
                           "__v": 0
                         }
                       }
@@ -811,20 +1161,20 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "6279b99d997e4b4fcf4cbe3c",
-                      "createdAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 02:02:21 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6282a096be831a3620be1388",
+                      "createdAt": "Mon May 16 2022 20:05:58 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon May 16 2022 20:05:58 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "6279b99b997e4b4fcf4cbe05",
+                        "_id": "6282a093be831a3620be1346",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "eum excepturi dolor",
-                        "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
+                        "name": "quia sapiente qui",
+                        "description": "Fuga sint id voluptas illo dicta dolor blanditiis accusantium. Consequuntur nisi ut quas illum ut sed quia sapiente. Excepturi minus ipsa labore aut.",
                         "category": {
-                          "_id": "6279b999997e4b4fcf4cbdf0",
-                          "name": "Food",
+                          "_id": "6282a091be831a3620be1337",
+                          "name": "Phones",
                           "__v": 0
                         }
                       }
@@ -879,9 +1229,9 @@
                 },
                 "example": {
                   "status": "success",
-                  "authorizationUrl": "https://checkout.paystack.com/f63k058akc8ao21",
-                  "accessCode": "f63k058akc8ao21",
-                  "transactionId": "6279b99e997e4b4fcf4cbe4c"
+                  "authorizationUrl": "https://checkout.paystack.com/8n9zjwz46xp1mdr",
+                  "accessCode": "8n9zjwz46xp1mdr",
+                  "transactionId": "6282a096be831a3620be1398"
                 }
               }
             }
@@ -930,23 +1280,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "6279b999997e4b4fcf4cbdf0",
+                      "_id": "6282a091be831a3620be1337",
+                      "name": "Phones",
+                      "__v": 0
+                    },
+                    {
+                      "_id": "6282a091be831a3620be1331",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "6279b999997e4b4fcf4cbdf4",
-                      "name": "Clothings",
-                      "__v": 0
-                    },
-                    {
-                      "_id": "6279b999997e4b4fcf4cbdf2",
+                      "_id": "6282a091be831a3620be1333",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "6279b999997e4b4fcf4cbdf6",
-                      "name": "Phones",
+                      "_id": "6282a091be831a3620be1335",
+                      "name": "Clothings",
                       "__v": 0
                     }
                   ]
@@ -976,7 +1326,7 @@
                 }
               },
               "example": {
-                "name": "nisi voluptatem quaerat"
+                "name": "ut et voluptas"
               }
             }
           }
@@ -1011,8 +1361,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "6279b99e997e4b4fcf4cbe53",
-                    "name": "nisi voluptatem quaerat",
+                    "_id": "6282a099be831a3620be139f",
+                    "name": "ut et voluptas",
                     "__v": 0
                   }
                 }
@@ -1070,15 +1420,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Gorgeous Soft Towels",
-                "categoryId": "6279b999997e4b4fcf4cbdf0",
+                "name": "Gorgeous Concrete Salad",
+                "categoryId": "6282a091be831a3620be1337",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-05-10T01:02:22.975Z",
+                "expiryDate": "2022-05-16T19:06:01.723Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores."
+                "description": "Eum iure accusantium unde voluptas sed. Quae hic hic quo sed reiciendis. Sapiente cumque harum ipsam quae commodi error consequuntur fugiat dolore. Corrupti et dolores non dolorem commodi itaque et veritatis. Perferendis quo eligendi. Eveniet ad laborum voluptates eos sit totam."
               }
             }
           }
@@ -1156,13 +1506,13 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "6279b99e997e4b4fcf4cbe58",
-                    "name": "Gorgeous Soft Towels",
+                    "_id": "6282a099be831a3620be13a4",
+                    "name": "Gorgeous Concrete Salad",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-10T01:02:22.975Z",
-                    "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
-                    "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-05-10T02:02:22+01:00",
+                    "expiryDate": "2022-05-16T19:06:01.723Z",
+                    "description": "Eum iure accusantium unde voluptas sed. Quae hic hic quo sed reiciendis. Sapiente cumque harum ipsam quae commodi error consequuntur fugiat dolore. Corrupti et dolores non dolorem commodi itaque et veritatis. Perferendis quo eligendi. Eveniet ad laborum voluptates eos sit totam.",
+                    "createdAt": "Mon May 16 2022 20:06:01 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-16T20:06:01+01:00",
                     "__v": 0
                   }
                 }
@@ -1292,13 +1642,13 @@
                       "minimumOrder": 0,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b99e997e4b4fcf4cbe58",
-                      "name": "Gorgeous Soft Towels",
+                      "_id": "6282a099be831a3620be13a4",
+                      "name": "Gorgeous Concrete Salad",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-05-10T01:02:22.975Z",
-                      "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
-                      "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Tue May 10 2022 02:02:23 GMT+0100 (West Africa Standard Time)",
+                      "expiryDate": "2022-05-16T19:06:01.723Z",
+                      "description": "Eum iure accusantium unde voluptas sed. Quae hic hic quo sed reiciendis. Sapiente cumque harum ipsam quae commodi error consequuntur fugiat dolore. Corrupti et dolores non dolorem commodi itaque et veritatis. Perferendis quo eligendi. Eveniet ad laborum voluptates eos sit totam.",
+                      "createdAt": "Mon May 16 2022 20:06:01 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon May 16 2022 20:06:01 GMT+0100 (West Africa Standard Time)",
                       "__v": 0
                     }
                   ],
@@ -1522,14 +1872,14 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "approved",
-                    "_id": "6279b99e997e4b4fcf4cbe58",
-                    "name": "Gorgeous Soft Towels",
+                    "_id": "6282a099be831a3620be13a4",
+                    "name": "Gorgeous Concrete Salad",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-10T01:02:22.975Z",
-                    "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores.",
-                    "creatorId": "6279b99b997e4b4fcf4cbe0b",
-                    "createdAt": "Tue May 10 2022 02:02:22 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "Tue May 10 2022 02:02:23 GMT+0100 (West Africa Standard Time)",
+                    "expiryDate": "2022-05-16T19:06:01.723Z",
+                    "description": "Eum iure accusantium unde voluptas sed. Quae hic hic quo sed reiciendis. Sapiente cumque harum ipsam quae commodi error consequuntur fugiat dolore. Corrupti et dolores non dolorem commodi itaque et veritatis. Perferendis quo eligendi. Eveniet ad laborum voluptates eos sit totam.",
+                    "creatorId": "6282a094be831a3620be134c",
+                    "createdAt": "Mon May 16 2022 20:06:01 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "Mon May 16 2022 20:06:01 GMT+0100 (West Africa Standard Time)",
                     "__v": 0
                   }
                 }
@@ -1623,10 +1973,10 @@
                     {
                       "feedbackId": [],
                       "price": 500,
-                      "_id": "6279b99e997e4b4fcf4cbe58",
-                      "name": "Gorgeous Soft Towels",
+                      "_id": "6282a099be831a3620be13a4",
+                      "name": "Gorgeous Concrete Salad",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "description": "Reiciendis maiores deserunt perferendis ab enim rem rerum qui. Aperiam voluptatem ut sunt deserunt dolores saepe autem nemo quod. Temporibus a veritatis repellat ab suscipit sed dolore. Facere tempora assumenda placeat. Aut quasi vel maiores voluptatem eum dolores."
+                      "description": "Eum iure accusantium unde voluptas sed. Quae hic hic quo sed reiciendis. Sapiente cumque harum ipsam quae commodi error consequuntur fugiat dolore. Corrupti et dolores non dolorem commodi itaque et veritatis. Perferendis quo eligendi. Eveniet ad laborum voluptates eos sit totam."
                     }
                   ],
                   "pageData": {
@@ -1770,14 +2120,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b99b997e4b4fcf4cbe05",
+                      "_id": "6282a093be831a3620be1346",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "eum excepturi dolor",
-                      "categoryId": "6279b999997e4b4fcf4cbdf0",
-                      "expiryDate": "2022-05-10T01:02:19.468Z",
-                      "description": "Iusto quo nulla sapiente. Dicta ducimus necessitatibus aut. Nihil sed omnis. Et ipsa hic. Assumenda ea consequatur quis qui autem tenetur et.",
-                      "createdAt": "Tue May 10 2022 02:02:19 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-10T02:02:19+01:00",
+                      "name": "quia sapiente qui",
+                      "categoryId": "6282a091be831a3620be1337",
+                      "expiryDate": "2022-05-16T19:05:55.801Z",
+                      "description": "Fuga sint id voluptas illo dicta dolor blanditiis accusantium. Consequuntur nisi ut quas illum ut sed quia sapiente. Excepturi minus ipsa labore aut.",
+                      "createdAt": "Mon May 16 2022 20:05:55 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-16T20:05:55+01:00",
                       "__v": 0
                     },
                     {
@@ -1788,14 +2138,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "6279b99b997e4b4fcf4cbe06",
+                      "_id": "6282a093be831a3620be1347",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "consequatur et repellendus",
-                      "categoryId": "6279b999997e4b4fcf4cbdf0",
-                      "expiryDate": "2022-05-10T01:02:19.468Z",
-                      "description": "At id vel doloremque iusto magni sed in qui aut. Commodi adipisci esse perferendis qui. Assumenda voluptatem est et sunt pariatur similique. Eos veritatis pariatur omnis qui optio et assumenda cumque. Et ducimus enim. Laborum iusto alias.",
-                      "createdAt": "Tue May 10 2022 02:02:19 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-10T02:02:19+01:00",
+                      "name": "tenetur accusantium error",
+                      "categoryId": "6282a091be831a3620be1337",
+                      "expiryDate": "2022-05-16T19:05:55.802Z",
+                      "description": "Doloribus neque sit autem ut aut sint et. Omnis in ea iure enim sit et sequi doloribus doloremque. Laudantium sed molestiae ab itaque in eos voluptatem aspernatur. Placeat est corrupti illum inventore ut id ut blanditiis. Sint quae consequatur assumenda qui aut commodi.",
+                      "createdAt": "Mon May 16 2022 20:05:55 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-16T20:05:55+01:00",
                       "__v": 0
                     }
                   ],

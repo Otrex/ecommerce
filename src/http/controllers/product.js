@@ -21,6 +21,11 @@ class ProductController {
     handler: ProductService.approveProduct,
   });
 
+  static disapproveProduct = RequestHandler({
+    validator: ApproveProductValidator,
+    handler: ProductService.disapproveProduct,
+  });
+
   static getProduct_Business = RequestHandler({
     validator: GetBusinessProductValidator,
     handler: ProductService.getProducts_Business,
