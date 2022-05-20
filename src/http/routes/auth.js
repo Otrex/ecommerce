@@ -28,7 +28,7 @@ router.post(
 );
 router.post('/forgot-password', AuthController.initPasswordReset);
 
-router.use(googleStrategy);
+passport.use(googleStrategy);
 router.get('/buyer/google', passport.authenticate('google', { scope: [ 'email', 'profile' ], state: ACCOUNT_TYPES.CUSTOMER }))
 router.get('/vendor/google', passport.authenticate('google', { scope: [ 'email', 'profile' ], state: ACCOUNT_TYPES.BUSINESS }))
 router.get('/google/callback', AuthController.googleAuthHandler)

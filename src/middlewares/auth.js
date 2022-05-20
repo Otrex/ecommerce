@@ -4,6 +4,7 @@ const {
 } = require('../http/lib/exceptions');
 const { ObjectId } = require('../http/types');
 const models = require('../http/models');
+const config = require('../config')
 const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../constants');
 const { decodeToken } = require('../scripts/utils');
 const { Strategy: GoogleStrategy } = require('passport-google-oauth2')
