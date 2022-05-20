@@ -7,6 +7,8 @@ module.exports = {
     secret: process.env.APP_SECRET,
     name: process.env.APP_NAME || name,
     env: process.env.APP_ENV,
+    frontendDomain: process.env.APP_FRONTEND_DOMAIN,
+    frontendPath: process.env.APP_FRONTEND_PATH,
     bcryptRounds: 10,
   },
   db: {
@@ -40,6 +42,11 @@ module.exports = {
     accessKey: process.env.S3_ACCESS_KEY,
     secretKey: process.env.S3_SECRET_KEY,
     bucket: process.env.S3_BUCKET,
+  },
+  google: {
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: process.env.GOOGLE_CALLBACK_URL,
   },
   paystack: {
     key: process.env.PAYSTACK_KEY,

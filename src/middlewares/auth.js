@@ -6,6 +6,7 @@ const { ObjectId } = require('../http/types');
 const models = require('../http/models');
 const { ACCOUNT_TYPES, TOKEN_FLAG } = require('../constants');
 const { decodeToken } = require('../scripts/utils');
+const { Strategy: GoogleStrategy } = require('passport-google-oauth2')
 
 module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
@@ -22,6 +23,21 @@ module.exports = {
       next();
     };
   },
+  googleStrategy: new GoogleStrategy({
+    clientID:     config.google.clientId,
+    clientSecret: config.google.clientSecret,
+    callbackURL: config.google.callbackURL,
+    passReqToCallback: true,
+  },
+  (request, accessToken, refreshToken, profile, done) => {
+    const [_,type] = Object.entries(ACCOUNT_TYPES)
+      .find(([key, value]) => value.toLowerCase() === request.query.state);
+    console.log(profile)
+    if (!type) done(new Error('invalid type'));
+    models.Account.findOrCreate({ googleId: profile.id, type }, (err, account) => {
+      return done(err, account);
+    });
+  }),
   isAdmin: (req, res, next) => {
     const { account } = req.session;
     if (!account.isSuperAdmin) {
@@ -51,8 +67,6 @@ module.exports = {
         }
 
         const { accountId, flag, counter } = await decodeToken(token);
-
-        console.log(flag);
 
         if (!accountId) {
           return next(

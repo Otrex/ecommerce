@@ -1,6 +1,7 @@
 const express = require('express');
 const AuthController = require('../controllers/auth');
-const { authentication, addType } = require('../../middlewares/auth');
+const { authentication, addType, googleStrategy } = require('../../middlewares/auth');
+const passport = require('passport');
 
 const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../../constants');
 
@@ -26,5 +27,10 @@ router.post(
   AuthController.passwordReset
 );
 router.post('/forgot-password', AuthController.initPasswordReset);
+
+router.use(googleStrategy);
+router.get('/buyer/google', passport.authenticate('google', { scope: [ 'email', 'profile' ], state: ACCOUNT_TYPES.CUSTOMER }))
+router.get('/vendor/google', passport.authenticate('google', { scope: [ 'email', 'profile' ], state: ACCOUNT_TYPES.BUSINESS }))
+router.get('/google/callback', AuthController.googleAuthHandler)
 
 module.exports = router;

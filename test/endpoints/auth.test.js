@@ -39,7 +39,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Register'],
+      });
       userClient.$verifyToken = res.body.data.token;
     });
 
@@ -78,7 +80,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Register'],
+      });
     });
   });
 
@@ -92,7 +96,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Login'],
+      });
       userClient.accountId = res.body.data.account._id;
     });
     it('login client', async () => {
@@ -103,7 +109,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Login'],
+      });
       userClient.accountId = res.body.data.account._id;
     });
     it('login admin', async () => {
@@ -115,7 +123,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res,{
+        tags: ['Login'],
+      });
     });
     it('login vendor', async () => {
       const res = await server.post('/v1/vendor/login').send({
@@ -125,7 +135,9 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res);
+      documentation.addEndpoint(res, {
+        tags: ['Login'],
+      });
       userBusiness.accountId = res.body.data.account._id;
     });
   });
@@ -169,7 +181,9 @@ describe('Login', () => {
 
     console.log(res.body, res.error);
     assert.equal(res.status, 200);
-    documentation.addEndpoint(res);
+    documentation.addEndpoint(res, {
+      tags: ['Login'],
+    });
     // userClient.accountId = res.body.data._id;
   });
 });

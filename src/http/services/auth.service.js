@@ -18,10 +18,33 @@ const {
   generateJWTToken,
 } = require('../../scripts/utils');
 const { DateUpdate } = require('../../core/Utils');
+const passport = require('passport');
 
 const { verification } = mails;
 
 class AuthService {
+  static socialAuthHandler = (_, req, res) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    passport.authenticate('google', { session: false }, async (err, user) => {
+      if (err || !user) {
+        return res.redirect(
+          `${config.app.frontendDomain}/${
+            config.app.frontendPath
+          }?error=${JSON.stringify(err)}`,
+        );
+      }
+  
+      const token = await generateJWTToken({
+        accountId: account._id,
+        flag: TOKEN_FLAG.AUTH,
+      });
+      
+      return res.redirect(
+        `${config.app.frontendDomain}/${config.app.frontendPath}?token=${token}`,
+      );
+    })(req, res);
+  };
+  
   static login = async ({ email, password, type }) => {
     const account = await models.Account.findOne(
       { email, type },

@@ -12,6 +12,10 @@ const {
 } = require('../validators');
 
 class AuthController {
+  static googleAuthHandler = requestHandler({
+    handler: AuthService.socialAuthHandler,
+  });
+
   static login = requestHandler({
     validator: LoginValidator,
     handler: AuthService.login,

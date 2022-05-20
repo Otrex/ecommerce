@@ -7,6 +7,7 @@ const config = require('./config');
 const helmet = require('helmet');
 const { dbUri } = require('./database');
 const Logger = require('./core/Logger');
+const passport = require('passport');
 
 const {
   errorHandler,
@@ -36,6 +37,9 @@ const stream = {
 app.use(
   morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream })
 );
+
+app.use(passport.initialize())
+// app.use(passport.session())
 
 /* ROUTES */
 app.use('/v1', require('./http/routes'));
