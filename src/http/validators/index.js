@@ -48,6 +48,15 @@ class CreateProductValidator extends GenericValidator {
   };
 }
 
+class AddFeedbackValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    rating: { type: 'number', trim: true, min: 0, max: 5 },
+    comment: { type: 'string', trim: true, optional: true },
+    productId: { type: 'string', trim: true, min: 5 },
+  };
+}
+
 class SignedURLValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -217,6 +226,7 @@ module.exports = {
   BusinessRegisterValidator,
   ApproveProductValidator,
   CreateProductValidator,
+  AddFeedbackValidator,
   AddCategoryValidator,
   SignedURLValidator,
   VerifyEmailValidator,

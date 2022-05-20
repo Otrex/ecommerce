@@ -58,10 +58,10 @@
                 }
               },
               "example": {
-                "email": "Oceane_Schulist@hotmail.com",
-                "password": "KYmkZ9accDMUnFL",
-                "firstName": "Lenna",
-                "lastName": "Torphy",
+                "email": "Opal_Glover@yahoo.com",
+                "password": "fHYyTei5pWEJ3h_",
+                "firstName": "Jabari",
+                "lastName": "Mohr",
                 "gender": "male"
               }
             }
@@ -95,7 +95,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IllGd1luS093b3h0RTUxdHpRa3dvUTA4RjJJV2NLUkpPd0h0WiIsImlhdCI6MTY1MzA4NjE1OSwiZXhwIjoxNjUzMTcyNTU5fQ.03yYLZV46AeWoTtp7U2x0t6lhg3oNHk7VXeBhXNS_do"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlFDM1J5WFd2QzVkc20ydE8yNG5WbUNyZGR0bFRPRUZ3Sk1pbyIsImlhdCI6MTY1MzA4ODU0NSwiZXhwIjoxNjUzMTc0OTQ1fQ.BjZBUhPeqoBIq5Zvrod0JeJLml8FtdtpcOn7B9yiSBg"
                   }
                 }
               }
@@ -189,27 +189,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Jovany75@hotmail.com",
-                  "password": "KLSE7ccxMtyyhDR",
+                  "email": "Alisa2@gmail.com",
+                  "password": "I4lkayqTRwZ2BN9",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Billy Fahey"
+                  "fullName": "Ted Roberts"
                 },
                 "businessDetails": {
-                  "type": "Grass-roots 5th generation synergy",
-                  "name": "Synergized mobile productivity",
-                  "cacNumber": "Switchable transitional function",
-                  "state": "Nevada",
-                  "lga": "Pennsylvania",
+                  "type": "Sharable systematic array",
+                  "name": "Synergized value-added architecture",
+                  "cacNumber": "Grass-roots logistical strategy",
+                  "state": "Arizona",
+                  "lga": "Missouri",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Japan"
+                    "label": "Maldives"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Synergized zero tolerance framework",
-                  "accountName": "Gregory Schiller",
+                  "bank": "Automated object-oriented database",
+                  "accountName": "Julian Ziemann",
                   "payoutFrequency": 5
                 }
               }
@@ -244,7 +244,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6Inp2ZU9OYTBlOEtQcFFYdzQ2MTRlN29obTZaenRmc3dtaGU0WSIsImlhdCI6MTY1MzA4NjE2MCwiZXhwIjoxNjUzMTcyNTYwfQ.BEENmJ-6IXHbqOPN61SfYP3IhRfQHzb6tQi-QMxb7_Q"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlhFZDR1SVpZWmM0bzFyRnlldEpWa0Vjb0phOXE3YWRrMTZ1YyIsImlhdCI6MTY1MzA4ODU0NiwiZXhwIjoxNjUzMTc0OTQ2fQ.UM-L1EbDFndxCXnNxt-8FdXyJR1Peusp0dr8-t2Yob0"
                   }
                 }
               }
@@ -278,8 +278,8 @@
                 }
               },
               "example": {
-                "email": "Oceane_Schulist@hotmail.com",
-                "password": "KYmkZ9accDMUnFL",
+                "email": "Opal_Glover@yahoo.com",
+                "password": "fHYyTei5pWEJ3h_",
                 "type": "customer"
               }
             }
@@ -358,21 +358,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-20T22:36:00.985Z",
+                      "lastLoggedIn": "2022-05-20T23:15:46.862Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628817cfe155f51b7f535172",
-                      "firstName": "Lenna",
-                      "lastName": "Torphy",
-                      "email": "Oceane_Schulist@hotmail.com",
-                      "updatedAt": "2022-05-20T23:35:59+01:00",
-                      "createdAt": "2022-05-20T23:35:59+01:00",
+                      "_id": "6288212165108620bbaed182",
+                      "firstName": "Jabari",
+                      "lastName": "Mohr",
+                      "email": "Opal_Glover@yahoo.com",
+                      "updatedAt": "2022-05-21T00:15:45+01:00",
+                      "createdAt": "2022-05-21T00:15:45+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-05-20T22:36:00.858Z"
+                      "verifiedEmailAt": "2022-05-20T23:15:46.758Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiIwRmNpdEJEdzdiSjRmdklQbmszbjBTTkdESjlNcXlKMDZra1YiLCJpYXQiOjE2NTMwODYxNjEsImV4cCI6MTY1MzE3MjU2MX0.nzWmto88zqjdkShtqNV0jvXXtfcKtGI_CWS1WoqfqpA"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJJZ0hUVXZ0SmxCRWhib2pUT0YwZ2Y0NFZEUEdGdE1MUjloZEYiLCJpYXQiOjE2NTMwODg1NDYsImV4cCI6MTY1MzE3NDk0Nn0.7Lc2QpqpAdtjn5GNtG0bOsoATC_fx1FzMGVGGf2Tzwo"
                   }
                 }
               }
@@ -403,8 +403,8 @@
                 }
               },
               "example": {
-                "email": "Oceane_Schulist@hotmail.com",
-                "password": "KYmkZ9accDMUnFL"
+                "email": "Opal_Glover@yahoo.com",
+                "password": "fHYyTei5pWEJ3h_"
               }
             }
           }
@@ -479,20 +479,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-05-20T22:36:00.408Z",
+                      "lastLoggedIn": "2022-05-20T23:15:46.241Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628817cfe155f51b7f535172",
-                      "firstName": "Lenna",
-                      "lastName": "Torphy",
-                      "email": "Oceane_Schulist@hotmail.com",
-                      "updatedAt": "2022-05-20T23:35:59+01:00",
-                      "createdAt": "2022-05-20T23:35:59+01:00",
+                      "_id": "6288212165108620bbaed182",
+                      "firstName": "Jabari",
+                      "lastName": "Mohr",
+                      "email": "Opal_Glover@yahoo.com",
+                      "updatedAt": "2022-05-21T00:15:45+01:00",
+                      "createdAt": "2022-05-21T00:15:45+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkJ2N2w5VUVnMTlVYklkNmJ2UDlPTHFGcUtUTUFnQkpXU2prTiIsImlhdCI6MTY1MzA4NjE2MCwiZXhwIjoxNjUzMTcyNTYwfQ._1IGhJSCvagO3bCqEySYeU5vjU5DZmniJtYrjonbTxA"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImpVQW9FMnRlV1M2ZTZCemg1Nk1MNmlRTGlmdERmYm4zVDRsTiIsImlhdCI6MTY1MzA4ODU0NiwiZXhwIjoxNjUzMTc0OTQ2fQ.y5H9LQBrol3wPFZe61P1W-T-hkxpVw_af69KtARyNM4"
                   }
                 }
               }
@@ -523,8 +523,8 @@
                 }
               },
               "example": {
-                "email": "Helena.Wiegand23@hotmail.com",
-                "password": "6K3mTZQ01AOFmsg"
+                "email": "Eda.OReilly91@yahoo.com",
+                "password": "EG8bpcqg5PYfole"
               }
             }
           }
@@ -593,18 +593,18 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-20T22:36:00.601Z",
+                      "lastLoggedIn": "2022-05-20T23:15:46.482Z",
                       "type": "admin",
                       "isActive": false,
                       "isSuperAdmin": true,
-                      "_id": "628817d0e155f51b7f535189",
-                      "email": "Helena.Wiegand23@hotmail.com",
-                      "updatedAt": "2022-05-20T23:36:00+01:00",
-                      "createdAt": "2022-05-20T23:36:00+01:00",
+                      "_id": "6288212265108620bbaed199",
+                      "email": "Eda.OReilly91@yahoo.com",
+                      "updatedAt": "2022-05-21T00:15:46+01:00",
+                      "createdAt": "2022-05-21T00:15:46+01:00",
                       "__v": 0
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdkMGUxNTVmNTFiN2Y1MzUxODkiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJiVHJkdThid3ZGeGMzZHNTTnZJU0tIYUxWbUJLZXZjUW1DcEwiLCJpYXQiOjE2NTMwODYxNjAsImV4cCI6MTY1MzE3MjU2MH0._DUyM3nXtidjbmXrxdalsZjehrUXs1up1dTxxJvsrCo"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMjY1MTA4NjIwYmJhZWQxOTkiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJ4T0k5UnFhMnlzRlUxZG5uVXYyOHVYQllZS095QkI5WTd2RjciLCJpYXQiOjE2NTMwODg1NDYsImV4cCI6MTY1MzE3NDk0Nn0.VOQWjoZNFcMfBmQLydM3LySYzwGHdeZnPO3426Ru7Tg"
                   }
                 }
               }
@@ -635,8 +635,8 @@
                 }
               },
               "example": {
-                "email": "Jovany75@hotmail.com",
-                "password": "KLSE7ccxMtyyhDR"
+                "email": "Alisa2@gmail.com",
+                "password": "I4lkayqTRwZ2BN9"
               }
             }
           }
@@ -714,21 +714,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-05-20T22:36:00.720Z",
+                      "lastLoggedIn": "2022-05-20T23:15:46.609Z",
                       "type": "business",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628817cfe155f51b7f535179",
+                      "_id": "6288212165108620bbaed189",
                       "phoneNumber": "+2345678765456",
-                      "firstName": "Billy",
-                      "lastName": "Fahey",
-                      "email": "Jovany75@hotmail.com",
-                      "updatedAt": "2022-05-20T23:35:59+01:00",
-                      "createdAt": "2022-05-20T23:35:59+01:00",
+                      "firstName": "Ted",
+                      "lastName": "Roberts",
+                      "email": "Alisa2@gmail.com",
+                      "updatedAt": "2022-05-21T00:15:45+01:00",
+                      "createdAt": "2022-05-21T00:15:45+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkhKU080TEkyOFd6dXBMSXFZTzZrRVMwdExrTm9DSHhqR2VmbiIsImlhdCI6MTY1MzA4NjE2MCwiZXhwIjoxNjUzMTcyNTYwfQ.JpnMDrNF2YL7-7Zrg5Q-F4QQ4RkySNVG9g9hFNCsyvo"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlBSVmIzeW5DVm10OGVQaWpIRWwxeWVORG9qdkd5TGd6amJlQiIsImlhdCI6MTY1MzA4ODU0NiwiZXhwIjoxNjUzMTc0OTQ2fQ.3K-KdQWya5Hbm_15lNo1trhc_-8D3HcyWnoGcJguNII"
                   }
                 }
               }
@@ -754,7 +754,7 @@
                 }
               },
               "example": {
-                "code": "91521"
+                "code": "34012"
               }
             }
           }
@@ -781,7 +781,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJSMHNBckMxb29QdmVFdUd0bXd6ZWE2RW1tdTZiS1VhUGtWbDIiLCJpYXQiOjE2NTMwODYxNjAsImV4cCI6MTY1MzE3MjU2MH0.RIclS05iqISZa30odD1xw9U6soAOgTQSrfaR2quPttw"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJLSjRBNDA0WjZibDRaTmxZY0VEcjlQc2hqR1Bnc3ZzQ0tVakMiLCJpYXQiOjE2NTMwODg1NDYsImV4cCI6MTY1MzE3NDk0Nn0.JwsNcdyjD11ATenkvqzwM8uhi7mgjB-q3-5h-MDcLj4"
                 }
               }
             }
@@ -809,7 +809,7 @@
                 }
               },
               "example": {
-                "email": "Oceane_Schulist@hotmail.com",
+                "email": "Opal_Glover@yahoo.com",
                 "type": "customer"
               }
             }
@@ -843,7 +843,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MTdjZmUxNTVmNTFiN2Y1MzUxNzIiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiTElGdGI4M1kxSjJEcnlJVEtmVDNYSmpLdlZWSlEwMlNSSEh4IiwiaWF0IjoxNjUzMDg2MTYxLCJleHAiOjE2NTMxNzI1NjF9.QzVxQ14N9gxtxenfjLCJa5I5Nzgj20g4l3EGKpv5Qnc"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjEyMTY1MTA4NjIwYmJhZWQxODIiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiQkRuSlp1ME5XVG42TjZBNkN3YnZiblFDODJaTkpIYlVMRFdrIiwiaWF0IjoxNjUzMDg4NTQ2LCJleHAiOjE2NTMxNzQ5NDZ9.6A51iYrvsPcjHx9Ek8djcdgWSgbJ43t6cZFSpm3e9TA"
                   }
                 }
               }
@@ -976,7 +976,7 @@
                 }
               },
               "example": {
-                "productId": "628817cee155f51b7f535162",
+                "productId": "6288211f65108620bbaed172",
                 "quantity": 10
               }
             }
@@ -1064,19 +1064,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "628817d1e155f51b7f5351a4",
-                      "createdAt": "Fri May 20 2022 23:36:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Fri May 20 2022 23:36:01 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6288212365108620bbaed1b4",
+                      "createdAt": "Sat May 21 2022 00:15:47 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Sat May 21 2022 00:15:47 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "628817cee155f51b7f535162",
+                        "_id": "6288211f65108620bbaed172",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "voluptatem animi dolores",
-                        "description": "Voluptas explicabo soluta et soluta doloremque perferendis soluta quidem. Aut voluptas illo consectetur. Vel nisi quasi recusandae quod itaque non. Aspernatur dolorum ea rerum dicta tempora eius.",
+                        "name": "suscipit illum aut",
+                        "description": "Sint sed assumenda aspernatur consequatur repellat. Ducimus odit voluptas odio repudiandae qui ut.",
                         "category": {
-                          "_id": "628817cce155f51b7f53514d",
+                          "_id": "6288211d65108620bbaed15d",
                           "name": "Food",
                           "__v": 0
                         }
@@ -1173,19 +1173,19 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "628817d1e155f51b7f5351a4",
-                      "createdAt": "Fri May 20 2022 23:36:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Fri May 20 2022 23:36:01 GMT+0100 (West Africa Standard Time)",
+                      "_id": "6288212365108620bbaed1b4",
+                      "createdAt": "Sat May 21 2022 00:15:47 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Sat May 21 2022 00:15:47 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 10000,
                         "weight": 20,
-                        "_id": "628817cee155f51b7f535162",
+                        "_id": "6288211f65108620bbaed172",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "voluptatem animi dolores",
-                        "description": "Voluptas explicabo soluta et soluta doloremque perferendis soluta quidem. Aut voluptas illo consectetur. Vel nisi quasi recusandae quod itaque non. Aspernatur dolorum ea rerum dicta tempora eius.",
+                        "name": "suscipit illum aut",
+                        "description": "Sint sed assumenda aspernatur consequatur repellat. Ducimus odit voluptas odio repudiandae qui ut.",
                         "category": {
-                          "_id": "628817cce155f51b7f53514d",
+                          "_id": "6288211d65108620bbaed15d",
                           "name": "Food",
                           "__v": 0
                         }
@@ -1241,9 +1241,9 @@
                 },
                 "example": {
                   "status": "success",
-                  "authorizationUrl": "https://checkout.paystack.com/t83773bpep819zt",
-                  "accessCode": "t83773bpep819zt",
-                  "transactionId": "628817d1e155f51b7f5351b4"
+                  "authorizationUrl": "https://checkout.paystack.com/d6nwf4x3ueu7wtj",
+                  "accessCode": "d6nwf4x3ueu7wtj",
+                  "transactionId": "6288212365108620bbaed1c4"
                 }
               }
             }
@@ -1292,22 +1292,22 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "628817cce155f51b7f53514d",
+                      "_id": "6288211d65108620bbaed15d",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "628817cce155f51b7f53514f",
+                      "_id": "6288211d65108620bbaed15f",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "628817cce155f51b7f535151",
+                      "_id": "6288211d65108620bbaed161",
                       "name": "Clothings",
                       "__v": 0
                     },
                     {
-                      "_id": "628817cce155f51b7f535153",
+                      "_id": "6288211d65108620bbaed163",
                       "name": "Phones",
                       "__v": 0
                     }
@@ -1338,7 +1338,7 @@
                 }
               },
               "example": {
-                "name": "praesentium dolores esse"
+                "name": "officiis quam dignissimos"
               }
             }
           }
@@ -1373,8 +1373,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "628817d9e155f51b7f5351bb",
-                    "name": "praesentium dolores esse",
+                    "_id": "6288213b65108620bbaed1cb",
+                    "name": "officiis quam dignissimos",
                     "__v": 0
                   }
                 }
@@ -1432,15 +1432,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Refined Fresh Pants",
-                "categoryId": "628817cce155f51b7f53514d",
+                "name": "Sleek Plastic Table",
+                "categoryId": "6288211d65108620bbaed15d",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-05-20T22:36:09.179Z",
+                "expiryDate": "2022-05-20T23:16:11.066Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Alias quia ad praesentium debitis. Doloremque voluptatibus placeat in neque libero dignissimos minus. Dolores in libero quia. Animi enim autem et ut iure sunt corrupti incidunt harum."
+                "description": "In placeat dolore magni eos voluptate necessitatibus. Distinctio sint similique mollitia sed ut error."
               }
             }
           }
@@ -1518,158 +1518,14 @@
                     "minimumOrder": 0,
                     "handlingFee": 10,
                     "status": "pending",
-                    "_id": "628817d9e155f51b7f5351c0",
-                    "name": "Refined Fresh Pants",
+                    "_id": "6288213b65108620bbaed1d0",
+                    "name": "Sleek Plastic Table",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-20T22:36:09.179Z",
-                    "description": "Alias quia ad praesentium debitis. Doloremque voluptatibus placeat in neque libero dignissimos minus. Dolores in libero quia. Animi enim autem et ut iure sunt corrupti incidunt harum.",
-                    "createdAt": "Fri May 20 2022 23:36:09 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-05-20T23:36:09+01:00",
+                    "expiryDate": "2022-05-20T23:16:11.066Z",
+                    "description": "In placeat dolore magni eos voluptate necessitatibus. Distinctio sint similique mollitia sed ut error.",
+                    "createdAt": "Sat May 21 2022 00:16:11 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-21T00:16:11+01:00",
                     "__v": 0
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "description": "",
-        "tags": [
-          "Product/Vendor"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "status",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "page",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "string"
-                    },
-                    "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "price": {
-                            "type": "number"
-                          },
-                          "weight": {
-                            "type": "number"
-                          },
-                          "quantityLeft": {
-                            "type": "number"
-                          },
-                          "quantity": {
-                            "type": "number"
-                          },
-                          "minimumOrder": {
-                            "type": "number"
-                          },
-                          "handlingFee": {
-                            "type": "number"
-                          },
-                          "status": {
-                            "type": "string"
-                          },
-                          "_id": {
-                            "type": "string"
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "imageUrl": {
-                            "type": "string"
-                          },
-                          "expiryDate": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          },
-                          "createdAt": {
-                            "type": "string"
-                          },
-                          "updatedAt": {
-                            "type": "string"
-                          },
-                          "__v": {
-                            "type": "number"
-                          }
-                        }
-                      }
-                    },
-                    "pageData": {
-                      "type": "object",
-                      "properties": {
-                        "total": {
-                          "type": "number"
-                        },
-                        "currentPage": {
-                          "type": "number"
-                        },
-                        "nextPage": {},
-                        "prevPage": {},
-                        "lastPage": {
-                          "type": "number"
-                        }
-                      }
-                    }
-                  }
-                },
-                "example": {
-                  "status": "success",
-                  "data": [
-                    {
-                      "price": 500,
-                      "weight": 30,
-                      "quantityLeft": 10,
-                      "quantity": 10,
-                      "minimumOrder": 0,
-                      "handlingFee": 10,
-                      "status": "approved",
-                      "_id": "628817d9e155f51b7f5351c0",
-                      "name": "Refined Fresh Pants",
-                      "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-05-20T22:36:09.179Z",
-                      "description": "Alias quia ad praesentium debitis. Doloremque voluptatibus placeat in neque libero dignissimos minus. Dolores in libero quia. Animi enim autem et ut iure sunt corrupti incidunt harum.",
-                      "createdAt": "Fri May 20 2022 23:36:09 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Fri May 20 2022 23:36:09 GMT+0100 (West Africa Standard Time)",
-                      "__v": 0
-                    }
-                  ],
-                  "pageData": {
-                    "total": 1,
-                    "currentPage": 1,
-                    "nextPage": null,
-                    "prevPage": null,
-                    "lastPage": 1
                   }
                 }
               }
@@ -1786,121 +1642,6 @@
         }
       }
     },
-    "/v1/public/products/{productId}": {
-      "get": {
-        "description": "",
-        "tags": [
-          "Product"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "productId",
-            "description": "",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "string"
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "feedbackId": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "price": {
-                          "type": "number"
-                        },
-                        "weight": {
-                          "type": "number"
-                        },
-                        "quantityLeft": {
-                          "type": "number"
-                        },
-                        "quantity": {
-                          "type": "number"
-                        },
-                        "minimumOrder": {
-                          "type": "number"
-                        },
-                        "handlingFee": {
-                          "type": "number"
-                        },
-                        "status": {
-                          "type": "string"
-                        },
-                        "_id": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "imageUrl": {
-                          "type": "string"
-                        },
-                        "expiryDate": {
-                          "type": "string"
-                        },
-                        "description": {
-                          "type": "string"
-                        },
-                        "creatorId": {
-                          "type": "string"
-                        },
-                        "createdAt": {
-                          "type": "string"
-                        },
-                        "updatedAt": {
-                          "type": "string"
-                        },
-                        "__v": {
-                          "type": "number"
-                        }
-                      }
-                    }
-                  }
-                },
-                "example": {
-                  "status": "success",
-                  "data": {
-                    "feedbackId": [],
-                    "price": 500,
-                    "weight": 30,
-                    "quantityLeft": 10,
-                    "quantity": 10,
-                    "minimumOrder": 0,
-                    "handlingFee": 10,
-                    "status": "approved",
-                    "_id": "628817d9e155f51b7f5351c0",
-                    "name": "Refined Fresh Pants",
-                    "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-20T22:36:09.179Z",
-                    "description": "Alias quia ad praesentium debitis. Doloremque voluptatibus placeat in neque libero dignissimos minus. Dolores in libero quia. Animi enim autem et ut iure sunt corrupti incidunt harum.",
-                    "creatorId": "628817cee155f51b7f535168",
-                    "createdAt": "Fri May 20 2022 23:36:09 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "Fri May 20 2022 23:36:09 GMT+0100 (West Africa Standard Time)",
-                    "__v": 0
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/buyer/products/favorites": {
       "get": {
         "description": "",
@@ -1985,10 +1726,10 @@
                     {
                       "feedbackId": [],
                       "price": 500,
-                      "_id": "628817d9e155f51b7f5351c0",
-                      "name": "Refined Fresh Pants",
+                      "_id": "6288213b65108620bbaed1d0",
+                      "name": "Sleek Plastic Table",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "description": "Alias quia ad praesentium debitis. Doloremque voluptatibus placeat in neque libero dignissimos minus. Dolores in libero quia. Animi enim autem et ut iure sunt corrupti incidunt harum."
+                      "description": "In placeat dolore magni eos voluptate necessitatibus. Distinctio sint similique mollitia sed ut error."
                     }
                   ],
                   "pageData": {
@@ -2132,14 +1873,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "628817cee155f51b7f535162",
+                      "_id": "6288211f65108620bbaed172",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "voluptatem animi dolores",
-                      "categoryId": "628817cce155f51b7f53514d",
-                      "expiryDate": "2022-05-20T22:35:58.392Z",
-                      "description": "Voluptas explicabo soluta et soluta doloremque perferendis soluta quidem. Aut voluptas illo consectetur. Vel nisi quasi recusandae quod itaque non. Aspernatur dolorum ea rerum dicta tempora eius.",
-                      "createdAt": "Fri May 20 2022 23:35:58 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-20T23:35:58+01:00",
+                      "name": "suscipit illum aut",
+                      "categoryId": "6288211d65108620bbaed15d",
+                      "expiryDate": "2022-05-20T23:15:43.944Z",
+                      "description": "Sint sed assumenda aspernatur consequatur repellat. Ducimus odit voluptas odio repudiandae qui ut.",
+                      "createdAt": "Sat May 21 2022 00:15:43 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-21T00:15:43+01:00",
                       "__v": 0
                     },
                     {
@@ -2150,14 +1891,14 @@
                       "minimumOrder": 2,
                       "handlingFee": 10,
                       "status": "approved",
-                      "_id": "628817cee155f51b7f535163",
+                      "_id": "6288211f65108620bbaed173",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "placeat beatae quidem",
-                      "categoryId": "628817cce155f51b7f53514d",
-                      "expiryDate": "2022-05-20T22:35:58.393Z",
-                      "description": "Ut aut debitis omnis expedita corrupti aspernatur amet. Sit fugit sunt eum quia reprehenderit hic veniam dolorem. At natus quia facere sint at. Praesentium hic enim recusandae id est quia.",
-                      "createdAt": "Fri May 20 2022 23:35:58 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-20T23:35:58+01:00",
+                      "name": "consectetur numquam non",
+                      "categoryId": "6288211d65108620bbaed15d",
+                      "expiryDate": "2022-05-20T23:15:43.945Z",
+                      "description": "Qui et voluptas id cupiditate facere nihil sed. Dolore dicta ut voluptas.",
+                      "createdAt": "Sat May 21 2022 00:15:43 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-21T00:15:43+01:00",
                       "__v": 0
                     }
                   ],

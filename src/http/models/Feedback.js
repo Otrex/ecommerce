@@ -1,18 +1,20 @@
 const mongoose = require('mongoose');
+const timestamp = require('./plugins/timestamp');
 
 const { Schema } = mongoose;
 const feedbackSchema = new Schema({
-  ratings: {
+  rating: {
     type: Number,
   },
   comment: {
     type: Number,
   },
-  customer: {
+  customerId: {
     type: mongoose.Types.ObjectId,
     ref: 'Customer',
   },
 });
 
-const feedback = mongoose.model('Feedback', feedbackSchema);
-module.exports = feedback;
+feedbackSchema.plugin(timestamp);
+
+module.exports = feedbackSchema;

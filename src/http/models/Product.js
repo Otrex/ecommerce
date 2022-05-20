@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const timestamp = require('./plugins/timestamp');
+const FeedbackSchema = require('./Feedback');
 const { PRODUCT_STATUS } = require('../../constants');
 
 const productSchema = new mongoose.Schema(
@@ -10,12 +11,7 @@ const productSchema = new mongoose.Schema(
     },
     imageUrl: String,
     name: String,
-    feedbackId: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: 'FeedBack',
-      },
-    ],
+    feedbackId: [FeedbackSchema],
     categoryId: {
       type: mongoose.Types.ObjectId,
       ref: 'Category',

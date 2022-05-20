@@ -29,6 +29,10 @@ router
   .get(ProductController.getFavorites);
 
 router
+  .route('/buyer/products/:productId/feedback')
+  .post(ProductController.addFeedback);
+
+router
   .route('/buyer/products/:productId/like')
   .post(ProductController.likeProduct);
 

@@ -74,10 +74,11 @@ class ProductService {
     const products = await models.Product.find(query, null, {
       skip,
       limit,
-    });
+    }).populate('feedbackId');
 
     const _products = products.map((product) => ({
       ...omit(product.toJSON(), ['feedbackId', 'creatorId']),
+      feedback: product.feedbackId
     }));
 
     return paginateResponse([_products, count], page, limit);
@@ -157,7 +158,6 @@ class ProductService {
     return paginateResponse([_result, count], page, limit);
   };
 
-
   static getProductByCategory = async ({ categoryId, page, limit }) => {
     const category = await models.Category.findById(categoryId);
     if (!category) throw new NotFoundError('category not found');
@@ -175,11 +175,15 @@ class ProductService {
   }
 
   static getProductDetails = async ({ productId }) => {
-    const product = await models.Product.findOne({ _id: productId });
+    const product = await models.Product.findOne({ _id: productId }).populate('feedbackId');
     if (!product) throw new NotFoundError('product not found');
 
     return {
-      data: product
+      data: {
+        ...product, 
+        feedback: product.feedbackId, 
+        feedbackId: undefined,
+      }
     }
   }
 
@@ -195,6 +199,30 @@ class ProductService {
     return {
       message: 'product has been approved',
     };
+  }
+
+  static addFeedback = async ({ productId, rating, comment, account }) => {
+    const product = await models.Product.findOne({ _id: productId });
+    if (!product) throw new NotFoundError('product not found');
+
+    const customer = await models.Customer.findOne({
+      accountId: account._id,
+    });
+
+    if (!customer) throw new NotFoundError('customer not found');
+
+    const feedback = await models.Feedback.create({
+      customerId: customer._id,
+      comment,
+      rating,
+    });
+
+    product.feedback.push(feedback._id);
+    await product.save();
+
+    return {
+      message: 'feedback added successfully', 
+    }
   }
 }
 
