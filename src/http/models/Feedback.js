@@ -7,7 +7,7 @@ const feedbackSchema = new Schema({
     type: Number,
   },
   comment: {
-    type: Number,
+    type: String,
   },
   customerId: {
     type: mongoose.Types.ObjectId,

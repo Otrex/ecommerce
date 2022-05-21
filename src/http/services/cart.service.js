@@ -4,12 +4,19 @@ const { omit } = require('lodash');
 const { PRODUCT_STATUS } = require('../../constants');
 const Paystack = require('paystack-api-ts').default;
 const config = require('../../config');
+const { distanceBtwPoints } = require('./../../scripts/utils')
 
 const paystack = new Paystack(config.paystack.key);
 
 class CartService {
   static getCart = async ({ account }) => {
-    const cart = await models.Cart.find({ customerId: account._id })
+    const customer = await models.Customer.findOne({
+      accountId: account._id,
+    });
+
+    if (!customer) throw new NotFoundError('customer not found');
+
+    const cart = await models.Cart.find({ customerId: customer._id })
       .populate({
         path: 'productId',
         select: [
@@ -19,6 +26,7 @@ class CartService {
           'description',
           'name',
           'imageUrl',
+          'creatorId',
         ],
         populate: {
           path: 'categoryId',
@@ -43,6 +51,10 @@ class CartService {
   static addToCart = async ({ productId, account, quantity }) => {
     const product = await models.Product.findById(productId);
     if (!product) throw new NotFoundError('product not found');
+    const customer = await models.Customer.findOne({
+      accountId: account._id,
+    });
+    if (!customer) throw new NotFoundError('customer not found');
 
     if (product.status !== PRODUCT_STATUS.APPROVED) {
       throw new ServiceError(
@@ -61,13 +73,13 @@ class CartService {
     }
 
     let cart = await models.Cart.findOne({
-      customerId: account._id,
+      customerId: customer._id,
       productId,
     });
 
     if (!cart) {
       cart = await models.Cart.create({
-        customerId: account._id,
+        customerId: customer._id,
         productId,
       });
     }
@@ -116,6 +128,61 @@ class CartService {
       transactionId: transaction.id,
     };
   };
+
+  static getCheckoutDetails = async ({ account }) => {
+    const { data } = await CartService.getCart({ account });
+    if (!data.length) throw new ServiceError('no item in cart');
+
+    // Get customer address
+    const { address: customerAddress } = await models.Customer.findOne({
+      accountId: account._id,
+    }).populate('address').exec();
+
+    // distanceState contains the calculated distance 
+    // for each unique product and the frequency of product
+    // as well as the totalWeight in KG
+    const distanceState = {};
+    for (const item of data ) {
+      const business = await models.Business
+        .findById(item.product.creatorId)
+        .populate('logisticsId')
+        .populate('address')
+        .exec();
+
+      // Get Each business Address
+      let { logisticsId: logistics, address: businessAddress } = business;
+      if (!logistics) logistics = await models.Logistics.findOne({ default: true });
+
+      const distance = distanceBtwPoints(
+        businessAddress.lat,
+        customerAddress.lat,
+        businessAddress.lng,
+        customerAddress.lng,
+      );
+      
+      distanceState[item.product._id.toString()] = {
+        productTotaldiscount: item.product.discount * item.product.price * item.quantity,
+        productTotalPrice: item.product.price * item.quantity,
+        totalWeight: item.product.weight * item.quantity,
+        costPerUnit: logistics.cost,
+        occurence: 1,
+        distance,
+      }
+    }
+
+    return {
+      data: {
+        totalCost: Object.entries(distanceState)
+          .map(([k, v]) => v.productTotalPrice - v.productTotaldiscount)
+          .reduce((t, c) => t + c, 0),
+        
+        totalDistanceCost: Object.entries(distanceState)
+        .map(([k, v]) => v.costPerUnit - v.distance)
+        .reduce((t, c) => t + c, 0)
+      }
+    }
+
+  }
 }
 
 module.exports = CartService;

@@ -3,7 +3,7 @@ module.exports = {
   Address: require('./Address'),
   Account: require('./Account'),
   Product: require('./Product'),
-  Feedback: require('./Feedback'),
+  Logistics: require('./Logistics'),
   Business: require('./Business'),
   Customer: require('./Customer'),
   Category: require('./Category'),

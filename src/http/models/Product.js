@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema(
     },
     imageUrl: String,
     name: String,
-    feedbackId: [FeedbackSchema],
+    feedback: [FeedbackSchema],
     categoryId: {
       type: mongoose.Types.ObjectId,
       ref: 'Category',
@@ -48,6 +48,10 @@ const productSchema = new mongoose.Schema(
     },
     reasonForDisapproval : {
       type: String,
+    },
+    discount: { // In percewnt
+      type: Number,
+      default: 0,
     },
     status: {
       type: String,

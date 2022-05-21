@@ -115,6 +115,28 @@ describe('Product', () => {
       });
     });
 
+    it('add feedback to product', async () => {
+      const res = await server
+        .post(`/v1/buyer/products/${product._id}/feedback`)
+        .set({ Authorization: `Bearer ${buyer.token}` })
+        .send({
+          comment: faker.lorem.sentences(),
+          rating: 4,
+        })
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Buyer'],
+        pathParameters: [
+          {
+            index: 3,
+            name: 'productId',
+          },
+        ],
+      });
+    });
+
     it('it should like product', async () => {
       const res = await server
         .post(`/v1/buyer/products/${product._id}/like`)
@@ -137,27 +159,6 @@ describe('Product', () => {
     it('it get product details', async () => {
       const res = await server
         .get(`/v1/public/products/${product._id}`)
-
-      console.log(res.body, res.error);
-      assert.equal(res.status, 200);
-      documentation.addEndpoint(res, {
-        tags: ['Product'],
-        pathParameters: [
-          {
-            index: 3,
-            name: 'productId',
-          },
-        ],
-      });
-    });
-
-    it('add feedback to product', async () => {
-      const res = await server
-        .post(`/v1/buyer/products/${product._id}/feedback`)
-        .send({
-          comment: faker.lorem.sentences(),
-          rating: 4,
-        })
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);

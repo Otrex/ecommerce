@@ -8,7 +8,11 @@ const app = require('./app');
 
 const config = require('./config');
 const Logger = require('./core/Logger');
-const { seedAdmin, seedCategories } = require('./scripts/seeds');
+const {
+  seedAdmin,
+  seedLogistics,
+  seedCategories,
+} = require('./scripts/seeds');
 
 const log = new Logger();
 
@@ -16,6 +20,7 @@ require('./database')
   .connect()
   .then(async () => {
     await seedCategories();
+    await seedLogistics();
     await seedAdmin();
     app.listen(config.app.port, () => {
       log.info(`SERVER STARTED ::: PORT=${config.app.port}`);

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Address = require('./Address');
+const Logistics = require('./Logistics');
 const timestamp = require('./plugins/timestamp');
 const { Schema } = mongoose;
 
@@ -11,6 +12,10 @@ const businessSchema = new Schema({
   address: {
     type: mongoose.Types.ObjectId,
     ref: Address,
+  },
+  logisticsId: {
+    type: mongoose.Types.ObjectId,
+    ref: Logistics,
   },
   type: {
     type: String,

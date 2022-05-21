@@ -45,7 +45,7 @@ class ProductService {
     });
 
     return {
-      data: omit(product.toObject(), ['feedbackId', 'creatorId']),
+      data: omit(product.toObject(), ['creatorId']),
     };
   };
 
@@ -74,11 +74,10 @@ class ProductService {
     const products = await models.Product.find(query, null, {
       skip,
       limit,
-    }).populate('feedbackId');
+    });
 
     const _products = products.map((product) => ({
-      ...omit(product.toJSON(), ['feedbackId', 'creatorId']),
-      feedback: product.feedbackId
+      ...omit(product.toJSON(), [ 'creatorId']),
     }));
 
     return paginateResponse([_products, count], page, limit);
@@ -143,7 +142,7 @@ class ProductService {
         select: [
           'price',
           'name',
-          'feedbackId',
+          'feedback',
           'imageUrl',
           'description',
           '_id',
@@ -168,22 +167,18 @@ class ProductService {
     const count = await models.Product.count(clause);
 
     const _products = products.map((product) => ({
-      ...omit(product.toJSON(), ['feedbackId', 'creatorId' ]),
+      ...omit(product.toJSON(), [ 'creatorId' ]),
     }));
 
     return paginateResponse([_products, count], page, limit);
   }
 
   static getProductDetails = async ({ productId }) => {
-    const product = await models.Product.findOne({ _id: productId }).populate('feedbackId');
+    const product = await models.Product.findOne({ _id: productId });
     if (!product) throw new NotFoundError('product not found');
 
     return {
-      data: {
-        ...product, 
-        feedback: product.feedbackId, 
-        feedbackId: undefined,
-      }
+      data: product,
     }
   }
 
@@ -211,13 +206,13 @@ class ProductService {
 
     if (!customer) throw new NotFoundError('customer not found');
 
-    const feedback = await models.Feedback.create({
+    const feedback = await product.feedback.create({
       customerId: customer._id,
       comment,
       rating,
     });
 
-    product.feedback.push(feedback._id);
+    product.feedback.push(feedback);
     await product.save();
 
     return {

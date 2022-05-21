@@ -33,9 +33,17 @@ const checkOrInsert = async (model, data) => {
 };
 
 const categories = require('./data/categories.js');
+const Logistics = require('../../http/models/Logistics');
 exports.seedCategories = async () => {
   await Promise.all(
     categories.map((cat) => checkOrInsert(Category, cat))
+  );
+};
+
+const logisticsCompanies = require('./data/logisticsCompanies');
+exports.seedLogistics = async () => {
+  await Promise.all(
+    logisticsCompanies.map((log) => checkOrInsert(Logistics, log))
   );
 };
 
