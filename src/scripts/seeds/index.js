@@ -70,6 +70,6 @@ exports.seedAdmin = async () => {
 if (require.main === module) {
   seedAdmin();
   seedCategories();
-  seedLogistics()
+  seedLogistics();
   // seed();
 }

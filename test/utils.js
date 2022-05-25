@@ -1,5 +1,5 @@
 const ObjectId = require('mongoose').Types.ObjectId;
-const { bcryptHash } = require('../src/scripts/utils')
+const { bcryptHash } = require('../src/scripts/utils');
 const models = require('../src/http/models');
 const { generateJWTToken } = require('../src/scripts/utils');
 const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../src/constants');
@@ -26,8 +26,8 @@ exports.createAccountReturnToken = async (data = {}) => {
   const address = await models.Address.create({
     lat: faker.address.latitude(),
     lng: faker.address.longitude(),
-    label: faker.address.streetAddress()
-  })
+    label: faker.address.streetAddress(),
+  });
 
   if (data.type === ACCOUNT_TYPES.BUSINESS) {
     await models.Business.create({

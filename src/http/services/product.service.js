@@ -77,7 +77,7 @@ class ProductService {
     });
 
     const _products = products.map((product) => ({
-      ...omit(product.toJSON(), [ 'creatorId']),
+      ...omit(product.toJSON(), ['creatorId']),
     }));
 
     return paginateResponse([_products, count], page, limit);
@@ -157,21 +157,31 @@ class ProductService {
     return paginateResponse([_result, count], page, limit);
   };
 
-  static getProductByCategory = async ({ categoryId, page, limit }) => {
+  static getProductByCategory = async ({
+    categoryId,
+    page,
+    limit,
+  }) => {
     const category = await models.Category.findById(categoryId);
     if (!category) throw new NotFoundError('category not found');
 
     const skip = calcSkip({ page, limit });
-    const clause = { categoryId: category._id, status: PRODUCT_STATUS.APPROVED };
-    const products = await models.Product.find(clause, null, { skip, limit });
+    const clause = {
+      categoryId: category._id,
+      status: PRODUCT_STATUS.APPROVED,
+    };
+    const products = await models.Product.find(clause, null, {
+      skip,
+      limit,
+    });
     const count = await models.Product.count(clause);
 
     const _products = products.map((product) => ({
-      ...omit(product.toJSON(), [ 'creatorId' ]),
+      ...omit(product.toJSON(), ['creatorId']),
     }));
 
     return paginateResponse([_products, count], page, limit);
-  }
+  };
 
   static getProductDetails = async ({ productId }) => {
     const product = await models.Product.findOne({ _id: productId });
@@ -179,8 +189,8 @@ class ProductService {
 
     return {
       data: product,
-    }
-  }
+    };
+  };
 
   static disapproveProduct = async ({ productId, reason }) => {
     const product = await models.Product.findOne({ _id: productId });
@@ -188,15 +198,20 @@ class ProductService {
 
     await models.Product.findByIdAndUpdate(product._id, {
       status: PRODUCT_STATUS.DISSAPPROVED,
-      reasonForDisapproval: reason
+      reasonForDisapproval: reason,
     });
 
     return {
       message: 'product has been approved',
     };
-  }
+  };
 
-  static addFeedback = async ({ productId, rating, comment, account }) => {
+  static addFeedback = async ({
+    productId,
+    rating,
+    comment,
+    account,
+  }) => {
     const product = await models.Product.findOne({ _id: productId });
     if (!product) throw new NotFoundError('product not found');
 
@@ -216,21 +231,24 @@ class ProductService {
     await product.save();
 
     return {
-      message: 'feedback added successfully', 
-    }
-  }
+      message: 'feedback added successfully',
+    };
+  };
 
   static getApprovedProducts_Public = async ({ page, limit }) => {
     const skip = calcSkip({ page, limit });
     const clause = { status: PRODUCT_STATUS.APPROVED };
-    const products = await models.Product.find(clause, null, { skip, limit });
+    const products = await models.Product.find(clause, null, {
+      skip,
+      limit,
+    });
     const count = await models.Product.count(clause);
     const _products = products.map((product) => ({
-      ...omit(product.toJSON(), [ 'creatorId' ]),
+      ...omit(product.toJSON(), ['creatorId']),
     }));
 
     return paginateResponse([_products, count], page, limit);
-  }
+  };
 
   static getFeedback = async ({ account, page, limit }) => {
     const vendor = await models.Business.findOne({
@@ -240,7 +258,7 @@ class ProductService {
 
     const query = {
       creatorId: vendor._id,
-      status: PRODUCT_STATUS.APPROVED
+      status: PRODUCT_STATUS.APPROVED,
     };
 
     const skip = calcSkip({ page, limit });
@@ -255,14 +273,17 @@ class ProductService {
         'reasonForDisapproval',
         'handlingFee',
         'creatorId',
-        'discount'
+        'discount',
       ]),
-      avgRating: product.feedback.length ? product.feedback.reduce((t, e) => t + e.rating, 0)/product.feedback.length: 0,
+      avgRating: product.feedback.length
+        ? product.feedback.reduce((t, e) => t + e.rating, 0) /
+          product.feedback.length
+        : 0,
       category: product.categoryId,
     }));
 
     return paginateResponse([_products, count], page, limit);
-  }
+  };
 }
 
 module.exports = ProductService;

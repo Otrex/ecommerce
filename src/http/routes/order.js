@@ -9,5 +9,10 @@ const router = express.Router();
 
 router.use(authentication());
 
-router.route('/vendor/order/stats').get(authorization([ACCOUNT_TYPES.BUSINESS]), OrderController.stats)
+router
+  .route('/vendor/order/stats')
+  .get(
+    authorization([ACCOUNT_TYPES.BUSINESS]),
+    OrderController.stats
+  );
 module.exports = router;

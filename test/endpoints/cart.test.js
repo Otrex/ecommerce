@@ -39,7 +39,9 @@ before(async () => {
   categories = await models.Category.find({});
   buyer = await createAccountReturnToken(userCustomer);
   vendor = await createAccountReturnToken(userBusiness);
-  business = await models.Business.findOne({ accountId: vendor.account._id })
+  business = await models.Business.findOne({
+    accountId: vendor.account._id,
+  });
   products = await Promise.all(
     [
       {

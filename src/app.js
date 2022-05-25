@@ -38,7 +38,7 @@ app.use(
   morgan(config.app.env === 'local' ? 'dev' : 'combined', { stream })
 );
 
-app.use(passport.initialize())
+app.use(passport.initialize());
 // app.use(passport.session())
 
 /* ROUTES */

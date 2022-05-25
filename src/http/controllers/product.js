@@ -53,17 +53,17 @@ class ProductController {
     handler: ProductService.likeProduct,
   });
 
-  static getProductDetails =  RequestHandler({
+  static getProductDetails = RequestHandler({
     validator: GetProductDetailsValidator,
     handler: ProductService.getProductDetails,
   });
 
-  static addFeedback =  RequestHandler({
+  static addFeedback = RequestHandler({
     validator: AddFeedbackValidator,
     handler: ProductService.addFeedback,
   });
 
-  static getFeedback_Business =  RequestHandler({
+  static getFeedback_Business = RequestHandler({
     validator: GetProductValidator,
     handler: ProductService.getFeedback,
   });
