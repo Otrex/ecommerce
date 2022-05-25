@@ -118,7 +118,7 @@ class OrderService {
       },
     ]);
 
-    return result ? result.orders: 0
+    return result ? result.orders: 0;
   }
 }
 
