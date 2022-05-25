@@ -135,6 +135,9 @@ class CartService {
       accountId: account._id,
     }).populate('address').exec();
 
+    if (!customerAddress) {
+      throw new ServiceError('no valid address found')
+    }
     // distanceState contains the calculated distance 
     // for each unique product and the frequency of product
     // as well as the totalWeight in KG
@@ -149,6 +152,8 @@ class CartService {
       // Get Each business Address
       let { logisticsId: logistics, address: businessAddress } = business;
       if (!logistics) logistics = await models.Logistics.findOne({ default: true });
+
+      if (!businessAddress) throw new ServiceError('product owner has not added his address yet')
 
       const distance = distanceBtwPoints(
         businessAddress.lat,
