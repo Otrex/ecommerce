@@ -219,6 +219,18 @@ class ProductService {
       message: 'feedback added successfully', 
     }
   }
+
+  static getApprovedProducts_Public = async ({ page, limit }) => {
+    const skip = calcSkip({ page, limit });
+    const clause = { status: PRODUCT_STATUS.APPROVED };
+    const products = await models.Product.find(clause, null, { skip, limit });
+    const count = await models.Product.count(clause);
+    const _products = products.map((product) => ({
+      ...omit(product.toJSON(), [ 'creatorId' ]),
+    }));
+
+    return paginateResponse([_products, count], page, limit);
+  }
 }
 
 module.exports = ProductService;

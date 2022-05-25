@@ -173,6 +173,17 @@ describe('Product', () => {
       });
     });
 
+    it('it get product details', async () => {
+      const res = await server
+        .get('/v1/public/products?page=1&limit=20')
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product'],
+      });
+    });
+
     it('get favorite products', async () => {
       const res = await server
         .get('/v1/buyer/products/favorites?page=1&limit=20')

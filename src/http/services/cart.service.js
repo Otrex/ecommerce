@@ -100,14 +100,11 @@ class CartService {
   };
 
   static checkoutCart = async ({ account }) => {
-    const { data } = await CartService.getCart({ account });
-    if (!data.length) throw new ServiceError('no item in cart');
+    const { data } = await CartService.getCheckoutDetails({ account });
+    const { totalCost, totalDistanceCost } = data;
+    const amount = Math.ceil(totalCost * totalDistanceCost);
 
-    const amount = data.reduce(
-      (total, cart) => total + cart.quantity * cart.product.price,
-      0
-    );
-
+    if (('' + amount).length > 7) throw new ServiceError('total cost has exceeded the a million and cant be carried out. Please contact support')
     const transaction = await models.Transaction.create({
       amount,
     });
@@ -161,14 +158,15 @@ class CartService {
       );
       
       distanceState[item.product._id.toString()] = {
-        productTotaldiscount: item.product.discount * item.product.price * item.quantity,
+        productTotaldiscount: ((item.product.discount || 0) * item.product.price * item.quantity) / 100,
+        distanceCost: logistics.cost ? (item.product.weight * item.quantity * distance)/logistics.cost: 0, /// Calculates cost for delivering a product :: (weight*quantity*distance)/ costoftransport_in_kmKg
         productTotalPrice: item.product.price * item.quantity,
-        totalWeight: item.product.weight * item.quantity,
-        costPerUnit: logistics.cost,
         occurence: 1,
         distance,
       }
     }
+
+    console.log(distanceState)
 
     return {
       data: {
@@ -177,8 +175,8 @@ class CartService {
           .reduce((t, c) => t + c, 0),
         
         totalDistanceCost: Object.entries(distanceState)
-        .map(([k, v]) => v.costPerUnit - v.distance)
-        .reduce((t, c) => t + c, 0)
+          .map(([k, v]) => v.distanceCost)
+          .reduce((t, c) => t + c, 0)
       }
     }
 

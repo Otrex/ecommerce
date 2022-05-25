@@ -3,6 +3,7 @@ const { bcryptHash } = require('../src/scripts/utils')
 const models = require('../src/http/models');
 const { generateJWTToken } = require('../src/scripts/utils');
 const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../src/constants');
+const faker = require('faker');
 
 exports.getToken = async (
   { accountId },
@@ -22,15 +23,23 @@ exports.createAccountReturnToken = async (data = {}) => {
     emailVerifiedAt: new Date(),
   });
 
+  const address = await models.Address.create({
+    lat: faker.address.latitude(),
+    lng: faker.address.longitude(),
+    label: faker.address.streetAddress()
+  })
+
   if (data.type === ACCOUNT_TYPES.BUSINESS) {
     await models.Business.create({
       accountId: account._id,
+      address: address._id,
     });
   }
 
   if (data.type === ACCOUNT_TYPES.CUSTOMER) {
     await models.Customer.create({
       accountId: account._id,
+      address: address._id,
     });
   }
 

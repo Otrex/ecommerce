@@ -58,10 +58,10 @@
                 }
               },
               "example": {
-                "email": "Zita30@yahoo.com",
-                "password": "QZ1_zUOX0BOcfrj",
-                "firstName": "Javon",
-                "lastName": "Harvey",
+                "email": "Boris_Gislason@gmail.com",
+                "password": "KA373HERKTi0MMe",
+                "firstName": "Javonte",
+                "lastName": "Ernser",
                 "gender": "male"
               }
             }
@@ -95,7 +95,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNjc2Y2Q1NjE3MzIwNTQ3MmUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjNhTXc4Z3UxSWxCYUNmbDN3c25pWGNFSW9KYmRNc0pUVGhNMCIsImlhdCI6MTY1MzA5MDc5MSwiZXhwIjoxNjUzMTc3MTkxfQ.FwyOhL4d32HX0cn_JzirKG7giP5RZOv0hyE4j3BltAY"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmNzYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjQ2T2FmTWVNalJGTFR4MENTY0JGVUVyaGJiVHNneng4a3IzTCIsImlhdCI6MTY1MzQzODIzMSwiZXhwIjoxNjUzNTI0NjMxfQ.FujpN3Cs_XvX9DQxfwmi8KI4Uo7jEp_WsQOndFPlEbI"
                   }
                 }
               }
@@ -189,27 +189,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Helen55@gmail.com",
-                  "password": "jJa7h6__pErfgCz",
+                  "email": "Beulah53@gmail.com",
+                  "password": "kwK1HFw4es6HUlu",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Nels Koss"
+                  "fullName": "Harry Friesen"
                 },
                 "businessDetails": {
-                  "type": "Function-based systemic knowledge user",
-                  "name": "Team-oriented motivating process improvement",
-                  "cacNumber": "Intuitive real-time knowledge base",
-                  "state": "Texas",
-                  "lga": "Maryland",
+                  "type": "Implemented holistic capacity",
+                  "name": "Open-architected static project",
+                  "cacNumber": "Optimized client-driven firmware",
+                  "state": "Maryland",
+                  "lga": "South Dakota",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Andorra"
+                    "label": "Aruba"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Customizable human-resource methodology",
-                  "accountName": "Hollis Lueilwitz",
+                  "bank": "Proactive real-time hierarchy",
+                  "accountName": "Marlin Lowe",
                   "payoutFrequency": 5
                 }
               }
@@ -244,7 +244,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNzc2Y2Q1NjE3MzIwNTQ3MzUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjltelMzSnBNbGJhVG56VWh2OVBZTEVMd09zcFVBV3l2cUJsWiIsImlhdCI6MTY1MzA5MDc5MSwiZXhwIjoxNjUzMTc3MTkxfQ.3NJZgE7pL-tbT2T7pvZli19RL6KOBhvbdwwnPcUBrAs"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmN2QiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IlZ3aVNXYk9yZjRwSmgycEVIQjVhTXRNN3ZEOERHcEVJakNsYiIsImlhdCI6MTY1MzQzODIzMiwiZXhwIjoxNjUzNTI0NjMyfQ.O7mPRr1POWqVWEKyU3J_8i89Zu3KK6b7s0DR1tfIKzk"
                   }
                 }
               }
@@ -278,8 +278,8 @@
                 }
               },
               "example": {
-                "email": "Zita30@yahoo.com",
-                "password": "QZ1_zUOX0BOcfrj",
+                "email": "Boris_Gislason@gmail.com",
+                "password": "KA373HERKTi0MMe",
                 "type": "customer"
               }
             }
@@ -358,21 +358,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-20T23:53:12.727Z",
+                      "lastLoggedIn": "2022-05-25T00:23:53.030Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628829e676cd56173205472e",
-                      "firstName": "Javon",
-                      "lastName": "Harvey",
-                      "email": "Zita30@yahoo.com",
-                      "updatedAt": "2022-05-21T00:53:10+01:00",
-                      "createdAt": "2022-05-21T00:53:10+01:00",
+                      "_id": "628d7717f5073f2014e02f76",
+                      "firstName": "Javonte",
+                      "lastName": "Ernser",
+                      "email": "Boris_Gislason@gmail.com",
+                      "updatedAt": "2022-05-25T01:23:51+01:00",
+                      "createdAt": "2022-05-25T01:23:51+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-05-20T23:53:12.624Z"
+                      "verifiedEmailAt": "2022-05-25T00:23:52.901Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNjc2Y2Q1NjE3MzIwNTQ3MmUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJsdzQ5QzFqQWdQdHpDdUVrZ2pvdk5XeDAxSmdwWEZGUVpCTHIiLCJpYXQiOjE2NTMwOTA3OTIsImV4cCI6MTY1MzE3NzE5Mn0.KvPXkF1PcHHWn0WDice0jmpgwtl2-va3Ph_KqdYhaao"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmNzYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiIyank4NTdtWGxTb1U2TTJtNkVHaFBSb2hFak12QTRWQWRLTVkiLCJpYXQiOjE2NTM0MzgyMzMsImV4cCI6MTY1MzUyNDYzM30.e-I39OIKScGjpzC1BeWWQ1olSNdWhA2iYrpAlyG_DCQ"
                   }
                 }
               }
@@ -403,8 +403,8 @@
                 }
               },
               "example": {
-                "email": "Zita30@yahoo.com",
-                "password": "QZ1_zUOX0BOcfrj"
+                "email": "Boris_Gislason@gmail.com",
+                "password": "KA373HERKTi0MMe"
               }
             }
           }
@@ -479,20 +479,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-05-20T23:53:12.156Z",
+                      "lastLoggedIn": "2022-05-25T00:23:52.376Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628829e676cd56173205472e",
-                      "firstName": "Javon",
-                      "lastName": "Harvey",
-                      "email": "Zita30@yahoo.com",
-                      "updatedAt": "2022-05-21T00:53:10+01:00",
-                      "createdAt": "2022-05-21T00:53:10+01:00",
+                      "_id": "628d7717f5073f2014e02f76",
+                      "firstName": "Javonte",
+                      "lastName": "Ernser",
+                      "email": "Boris_Gislason@gmail.com",
+                      "updatedAt": "2022-05-25T01:23:51+01:00",
+                      "createdAt": "2022-05-25T01:23:51+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNjc2Y2Q1NjE3MzIwNTQ3MmUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImJZZ1NVQzdqSWhxMGdmZElWOU1MNmo2a2VTaFNhWTlzV041UyIsImlhdCI6MTY1MzA5MDc5MiwiZXhwIjoxNjUzMTc3MTkyfQ.K7Orb757ARQ_3cOHesrrbnUdl7s4ZWgFVK_5tixcOdI"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmNzYiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkVVTlFvTU5pSXNmQkRIOGN6SmRFcVBITEVnZUh3RGs2dzBDQiIsImlhdCI6MTY1MzQzODIzMiwiZXhwIjoxNjUzNTI0NjMyfQ.TTHfZ0-bPJTs8aPDGUfs0fO8uUbbgwgf7SfhUFtM6LA"
                   }
                 }
               }
@@ -523,8 +523,8 @@
                 }
               },
               "example": {
-                "email": "Allison.Huel@yahoo.com",
-                "password": "hazX4GYRbObLSsQ"
+                "email": "Elisha.Smith0@hotmail.com",
+                "password": "LzP8V1AXljRq7eY"
               }
             }
           }
@@ -593,18 +593,18 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-05-20T23:53:12.349Z",
+                      "lastLoggedIn": "2022-05-25T00:23:52.599Z",
                       "type": "admin",
                       "isActive": false,
                       "isSuperAdmin": true,
-                      "_id": "628829e876cd561732054745",
-                      "email": "Allison.Huel@yahoo.com",
-                      "updatedAt": "2022-05-21T00:53:12+01:00",
-                      "createdAt": "2022-05-21T00:53:12+01:00",
+                      "_id": "628d7718f5073f2014e02f8d",
+                      "email": "Elisha.Smith0@hotmail.com",
+                      "updatedAt": "2022-05-25T01:23:52+01:00",
+                      "createdAt": "2022-05-25T01:23:52+01:00",
                       "__v": 0
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllODc2Y2Q1NjE3MzIwNTQ3NDUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJuRTZoOTdyelNDWm9RclN2Q05DSldPV1JxempMaEpRVDlncXUiLCJpYXQiOjE2NTMwOTA3OTIsImV4cCI6MTY1MzE3NzE5Mn0.NjtI_9bsRNEb9816RuSILZBE7qMyTlnxHmtynWtmLDw"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxOGY1MDczZjIwMTRlMDJmOGQiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJIeG9WSGhJdW5FbDBvWXAwRnVTSlVPMFF2V3dCamFqV0ZIZEEiLCJpYXQiOjE2NTM0MzgyMzIsImV4cCI6MTY1MzUyNDYzMn0.yTMFCkPRq5MeQfRoWZeWNEM3MYVtpicoydug4X_QV8I"
                   }
                 }
               }
@@ -635,8 +635,8 @@
                 }
               },
               "example": {
-                "email": "Helen55@gmail.com",
-                "password": "jJa7h6__pErfgCz"
+                "email": "Beulah53@gmail.com",
+                "password": "kwK1HFw4es6HUlu"
               }
             }
           }
@@ -714,21 +714,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-05-20T23:53:12.450Z",
+                      "lastLoggedIn": "2022-05-25T00:23:52.726Z",
                       "type": "business",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "628829e776cd561732054735",
+                      "_id": "628d7717f5073f2014e02f7d",
                       "phoneNumber": "+2345678765456",
-                      "firstName": "Nels",
-                      "lastName": "Koss",
-                      "email": "Helen55@gmail.com",
-                      "updatedAt": "2022-05-21T00:53:11+01:00",
-                      "createdAt": "2022-05-21T00:53:11+01:00",
+                      "firstName": "Harry",
+                      "lastName": "Friesen",
+                      "email": "Beulah53@gmail.com",
+                      "updatedAt": "2022-05-25T01:23:51+01:00",
+                      "createdAt": "2022-05-25T01:23:51+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNzc2Y2Q1NjE3MzIwNTQ3MzUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImxvbkNIczY2bWdZdVVyTkJrdWpGb1p4YXRuRkhSaEk5M0ZaZSIsImlhdCI6MTY1MzA5MDc5MiwiZXhwIjoxNjUzMTc3MTkyfQ.gM7SgAKNtJH-STIkvcbbHwSeGtKlZfOAnkfFI6eI31c"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmN2QiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InhtTFJWQkR6UmI0VWhFbU1PR2lPWVh3ekw2SUdST0ZUa1diSCIsImlhdCI6MTY1MzQzODIzMiwiZXhwIjoxNjUzNTI0NjMyfQ.V6_lAW-JA6M2H9YvMsqxvxKns_F5eoVp3jE-qUUPqvs"
                   }
                 }
               }
@@ -754,7 +754,7 @@
                 }
               },
               "example": {
-                "code": "37685"
+                "code": "19285"
               }
             }
           }
@@ -781,7 +781,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNjc2Y2Q1NjE3MzIwNTQ3MmUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJCVjRJZkl5QmFpYTVTaG9FZW5Eek8ySUs5eHVUajR0Z1dtNWEiLCJpYXQiOjE2NTMwOTA3OTIsImV4cCI6MTY1MzE3NzE5Mn0.71yqNWTSdZ_V_0Fz6YaOPv1Us3Pnd0OEU6gMFiNNg6o"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmNzYiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJNRWZRVWdNY0JnbFVwV1NPZm53U25wT09WNGFPRVgwYjhZM2YiLCJpYXQiOjE2NTM0MzgyMzIsImV4cCI6MTY1MzUyNDYzMn0.oQnrKLVvwuZ8QJmEjdqTiu2n2BLSIaUNZOZfEa6HQRE"
                 }
               }
             }
@@ -809,7 +809,7 @@
                 }
               },
               "example": {
-                "email": "Zita30@yahoo.com",
+                "email": "Boris_Gislason@gmail.com",
                 "type": "customer"
               }
             }
@@ -843,7 +843,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2Mjg4MjllNjc2Y2Q1NjE3MzIwNTQ3MmUiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiejQ1eHdxNHp3TTB4Y0ozb0g3alZKVzJYRVBEQWQ1RzlUa2wyIiwiaWF0IjoxNjUzMDkwNzkyLCJleHAiOjE2NTMxNzcxOTJ9.5cIzD8SlCLOeeTBB0uZzazL-xvABPkFcdu2VkVgRw0E"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MjhkNzcxN2Y1MDczZjIwMTRlMDJmNzYiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiV1FzeEU5b0JJcUpGQzBQeVBDUnZvRU9qSEp2ODVIbU1WTDhjIiwiaWF0IjoxNjUzNDM4MjMzLCJleHAiOjE2NTM1MjQ2MzN9.SStOGufBR8HkAixpl_Yf6A17d8qjZBrQb9YA_e8f2y8"
                   }
                 }
               }
@@ -976,7 +976,7 @@
                 }
               },
               "example": {
-                "productId": "628829e576cd56173205471e",
+                "productId": "628d7716f5073f2014e02f60",
                 "quantity": 10
               }
             }
@@ -1028,6 +1028,9 @@
                               "_id": {
                                 "type": "string"
                               },
+                              "creatorId": {
+                                "type": "string"
+                              },
                               "imageUrl": {
                                 "type": "string"
                               },
@@ -1064,19 +1067,20 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "628829e876cd561732054760",
-                      "createdAt": "Sat May 21 2022 00:53:12 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Sat May 21 2022 00:53:13 GMT+0100 (West Africa Standard Time)",
+                      "_id": "628d7719f5073f2014e02fab",
+                      "createdAt": "Wed May 25 2022 01:23:53 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Wed May 25 2022 01:23:53 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
-                        "price": 10000,
+                        "price": 0.05,
                         "weight": 20,
-                        "_id": "628829e576cd56173205471e",
+                        "_id": "628d7716f5073f2014e02f60",
+                        "creatorId": "628d7716f5073f2014e02f5d",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "non rerum ut",
-                        "description": "Earum quasi et. Excepturi eos aliquid. Tenetur suscipit alias. Hic optio perferendis debitis recusandae minima excepturi.",
+                        "name": "aut voluptatibus itaque",
+                        "description": "Sit quos aliquam et adipisci consequatur ut aspernatur id. Nisi excepturi quam reiciendis et quis hic neque soluta officia. Cumque eveniet omnis cupiditate et ut eius quos dolorem reprehenderit. Optio qui minima incidunt placeat exercitationem. Et quia tempore mollitia omnis.",
                         "category": {
-                          "_id": "628829e376cd561732054709",
+                          "_id": "628d7714f5073f2014e02f43",
                           "name": "Food",
                           "__v": 0
                         }
@@ -1138,6 +1142,9 @@
                               "_id": {
                                 "type": "string"
                               },
+                              "creatorId": {
+                                "type": "string"
+                              },
                               "imageUrl": {
                                 "type": "string"
                               },
@@ -1173,19 +1180,20 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "628829e876cd561732054760",
-                      "createdAt": "Sat May 21 2022 00:53:12 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Sat May 21 2022 00:53:13 GMT+0100 (West Africa Standard Time)",
+                      "_id": "628d7719f5073f2014e02fab",
+                      "createdAt": "Wed May 25 2022 01:23:53 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Wed May 25 2022 01:23:53 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
-                        "price": 10000,
+                        "price": 0.05,
                         "weight": 20,
-                        "_id": "628829e576cd56173205471e",
+                        "_id": "628d7716f5073f2014e02f60",
+                        "creatorId": "628d7716f5073f2014e02f5d",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "non rerum ut",
-                        "description": "Earum quasi et. Excepturi eos aliquid. Tenetur suscipit alias. Hic optio perferendis debitis recusandae minima excepturi.",
+                        "name": "aut voluptatibus itaque",
+                        "description": "Sit quos aliquam et adipisci consequatur ut aspernatur id. Nisi excepturi quam reiciendis et quis hic neque soluta officia. Cumque eveniet omnis cupiditate et ut eius quos dolorem reprehenderit. Optio qui minima incidunt placeat exercitationem. Et quia tempore mollitia omnis.",
                         "category": {
-                          "_id": "628829e376cd561732054709",
+                          "_id": "628d7714f5073f2014e02f43",
                           "name": "Food",
                           "__v": 0
                         }
@@ -1241,9 +1249,51 @@
                 },
                 "example": {
                   "status": "success",
-                  "authorizationUrl": "https://checkout.paystack.com/11e11o72u3haaoa",
-                  "accessCode": "11e11o72u3haaoa",
-                  "transactionId": "628829e976cd561732054770"
+                  "authorizationUrl": "https://checkout.paystack.com/zll89gwkwqyybkm",
+                  "accessCode": "zll89gwkwqyybkm",
+                  "transactionId": "628d7719f5073f2014e02fc3"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "tags": [
+          "Cart/Buyer"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "totalCost": {
+                          "type": "number"
+                        },
+                        "totalDistanceCost": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": {
+                    "totalCost": 0.5,
+                    "totalDistanceCost": 266495.6686815336
+                  }
                 }
               }
             }
@@ -1292,22 +1342,22 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "628829e376cd561732054709",
+                      "_id": "628d7714f5073f2014e02f43",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "628829e376cd56173205470b",
+                      "_id": "628d7714f5073f2014e02f45",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "628829e376cd56173205470f",
+                      "_id": "628d7714f5073f2014e02f49",
                       "name": "Phones",
                       "__v": 0
                     },
                     {
-                      "_id": "628829e376cd56173205470d",
+                      "_id": "628d7714f5073f2014e02f47",
                       "name": "Clothings",
                       "__v": 0
                     }
@@ -1338,7 +1388,7 @@
                 }
               },
               "example": {
-                "name": "voluptas maxime odio"
+                "name": "voluptas libero in"
               }
             }
           }
@@ -1373,8 +1423,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "628829ea76cd561732054777",
-                    "name": "voluptas maxime odio",
+                    "_id": "628d771af5073f2014e02fd5",
+                    "name": "voluptas libero in",
                     "__v": 0
                   }
                 }
@@ -1432,15 +1482,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Practical Soft Chair",
-                "categoryId": "628829e376cd561732054709",
+                "name": "Rustic Concrete Pizza",
+                "categoryId": "628d7714f5073f2014e02f43",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-05-20T23:53:14.070Z",
+                "expiryDate": "2022-05-25T00:23:54.443Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Cumque explicabo accusantium deserunt dolor debitis praesentium qui. Vero quibusdam odio rerum ipsum rem. Fugit maxime similique nisi ut velit qui placeat ratione et. Voluptas temporibus libero suscipit nesciunt delectus dignissimos enim. In mollitia voluptas reprehenderit. Inventore vel atque."
+                "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et."
               }
             }
           }
@@ -1475,6 +1525,9 @@
                           "type": "number"
                         },
                         "handlingFee": {
+                          "type": "number"
+                        },
+                        "discount": {
                           "type": "number"
                         },
                         "status": {
@@ -1521,15 +1574,16 @@
                     "quantity": 10,
                     "minimumOrder": 0,
                     "handlingFee": 10,
+                    "discount": 0,
                     "status": "pending",
-                    "_id": "628829ea76cd56173205477c",
-                    "name": "Practical Soft Chair",
+                    "_id": "628d771af5073f2014e02fda",
+                    "name": "Rustic Concrete Pizza",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-20T23:53:14.070Z",
-                    "description": "Cumque explicabo accusantium deserunt dolor debitis praesentium qui. Vero quibusdam odio rerum ipsum rem. Fugit maxime similique nisi ut velit qui placeat ratione et. Voluptas temporibus libero suscipit nesciunt delectus dignissimos enim. In mollitia voluptas reprehenderit. Inventore vel atque.",
+                    "expiryDate": "2022-05-25T00:23:54.443Z",
+                    "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et.",
                     "feedback": [],
-                    "createdAt": "Sat May 21 2022 00:53:14 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-05-21T00:53:14+01:00",
+                    "createdAt": "Wed May 25 2022 01:23:54 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-25T01:23:54+01:00",
                     "__v": 0
                   }
                 }
@@ -1598,6 +1652,9 @@
                             "type": "number"
                           },
                           "handlingFee": {
+                            "type": "number"
+                          },
+                          "discount": {
                             "type": "number"
                           },
                           "status": {
@@ -1684,24 +1741,25 @@
                       "quantity": 10,
                       "minimumOrder": 0,
                       "handlingFee": 10,
+                      "discount": 0,
                       "status": "approved",
-                      "_id": "628829ea76cd56173205477c",
-                      "name": "Practical Soft Chair",
+                      "_id": "628d771af5073f2014e02fda",
+                      "name": "Rustic Concrete Pizza",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-05-20T23:53:14.070Z",
-                      "description": "Cumque explicabo accusantium deserunt dolor debitis praesentium qui. Vero quibusdam odio rerum ipsum rem. Fugit maxime similique nisi ut velit qui placeat ratione et. Voluptas temporibus libero suscipit nesciunt delectus dignissimos enim. In mollitia voluptas reprehenderit. Inventore vel atque.",
+                      "expiryDate": "2022-05-25T00:23:54.443Z",
+                      "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et.",
                       "feedback": [
                         {
-                          "_id": "628829ea76cd561732054784",
-                          "customerId": "628829e676cd561732054728",
-                          "comment": "Fugiat culpa aut facilis accusantium soluta aut magnam facilis quidem. Nesciunt quis minus enim illo quia deserunt ad ducimus ut. Quas unde ut voluptatem laboriosam blanditiis ut. Sit et rerum adipisci quasi velit placeat est autem. Accusantium velit non et corrupti consequuntur.",
+                          "_id": "628d771af5073f2014e02fe2",
+                          "customerId": "628d7717f5073f2014e02f6e",
+                          "comment": "Cum ut vel eius officiis sint soluta. Nulla tenetur aut mollitia hic vitae excepturi veritatis nihil. Culpa autem voluptatibus harum tenetur.",
                           "rating": 4,
-                          "updatedAt": "2022-05-21T00:53:14+01:00",
-                          "createdAt": "2022-05-21T00:53:14+01:00"
+                          "updatedAt": "2022-05-25T01:23:54+01:00",
+                          "createdAt": "2022-05-25T01:23:54+01:00"
                         }
                       ],
-                      "createdAt": "Sat May 21 2022 00:53:14 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-21T00:53:14+01:00",
+                      "createdAt": "Wed May 25 2022 01:23:54 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:54+01:00",
                       "__v": 1
                     }
                   ],
@@ -1805,7 +1863,7 @@
                 }
               },
               "example": {
-                "comment": "Fugiat culpa aut facilis accusantium soluta aut magnam facilis quidem. Nesciunt quis minus enim illo quia deserunt ad ducimus ut. Quas unde ut voluptatem laboriosam blanditiis ut. Sit et rerum adipisci quasi velit placeat est autem. Accusantium velit non et corrupti consequuntur.",
+                "comment": "Cum ut vel eius officiis sint soluta. Nulla tenetur aut mollitia hic vitae excepturi veritatis nihil. Culpa autem voluptatibus harum tenetur.",
                 "rating": 4
               }
             }
@@ -1940,6 +1998,9 @@
                         "handlingFee": {
                           "type": "number"
                         },
+                        "discount": {
+                          "type": "number"
+                        },
                         "status": {
                           "type": "string"
                         },
@@ -2009,26 +2070,227 @@
                     "quantity": 10,
                     "minimumOrder": 0,
                     "handlingFee": 10,
+                    "discount": 0,
                     "status": "approved",
-                    "_id": "628829ea76cd56173205477c",
-                    "name": "Practical Soft Chair",
+                    "_id": "628d771af5073f2014e02fda",
+                    "name": "Rustic Concrete Pizza",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-05-20T23:53:14.070Z",
-                    "description": "Cumque explicabo accusantium deserunt dolor debitis praesentium qui. Vero quibusdam odio rerum ipsum rem. Fugit maxime similique nisi ut velit qui placeat ratione et. Voluptas temporibus libero suscipit nesciunt delectus dignissimos enim. In mollitia voluptas reprehenderit. Inventore vel atque.",
-                    "creatorId": "628829e676cd561732054724",
+                    "expiryDate": "2022-05-25T00:23:54.443Z",
+                    "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et.",
+                    "creatorId": "628d7717f5073f2014e02f68",
                     "feedback": [
                       {
-                        "_id": "628829ea76cd561732054784",
-                        "customerId": "628829e676cd561732054728",
-                        "comment": "Fugiat culpa aut facilis accusantium soluta aut magnam facilis quidem. Nesciunt quis minus enim illo quia deserunt ad ducimus ut. Quas unde ut voluptatem laboriosam blanditiis ut. Sit et rerum adipisci quasi velit placeat est autem. Accusantium velit non et corrupti consequuntur.",
+                        "_id": "628d771af5073f2014e02fe2",
+                        "customerId": "628d7717f5073f2014e02f6e",
+                        "comment": "Cum ut vel eius officiis sint soluta. Nulla tenetur aut mollitia hic vitae excepturi veritatis nihil. Culpa autem voluptatibus harum tenetur.",
                         "rating": 4,
-                        "updatedAt": "2022-05-21T00:53:14+01:00",
-                        "createdAt": "2022-05-21T00:53:14+01:00"
+                        "updatedAt": "2022-05-25T01:23:54+01:00",
+                        "createdAt": "2022-05-25T01:23:54+01:00"
                       }
                     ],
-                    "createdAt": "Sat May 21 2022 00:53:14 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-05-21T00:53:14+01:00",
+                    "createdAt": "Wed May 25 2022 01:23:54 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-05-25T01:23:54+01:00",
                     "__v": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/public/products": {
+      "get": {
+        "description": "",
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "price": {
+                            "type": "number"
+                          },
+                          "weight": {
+                            "type": "number"
+                          },
+                          "quantityLeft": {
+                            "type": "number"
+                          },
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "minimumOrder": {
+                            "type": "number"
+                          },
+                          "handlingFee": {
+                            "type": "number"
+                          },
+                          "discount": {
+                            "type": "number"
+                          },
+                          "status": {
+                            "type": "string"
+                          },
+                          "_id": {
+                            "type": "string"
+                          },
+                          "imageUrl": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "categoryId": {
+                            "type": "string"
+                          },
+                          "expiryDate": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "feedback": {
+                            "type": "array",
+                            "items": {}
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    },
+                    "pageData": {
+                      "type": "object",
+                      "properties": {
+                        "total": {
+                          "type": "number"
+                        },
+                        "currentPage": {
+                          "type": "number"
+                        },
+                        "nextPage": {},
+                        "prevPage": {},
+                        "lastPage": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": [
+                    {
+                      "price": 0.05,
+                      "weight": 20,
+                      "quantityLeft": 50,
+                      "quantity": 50,
+                      "minimumOrder": 2,
+                      "handlingFee": 10,
+                      "discount": 0,
+                      "status": "approved",
+                      "_id": "628d7716f5073f2014e02f60",
+                      "imageUrl": "http://placeimg.com/640/480",
+                      "name": "aut voluptatibus itaque",
+                      "categoryId": "628d7714f5073f2014e02f43",
+                      "expiryDate": "2022-05-25T00:23:50.555Z",
+                      "description": "Sit quos aliquam et adipisci consequatur ut aspernatur id. Nisi excepturi quam reiciendis et quis hic neque soluta officia. Cumque eveniet omnis cupiditate et ut eius quos dolorem reprehenderit. Optio qui minima incidunt placeat exercitationem. Et quia tempore mollitia omnis.",
+                      "feedback": [],
+                      "createdAt": "Wed May 25 2022 01:23:50 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:50+01:00",
+                      "__v": 0
+                    },
+                    {
+                      "price": 0.05,
+                      "weight": 20,
+                      "quantityLeft": 50,
+                      "quantity": 50,
+                      "minimumOrder": 2,
+                      "handlingFee": 10,
+                      "discount": 0,
+                      "status": "approved",
+                      "_id": "628d7716f5073f2014e02f61",
+                      "imageUrl": "http://placeimg.com/640/480",
+                      "name": "id et quam",
+                      "categoryId": "628d7714f5073f2014e02f43",
+                      "expiryDate": "2022-05-25T00:23:50.555Z",
+                      "description": "Aut soluta est est sed. In qui sunt numquam quia adipisci et minima omnis. Officia ut fugiat facilis dolores nesciunt non delectus consequuntur. Nihil qui est.",
+                      "feedback": [],
+                      "createdAt": "Wed May 25 2022 01:23:50 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:50+01:00",
+                      "__v": 0
+                    },
+                    {
+                      "price": 500,
+                      "weight": 30,
+                      "quantityLeft": 10,
+                      "quantity": 10,
+                      "minimumOrder": 0,
+                      "handlingFee": 10,
+                      "discount": 0,
+                      "status": "approved",
+                      "_id": "628d771af5073f2014e02fda",
+                      "name": "Rustic Concrete Pizza",
+                      "imageUrl": "http://placeimg.com/640/480",
+                      "expiryDate": "2022-05-25T00:23:54.443Z",
+                      "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et.",
+                      "feedback": [
+                        {
+                          "_id": "628d771af5073f2014e02fe2",
+                          "customerId": "628d7717f5073f2014e02f6e",
+                          "comment": "Cum ut vel eius officiis sint soluta. Nulla tenetur aut mollitia hic vitae excepturi veritatis nihil. Culpa autem voluptatibus harum tenetur.",
+                          "rating": 4,
+                          "updatedAt": "2022-05-25T01:23:54+01:00",
+                          "createdAt": "2022-05-25T01:23:54+01:00"
+                        }
+                      ],
+                      "createdAt": "Wed May 25 2022 01:23:54 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:54+01:00",
+                      "__v": 1
+                    }
+                  ],
+                  "pageData": {
+                    "total": 3,
+                    "currentPage": 1,
+                    "nextPage": null,
+                    "prevPage": null,
+                    "lastPage": 1
                   }
                 }
               }
@@ -2142,18 +2404,18 @@
                   "data": [
                     {
                       "price": 500,
-                      "_id": "628829ea76cd56173205477c",
-                      "name": "Practical Soft Chair",
+                      "_id": "628d771af5073f2014e02fda",
+                      "name": "Rustic Concrete Pizza",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "description": "Cumque explicabo accusantium deserunt dolor debitis praesentium qui. Vero quibusdam odio rerum ipsum rem. Fugit maxime similique nisi ut velit qui placeat ratione et. Voluptas temporibus libero suscipit nesciunt delectus dignissimos enim. In mollitia voluptas reprehenderit. Inventore vel atque.",
+                      "description": "Rem sapiente et atque voluptas amet. Dicta occaecati ipsum aut ullam ab qui voluptatibus dignissimos iste. Iusto fuga voluptate porro quidem sed reiciendis. Non hic labore veritatis tempore aut porro. Voluptatibus voluptas et.",
                       "feedback": [
                         {
-                          "_id": "628829ea76cd561732054784",
-                          "customerId": "628829e676cd561732054728",
-                          "comment": "Fugiat culpa aut facilis accusantium soluta aut magnam facilis quidem. Nesciunt quis minus enim illo quia deserunt ad ducimus ut. Quas unde ut voluptatem laboriosam blanditiis ut. Sit et rerum adipisci quasi velit placeat est autem. Accusantium velit non et corrupti consequuntur.",
+                          "_id": "628d771af5073f2014e02fe2",
+                          "customerId": "628d7717f5073f2014e02f6e",
+                          "comment": "Cum ut vel eius officiis sint soluta. Nulla tenetur aut mollitia hic vitae excepturi veritatis nihil. Culpa autem voluptatibus harum tenetur.",
                           "rating": 4,
-                          "updatedAt": "2022-05-21T00:53:14+01:00",
-                          "createdAt": "2022-05-21T00:53:14+01:00"
+                          "updatedAt": "2022-05-25T01:23:54+01:00",
+                          "createdAt": "2022-05-25T01:23:54+01:00"
                         }
                       ]
                     }
@@ -2237,6 +2499,9 @@
                           "handlingFee": {
                             "type": "number"
                           },
+                          "discount": {
+                            "type": "number"
+                          },
                           "status": {
                             "type": "string"
                           },
@@ -2296,41 +2561,43 @@
                   "status": "success",
                   "data": [
                     {
-                      "price": 10000,
+                      "price": 0.05,
                       "weight": 20,
                       "quantityLeft": 50,
                       "quantity": 50,
                       "minimumOrder": 2,
                       "handlingFee": 10,
+                      "discount": 0,
                       "status": "approved",
-                      "_id": "628829e576cd56173205471e",
+                      "_id": "628d7716f5073f2014e02f60",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "non rerum ut",
-                      "categoryId": "628829e376cd561732054709",
-                      "expiryDate": "2022-05-20T23:53:09.894Z",
-                      "description": "Earum quasi et. Excepturi eos aliquid. Tenetur suscipit alias. Hic optio perferendis debitis recusandae minima excepturi.",
+                      "name": "aut voluptatibus itaque",
+                      "categoryId": "628d7714f5073f2014e02f43",
+                      "expiryDate": "2022-05-25T00:23:50.555Z",
+                      "description": "Sit quos aliquam et adipisci consequatur ut aspernatur id. Nisi excepturi quam reiciendis et quis hic neque soluta officia. Cumque eveniet omnis cupiditate et ut eius quos dolorem reprehenderit. Optio qui minima incidunt placeat exercitationem. Et quia tempore mollitia omnis.",
                       "feedback": [],
-                      "createdAt": "Sat May 21 2022 00:53:09 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-21T00:53:09+01:00",
+                      "createdAt": "Wed May 25 2022 01:23:50 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:50+01:00",
                       "__v": 0
                     },
                     {
-                      "price": 10000,
+                      "price": 0.05,
                       "weight": 20,
                       "quantityLeft": 50,
                       "quantity": 50,
                       "minimumOrder": 2,
                       "handlingFee": 10,
+                      "discount": 0,
                       "status": "approved",
-                      "_id": "628829e576cd56173205471f",
+                      "_id": "628d7716f5073f2014e02f61",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "omnis in cupiditate",
-                      "categoryId": "628829e376cd561732054709",
-                      "expiryDate": "2022-05-20T23:53:09.894Z",
-                      "description": "Possimus qui rem omnis nihil est quas ratione. Minus perspiciatis nihil nam quam. Ipsum sed consequuntur ducimus placeat maxime tempora aperiam ut. Repudiandae nemo et nobis et ut sed dolore magnam in. Eum ut voluptatem voluptate et eum. Rerum dolor accusantium voluptatem beatae corrupti est dolor.",
+                      "name": "id et quam",
+                      "categoryId": "628d7714f5073f2014e02f43",
+                      "expiryDate": "2022-05-25T00:23:50.555Z",
+                      "description": "Aut soluta est est sed. In qui sunt numquam quia adipisci et minima omnis. Officia ut fugiat facilis dolores nesciunt non delectus consequuntur. Nihil qui est.",
                       "feedback": [],
-                      "createdAt": "Sat May 21 2022 00:53:09 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-05-21T00:53:09+01:00",
+                      "createdAt": "Wed May 25 2022 01:23:50 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-05-25T01:23:50+01:00",
                       "__v": 0
                     }
                   ],

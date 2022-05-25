@@ -39,14 +39,15 @@ before(async () => {
   categories = await models.Category.find({});
   buyer = await createAccountReturnToken(userCustomer);
   vendor = await createAccountReturnToken(userBusiness);
+  business = await models.Business.findOne({ accountId: vendor.account._id })
   products = await Promise.all(
     [
       {
-        creatorId: vendor.account._id,
+        creatorId: business._id,
         imageUrl: faker.image.imageUrl(),
         name: faker.lorem.words(),
         categoryId: categories[0]._id,
-        price: 10000,
+        price: 0.05,
         weight: 20,
         quantity: 50,
         quantityLeft: 50,
@@ -57,11 +58,11 @@ before(async () => {
         status: PRODUCT_STATUS.APPROVED,
       },
       {
-        creatorId: vendor.account._id,
+        creatorId: business._id,
         imageUrl: faker.image.imageUrl(),
         name: faker.lorem.words(),
         categoryId: categories[0]._id,
-        price: 10000,
+        price: 0.05,
         weight: 20,
         quantity: 50,
         quantityLeft: 50,
@@ -117,5 +118,18 @@ describe('Cart', () => {
         tags: ['Cart/Buyer'],
       });
     });
+
+    it('checkout cart items saved', async () => {
+      const res = await server
+        .get('/v1/buyer/cart/checkout')
+        .set({ Authorization: `Bearer ${buyer.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Buyer'],
+      });
+    });
+
   });
 });
