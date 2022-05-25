@@ -3,7 +3,7 @@ const ProductController = require('../controllers/product');
 const router = express.Router();
 
 router
-  .route('/public/products')
+  .route('/public')
   .get(ProductController.getProductsPublic);
 
 router
