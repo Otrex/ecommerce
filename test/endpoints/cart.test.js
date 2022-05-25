@@ -131,5 +131,16 @@ describe('Cart', () => {
       });
     });
 
+    it('should get order stats', async () => {
+      const res = await server
+        .get('/v1/vendor/order/stats')
+        .set({ Authorization: `Bearer ${vendor.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Vendor'],
+      });
+    });
   });
 });

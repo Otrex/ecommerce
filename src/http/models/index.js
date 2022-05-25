@@ -1,5 +1,6 @@
 module.exports = {
   Cart: require('./Cart'),
+  Order: require('./Order'),
   Address: require('./Address'),
   Account: require('./Account'),
   Product: require('./Product'),

@@ -16,8 +16,8 @@ class GenericValidator {
   });
   check(data) {
     // console.log(data, this.schema)
-    if (Object.entries(data).length < 1)
-      throw new ValidationError('no data passed');
+    // if (Object.entries(data).length < 1)
+    //   throw new ValidationError('no data passed');
     if (!this.schema) throw new ServiceError('no scheme passed');
 
     let error = this.validator.compile(this.schema)(data);

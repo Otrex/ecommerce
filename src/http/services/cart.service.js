@@ -100,7 +100,7 @@ class CartService {
   };
 
   static checkoutCart = async ({ account }) => {
-    const { data } = await CartService.getCheckoutDetails({ account });
+    const { data } = await CartService.getCheckoutDetails({ account, createOrder: true });
     const { totalCost, totalDistanceCost } = data;
     const amount = Math.ceil(totalCost * totalDistanceCost);
 
@@ -126,7 +126,7 @@ class CartService {
     };
   };
 
-  static getCheckoutDetails = async ({ account }) => {
+  static getCheckoutDetails = async ({ account, createOrder }) => {
     const { data } = await CartService.getCart({ account });
     if (!data.length) throw new ServiceError('no item in cart');
 
@@ -169,9 +169,19 @@ class CartService {
         occurence: 1,
         distance,
       }
-    }
 
-    console.log(distanceState)
+      if (createOrder) {
+        const calculations = distanceState[item.product._id.toString()];
+        await models.Order.create({
+          distance,
+          quantity: item.quantity,
+          productId: item.product._id,
+          address: customerAddress._id,
+          totalTransportCost: calculations.distanceCost,
+          totalCost: calculations.productTotalPrice - calculations.productTotaldiscount,
+        })
+      }
+    }
 
     return {
       data: {

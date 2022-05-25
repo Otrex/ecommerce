@@ -15,6 +15,7 @@ module.exports = {
     SHIPPED: 'shipped',
     PENDING: 'pending',
     COMPLETED: 'completed',
+    INCOMPLETED: 'incompleted',
     CANCELLED: 'cancelled'
   },
   TRANSACTION_STATUS: {

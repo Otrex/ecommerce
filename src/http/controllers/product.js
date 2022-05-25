@@ -62,6 +62,11 @@ class ProductController {
     validator: AddFeedbackValidator,
     handler: ProductService.addFeedback,
   });
+
+  static getFeedback_Business =  RequestHandler({
+    validator: GetProductValidator,
+    handler: ProductService.getFeedback,
+  });
 }
 
 module.exports = ProductController;

@@ -2,8 +2,8 @@ const { ACCOUNT_TYPES } = require('../../constants');
 const GenericValidator = require('./core');
 
 const paginationSchemaFragment = {
-  page: { type: 'number', convert: true, min: 1 },
-  limit: { type: 'number', convert: true, min: 1 },
+  page: { type: 'number', convert: true, min: 1, optional: true, default: 1 },
+  limit: { type: 'number', convert: true, min: 1, optional: true, default: 20 },
 };
 
 class LoginValidator extends GenericValidator {

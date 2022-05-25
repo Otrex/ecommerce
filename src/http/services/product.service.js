@@ -231,6 +231,38 @@ class ProductService {
 
     return paginateResponse([_products, count], page, limit);
   }
+
+  static getFeedback = async ({ account, page, limit }) => {
+    const vendor = await models.Business.findOne({
+      accountId: account._id,
+    });
+    if (!vendor) throw new NotFoundError('vendor not found');
+
+    const query = {
+      creatorId: vendor._id,
+      status: PRODUCT_STATUS.APPROVED
+    };
+
+    const skip = calcSkip({ page, limit });
+    const count = await models.Product.count(query);
+    const products = await models.Product.find(query, null, {
+      skip,
+      limit,
+    }).populate('categoryId');
+
+    const _products = products.map((product) => ({
+      ...omit(product.toJSON(), [
+        'reasonForDisapproval',
+        'handlingFee',
+        'creatorId',
+        'discount'
+      ]),
+      avgRating: product.feedback.length ? product.feedback.reduce((t, e) => t + e.rating, 0)/product.feedback.length: 0,
+      category: product.categoryId,
+    }));
+
+    return paginateResponse([_products, count], page, limit);
+  }
 }
 
 module.exports = ProductService;
