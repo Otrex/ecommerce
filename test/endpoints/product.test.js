@@ -122,7 +122,7 @@ describe('Product', () => {
         .send({
           comment: faker.lorem.sentences(),
           rating: 4,
-        })
+        });
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
@@ -157,8 +157,9 @@ describe('Product', () => {
     });
 
     it('it get product details', async () => {
-      const res = await server
-        .get(`/v1/public/products/${product._id}`)
+      const res = await server.get(
+        `/v1/public/products/${product._id}`
+      );
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
@@ -170,6 +171,18 @@ describe('Product', () => {
             name: 'productId',
           },
         ],
+      });
+    });
+
+    it('it get product details', async () => {
+      const res = await server.get(
+        '/v1/public/products?page=1&limit=20'
+      );
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product'],
       });
     });
 
@@ -199,9 +212,22 @@ describe('Product', () => {
       });
     });
 
-    it('get products by categories', async () => {
+    it('get products feedback', async () => {
       const res = await server
-        .get(`/v1/public/categories/${categories[0]._id.toString()}/products?page=1&limit=20`);
+        .get('/v1/vendor/products/feedback')
+        .set({ Authorization: `Bearer ${result.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Vendor'],
+      });
+    });
+
+    it('get products by categories', async () => {
+      const res = await server.get(
+        `/v1/public/categories/${categories[0]._id.toString()}/products?page=1&limit=20`
+      );
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);

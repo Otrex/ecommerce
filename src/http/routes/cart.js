@@ -22,6 +22,10 @@ router
 
 router
   .route('/buyer/cart/checkout')
+  .get(
+    authorization([ACCOUNT_TYPES.CUSTOMER]),
+    CartController.getCheckoutDetails
+  )
   .post(
     authorization([ACCOUNT_TYPES.CUSTOMER]),
     CartController.checkoutCart

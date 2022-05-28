@@ -4,7 +4,7 @@ const { omit } = require('lodash');
 const { PRODUCT_STATUS } = require('../../constants');
 const Paystack = require('paystack-api-ts').default;
 const config = require('../../config');
-const { distanceBtwPoints } = require('./../../scripts/utils')
+const { distanceBtwPoints } = require('./../../scripts/utils');
 
 const paystack = new Paystack(config.paystack.key);
 
@@ -100,14 +100,17 @@ class CartService {
   };
 
   static checkoutCart = async ({ account }) => {
-    const { data } = await CartService.getCart({ account });
-    if (!data.length) throw new ServiceError('no item in cart');
+    const { data } = await CartService.getCheckoutDetails({
+      account,
+      createOrder: true,
+    });
+    const { totalCost, totalDistanceCost } = data;
+    const amount = Math.ceil(totalCost * totalDistanceCost);
 
-    const amount = data.reduce(
-      (total, cart) => total + cart.quantity * cart.product.price,
-      0
-    );
-
+    if (('' + amount).length > 7)
+      throw new ServiceError(
+        'total cost has exceeded the a million and cant be carried out. Please contact support'
+      );
     const transaction = await models.Transaction.create({
       amount,
     });
@@ -129,60 +132,96 @@ class CartService {
     };
   };
 
-  static getCheckoutDetails = async ({ account }) => {
+  static getCheckoutDetails = async ({ account, createOrder }) => {
     const { data } = await CartService.getCart({ account });
     if (!data.length) throw new ServiceError('no item in cart');
 
     // Get customer address
-    const { address: customerAddress } = await models.Customer.findOne({
-      accountId: account._id,
-    }).populate('address').exec();
+    const { address: customerAddress } =
+      await models.Customer.findOne({
+        accountId: account._id,
+      })
+        .populate('address')
+        .exec();
 
-    // distanceState contains the calculated distance 
+    if (!customerAddress) {
+      throw new ServiceError('no valid address found');
+    }
+    // distanceState contains the calculated distance
     // for each unique product and the frequency of product
     // as well as the totalWeight in KG
     const distanceState = {};
-    for (const item of data ) {
-      const business = await models.Business
-        .findById(item.product.creatorId)
+    for (const item of data) {
+      const business = await models.Business.findById(
+        item.product.creatorId
+      )
         .populate('logisticsId')
         .populate('address')
         .exec();
 
       // Get Each business Address
-      let { logisticsId: logistics, address: businessAddress } = business;
-      if (!logistics) logistics = await models.Logistics.findOne({ default: true });
+      let { logisticsId: logistics, address: businessAddress } =
+        business;
+      if (!logistics)
+        logistics = await models.Logistics.findOne({ default: true });
+
+      if (!businessAddress)
+        throw new ServiceError(
+          'product owner has not added his address yet'
+        );
 
       const distance = distanceBtwPoints(
         businessAddress.lat,
         customerAddress.lat,
         businessAddress.lng,
-        customerAddress.lng,
+        customerAddress.lng
       );
-      
+
       distanceState[item.product._id.toString()] = {
-        productTotaldiscount: item.product.discount * item.product.price * item.quantity,
+        productTotaldiscount:
+          ((item.product.discount || 0) *
+            item.product.price *
+            item.quantity) /
+          100,
+        distanceCost: logistics.cost
+          ? (item.product.weight * item.quantity * distance) /
+            logistics.cost
+          : 0, /// Calculates cost for delivering a product :: (weight*quantity*distance)/ costoftransport_in_kmKg
         productTotalPrice: item.product.price * item.quantity,
-        totalWeight: item.product.weight * item.quantity,
-        costPerUnit: logistics.cost,
         occurence: 1,
         distance,
+      };
+
+      if (createOrder) {
+        const calculations =
+          distanceState[item.product._id.toString()];
+        await models.Order.create({
+          distance,
+          quantity: item.quantity,
+          productId: item.product._id,
+          address: customerAddress._id,
+          totalTransportCost: calculations.distanceCost,
+          totalCost:
+            calculations.productTotalPrice -
+            calculations.productTotaldiscount,
+        });
       }
     }
 
     return {
       data: {
         totalCost: Object.entries(distanceState)
-          .map(([k, v]) => v.productTotalPrice - v.productTotaldiscount)
+          .map(
+            ([k, v]) => v.productTotalPrice - v.productTotaldiscount
+          )
           .reduce((t, c) => t + c, 0),
-        
-        totalDistanceCost: Object.entries(distanceState)
-        .map(([k, v]) => v.costPerUnit - v.distance)
-        .reduce((t, c) => t + c, 0)
-      }
-    }
 
-  }
+        totalDistanceCost: Object.entries(distanceState)
+          .map(([k, v]) => v.distanceCost)
+          .reduce((t, c) => t + c, 0),
+      },
+    };
+  };
 }
 
 module.exports = CartService;

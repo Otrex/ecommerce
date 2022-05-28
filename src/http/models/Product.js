@@ -46,10 +46,11 @@ const productSchema = new mongoose.Schema(
     description: {
       type: String,
     },
-    reasonForDisapproval : {
+    reasonForDisapproval: {
       type: String,
     },
-    discount: { // In percewnt
+    discount: {
+      // In percewnt
       type: Number,
       default: 0,
     },

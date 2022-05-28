@@ -2,8 +2,20 @@ const { ACCOUNT_TYPES } = require('../../constants');
 const GenericValidator = require('./core');
 
 const paginationSchemaFragment = {
-  page: { type: 'number', convert: true, min: 1 },
-  limit: { type: 'number', convert: true, min: 1 },
+  page: {
+    type: 'number',
+    convert: true,
+    min: 1,
+    optional: true,
+    default: 1,
+  },
+  limit: {
+    type: 'number',
+    convert: true,
+    min: 1,
+    optional: true,
+    default: 20,
+  },
 };
 
 class LoginValidator extends GenericValidator {
@@ -95,7 +107,6 @@ class GetBusinessProductValidator extends GenericValidator {
   };
 }
 
-
 class GetProductByCategoryValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -105,6 +116,13 @@ class GetProductByCategoryValidator extends GenericValidator {
 }
 
 class GetFavoriteProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+  };
+}
+
+class GetProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     ...paginationSchemaFragment,
@@ -214,6 +232,7 @@ module.exports = {
   RegisterValidator,
   AddToCartValidator,
   LikeProductValidator,
+  GetProductValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
   InitPasswordResetValidator,

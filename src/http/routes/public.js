@@ -3,6 +3,10 @@ const ProductController = require('../controllers/product');
 const router = express.Router();
 
 router
+  .route('/public/products')
+  .get(ProductController.getProductsPublic);
+
+router
   .route('/public/products/:productId')
   .get(ProductController.getProductDetails);
 

@@ -1,5 +1,9 @@
 const Documentator = require('../src/scripts/documentator');
-const { seedCategories, seedAdmin } = require('../src/scripts/seeds');
+const {
+  seedCategories,
+  seedAdmin,
+  seedLogistics,
+} = require('../src/scripts/seeds');
 const { connection } = require('mongoose');
 const { DB } = require('../src/database');
 const nock = require('nock');
@@ -12,6 +16,7 @@ const mochaHooks = {
     await db.connect();
     await seedCategories();
     await seedAdmin();
+    await seedLogistics();
   },
 
   async afterAll() {

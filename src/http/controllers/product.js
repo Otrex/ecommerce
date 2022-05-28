@@ -1,6 +1,7 @@
 const RequestHandler = require('.');
 const ProductService = require('../services/product.service');
 const {
+  GetProductValidator,
   AddFeedbackValidator,
   LikeProductValidator,
   CreateProductValidator,
@@ -37,6 +38,11 @@ class ProductController {
     handler: ProductService.getProductByCategory,
   });
 
+  static getProductsPublic = RequestHandler({
+    validator: GetProductValidator,
+    handler: ProductService.getApprovedProducts_Public,
+  });
+
   static getFavorites = RequestHandler({
     validator: GetFavoriteProductValidator,
     handler: ProductService.getFavorites,
@@ -47,14 +53,19 @@ class ProductController {
     handler: ProductService.likeProduct,
   });
 
-  static getProductDetails =  RequestHandler({
+  static getProductDetails = RequestHandler({
     validator: GetProductDetailsValidator,
     handler: ProductService.getProductDetails,
   });
 
-  static addFeedback =  RequestHandler({
+  static addFeedback = RequestHandler({
     validator: AddFeedbackValidator,
     handler: ProductService.addFeedback,
+  });
+
+  static getFeedback_Business = RequestHandler({
+    validator: GetProductValidator,
+    handler: ProductService.getFeedback,
   });
 }
 

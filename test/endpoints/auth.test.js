@@ -123,7 +123,7 @@ describe('Authentication', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
-      documentation.addEndpoint(res,{
+      documentation.addEndpoint(res, {
         tags: ['Login'],
       });
     });

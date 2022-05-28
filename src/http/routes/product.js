@@ -21,6 +21,10 @@ router
   );
 
 router
+  .route('/vendor/products/feedback')
+  .get(ProductController.getFeedback_Business);
+
+router
   .route('/admin/products/:productId/approve')
   .post(ProductController.approveProduct);
 
