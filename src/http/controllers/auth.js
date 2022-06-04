@@ -2,7 +2,6 @@ const requestHandler = require('.');
 const AuthService = require('../services/auth.service');
 const {
   LoginValidator,
-  RegisterValidator,
   VerifyEmailValidator,
   PasswordResetValidator,
   CustomerRegisterValidator,

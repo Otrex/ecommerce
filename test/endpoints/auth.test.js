@@ -215,7 +215,7 @@ describe('Reset Password', () => {
         password,
       });
 
-    console.log(res.body, res.error);
+    console.log(res.body, res.error, token);
     assert.equal(res.status, 200);
     documentation.addEndpoint(res);
     // userClient.accountId = res.body.data._id;

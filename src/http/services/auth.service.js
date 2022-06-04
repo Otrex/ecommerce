@@ -179,7 +179,7 @@ class AuthService {
       5
     );
 
-    if (config.app.env !== APP_ENV.TEST) {
+    if (![APP_ENV.TEST, APP_ENV.DEVELOPMENT].includes(config.app.env)) {
       verification.addTo(account.email).addData({
         account,
         timedToken,
@@ -205,18 +205,16 @@ class AuthService {
       throw new ServiceError('account has already been verified');
     }
 
-    if (config.app.env !== APP_ENV.TEST) {
-      const timedToken = await getTimedToken(
-        TOKEN_FLAG.EMAIL_VERIFY,
-        code,
-        account._id
-      );
-      if (!timedToken) {
-        throw new ServiceError('invalid or expired code');
-      }
-
-      await models.TimedToken.remove({ _id: timedToken._id });
+    const timedToken = await getTimedToken(
+      TOKEN_FLAG.EMAIL_VERIFY,
+      code,
+      account._id
+    );
+    if (!timedToken) {
+      throw new ServiceError('invalid or expired code');
     }
+
+    await models.TimedToken.remove({ _id: timedToken._id });
 
     await models.Account.updateOne(
       { _id: account._id },
@@ -240,12 +238,7 @@ class AuthService {
     const account = await models.Account.findOne({ email, type });
     if (!account) throw new ServiceError('account does not exist');
 
-    const timedToken = await models.TimedToken.create({
-      expiryTimestamp: new DateUpdate().addHoursToNow(1),
-      token: `${generateToken(14)}${uuid()}`,
-      accountId: account._id,
-      type: TOKEN_FLAG.RESET,
-    });
+    const timedToken = await generateTimedToken(TOKEN_FLAG.RESET, account._id);
 
     /// Add mails
     if (config.app.env !== APP_ENV.TEST) {
@@ -279,20 +272,20 @@ class AuthService {
       throw new ServiceError('password does not match');
     }
 
-    if (config.app.env !== APP_ENV.TEST) {
-      const timedToken = await models.TimedToken.findOne({
-        accountId: account._id,
-        expiryTimestamp: { $gte: Date.now() },
-        type: TOKEN_FLAG.RESET,
-        token,
-      });
+    const timedToken = await models.TimedToken.findOne({
+      accountId: account._id,
+      // expiryTimestamp: { $gte: Date.now() },
+      type: TOKEN_FLAG.RESET,
+      token: code,
+    });
 
-      if (!timedToken) {
-        throw new ServiceError('invalid or expired token');
-      }
+    console.log('>>>', code, account, timedToken)
 
-      await models.TimedToken.remove({ _id: timedToken._id });
+    if (!timedToken) {
+      throw new ServiceError('invalid or expired token');
     }
+
+    await models.TimedToken.remove({ _id: timedToken._id });
 
     await models.Account.updateOne(
       { _id: account._id },

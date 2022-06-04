@@ -1,4 +1,5 @@
 const { NotFoundError, ServiceError } = require('../lib/exceptions');
+const { calcSkip, paginateResponse } = require('../../scripts/utils');
 const models = require('../models');
 const { ORDER_STATUS } = require('../../constants');
 
@@ -63,11 +64,12 @@ class OrderService {
     };
   };
 
-  static activeOrders = async ({ account }) => {
+  static activeOrders = async ({ account, page, limit }) => {
     const activeOrderStatus = [
       ORDER_STATUS.SHIPPED,
       ORDER_STATUS.PENDING
     ]
+    const skip = calcSkip({ page, limit });
     const vendor = await models.Business.findOne({
       accountId: account._id,
     });
@@ -118,7 +120,11 @@ class OrderService {
       },
     ]);
 
-    return result ? result.orders: 0;
+    const data = result 
+      ? [result.orders, result.count] 
+      : [[], 0];
+
+    return paginateResponse(data, page, limit)
   }
 }
 

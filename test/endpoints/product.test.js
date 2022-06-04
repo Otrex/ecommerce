@@ -115,6 +115,27 @@ describe('Product', () => {
       });
     });
 
+    it('it should disapprove product', async () => {
+      const res = await server
+        .post(`/v1/admin/products/${product._id}/disapprove`)
+        .set({ Authorization: `Bearer ${admin.token}` })
+        .send({
+          reason: "this is because it is the best"
+        });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Product/Admin'],
+        pathParameters: [
+          {
+            index: 3,
+            name: 'productId',
+          },
+        ],
+      });
+    });
+
     it('add feedback to product', async () => {
       const res = await server
         .post(`/v1/buyer/products/${product._id}/feedback`)
