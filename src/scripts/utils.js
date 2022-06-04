@@ -25,7 +25,7 @@ const generateToken = (length) => {
 };
 
 const generateNumbers = (length) => {
-  return Math.floor(Math.random() * (Math.pow(10, length) - 1));
+  return config.app.env !== APP_ENV.PRODUCTION ? 12345: Math.floor(Math.random() * (Math.pow(10, length) - 1));
 };
 
 exports.generateHash = (seed) => {
@@ -96,8 +96,8 @@ exports.paginateResponse = (data = [[], 0], page, take) => {
   };
 };
 
-exports.calcSkip = ({ page, take }) => {
-  return (page - 1) * take;
+exports.calcSkip = ({ page, limit }) => {
+  return (page - 1) * limit;
 };
 
 /**

@@ -126,9 +126,11 @@ class CartService {
     });
 
     return {
-      authorizationUrl: paymentInit.authorizationUrl,
-      accessCode: paymentInit.accessCode,
-      transactionId: transaction.id,
+      data: {
+        authorizationUrl: paymentInit.authorizationUrl,
+        accessCode: paymentInit.accessCode,
+        transactionId: transaction.id,
+      }
     };
   };
 

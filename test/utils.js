@@ -15,7 +15,7 @@ exports.getToken = async (
   });
 };
 
-exports.createAccountReturnToken = async (data = {}) => {
+exports.createAccountReturnToken = async (data = {}, otherInfo = {}) => {
   const account = await models.Account.create({
     ...data,
     password: await bcryptHash(data.password),
@@ -33,6 +33,7 @@ exports.createAccountReturnToken = async (data = {}) => {
     await models.Business.create({
       accountId: account._id,
       address: address._id,
+      ...otherInfo
     });
   }
 
@@ -40,6 +41,7 @@ exports.createAccountReturnToken = async (data = {}) => {
     await models.Customer.create({
       accountId: account._id,
       address: address._id,
+      ...otherInfo
     });
   }
 

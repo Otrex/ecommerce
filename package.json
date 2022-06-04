@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .js --fix",
     "test": "APP_ENV=test mocha",
     "prepare": "npx sync-dotenv",
-    "seed": "node ./src/providers/Seeder.js"
+    "seed": "node ./src/providers/Seeder.js",
+    "seed:products": "APP_ENV=test node ./src/scripts/seeds/products.js"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.7",

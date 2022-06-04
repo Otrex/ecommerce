@@ -129,6 +129,14 @@ class GetProductValidator extends GenericValidator {
   };
 }
 
+class GetBusinessesPaginationValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    query: { type: 'string', min: 0, trim: true },
+    ...paginationSchemaFragment,
+  };
+}
+
 class BusinessRegisterValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -227,10 +235,18 @@ class AddToCartValidator extends GenericValidator {
   };
 }
 
+class GetAccountValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    accountId: { type: 'string', min: 0, trim: true },
+  };
+}
+
 module.exports = {
   LoginValidator,
   RegisterValidator,
   AddToCartValidator,
+  GetAccountValidator,
   LikeProductValidator,
   GetProductValidator,
   CreateDropOffValidator,
@@ -239,6 +255,7 @@ module.exports = {
   GetProductDetailsValidator,
   GetFavoriteProductValidator,
   GetProductByCategoryValidator,
+  GetBusinessesPaginationValidator,
   ResendVerificationEmailValidator,
   GetBusinessProductValidator,
   CustomerRegisterValidator,

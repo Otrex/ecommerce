@@ -29,6 +29,10 @@ router
   .post(ProductController.approveProduct);
 
 router
+  .route('/admin/products/:productId/disapprove')
+  .post(ProductController.disapproveProduct);
+
+router
   .route('/buyer/products/favorites')
   .get(ProductController.getFavorites);
 
