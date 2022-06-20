@@ -34,20 +34,26 @@ class UserService {
 
   static searchForBusiness = async ({ query, page, limit }) => {
     const skip = calcSkip({ page, limit });
-    console.log({ query, page, limit, skip })
     const [result] = await models.Business.aggregate([
       {
         $lookup: {
-          from: models.Product.collection.collectionName,
+          from: models.Account.collection.collectionName,
           localField: 'accountId',
           foreignField: '_id',
-          as: 'account',
+          as: 'faccount',
         }
       },
       {
         $match: {
           name: { $regex: new RegExp(`${query}`, 'gi') }
         }
+      },
+      { $addFields: { account: { $first: "$faccount" } } },
+      {
+        $project: {
+          faccount: 0,
+          accountId: 0
+        },
       },
       {
         $facet: {
@@ -68,6 +74,8 @@ class UserService {
       {
         $project: {
           totalCount: 0,
+          faccount: 0,
+          accountId: 0
         },
       },
     ]);

@@ -56,7 +56,7 @@ describe('Product', () => {
 
     it('add categories', async () => {
       const res = await server
-        .post('/v1/admin/info/categories')
+        .post('/v1/info/admin/categories')
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({
           name: faker.lorem.words(),

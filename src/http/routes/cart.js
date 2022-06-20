@@ -15,6 +15,10 @@ router
     authorization([ACCOUNT_TYPES.CUSTOMER]),
     CartController.getCart
   )
+  .delete(
+    authorization([ACCOUNT_TYPES.CUSTOMER]),
+    CartController.deleteItemFromCart 
+  )
   .put(
     authorization([ACCOUNT_TYPES.CUSTOMER]),
     CartController.addToCart

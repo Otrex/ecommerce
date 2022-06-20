@@ -80,7 +80,7 @@ before(async () => {
 
 describe('Cart', () => {
   describe('Add to Cart', () => {
-    it('create product', async () => {
+    it('add items to cart', async () => {
       const res = await server
         .put('/v1/buyer/cart')
         .set({ Authorization: `Bearer ${buyer.token}` })
@@ -94,6 +94,31 @@ describe('Cart', () => {
       documentation.addEndpoint(res, {
         tags: ['Cart/Buyer'],
       });
+    });
+
+    it('add items to cart', async () => {
+      const res = await server
+        .put('/v1/buyer/cart')
+        .set({ Authorization: `Bearer ${buyer.token}` })
+        .send({
+          productId: products[1]._id,
+          quantity: 5,
+        });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+    });
+
+    it('delete items from cart', async () => {
+      const res = await server
+        .delete('/v1/buyer/cart')
+        .set({ Authorization: `Bearer ${buyer.token}` })
+        .send({
+          productId: products[1]._id,
+        });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
     });
 
     it('get carts items saved', async () => {

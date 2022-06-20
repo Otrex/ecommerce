@@ -97,4 +97,19 @@ describe('User', () => {
       });
     });
   });
+
+  describe('Logistics Test', () => {
+    it('search for businesses', async () => {
+      const res = await server
+        .get('/v1/admin/users/businesses/search?query=Benjamin&page=1&limit=20')
+        .set({ Authorization: `Bearer ${admin.token}` })
+        .send({});
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Admin/Search'],
+      });
+    });
+  });
 });
