@@ -3,7 +3,7 @@ const { calcSkip, paginateResponse } = require('../../scripts/utils');
 const ObjectId = require('mongoose').Types.ObjectId;
 const config = require('../../config');
 const models = require('../models');
-
+const { omit } = require('lodash');
 
 class UserService {
   static suspendUser = async ({ accountId }) => {
@@ -11,12 +11,12 @@ class UserService {
     if (!account) throw new NotFoundError('account not found');
 
     await models.Account.findByIdAndUpdate(account._id, {
-      suspend: true
+      suspend: true,
     });
 
     return {
-      message: 'account has been suspended'
-    }
+      message: 'account has been suspended',
+    };
   };
 
   static unsuspendUser = async ({ accountId }) => {
@@ -24,12 +24,12 @@ class UserService {
     if (!account) throw new NotFoundError('account not found');
 
     await models.Account.findByIdAndUpdate(account._id, {
-      suspend: false
+      suspend: false,
     });
 
     return {
-      message: 'account has been unsuspended'
-    }
+      message: 'account has been unsuspended',
+    };
   };
 
   static searchForBusiness = async ({ query, page, limit }) => {
@@ -41,18 +41,18 @@ class UserService {
           localField: 'accountId',
           foreignField: '_id',
           as: 'faccount',
-        }
+        },
       },
       {
         $match: {
-          name: { $regex: new RegExp(`${query}`, 'gi') }
-        }
+          name: { $regex: new RegExp(`${query}`, 'gi') },
+        },
       },
-      { $addFields: { account: { $first: "$faccount" } } },
+      { $addFields: { account: { $first: '$faccount' } } },
       {
         $project: {
           faccount: 0,
-          accountId: 0
+          accountId: 0,
         },
       },
       {
@@ -75,17 +75,23 @@ class UserService {
         $project: {
           totalCount: 0,
           faccount: 0,
-          accountId: 0
+          accountId: 0,
         },
       },
     ]);
 
-    const data = result 
-      ? [result.businesses, result.count] 
+    const data = result
+      ? [
+          result.businesses.map((e) => ({
+            ...e,
+            account: omit(e.account, ['password']),
+          })),
+          result.count,
+        ]
       : [[], 0];
-      
+
     return paginateResponse(data, page, limit);
-  }
+  };
 }
 
 module.exports = UserService;

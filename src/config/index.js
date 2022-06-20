@@ -32,7 +32,7 @@ module.exports = {
     verificationTTL: process.env.EMAIL_VERIFICATION_TTL || '24h',
     from: process.env.APP_EMAIL,
     sgKey: process.env.SENDGRID_KEY,
-    sendChampKey: process.env.SENDCHAMP_KEY
+    sendChampKey: process.env.SENDCHAMP_KEY,
   },
   admin: {
     email: process.env.ADMIN_EMAIL,

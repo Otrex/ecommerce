@@ -16,17 +16,18 @@ router
     LogisticsController.getCompanies
   );
 
-router.route('/admin/logistics')
+router
+  .route('/admin/logistics/new')
   .post(
     authorization([ACCOUNT_TYPES.ADMIN]),
     LogisticsController.addCompany
   );
 
-router.route('/vendor/logistics/set-default')
+router
+  .route('/vendor/logistics/set-default')
   .patch(
     authorization([ACCOUNT_TYPES.BUSINESS]),
     LogisticsController.setDefault
-  )
-
+  );
 
 module.exports = router;

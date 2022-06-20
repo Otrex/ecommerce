@@ -41,7 +41,9 @@ let categories;
 before(async () => {
   categories = await models.Category.find({});
   buyer = await createAccountReturnToken(userCustomer);
-  vendor = await createAccountReturnToken(userBusiness, { name: 'Benjamin' });
+  vendor = await createAccountReturnToken(userBusiness, {
+    name: 'Benjamin',
+  });
   admin = await createAccountReturnToken(adminData);
   business = await models.Business.findOne({
     accountId: vendor.account._id,
@@ -86,22 +88,9 @@ describe('User', () => {
   describe('Add to User', () => {
     it('search for businesses', async () => {
       const res = await server
-        .get('/v1/admin/users/businesses/search?query=Benjamin&page=1&limit=20')
-        .set({ Authorization: `Bearer ${admin.token}` })
-        .send({});
-
-      console.log(res.body, res.error);
-      assert.equal(res.status, 200);
-      documentation.addEndpoint(res, {
-        tags: ['Admin/Search'],
-      });
-    });
-  });
-
-  describe('Logistics Test', () => {
-    it('search for businesses', async () => {
-      const res = await server
-        .get('/v1/admin/users/businesses/search?query=Benjamin&page=1&limit=20')
+        .get(
+          '/v1/admin/users/businesses/search?query=Benjamin&page=1&limit=20'
+        )
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({});
 

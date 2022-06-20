@@ -58,10 +58,10 @@
                 }
               },
               "example": {
-                "email": "Athena.Goyette@gmail.com",
-                "password": "P__LKYbiQO1ncAi",
-                "firstName": "Adela",
-                "lastName": "Gaylord",
+                "email": "Polly_Zulauf@hotmail.com",
+                "password": "VpG1N0gBYPdGuRV",
+                "firstName": "Ethel",
+                "lastName": "Zemlak",
                 "gender": "male"
               }
             }
@@ -95,7 +95,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMWUyZGZjYjFlMTVkMmU4MTIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IkNHUUlVbkdXM0hoejZ5ZGk0aXdaOTRuWFZtcGtqZ2lQQkZsbSIsImlhdCI6MTY1NTcxNTEyMSwiZXhwIjoxNjU1ODAxNTIxfQ.lnJFFyTpsB_tPLKa5hCph_kUyKpUL825ufSzPy3zfuk"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3ODciLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6IjdRVGJ3Y2Jrb2xyajBqekJwbnNMb0d2UlVNNjV1dXYxa1ZBZCIsImlhdCI6MTY1NTc0OTc4MiwiZXhwIjoxNjU1ODM2MTgyfQ.GCZ1X70OVzUVcVvt-R0lBLta5YNPUYHVX6KVcknjeUE"
                   }
                 }
               }
@@ -189,27 +189,27 @@
               },
               "example": {
                 "sellerDetails": {
-                  "email": "Kiara.Labadie56@gmail.com",
-                  "password": "pEMUNAwrmR7JgF0",
+                  "email": "Westley_Ziemann61@yahoo.com",
+                  "password": "OZ8_2o1GrBflj3C",
                   "phoneNumber": "+2345678765456",
-                  "fullName": "Annetta Pouros"
+                  "fullName": "Andreane Upton"
                 },
                 "businessDetails": {
-                  "type": "Versatile solution-oriented superstructure",
-                  "name": "Cross-platform clear-thinking instruction set",
-                  "cacNumber": "Open-source logistical superstructure",
-                  "state": "Oregon",
-                  "lga": "South Dakota",
+                  "type": "Devolved foreground collaboration",
+                  "name": "Robust contextually-based internet solution",
+                  "cacNumber": "Multi-layered zero tolerance model",
+                  "state": "North Dakota",
+                  "lga": "Indiana",
                   "address": {
                     "lat": 324.43,
                     "long": 2424.42,
-                    "label": "Djibouti"
+                    "label": "Georgia"
                   }
                 },
                 "paymentDetails": {
                   "accountNumber": "456789000987",
-                  "bank": "Business-focused stable secured line",
-                  "accountName": "Bennett Koelpin",
+                  "bank": "Up-sized global utilisation",
+                  "accountName": "Sarai Ledner",
                   "payoutFrequency": 5
                 }
               }
@@ -244,7 +244,7 @@
                   "status": "success",
                   "message": "proceed to verifying your account",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMmUyZGZjYjFlMTVkMmU4MTkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InhyTTBDeklySHQwQnVjMGd0dUZ2bDhiMUpLdUREazFNeFVyRiIsImlhdCI6MTY1NTcxNTEyMiwiZXhwIjoxNjU1ODAxNTIyfQ.fE4tKKSmGm9yQb8JKQCmH_X7eR0ykUxrXKhnUVtx-LA"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3OGUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImJHR3ppUEVib2o5dzlobk12d2dTaHZnQndzZmdQVkhCM1NIbSIsImlhdCI6MTY1NTc0OTc4MiwiZXhwIjoxNjU1ODM2MTgyfQ.Sh0SmuNJzVQHi-Xy8MEvkN7VT570Kn9iyxDdJxe_3p4"
                   }
                 }
               }
@@ -278,8 +278,8 @@
                 }
               },
               "example": {
-                "email": "Athena.Goyette@gmail.com",
-                "password": "P__LKYbiQO1ncAi",
+                "email": "Polly_Zulauf@hotmail.com",
+                "password": "VpG1N0gBYPdGuRV",
                 "type": "customer"
               }
             }
@@ -358,21 +358,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-06-20T08:52:03.333Z",
+                      "lastLoggedIn": "2022-06-20T18:29:43.771Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "62b03531e2dfcb1e15d2e812",
-                      "firstName": "Adela",
-                      "lastName": "Gaylord",
-                      "email": "Athena.Goyette@gmail.com",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
-                      "createdAt": "2022-06-20T09:52:01+01:00",
+                      "_id": "62b0bc960d992d5dc77e6787",
+                      "firstName": "Ethel",
+                      "lastName": "Zemlak",
+                      "email": "Polly_Zulauf@hotmail.com",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
+                      "createdAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0,
-                      "verifiedEmailAt": "2022-06-20T08:52:03.213Z"
+                      "verifiedEmailAt": "2022-06-20T18:29:43.665Z"
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMWUyZGZjYjFlMTVkMmU4MTIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJycDhxaENiWXdDY1pabHc0VzY5YllUQzdYTmdqdEtOd3pqWTIiLCJpYXQiOjE2NTU3MTUxMjMsImV4cCI6MTY1NTgwMTUyM30.3-YisiohwD5_sU5Tmq_j_Npu6TCYKnzG60s-E0sYIAc"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3ODciLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJPSklrWVhPVzFJcXdDN1hVOGJVOTNkQ3hHZXBFMlByWE5LM1giLCJpYXQiOjE2NTU3NDk3ODMsImV4cCI6MTY1NTgzNjE4M30.fMKZIrYAMcp9mwmorgrLrHU5fi-xTbixmXKZg9NS3xY"
                   }
                 }
               }
@@ -403,8 +403,8 @@
                 }
               },
               "example": {
-                "email": "Athena.Goyette@gmail.com",
-                "password": "P__LKYbiQO1ncAi"
+                "email": "Polly_Zulauf@hotmail.com",
+                "password": "VpG1N0gBYPdGuRV"
               }
             }
           }
@@ -479,20 +479,20 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-06-20T08:52:02.588Z",
+                      "lastLoggedIn": "2022-06-20T18:29:43.159Z",
                       "type": "customer",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "62b03531e2dfcb1e15d2e812",
-                      "firstName": "Adela",
-                      "lastName": "Gaylord",
-                      "email": "Athena.Goyette@gmail.com",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
-                      "createdAt": "2022-06-20T09:52:01+01:00",
+                      "_id": "62b0bc960d992d5dc77e6787",
+                      "firstName": "Ethel",
+                      "lastName": "Zemlak",
+                      "email": "Polly_Zulauf@hotmail.com",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
+                      "createdAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMWUyZGZjYjFlMTVkMmU4MTIiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImVrYW85eGQyc3c3WmJhYjlyVEJ6Y25Xb3FNUm1ScXEyc1VGdyIsImlhdCI6MTY1NTcxNTEyMiwiZXhwIjoxNjU1ODAxNTIyfQ.SUI8bwXf421F2AKk4sUA3j-vTL1HZSqy0cePHzNoQt8"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3ODciLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6ImhIV1JrYkpTZXA4blp4M1NueldCZHZHbUdrenVCbVpiNFIxQSIsImlhdCI6MTY1NTc0OTc4MywiZXhwIjoxNjU1ODM2MTgzfQ.XhfkdQZ8DE9_5p6_bugJ8KxEj8WdUNwj65QeSNIScHc"
                   }
                 }
               }
@@ -523,8 +523,8 @@
                 }
               },
               "example": {
-                "email": "Hillard_Hahn@yahoo.com",
-                "password": "Op_DikJQhQrAASM"
+                "email": "Brittany.Bergstrom@hotmail.com",
+                "password": "U4tw3I8U29N6LEv"
               }
             }
           }
@@ -593,18 +593,18 @@
                   "data": {
                     "account": {
                       "isEmailVerified": true,
-                      "lastLoggedIn": "2022-06-20T08:52:02.834Z",
+                      "lastLoggedIn": "2022-06-20T18:29:43.389Z",
                       "type": "admin",
                       "isActive": false,
                       "isSuperAdmin": true,
-                      "_id": "62b03532e2dfcb1e15d2e829",
-                      "email": "Hillard_Hahn@yahoo.com",
-                      "updatedAt": "2022-06-20T09:52:02+01:00",
-                      "createdAt": "2022-06-20T09:52:02+01:00",
+                      "_id": "62b0bc970d992d5dc77e679e",
+                      "email": "Brittany.Bergstrom@hotmail.com",
+                      "updatedAt": "2022-06-20T19:29:43+01:00",
+                      "createdAt": "2022-06-20T19:29:43+01:00",
                       "__v": 0
                     },
                     "type": "auth",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMmUyZGZjYjFlMTVkMmU4MjkiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJRNzRkZUpiM1dJZmdiSk96WVBRV1Rsc3BCOEhUMHUySGVSZkciLCJpYXQiOjE2NTU3MTUxMjIsImV4cCI6MTY1NTgwMTUyMn0.2FAHiuxj-gPYbRAc5cWlAJc_gsdik38LbDDmaDwMAMU"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NzBkOTkyZDVkYzc3ZTY3OWUiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJYcVBTZjh1eFBtelNMZlVXVzE1aXNGT2lsNDVWdVgzQzNSaTAiLCJpYXQiOjE2NTU3NDk3ODMsImV4cCI6MTY1NTgzNjE4M30._ND7lxt8pinVwNtpNV3LiGcN_1EsElIdjwYERvvqvEU"
                   }
                 }
               }
@@ -635,8 +635,8 @@
                 }
               },
               "example": {
-                "email": "Kiara.Labadie56@gmail.com",
-                "password": "pEMUNAwrmR7JgF0"
+                "email": "Westley_Ziemann61@yahoo.com",
+                "password": "OZ8_2o1GrBflj3C"
               }
             }
           }
@@ -714,21 +714,21 @@
                   "data": {
                     "account": {
                       "isEmailVerified": false,
-                      "lastLoggedIn": "2022-06-20T08:52:03.017Z",
+                      "lastLoggedIn": "2022-06-20T18:29:43.505Z",
                       "type": "business",
                       "isActive": false,
                       "isSuperAdmin": false,
-                      "_id": "62b03532e2dfcb1e15d2e819",
+                      "_id": "62b0bc960d992d5dc77e678e",
                       "phoneNumber": "+2345678765456",
-                      "firstName": "Annetta",
-                      "lastName": "Pouros",
-                      "email": "Kiara.Labadie56@gmail.com",
-                      "updatedAt": "2022-06-20T09:52:02+01:00",
-                      "createdAt": "2022-06-20T09:52:02+01:00",
+                      "firstName": "Andreane",
+                      "lastName": "Upton",
+                      "email": "Westley_Ziemann61@yahoo.com",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
+                      "createdAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     },
                     "type": "email_verification",
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMmUyZGZjYjFlMTVkMmU4MTkiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InkxdG94VmhVc3NBamFmTUlCSXBoZk9tek1ZVTlwd3dvQjJQViIsImlhdCI6MTY1NTcxNTEyMywiZXhwIjoxNjU1ODAxNTIzfQ.uCa9w1iscMRza09oZf_uoNPXNDAIwKvQw0FMfjtSKbU"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3OGUiLCJmbGFnIjoiZW1haWxfdmVyaWZpY2F0aW9uIiwiY291bnRlciI6InZrYU54Y0JVOVhsaGNhVTJ3ckxUdjlDOXpXZkk1clAzcWNZSSIsImlhdCI6MTY1NTc0OTc4MywiZXhwIjoxNjU1ODM2MTgzfQ.GZNElGLs78fuHAJlnIebn_JfdD7XxjdfMl0nlL9mG3g"
                   }
                 }
               }
@@ -781,7 +781,7 @@
                 "example": {
                   "status": "success",
                   "message": "account has been verified",
-                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMWUyZGZjYjFlMTVkMmU4MTIiLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJGcGdjZDZueENibmc3M05kT0hMY2w3VXZDNDFidU5Yb3FkSVYiLCJpYXQiOjE2NTU3MTUxMjMsImV4cCI6MTY1NTgwMTUyM30.CM03Xbl2bweKGhO60RnzAR85OqLRHYHBFRrVlgFVpas"
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3ODciLCJmbGFnIjoiYXV0aCIsImNvdW50ZXIiOiJJa21hbnZsSGE0YkNvYzRiYjk3dlBJVzE5YmM5VmlwNTFzZGQiLCJpYXQiOjE2NTU3NDk3ODMsImV4cCI6MTY1NTgzNjE4M30.ScAEfGt6Lah_3USzeaXN_iu-gNUFARABNSQlHYTWgWk"
                 }
               }
             }
@@ -809,7 +809,7 @@
                 }
               },
               "example": {
-                "email": "Athena.Goyette@gmail.com",
+                "email": "Polly_Zulauf@hotmail.com",
                 "type": "customer"
               }
             }
@@ -843,7 +843,7 @@
                   "status": "success",
                   "message": "your reset code has been sent to you mail. please continue to reset your password",
                   "data": {
-                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwMzUzMWUyZGZjYjFlMTVkMmU4MTIiLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiQWVxVnpOa0h2RDZyWkw2MEJoUk1JRmVCNUk1eEt6a2ZLejBiIiwiaWF0IjoxNjU1NzE1MTIzLCJleHAiOjE2NTU4MDE1MjN9.eo7rHx-RTL70CxKTMRYE7x7zeiActNcLyi4ZP2OWmIs"
+                    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MmIwYmM5NjBkOTkyZDVkYzc3ZTY3ODciLCJmbGFnIjoicGFzc3dvcmRfcmVzZXQiLCJjb3VudGVyIjoiSUpzMTh2ZHJySlpsN0d1aTA1dDRqZGNWU3RCeWpOV2JSRVVsIiwiaWF0IjoxNjU1NzQ5NzgzLCJleHAiOjE2NTU4MzYxODN9.r2T4GGR8mGfjhfYsU78eG3jMj8zkDK9u-i91oe6NrCw"
                   }
                 }
               }
@@ -976,7 +976,7 @@
                 }
               },
               "example": {
-                "productId": "62b03530e2dfcb1e15d2e7e6",
+                "productId": "62b0bc940d992d5dc77e674a",
                 "quantity": 10
               }
             }
@@ -1067,26 +1067,120 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "62b03533e2dfcb1e15d2e84e",
-                      "createdAt": "Mon Jun 20 2022 09:52:03 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Mon Jun 20 2022 09:52:03 GMT+0100 (West Africa Standard Time)",
+                      "_id": "62b0bc980d992d5dc77e67c3",
+                      "createdAt": "Mon Jun 20 2022 19:29:44 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon Jun 20 2022 19:29:44 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 0.05,
                         "weight": 20,
-                        "_id": "62b03530e2dfcb1e15d2e7e6",
-                        "creatorId": "62b0352fe2dfcb1e15d2e7e3",
+                        "_id": "62b0bc940d992d5dc77e674a",
+                        "creatorId": "62b0bc940d992d5dc77e6747",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "id repudiandae nam",
-                        "description": "Dolores sit asperiores cupiditate non commodi perspiciatis. Quis quia dolorem laboriosam minima pariatur doloremque sit.",
+                        "name": "quis et laudantium",
+                        "description": "Occaecati qui vitae quas. Sed porro aspernatur nobis aperiam. Maxime id eveniet eius quo. Sint et eius aspernatur qui. Et maxime tempore.",
                         "category": {
-                          "_id": "62b0352de2dfcb1e15d2e7c9",
+                          "_id": "62b0bc920d992d5dc77e672d",
                           "name": "Food",
                           "__v": 0
                         }
                       }
                     }
                   ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "tags": [
+          "Cart/Buyer"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productId": {
+                    "type": "object",
+                    "properties": {
+                      "_bsontype": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "object",
+                        "properties": {
+                          "0": {
+                            "type": "number"
+                          },
+                          "1": {
+                            "type": "number"
+                          },
+                          "2": {
+                            "type": "number"
+                          },
+                          "3": {
+                            "type": "number"
+                          },
+                          "4": {
+                            "type": "number"
+                          },
+                          "5": {
+                            "type": "number"
+                          },
+                          "6": {
+                            "type": "number"
+                          },
+                          "7": {
+                            "type": "number"
+                          },
+                          "8": {
+                            "type": "number"
+                          },
+                          "9": {
+                            "type": "number"
+                          },
+                          "10": {
+                            "type": "number"
+                          },
+                          "11": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "productId": "62b0bc940d992d5dc77e674b"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "item has been successfully removed from cart"
                 }
               }
             }
@@ -1180,20 +1274,20 @@
                   "data": [
                     {
                       "quantity": 10,
-                      "_id": "62b03533e2dfcb1e15d2e84e",
-                      "createdAt": "Mon Jun 20 2022 09:52:03 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "Mon Jun 20 2022 09:52:03 GMT+0100 (West Africa Standard Time)",
+                      "_id": "62b0bc980d992d5dc77e67c3",
+                      "createdAt": "Mon Jun 20 2022 19:29:44 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "Mon Jun 20 2022 19:29:44 GMT+0100 (West Africa Standard Time)",
                       "__v": 0,
                       "product": {
                         "price": 0.05,
                         "weight": 20,
-                        "_id": "62b03530e2dfcb1e15d2e7e6",
-                        "creatorId": "62b0352fe2dfcb1e15d2e7e3",
+                        "_id": "62b0bc940d992d5dc77e674a",
+                        "creatorId": "62b0bc940d992d5dc77e6747",
                         "imageUrl": "http://placeimg.com/640/480",
-                        "name": "id repudiandae nam",
-                        "description": "Dolores sit asperiores cupiditate non commodi perspiciatis. Quis quia dolorem laboriosam minima pariatur doloremque sit.",
+                        "name": "quis et laudantium",
+                        "description": "Occaecati qui vitae quas. Sed porro aspernatur nobis aperiam. Maxime id eveniet eius quo. Sint et eius aspernatur qui. Et maxime tempore.",
                         "category": {
-                          "_id": "62b0352de2dfcb1e15d2e7c9",
+                          "_id": "62b0bc920d992d5dc77e672d",
                           "name": "Food",
                           "__v": 0
                         }
@@ -1257,7 +1351,7 @@
                   "data": {
                     "authorizationUrl": "http://test",
                     "accessCode": "paymentInit.accessCode",
-                    "transactionId": "62b03534e2dfcb1e15d2e887"
+                    "transactionId": "62b0bc980d992d5dc77e67fc"
                   }
                 }
               }
@@ -1360,6 +1454,164 @@
         }
       }
     },
+    "/v1/admin/logistics/new": {
+      "post": {
+        "description": "",
+        "tags": [
+          "Logistics/Admin"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "costPerUnit": {
+                    "type": "number"
+                  }
+                }
+              },
+              "example": {
+                "name": "Willie Kertzmann",
+                "description": "Spain d'Ivoire convergence invoice Markets",
+                "costPerUnit": 2
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "default": {
+                          "type": "boolean"
+                        },
+                        "_id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "costPerUnit": {
+                          "type": "number"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "__v": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "message": "logistics company added succcessfully",
+                  "data": {
+                    "default": false,
+                    "_id": "62b0bc990d992d5dc77e6816",
+                    "name": "Willie Kertzmann",
+                    "costPerUnit": 2,
+                    "description": "Spain d'Ivoire convergence invoice Markets",
+                    "__v": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/vendor/logistics": {
+      "get": {
+        "description": "",
+        "tags": [
+          "Logistics/Vendor"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "default": {
+                            "type": "boolean"
+                          },
+                          "_id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "__v": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "status": "success",
+                  "data": [
+                    {
+                      "default": true,
+                      "_id": "62b0bc930d992d5dc77e673a",
+                      "name": "Test Company",
+                      "description": "this is the best test company out there",
+                      "__v": 0
+                    },
+                    {
+                      "default": false,
+                      "_id": "62b0bc990d992d5dc77e6816",
+                      "name": "Willie Kertzmann",
+                      "costPerUnit": 2,
+                      "description": "Spain d'Ivoire convergence invoice Markets",
+                      "__v": 0
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/info/categories": {
       "get": {
         "description": "",
@@ -1401,23 +1653,23 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "62b0352de2dfcb1e15d2e7c9",
+                      "_id": "62b0bc920d992d5dc77e672d",
                       "name": "Food",
                       "__v": 0
                     },
                     {
-                      "_id": "62b0352de2dfcb1e15d2e7cb",
+                      "_id": "62b0bc920d992d5dc77e672f",
                       "name": "Livestock",
                       "__v": 0
                     },
                     {
-                      "_id": "62b0352de2dfcb1e15d2e7cd",
-                      "name": "Clothings",
+                      "_id": "62b0bc920d992d5dc77e6733",
+                      "name": "Phones",
                       "__v": 0
                     },
                     {
-                      "_id": "62b0352de2dfcb1e15d2e7cf",
-                      "name": "Phones",
+                      "_id": "62b0bc920d992d5dc77e6731",
+                      "name": "Clothings",
                       "__v": 0
                     }
                   ]
@@ -1447,7 +1699,7 @@
                 }
               },
               "example": {
-                "name": "sint sed fuga"
+                "name": "sit et voluptates"
               }
             }
           }
@@ -1482,8 +1734,8 @@
                 "example": {
                   "status": "success",
                   "data": {
-                    "_id": "62b03539e2dfcb1e15d2e89f",
-                    "name": "sint sed fuga",
+                    "_id": "62b0bc990d992d5dc77e681f",
+                    "name": "sit et voluptates",
                     "__v": 0
                   }
                 }
@@ -1541,15 +1793,15 @@
               },
               "example": {
                 "imageUrl": "http://placeimg.com/640/480",
-                "name": "Licensed Concrete Table",
-                "categoryId": "62b0352de2dfcb1e15d2e7c9",
+                "name": "Unbranded Metal Cheese",
+                "categoryId": "62b0bc920d992d5dc77e672d",
                 "price": 500,
                 "weight": 30,
                 "quantity": 10,
-                "expiryDate": "2022-06-20T08:52:09.135Z",
+                "expiryDate": "2022-06-20T18:29:45.364Z",
                 "minimumOrder": 0,
                 "handlingFee": 10,
-                "description": "Odit enim reiciendis accusantium nisi reprehenderit ut. Repudiandae consectetur sint sint sint aperiam nam dolor aut illo."
+                "description": "Illo consectetur ea ut vel et explicabo ut in libero. Veritatis iure repudiandae omnis eaque occaecati facilis esse ipsam et. Voluptas mollitia maiores inventore repellat labore sed libero laudantium adipisci."
               }
             }
           }
@@ -1635,14 +1887,14 @@
                     "handlingFee": 10,
                     "discount": 0,
                     "status": "pending",
-                    "_id": "62b03539e2dfcb1e15d2e8a6",
-                    "name": "Licensed Concrete Table",
+                    "_id": "62b0bc990d992d5dc77e6826",
+                    "name": "Unbranded Metal Cheese",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-06-20T08:52:09.135Z",
-                    "description": "Odit enim reiciendis accusantium nisi reprehenderit ut. Repudiandae consectetur sint sint sint aperiam nam dolor aut illo.",
+                    "expiryDate": "2022-06-20T18:29:45.364Z",
+                    "description": "Illo consectetur ea ut vel et explicabo ut in libero. Veritatis iure repudiandae omnis eaque occaecati facilis esse ipsam et. Voluptas mollitia maiores inventore repellat labore sed libero laudantium adipisci.",
                     "feedback": [],
-                    "createdAt": "Mon Jun 20 2022 09:52:09 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-06-20T09:52:09+01:00",
+                    "createdAt": "Mon Jun 20 2022 19:29:45 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-06-20T19:29:45+01:00",
                     "__v": 0
                   }
                 }
@@ -1803,23 +2055,23 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "disapproved",
-                      "_id": "62b03539e2dfcb1e15d2e8a6",
-                      "name": "Licensed Concrete Table",
+                      "_id": "62b0bc990d992d5dc77e6826",
+                      "name": "Unbranded Metal Cheese",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "expiryDate": "2022-06-20T08:52:09.135Z",
-                      "description": "Odit enim reiciendis accusantium nisi reprehenderit ut. Repudiandae consectetur sint sint sint aperiam nam dolor aut illo.",
+                      "expiryDate": "2022-06-20T18:29:45.364Z",
+                      "description": "Illo consectetur ea ut vel et explicabo ut in libero. Veritatis iure repudiandae omnis eaque occaecati facilis esse ipsam et. Voluptas mollitia maiores inventore repellat labore sed libero laudantium adipisci.",
                       "feedback": [
                         {
-                          "_id": "62b03539e2dfcb1e15d2e8b7",
-                          "customerId": "62b03530e2dfcb1e15d2e7f4",
-                          "comment": "Ab quibusdam provident praesentium dignissimos porro deleniti. Provident eos porro rem vitae inventore assumenda.",
+                          "_id": "62b0bc990d992d5dc77e6837",
+                          "customerId": "62b0bc950d992d5dc77e6769",
+                          "comment": "Nam facilis molestiae eos nostrum est. Deleniti sed minima aliquam voluptatem aliquam iste rerum at. Quae et molestiae aliquid. Debitis ea consequuntur sunt. Inventore vitae distinctio. Ut mollitia harum neque expedita voluptatem reprehenderit excepturi.",
                           "rating": 4,
-                          "updatedAt": "2022-06-20T09:52:09+01:00",
-                          "createdAt": "2022-06-20T09:52:09+01:00"
+                          "updatedAt": "2022-06-20T19:29:45+01:00",
+                          "createdAt": "2022-06-20T19:29:45+01:00"
                         }
                       ],
-                      "createdAt": "Mon Jun 20 2022 09:52:09 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:09+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:45 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:45+01:00",
                       "__v": 1,
                       "reasonForDisapproval": null
                     }
@@ -1984,7 +2236,7 @@
                 }
               },
               "example": {
-                "comment": "Ab quibusdam provident praesentium dignissimos porro deleniti. Provident eos porro rem vitae inventore assumenda.",
+                "comment": "Nam facilis molestiae eos nostrum est. Deleniti sed minima aliquam voluptatem aliquam iste rerum at. Quae et molestiae aliquid. Debitis ea consequuntur sunt. Inventore vitae distinctio. Ut mollitia harum neque expedita voluptatem reprehenderit excepturi.",
                 "rating": 4
               }
             }
@@ -2194,24 +2446,24 @@
                     "handlingFee": 10,
                     "discount": 0,
                     "status": "disapproved",
-                    "_id": "62b03539e2dfcb1e15d2e8a6",
-                    "name": "Licensed Concrete Table",
+                    "_id": "62b0bc990d992d5dc77e6826",
+                    "name": "Unbranded Metal Cheese",
                     "imageUrl": "http://placeimg.com/640/480",
-                    "expiryDate": "2022-06-20T08:52:09.135Z",
-                    "description": "Odit enim reiciendis accusantium nisi reprehenderit ut. Repudiandae consectetur sint sint sint aperiam nam dolor aut illo.",
-                    "creatorId": "62b03530e2dfcb1e15d2e7ee",
+                    "expiryDate": "2022-06-20T18:29:45.364Z",
+                    "description": "Illo consectetur ea ut vel et explicabo ut in libero. Veritatis iure repudiandae omnis eaque occaecati facilis esse ipsam et. Voluptas mollitia maiores inventore repellat labore sed libero laudantium adipisci.",
+                    "creatorId": "62b0bc950d992d5dc77e6763",
                     "feedback": [
                       {
-                        "_id": "62b03539e2dfcb1e15d2e8b7",
-                        "customerId": "62b03530e2dfcb1e15d2e7f4",
-                        "comment": "Ab quibusdam provident praesentium dignissimos porro deleniti. Provident eos porro rem vitae inventore assumenda.",
+                        "_id": "62b0bc990d992d5dc77e6837",
+                        "customerId": "62b0bc950d992d5dc77e6769",
+                        "comment": "Nam facilis molestiae eos nostrum est. Deleniti sed minima aliquam voluptatem aliquam iste rerum at. Quae et molestiae aliquid. Debitis ea consequuntur sunt. Inventore vitae distinctio. Ut mollitia harum neque expedita voluptatem reprehenderit excepturi.",
                         "rating": 4,
-                        "updatedAt": "2022-06-20T09:52:09+01:00",
-                        "createdAt": "2022-06-20T09:52:09+01:00"
+                        "updatedAt": "2022-06-20T19:29:45+01:00",
+                        "createdAt": "2022-06-20T19:29:45+01:00"
                       }
                     ],
-                    "createdAt": "Mon Jun 20 2022 09:52:09 GMT+0100 (West Africa Standard Time)",
-                    "updatedAt": "2022-06-20T09:52:09+01:00",
+                    "createdAt": "Mon Jun 20 2022 19:29:45 GMT+0100 (West Africa Standard Time)",
+                    "updatedAt": "2022-06-20T19:29:45+01:00",
                     "__v": 1,
                     "reasonForDisapproval": null
                   }
@@ -2348,15 +2600,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03530e2dfcb1e15d2e7e6",
+                      "_id": "62b0bc940d992d5dc77e674a",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "id repudiandae nam",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:00.075Z",
-                      "description": "Dolores sit asperiores cupiditate non commodi perspiciatis. Quis quia dolorem laboriosam minima pariatur doloremque sit.",
+                      "name": "quis et laudantium",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:40.347Z",
+                      "description": "Occaecati qui vitae quas. Sed porro aspernatur nobis aperiam. Maxime id eveniet eius quo. Sint et eius aspernatur qui. Et maxime tempore.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:00 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:00+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:40 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:40+01:00",
                       "__v": 0
                     },
                     {
@@ -2368,15 +2620,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03530e2dfcb1e15d2e7e7",
+                      "_id": "62b0bc940d992d5dc77e674b",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "qui est est",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:00.075Z",
-                      "description": "Fugit delectus occaecati modi velit ex molestias nulla dignissimos. Enim asperiores quia rerum quis. Mollitia enim enim doloremque et placeat praesentium.",
+                      "name": "tempora et voluptatem",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:40.348Z",
+                      "description": "Aut officiis repellat sint suscipit ut pariatur sed. Fuga quia ipsum pariatur consequuntur qui assumenda. Est harum quos et id quam assumenda nulla autem non. Culpa officia aperiam aut consequatur voluptatibus autem et. Praesentium amet aut facere pariatur velit optio qui et.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:00 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:00+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:40 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:40+01:00",
                       "__v": 0
                     },
                     {
@@ -2388,15 +2640,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03531e2dfcb1e15d2e80d",
+                      "_id": "62b0bc960d992d5dc77e6782",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "adipisci reprehenderit neque",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:01.361Z",
-                      "description": "Qui corporis dignissimos voluptatibus. Velit possimus porro earum illo. Sunt rerum quisquam aut minima praesentium quia iusto. Velit deleniti autem et explicabo et.",
+                      "name": "est optio nulla",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:42.151Z",
+                      "description": "Iure eum rem libero repellendus vero quia maiores explicabo et. Quae illum mollitia voluptatem corporis voluptatem similique. Reprehenderit modi nam reprehenderit voluptas est incidunt officiis veniam quis.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:42 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     },
                     {
@@ -2408,15 +2660,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03531e2dfcb1e15d2e80e",
+                      "_id": "62b0bc960d992d5dc77e6783",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "porro ipsum accusamus",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:01.361Z",
-                      "description": "Quia a debitis fugiat quia et magni. Praesentium placeat fugiat. Vitae rerum ex occaecati eaque excepturi. Ut et neque. Nulla quia error corrupti consectetur fugiat.",
+                      "name": "repellat enim inventore",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:42.151Z",
+                      "description": "A voluptas omnis doloremque odit reiciendis dolore iure. Totam ea excepturi maiores incidunt et sequi omnis soluta rerum. Rerum et nostrum doloribus et asperiores expedita sequi qui. Qui magnam odio aperiam rerum.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:42 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     }
                   ],
@@ -2539,18 +2791,18 @@
                   "data": [
                     {
                       "price": 500,
-                      "_id": "62b03539e2dfcb1e15d2e8a6",
-                      "name": "Licensed Concrete Table",
+                      "_id": "62b0bc990d992d5dc77e6826",
+                      "name": "Unbranded Metal Cheese",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "description": "Odit enim reiciendis accusantium nisi reprehenderit ut. Repudiandae consectetur sint sint sint aperiam nam dolor aut illo.",
+                      "description": "Illo consectetur ea ut vel et explicabo ut in libero. Veritatis iure repudiandae omnis eaque occaecati facilis esse ipsam et. Voluptas mollitia maiores inventore repellat labore sed libero laudantium adipisci.",
                       "feedback": [
                         {
-                          "_id": "62b03539e2dfcb1e15d2e8b7",
-                          "customerId": "62b03530e2dfcb1e15d2e7f4",
-                          "comment": "Ab quibusdam provident praesentium dignissimos porro deleniti. Provident eos porro rem vitae inventore assumenda.",
+                          "_id": "62b0bc990d992d5dc77e6837",
+                          "customerId": "62b0bc950d992d5dc77e6769",
+                          "comment": "Nam facilis molestiae eos nostrum est. Deleniti sed minima aliquam voluptatem aliquam iste rerum at. Quae et molestiae aliquid. Debitis ea consequuntur sunt. Inventore vitae distinctio. Ut mollitia harum neque expedita voluptatem reprehenderit excepturi.",
                           "rating": 4,
-                          "updatedAt": "2022-06-20T09:52:09+01:00",
-                          "createdAt": "2022-06-20T09:52:09+01:00"
+                          "updatedAt": "2022-06-20T19:29:45+01:00",
+                          "createdAt": "2022-06-20T19:29:45+01:00"
                         }
                       ]
                     }
@@ -2761,15 +3013,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03530e2dfcb1e15d2e7e6",
+                      "_id": "62b0bc940d992d5dc77e674a",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "id repudiandae nam",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:00.075Z",
-                      "description": "Dolores sit asperiores cupiditate non commodi perspiciatis. Quis quia dolorem laboriosam minima pariatur doloremque sit.",
+                      "name": "quis et laudantium",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:40.347Z",
+                      "description": "Occaecati qui vitae quas. Sed porro aspernatur nobis aperiam. Maxime id eveniet eius quo. Sint et eius aspernatur qui. Et maxime tempore.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:00 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:00+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:40 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:40+01:00",
                       "__v": 0
                     },
                     {
@@ -2781,15 +3033,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03530e2dfcb1e15d2e7e7",
+                      "_id": "62b0bc940d992d5dc77e674b",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "qui est est",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:00.075Z",
-                      "description": "Fugit delectus occaecati modi velit ex molestias nulla dignissimos. Enim asperiores quia rerum quis. Mollitia enim enim doloremque et placeat praesentium.",
+                      "name": "tempora et voluptatem",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:40.348Z",
+                      "description": "Aut officiis repellat sint suscipit ut pariatur sed. Fuga quia ipsum pariatur consequuntur qui assumenda. Est harum quos et id quam assumenda nulla autem non. Culpa officia aperiam aut consequatur voluptatibus autem et. Praesentium amet aut facere pariatur velit optio qui et.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:00 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:00+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:40 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:40+01:00",
                       "__v": 0
                     },
                     {
@@ -2801,15 +3053,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03531e2dfcb1e15d2e80d",
+                      "_id": "62b0bc960d992d5dc77e6782",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "adipisci reprehenderit neque",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:01.361Z",
-                      "description": "Qui corporis dignissimos voluptatibus. Velit possimus porro earum illo. Sunt rerum quisquam aut minima praesentium quia iusto. Velit deleniti autem et explicabo et.",
+                      "name": "est optio nulla",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:42.151Z",
+                      "description": "Iure eum rem libero repellendus vero quia maiores explicabo et. Quae illum mollitia voluptatem corporis voluptatem similique. Reprehenderit modi nam reprehenderit voluptas est incidunt officiis veniam quis.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:42 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     },
                     {
@@ -2821,15 +3073,15 @@
                       "handlingFee": 10,
                       "discount": 0,
                       "status": "approved",
-                      "_id": "62b03531e2dfcb1e15d2e80e",
+                      "_id": "62b0bc960d992d5dc77e6783",
                       "imageUrl": "http://placeimg.com/640/480",
-                      "name": "porro ipsum accusamus",
-                      "categoryId": "62b0352de2dfcb1e15d2e7c9",
-                      "expiryDate": "2022-06-20T08:52:01.361Z",
-                      "description": "Quia a debitis fugiat quia et magni. Praesentium placeat fugiat. Vitae rerum ex occaecati eaque excepturi. Ut et neque. Nulla quia error corrupti consectetur fugiat.",
+                      "name": "repellat enim inventore",
+                      "categoryId": "62b0bc920d992d5dc77e672d",
+                      "expiryDate": "2022-06-20T18:29:42.151Z",
+                      "description": "A voluptas omnis doloremque odit reiciendis dolore iure. Totam ea excepturi maiores incidunt et sequi omnis soluta rerum. Rerum et nostrum doloribus et asperiores expedita sequi qui. Qui magnam odio aperiam rerum.",
                       "feedback": [],
-                      "createdAt": "Mon Jun 20 2022 09:52:01 GMT+0100 (West Africa Standard Time)",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
+                      "createdAt": "Mon Jun 20 2022 19:29:42 GMT+0100 (West Africa Standard Time)",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0
                     }
                   ],
@@ -2945,9 +3197,6 @@
                               "email": {
                                 "type": "string"
                               },
-                              "password": {
-                                "type": "string"
-                              },
                               "updatedAt": {
                                 "type": "string"
                               },
@@ -2984,23 +3233,22 @@
                   "status": "success",
                   "data": [
                     {
-                      "_id": "62b03531e2dfcb1e15d2e806",
-                      "address": "62b03531e2dfcb1e15d2e804",
+                      "_id": "62b0bc960d992d5dc77e677b",
+                      "address": "62b0bc950d992d5dc77e6779",
                       "name": "Benjamin",
-                      "updatedAt": "2022-06-20T09:52:01+01:00",
-                      "createdAt": "2022-06-20T09:52:01+01:00",
+                      "updatedAt": "2022-06-20T19:29:42+01:00",
+                      "createdAt": "2022-06-20T19:29:42+01:00",
                       "__v": 0,
                       "account": {
-                        "_id": "62b03531e2dfcb1e15d2e802",
+                        "_id": "62b0bc950d992d5dc77e6777",
                         "isEmailVerified": true,
-                        "lastLoggedIn": "2022-06-20T08:51:55.996Z",
+                        "lastLoggedIn": "2022-06-20T18:29:36.747Z",
                         "type": "business",
                         "isActive": false,
                         "isSuperAdmin": false,
-                        "email": "Amelie44@hotmail.com",
-                        "password": "$2b$10$cn/0.avkKkTB/YS8E1TdJeA/WKxyuZufPPhXxE9SYP/KHhigMZNHi",
-                        "updatedAt": "2022-06-20T09:52:01+01:00",
-                        "createdAt": "2022-06-20T09:52:01+01:00",
+                        "email": "Joana31@hotmail.com",
+                        "updatedAt": "2022-06-20T19:29:41+01:00",
+                        "createdAt": "2022-06-20T19:29:41+01:00",
                         "__v": 0
                       }
                     }

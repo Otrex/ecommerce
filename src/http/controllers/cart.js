@@ -1,6 +1,9 @@
 const RequestHandler = require('.');
 const CartService = require('../services/cart.service');
-const { AddToCartValidator, DeleteFromCartValidator } = require('../validators');
+const {
+  AddToCartValidator,
+  DeleteFromCartValidator,
+} = require('../validators');
 
 class CartController {
   static addToCart = RequestHandler({

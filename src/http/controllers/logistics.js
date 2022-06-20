@@ -19,7 +19,6 @@ class InfoController {
     validator: AddLogisticsValidator,
     handler: LogisticsService.addLogisticsCompany,
   });
-
 }
 
 module.exports = InfoController;

@@ -39,7 +39,8 @@ class AddLogisticsValidator extends GenericValidator {
     $$strict: 'remove',
     name: { type: 'string', trim: true, min: 1 },
     description: { type: 'string' },
-    costPerUnit: { type: 'number', positive: true }
+    costPerUnit: { type: 'number', positive: true },
+    isDefault: { type: 'boolean', optional: true, default: false },
   };
 }
 

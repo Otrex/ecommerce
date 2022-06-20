@@ -25,7 +25,9 @@ const generateToken = (length) => {
 };
 
 const generateNumbers = (length) => {
-  return config.app.env !== APP_ENV.PRODUCTION ? 12345: Math.floor(Math.random() * (Math.pow(10, length) - 1));
+  return config.app.env !== APP_ENV.PRODUCTION
+    ? 12345
+    : Math.floor(Math.random() * (Math.pow(10, length) - 1));
 };
 
 exports.generateHash = (seed) => {

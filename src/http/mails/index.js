@@ -12,22 +12,21 @@ const options = {
   headers: {
     Accept: 'application/json, */*',
     'Content-Type': 'application/json',
-    Authorization: 'Bearer sendchamp_live_$2y$10$oDw0g9ACR3DvfGRBT6lgSuq6ihBp6uG/.Q/p810oTqvJhsNsNlmFi'
+    Authorization:
+      'Bearer sendchamp_live_$2y$10$oDw0g9ACR3DvfGRBT6lgSuq6ihBp6uG/.Q/p810oTqvJhsNsNlmFi',
   },
   form: {
     to: ['+2349052289089'],
     message: 'Test message 6777778',
     sender_name: 'flitaa',
-    route: 'dnd'
-  }
+    route: 'dnd',
+  },
 };
 
 const Provider = require('mail-template-sender/core/Provider');
 
 class SendChampProvider extends Provider {
-  async send() {
-    
-  }
+  async send() {}
 }
 
 sgMail.setApiKey(config.email.sgKey);

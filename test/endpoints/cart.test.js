@@ -119,6 +119,9 @@ describe('Cart', () => {
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['Cart/Buyer'],
+      });
     });
 
     it('get carts items saved', async () => {

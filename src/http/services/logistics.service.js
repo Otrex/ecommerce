@@ -13,7 +13,7 @@ class LogisticsService {
     description,
   }) => {
     let company = await models.Logistics.findOne({
-      name
+      name,
     });
 
     if (company) throw new ServiceError('company already exist');
@@ -22,20 +22,24 @@ class LogisticsService {
       name,
       costPerUnit,
       description,
-    })
-    
-    return {
-      data: company,
-      message: 'logistics company added succcessfully'
-    }
-  };
-
-  static setDefaultLogisticCompany = async ({ companyId, account }) => {
-    let company = await models.Category.findOne({
-      _id: new Types.ObjectId(companyId)
     });
 
-    if (!company) throw new NotFoundError('logistics company not found');
+    return {
+      data: company,
+      message: 'logistics company added succcessfully',
+    };
+  };
+
+  static setDefaultLogisticCompany = async ({
+    companyId,
+    account,
+  }) => {
+    let company = await models.Category.findOne({
+      _id: new Types.ObjectId(companyId),
+    });
+
+    if (!company)
+      throw new NotFoundError('logistics company not found');
 
     const business = await models.Business.findOne({
       accountId: account._id,
@@ -44,12 +48,12 @@ class LogisticsService {
     if (!business) throw new ServiceError('user is not a vendor');
 
     await models.Business.findByIdAndUpdate(business._id, {
-      logisticsId: company._id
+      logisticsId: company._id,
     });
 
     return {
-      message: 'default logistics company has been set successfully'
-    }
+      message: 'default logistics company has been set successfully',
+    };
   };
 }
 

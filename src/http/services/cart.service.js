@@ -121,7 +121,7 @@ class CartService {
         amount: `${amount * 100}`,
         email: account.email,
       });
-  
+
       await models.Transaction.findByIdAndUpdate(transaction._id, {
         reference: paymentInit.reference,
       });
@@ -131,7 +131,7 @@ class CartService {
           authorizationUrl: paymentInit.authorizationUrl,
           accessCode: paymentInit.accessCode,
           transactionId: transaction.id,
-        }
+        },
       };
     } catch (err) {
       if (config.app.env === APP_ENV.TEST) {
@@ -140,10 +140,10 @@ class CartService {
             authorizationUrl: 'http://test',
             accessCode: 'paymentInit.accessCode',
             transactionId: transaction.id,
-          }
+          },
         };
       }
-      throw new ServiceError('something went wrong with paystack')
+      throw new ServiceError('something went wrong with paystack');
     }
   };
 
@@ -243,13 +243,15 @@ class CartService {
       account,
     });
 
-    const item = data.find(e => e.product._id.toString() === productId);
+    const item = data.find(
+      (e) => e.product._id.toString() === productId
+    );
     if (!item) throw new ServiceError('item is not in the cart');
 
     await models.Cart.deleteOne({ _id: item._id });
 
     return {
-      message: 'item has been successfully removed from cart'
+      message: 'item has been successfully removed from cart',
     };
   };
 }
