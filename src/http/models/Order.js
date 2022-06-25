@@ -11,6 +11,10 @@ const orderSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: 'Product',
     },
+    accountId: {
+      type: mongoose.Types.ObjectId,
+      ref: 'Account',
+    },
     address: {
       type: mongoose.Types.ObjectId,
       ref: 'Address',

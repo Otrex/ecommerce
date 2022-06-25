@@ -107,7 +107,7 @@ class CartService {
     const { totalCost, totalDistanceCost } = data;
     const amount = Math.ceil(totalCost * totalDistanceCost);
 
-    if (('' + amount).length > 7)
+    if (String(amount).length > 7)
       throw new ServiceError(
         'total cost has exceeded the a million and cant be carried out. Please contact support'
       );
@@ -199,6 +199,7 @@ class CartService {
           distanceState[item.product._id.toString()];
         await models.Order.create({
           distance,
+          accountId: account._id,
           quantity: item.quantity,
           productId: item.product._id,
           address: customerAddress._id,

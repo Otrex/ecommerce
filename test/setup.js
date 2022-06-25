@@ -21,7 +21,7 @@ const mochaHooks = {
 
   async afterAll() {
     documentation.renderDocumentation();
-    await connection.dropDatabase();
+    // await connection.dropDatabase();
     await db.disconnect();
   },
 

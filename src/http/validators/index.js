@@ -170,6 +170,13 @@ class GetBusinessesPaginationValidator extends GenericValidator {
   };
 }
 
+class GetAccountPaginationValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+  };
+}
+
 class BusinessRegisterValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -318,6 +325,7 @@ module.exports = {
   GetFavoriteProductValidator,
   GetProductByCategoryValidator,
   GetBusinessesPaginationValidator,
+  GetAccountPaginationValidator,
   ResendVerificationEmailValidator,
   GetBusinessProductValidator,
   CustomerRegisterValidator,
