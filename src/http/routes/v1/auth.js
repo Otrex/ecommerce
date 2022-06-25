@@ -1,13 +1,13 @@
 const express = require('express');
-const AuthController = require('../controllers/auth');
+const AuthController = require('../../controllers/auth');
 const {
   authentication,
   addType,
   googleStrategy,
-} = require('../../middlewares/auth');
+} = require('../../../middlewares/auth');
 const passport = require('passport');
 
-const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../../constants');
+const { TOKEN_FLAG, ACCOUNT_TYPES } = require('../../../constants');
 
 const router = express.Router();
 

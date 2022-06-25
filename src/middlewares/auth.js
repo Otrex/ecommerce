@@ -15,7 +15,7 @@ module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
     return (req, res, next) => {
       const { account } = req.session;
-      if (account.isSuperAdmin) next();
+      if (account.isSuperAdmin) return next();
       if (!userTypes.includes(account.type)) {
         return next(
           new AuthorizationError(

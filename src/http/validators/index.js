@@ -242,8 +242,26 @@ class GetAccountValidator extends GenericValidator {
   };
 }
 
+class AddLogisticsValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    name: { type: 'string', trim: true, min: 1 },
+    description: { type: 'string' },
+    costPerUnit: { type: 'number', positive: true },
+    isDefault: { type: 'boolean', optional: true, default: false },
+  };
+}
+
+class SetDefaultLogisticsValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    companyId: { type: 'objectID' },
+  };
+}
 module.exports = {
   LoginValidator,
+  AddLogisticsValidator,
+  SetDefaultLogisticsValidator,
   RegisterValidator,
   AddToCartValidator,
   GetAccountValidator,

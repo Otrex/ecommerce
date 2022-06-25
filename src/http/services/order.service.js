@@ -67,8 +67,8 @@ class OrderService {
   static activeOrders = async ({ account, page, limit }) => {
     const activeOrderStatus = [
       ORDER_STATUS.SHIPPED,
-      ORDER_STATUS.PENDING
-    ]
+      ORDER_STATUS.PENDING,
+    ];
     const skip = calcSkip({ page, limit });
     const vendor = await models.Business.findOne({
       accountId: account._id,
@@ -95,7 +95,7 @@ class OrderService {
           status: {
             $in: activeOrderStatus,
           },
-        }
+        },
       },
       {
         $facet: {
@@ -120,12 +120,10 @@ class OrderService {
       },
     ]);
 
-    const data = result 
-      ? [result.orders, result.count] 
-      : [[], 0];
+    const data = result ? [result.orders, result.count] : [[], 0];
 
-    return paginateResponse(data, page, limit)
-  }
+    return paginateResponse(data, page, limit);
+  };
 }
 
 module.exports = OrderService;

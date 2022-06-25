@@ -1,6 +1,9 @@
 const RequestHandler = require('.');
 const UserService = require('../services/user.service');
-const { GetAccountValidator, GetBusinessesPaginationValidator } = require('../validators');
+const {
+  GetAccountValidator,
+  GetBusinessesPaginationValidator,
+} = require('../validators');
 
 class UserController {
   static suspendUser = RequestHandler({

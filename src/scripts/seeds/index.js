@@ -56,9 +56,9 @@ exports.seedAdmin = async () => {
     account = await Account.create({
       isSuperAdmin: true,
       isEmailVerified: true,
+      type: 'admin',
       emailVerifiedAt: new Date(),
       email: config.admin.email,
-      password: '1234',
     });
   }
 
@@ -67,7 +67,7 @@ exports.seedAdmin = async () => {
   });
 };
 
-if (require.main === module) { 
+if (require.main === module) {
   seedAdmin();
   seedCategories();
   seedLogistics();

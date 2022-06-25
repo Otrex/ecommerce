@@ -1,10 +1,10 @@
 const express = require('express');
-const OrderController = require('../controllers/order');
+const OrderController = require('../../controllers/order');
 const {
   authentication,
   authorization,
-} = require('../../middlewares/auth');
-const { ACCOUNT_TYPES } = require('../../constants');
+} = require('../../../middlewares/auth');
+const { ACCOUNT_TYPES } = require('../../../constants');
 const router = express.Router();
 
 router.use(authentication());

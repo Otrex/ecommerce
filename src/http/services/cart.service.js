@@ -130,7 +130,7 @@ class CartService {
         authorizationUrl: paymentInit.authorizationUrl,
         accessCode: paymentInit.accessCode,
         transactionId: transaction.id,
-      }
+      },
     };
   };
 

@@ -155,6 +155,7 @@ class AuthService {
     const account = await models.Account.create({
       password: await bcryptHash(password),
       type: ACCOUNT_TYPES.BUSINESS,
+      isEmailVerified: true,
       phoneNumber,
       firstName,
       lastName,
@@ -179,7 +180,9 @@ class AuthService {
       5
     );
 
-    if (![APP_ENV.TEST, APP_ENV.DEVELOPMENT].includes(config.app.env)) {
+    if (
+      ![APP_ENV.TEST, APP_ENV.DEVELOPMENT].includes(config.app.env)
+    ) {
       verification.addTo(account.email).addData({
         account,
         timedToken,
@@ -238,7 +241,10 @@ class AuthService {
     const account = await models.Account.findOne({ email, type });
     if (!account) throw new ServiceError('account does not exist');
 
-    const timedToken = await generateTimedToken(TOKEN_FLAG.RESET, account._id);
+    const timedToken = await generateTimedToken(
+      TOKEN_FLAG.RESET,
+      account._id
+    );
 
     /// Add mails
     if (config.app.env !== APP_ENV.TEST) {
@@ -279,7 +285,7 @@ class AuthService {
       token: code,
     });
 
-    console.log('>>>', code, account, timedToken)
+    console.log('>>>', code, account, timedToken);
 
     if (!timedToken) {
       throw new ServiceError('invalid or expired token');

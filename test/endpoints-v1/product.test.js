@@ -120,7 +120,7 @@ describe('Product', () => {
         .post(`/v1/admin/products/${product._id}/disapprove`)
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({
-          reason: "this is because it is the best"
+          reason: 'this is because it is the best',
         });
 
       console.log(res.body, res.error);
