@@ -201,7 +201,7 @@ class BusinessRegisterValidator extends GenericValidator {
           type: 'object',
           props: {
             lat: { type: 'number', convert: true },
-            label: { type: 'string', trim: true, min: 5 },
+            fullAddress: { type: 'string', trim: true, min: 5 },
             long: { type: 'number', convert: true },
           },
         },

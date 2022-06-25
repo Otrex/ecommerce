@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const timestamp = require('./plugins/timestamp');
 const { ORDER_STATUS } = require('../../constants');
 
 const orderSchema = new mongoose.Schema(
@@ -44,5 +43,4 @@ const orderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-orderSchema.plugin(timestamp);
 module.exports = mongoose.model('Order', orderSchema);

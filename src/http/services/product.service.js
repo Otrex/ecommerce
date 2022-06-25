@@ -1,9 +1,11 @@
 const { NotFoundError, ServiceError } = require('../lib/exceptions');
 const { calcSkip, paginateResponse } = require('../../scripts/utils');
-const { PRODUCT_STATUS } = require('../../constants');
+const { PRODUCT_STATUS, ORDER_STATUS } = require('../../constants');
 const ObjectId = require('mongoose').Types.ObjectId;
 const models = require('../models');
+const moment = require('moment');
 const { omit, pick } = require('lodash');
+const { filterDates } = require('../../scripts/utils');
 
 class ProductService {
   static createProduct = async ({
@@ -497,6 +499,99 @@ class ProductService {
         totalCategoriesReviewed: totalCategoriesReviewed
           ? totalCategoriesReviewed.total
           : 0,
+      },
+    };
+  };
+
+  static grossProductStats = async () => {
+    const [result] = await models.Product.aggregate([
+      {
+        $lookup: {
+          from: models.Category.collection.collectionName,
+          localField: 'categoryId',
+          foreignField: '_id',
+          as: 'category',
+        },
+      },
+      { $unwind: '$category' },
+      {
+        $addFields: {
+          totalProductCost: {
+            $multiply: ['$price', '$quantity'],
+          },
+        },
+      },
+      {
+        $addFields: {
+          totalSoldProductCost: {
+            $multiply: [
+              { $subtract: ['$quantity', '$quantityLeft'] },
+              '$price',
+            ],
+          },
+        },
+      },
+      {
+        $group: {
+          _id: null,
+          grossMerchandise: { $sum: '$totalProductCost' },
+          grossProductSales: { $sum: '$totalSoldProductCost' },
+        },
+      },
+      { $project: { _id: 0 } },
+    ]);
+
+    const startDate =  moment().subtract(16, 'week').toDate();
+    const chart = await models.Product.aggregate([
+      {
+        $match: {
+          createdAt: {
+            $gte: startDate
+          }
+        }
+      },
+      {
+        $lookup: {
+          from: models.Category.collection.collectionName,
+          localField: 'categoryId',
+          foreignField: '_id',
+          as: 'category',
+        },
+      },
+      { $unwind: '$category' },
+      {
+        $addFields: {
+          totalProductCost: {
+            $multiply: ['$price', '$quantity'],
+          },
+        },
+      },
+      {
+        $addFields: {
+          totalSoldProductCost: {
+            $multiply: [
+              { $subtract: ['$quantity', '$quantityLeft'] },
+              '$price',
+            ],
+          },
+        },
+      },
+      {
+        $project: {
+          totalProductCost: 1,
+          totalSoldProductCost: 1,
+          createdAt: 1
+        }
+      }
+    ]);
+
+    
+
+    return {
+      data: {
+        grossStats: result ? result : null,
+        chart: filterDates(chart, "startOftheWeek"),
+        startDate,
       },
     };
   };

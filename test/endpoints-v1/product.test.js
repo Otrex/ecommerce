@@ -308,5 +308,17 @@ describe('Product', () => {
         tags: ['V2/Product/Admin'],
       });
     });
+
+    it('it product gross stats', async () => {
+      const res = await server
+        .get(`/v2/products/gross/stats`)
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product/Admin'],
+      });
+    });
   });
 });

@@ -93,6 +93,10 @@ class ProductController {
   static getReviewGeneralStats = RequestHandler({
     handler: ProductService.getReviewGeneralStats,
   });
+
+  static grossProductStats = RequestHandler({
+    handler: ProductService.grossProductStats,
+  });
 }
 
 module.exports = ProductController;

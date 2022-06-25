@@ -328,15 +328,41 @@ class UserService {
       },
     ]);
 
-    const data = result
-      ? [
-          result.businesses,
-          result.count,
-        ]
-      : [[], 0];
+    const data = result ? [result.businesses, result.count] : [[], 0];
 
     return paginateResponse(data, page, limit);
   };
+
+  // NOT added to route
+  static setAddress = async ({ account, lat, lng, fullAddress, country, state, street }) => {
+    let user;
+    if (account.type === ACCOUNT_TYPES.BUSINESS) {
+      user = await models.Business.findOne({ accountId: account._id });
+    }
+
+    if (account.type === ACCOUNT_TYPES.CUSTOMER) {
+      user = await models.Customer.findOne({ accountId: account._id });
+    }
+
+    if (!user) throw new NotFoundError('account not found');
+
+    let { address: addressId } = user;
+
+    if (!addressId && account.type === ACCOUNT_TYPES.CUSTOMER) {
+      addressId = await models.Address.create({});
+      await models.Customer.findByIdAndUpdate( user._id, { address: addressId });
+    }
+
+    await models.Address.findByIdAndUpdate(addressId, {
+      lat,
+      lng,
+      fullAddress,
+      country,
+      street,
+      state,
+    })
+
+  }
 }
 
 module.exports = UserService;

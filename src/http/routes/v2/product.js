@@ -45,6 +45,15 @@ class ProductRouter extends Router {
       );
 
     this.$router
+      .route('/gross/stats')
+      .get(
+        this.$middleware.authorization([
+          this.CONSTANTS.ACCOUNT_TYPES.ADMIN,
+        ]),
+        ProductController.grossProductStats
+      );
+
+    this.$router
       .route('/reviews/stats')
       .get(
         this.$middleware.authorization([
