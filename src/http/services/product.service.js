@@ -3,7 +3,7 @@ const { calcSkip, paginateResponse } = require('../../scripts/utils');
 const { PRODUCT_STATUS } = require('../../constants');
 const ObjectId = require('mongoose').Types.ObjectId;
 const models = require('../models');
-const { omit } = require('lodash');
+const { omit, pick } = require('lodash');
 
 class ProductService {
   static createProduct = async ({
@@ -183,6 +183,72 @@ class ProductService {
     return paginateResponse([_products, count], page, limit);
   };
 
+  static getCategoryStats = async ({ page, limit }) => {
+    const skip = calcSkip({ page, limit });
+    const [data] = await models.Category.aggregate([
+      {
+        $lookup: {
+          from: models.Product.collection.collectionName,
+          localField: '_id',
+          foreignField: 'categoryId',
+          as: 'product',
+          pipeline: [
+            {
+              $group: {
+                _id: null,
+                totalProducts: { $sum: 1 },
+                totalProductQuantity: { $sum: '$quantity' },
+              },
+            },
+            { $project: { _id: 0 } },
+          ],
+        },
+      },
+      {
+        $addFields: {
+          statistics: {
+            $arrayElemAt: ['$product', 0],
+          },
+        },
+      },
+      {
+        $project: {
+          product: 0,
+        },
+      },
+      {
+        $facet: {
+          categories: [{ $skip: skip }, { $limit: limit }],
+          totalCount: [
+            {
+              $count: 'count',
+            },
+          ],
+        },
+      },
+      { $unwind: '$totalCount' },
+      {
+        $addFields: {
+          count: '$totalCount.count',
+        },
+      },
+      {
+        $project: {
+          totalCount: 0,
+        },
+      },
+    ]);
+
+    const totalProducts = await models.Product.countDocuments();
+    const categories = data ? [data.categories, data.count] : [[], 0];
+    return {
+      data: {
+        categories: paginateResponse(categories, page, limit),
+        totalProducts,
+      },
+    };
+  };
+
   static getProductDetails = async ({ productId }) => {
     const product = await models.Product.findOne({ _id: productId });
     if (!product) throw new NotFoundError('product not found');
@@ -284,6 +350,76 @@ class ProductService {
 
     return paginateResponse([_products, count], page, limit);
   };
+
+  static getProductsAdmin = async ({ page, limit }) => {
+    const skip = calcSkip({ page, limit });
+    const products = await models.Product.find({}, null, {
+      skip,
+      limit,
+    }).populate('categoryId');
+
+    return {
+      data: products.map((p) => ({
+        ...pick(p, [
+          'price',
+          'status',
+          'name',
+          'imageUrl',
+          'description',
+          'quantity',
+        ]),
+        category: p.categoryId,
+      })),
+    };
+  };
+
+  static searchForProduct = async ({ query, page, limit }) => {
+    const skip = calcSkip({ page, limit });
+
+    const [result] = await models.Product.aggregate([
+      {
+        $lookup: {
+          from: models.Category.collection.collectionName,
+          localField: 'categoryId',
+          foreignField: '_id',
+          as: 'category',
+        },
+      },
+      { $unwind: '$category' },
+      {
+        $match: {
+          $or : [
+            { name: { $regex: new RegExp(`${query}`, 'gi') }},
+            {'category.name': { $regex: new RegExp(`${query}`, 'gi') }},
+          ]
+        },
+      },
+      {
+        $facet: {
+          products: [{ $skip: skip }, { $limit: limit }],
+          totalCount: [
+            {
+              $count: 'count',
+            },
+          ],
+        },
+      },
+      { $unwind: '$totalCount' },
+      {
+        $addFields: {
+          count: '$totalCount.count',
+        },
+      },
+      {
+        $project: {
+          totalCount: 0,
+        }
+      }
+    ])
+
+    const products = result ? [result.products, result.count]: [[], 0];
+    return paginateResponse(products, page, limit)
+  }
 }
 
 module.exports = ProductService;

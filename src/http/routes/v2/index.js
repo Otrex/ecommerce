@@ -4,7 +4,7 @@ const router = Router();
 /**
  * ROUTES
  */
-const routes = ['./auth', './logistics'];
+const routes = ['./auth', './product', './logistics'];
 
 routes.forEach((route) => {
   router.use(...require(route).getRoutes());

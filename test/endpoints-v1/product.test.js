@@ -262,5 +262,28 @@ describe('Product', () => {
         ],
       });
     });
+
+    it('it get category details', async () => {
+      const res = await server
+        .get(`/v2/products/stats`)
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product/Admin'],
+      });
+    });
+
+    it('it product search', async () => {
+      const res = await server
+        .get(`/v2/products/search`);
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product'],
+      });
+    });
   });
 });

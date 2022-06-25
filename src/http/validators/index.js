@@ -31,6 +31,12 @@ class AddCategoryValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     name: { type: 'string', trim: true, min: 1 },
+    description: {
+      type: 'string',
+      trim: true,
+      min: 1,
+      optional: true,
+    },
   };
 }
 
@@ -120,7 +126,7 @@ class GetBusinessProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     ...paginationSchemaFragment,
-    status: { type: 'string', min: 0, trim: true },
+    status: { type: 'string', min: 0, trim: true, default: '' },
   };
 }
 
@@ -145,6 +151,16 @@ class GetProductValidator extends GenericValidator {
     ...paginationSchemaFragment,
   };
 }
+
+class SearchProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+    query: { type: 'string', default: '' }
+  };
+}
+
+class GetCategoriesStats extends GetProductValidator {}
 
 class GetBusinessesPaginationValidator extends GenericValidator {
   schema = {
@@ -294,6 +310,7 @@ module.exports = {
   AddLogisticsValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
+  GetCategoriesStats,
   DeleteFromCartValidator,
   SetDefaultLogisticsValidator,
   InitPasswordResetValidator,
@@ -305,6 +322,7 @@ module.exports = {
   GetBusinessProductValidator,
   CustomerRegisterValidator,
   BusinessRegisterValidator,
+  SearchProductValidator,
   ApproveProductValidator,
   CreateProductValidator,
   AddFeedbackValidator,

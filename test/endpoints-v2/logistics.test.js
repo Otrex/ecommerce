@@ -84,6 +84,5 @@ describe('Logistics', () => {
         tags: ['V2/Logistics/Vendor'],
       });
     });
-
   });
 });
