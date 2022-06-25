@@ -276,8 +276,7 @@ describe('Product', () => {
     });
 
     it('it product search', async () => {
-      const res = await server
-        .get(`/v2/products/search`);
+      const res = await server.get(`/v2/products/search`);
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);

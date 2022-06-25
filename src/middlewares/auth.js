@@ -99,7 +99,12 @@ module.exports = {
           return next(new AuthenticationError('token is invalid'));
         }
 
-        req.session = { account, type: account.isSuperAdmin ? ACCOUNT_TYPES.ADMIN: account.type };
+        req.session = {
+          account,
+          type: account.isSuperAdmin
+            ? ACCOUNT_TYPES.ADMIN
+            : account.type,
+        };
 
         return next();
       } catch (e) {

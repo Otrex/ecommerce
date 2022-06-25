@@ -156,7 +156,7 @@ class SearchProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     ...paginationSchemaFragment,
-    query: { type: 'string', default: '' }
+    query: { type: 'string', default: '' },
   };
 }
 

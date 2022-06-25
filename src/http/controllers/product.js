@@ -84,7 +84,6 @@ class ProductController {
     validator: SearchProductValidator,
     handler: ProductService.searchForProduct,
   });
-
 }
 
 module.exports = ProductController;

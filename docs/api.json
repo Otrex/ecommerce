@@ -30,9 +30,7 @@
     "/v1/buyer/register": {
       "post": {
         "description": "",
-        "tags": [
-          "Register"
-        ],
+        "tags": ["Register"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -107,9 +105,7 @@
     "/v1/vendor/register": {
       "post": {
         "description": "",
-        "tags": [
-          "Register"
-        ],
+        "tags": ["Register"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -256,9 +252,7 @@
     "/v1/login": {
       "post": {
         "description": "",
-        "tags": [
-          "Login"
-        ],
+        "tags": ["Login"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -384,9 +378,7 @@
     "/v1/buyer/login": {
       "post": {
         "description": "",
-        "tags": [
-          "Login"
-        ],
+        "tags": ["Login"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -504,9 +496,7 @@
     "/v1/admin/login": {
       "post": {
         "description": "",
-        "tags": [
-          "Login"
-        ],
+        "tags": ["Login"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -616,9 +606,7 @@
     "/v1/vendor/login": {
       "post": {
         "description": "",
-        "tags": [
-          "Login"
-        ],
+        "tags": ["Login"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -911,9 +899,7 @@
     "/v1/buyer/cart": {
       "put": {
         "description": "",
-        "tags": [
-          "Cart/Buyer"
-        ],
+        "tags": ["Cart/Buyer"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1095,9 +1081,7 @@
       },
       "delete": {
         "description": "",
-        "tags": [
-          "Cart/Buyer"
-        ],
+        "tags": ["Cart/Buyer"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1189,9 +1173,7 @@
       },
       "get": {
         "description": "",
-        "tags": [
-          "Cart/Buyer"
-        ],
+        "tags": ["Cart/Buyer"],
         "parameters": [],
         "responses": {
           "200": {
@@ -1304,9 +1286,7 @@
     "/v1/buyer/cart/checkout": {
       "get": {
         "description": "",
-        "tags": [
-          "Cart/Buyer"
-        ],
+        "tags": ["Cart/Buyer"],
         "parameters": [],
         "responses": {
           "200": {
@@ -1348,9 +1328,7 @@
     "/v1/vendor/order/stats": {
       "get": {
         "description": "",
-        "tags": [
-          "Cart/Vendor"
-        ],
+        "tags": ["Cart/Vendor"],
         "parameters": [],
         "responses": {
           "200": {
@@ -1400,9 +1378,7 @@
     "/v1/info/categories": {
       "get": {
         "description": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "parameters": [],
         "responses": {
           "200": {
@@ -1468,9 +1444,7 @@
     "/v1/info/admin/categories": {
       "post": {
         "description": "",
-        "tags": [
-          "Categories/Admin"
-        ],
+        "tags": ["Categories/Admin"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1533,9 +1507,7 @@
     "/v1/vendor/products": {
       "post": {
         "description": "",
-        "tags": [
-          "Product/Vendor"
-        ],
+        "tags": ["Product/Vendor"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -1690,9 +1662,7 @@
       },
       "get": {
         "description": "",
-        "tags": [
-          "Product/Vendor"
-        ],
+        "tags": ["Product/Vendor"],
         "parameters": [
           {
             "in": "query",
@@ -1878,9 +1848,7 @@
     "/v1/admin/products/{productId}/approve": {
       "post": {
         "description": "",
-        "tags": [
-          "Product/Admin"
-        ],
+        "tags": ["Product/Admin"],
         "parameters": [
           {
             "in": "path",
@@ -1932,9 +1900,7 @@
     "/v1/admin/products/{productId}/disapprove": {
       "post": {
         "description": "",
-        "tags": [
-          "Product/Admin"
-        ],
+        "tags": ["Product/Admin"],
         "parameters": [
           {
             "in": "path",
@@ -1992,9 +1958,7 @@
     "/v1/buyer/products/{productId}/feedback": {
       "post": {
         "description": "",
-        "tags": [
-          "Product/Buyer"
-        ],
+        "tags": ["Product/Buyer"],
         "parameters": [
           {
             "in": "path",
@@ -2056,9 +2020,7 @@
     "/v1/buyer/products/{productId}/like": {
       "post": {
         "description": "",
-        "tags": [
-          "Product/Buyer"
-        ],
+        "tags": ["Product/Buyer"],
         "parameters": [
           {
             "in": "path",
@@ -2110,9 +2072,7 @@
     "/v1/public/products/{productId}": {
       "get": {
         "description": "",
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "parameters": [
           {
             "in": "path",
@@ -2262,9 +2222,7 @@
     "/v1/public/products": {
       "get": {
         "description": "",
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "parameters": [
           {
             "in": "query",
@@ -2574,9 +2532,7 @@
     "/v1/buyer/products/favorites": {
       "get": {
         "description": "",
-        "tags": [
-          "Product/Buyer"
-        ],
+        "tags": ["Product/Buyer"],
         "parameters": [
           {
             "in": "query",
@@ -2709,9 +2665,7 @@
     "/v1/vendor/products/feedback": {
       "get": {
         "description": "",
-        "tags": [
-          "Product/Vendor"
-        ],
+        "tags": ["Product/Vendor"],
         "parameters": [],
         "responses": {
           "200": {
@@ -2766,9 +2720,7 @@
     "/v1/public/categories/{categoryId}/products?page=1&limit=20": {
       "get": {
         "description": "",
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "parameters": [
           {
             "in": "path",
@@ -3067,9 +3019,7 @@
     "/v2/products/stats": {
       "get": {
         "description": "",
-        "tags": [
-          "V2/Product/Admin"
-        ],
+        "tags": ["V2/Product/Admin"],
         "parameters": [],
         "responses": {
           "200": {
@@ -3200,9 +3150,7 @@
     "/v2/products/search": {
       "get": {
         "description": "",
-        "tags": [
-          "V2/Product"
-        ],
+        "tags": ["V2/Product"],
         "parameters": [],
         "responses": {
           "200": {
@@ -3568,9 +3516,7 @@
     "/v1/admin/users/businesses/search": {
       "get": {
         "description": "",
-        "tags": [
-          "Admin/Search"
-        ],
+        "tags": ["Admin/Search"],
         "parameters": [
           {
             "in": "query",
@@ -3736,9 +3682,7 @@
     "/v2/logistics": {
       "post": {
         "description": "",
-        "tags": [
-          "V2/Logistics/Admin"
-        ],
+        "tags": ["V2/Logistics/Admin"],
         "parameters": [],
         "requestBody": {
           "content": {
@@ -3823,9 +3767,7 @@
       },
       "get": {
         "description": "",
-        "tags": [
-          "V2/Logistics/Vendor"
-        ],
+        "tags": ["V2/Logistics/Vendor"],
         "parameters": [],
         "responses": {
           "200": {
@@ -4144,9 +4086,7 @@
     "/v2/logistics/62b6ffe2883a75288c5af35a/set-default": {
       "patch": {
         "description": "",
-        "tags": [
-          "V2/Logistics/Vendor"
-        ],
+        "tags": ["V2/Logistics/Vendor"],
         "parameters": [],
         "responses": {
           "200": {

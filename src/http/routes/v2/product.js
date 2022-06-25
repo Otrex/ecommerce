@@ -12,11 +12,15 @@ class ProductRouter extends Router {
     this.$router.get('/', (req, res, next) => {
       switch (req.session.type) {
         case this.CONSTANTS.ACCOUNT_TYPES.BUSINESS:
-          return ProductController.getProduct_Business(req, res, next);
+          return ProductController.getProduct_Business(
+            req,
+            res,
+            next
+          );
         case this.CONSTANTS.ACCOUNT_TYPES.ADMIN:
           return ProductController.getProducts_Admin(req, res, next);
       }
-    })
+    });
 
     this.$router
       .route('/stats')

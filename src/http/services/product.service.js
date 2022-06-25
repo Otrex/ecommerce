@@ -388,10 +388,14 @@ class ProductService {
       { $unwind: '$category' },
       {
         $match: {
-          $or : [
-            { name: { $regex: new RegExp(`${query}`, 'gi') }},
-            {'category.name': { $regex: new RegExp(`${query}`, 'gi') }},
-          ]
+          $or: [
+            { name: { $regex: new RegExp(`${query}`, 'gi') } },
+            {
+              'category.name': {
+                $regex: new RegExp(`${query}`, 'gi'),
+              },
+            },
+          ],
         },
       },
       {
@@ -413,13 +417,15 @@ class ProductService {
       {
         $project: {
           totalCount: 0,
-        }
-      }
-    ])
+        },
+      },
+    ]);
 
-    const products = result ? [result.products, result.count]: [[], 0];
-    return paginateResponse(products, page, limit)
-  }
+    const products = result
+      ? [result.products, result.count]
+      : [[], 0];
+    return paginateResponse(products, page, limit);
+  };
 }
 
 module.exports = ProductService;
