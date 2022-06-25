@@ -34,6 +34,23 @@ class AddCategoryValidator extends GenericValidator {
   };
 }
 
+class AddLogisticsValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    name: { type: 'string', trim: true, min: 1 },
+    description: { type: 'string' },
+    costPerUnit: { type: 'number', positive: true },
+    isDefault: { type: 'boolean', optional: true, default: false },
+  };
+}
+
+class SetDefaultLogisticsValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    companyId: { type: 'objectID' },
+  };
+}
+
 class ApproveProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -235,6 +252,13 @@ class AddToCartValidator extends GenericValidator {
   };
 }
 
+class DeleteFromCartValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    productId: 'objectID',
+  };
+}
+
 class GetAccountValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -242,22 +266,22 @@ class GetAccountValidator extends GenericValidator {
   };
 }
 
-class AddLogisticsValidator extends GenericValidator {
-  schema = {
-    $$strict: 'remove',
-    name: { type: 'string', trim: true, min: 1 },
-    description: { type: 'string' },
-    costPerUnit: { type: 'number', positive: true },
-    isDefault: { type: 'boolean', optional: true, default: false },
-  };
-}
+// class AddLogisticsValidator extends GenericValidator {
+//   schema = {
+//     $$strict: 'remove',
+//     name: { type: 'string', trim: true, min: 1 },
+//     description: { type: 'string' },
+//     costPerUnit: { type: 'number', positive: true },
+//     isDefault: { type: 'boolean', optional: true, default: false },
+//   };
+// }
 
-class SetDefaultLogisticsValidator extends GenericValidator {
-  schema = {
-    $$strict: 'remove',
-    companyId: { type: 'objectID' },
-  };
-}
+// class SetDefaultLogisticsValidator extends GenericValidator {
+//   schema = {
+//     $$strict: 'remove',
+//     companyId: { type: 'objectID' },
+//   };
+// }
 module.exports = {
   LoginValidator,
   AddLogisticsValidator,
@@ -267,8 +291,11 @@ module.exports = {
   GetAccountValidator,
   LikeProductValidator,
   GetProductValidator,
+  AddLogisticsValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
+  DeleteFromCartValidator,
+  SetDefaultLogisticsValidator,
   InitPasswordResetValidator,
   GetProductDetailsValidator,
   GetFavoriteProductValidator,

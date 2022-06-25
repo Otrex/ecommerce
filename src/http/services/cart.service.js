@@ -1,7 +1,7 @@
 const { ServiceError, NotFoundError } = require('../lib/exceptions');
 const models = require('../models');
 const { omit } = require('lodash');
-const { PRODUCT_STATUS } = require('../../constants');
+const { PRODUCT_STATUS, APP_ENV } = require('../../constants');
 const Paystack = require('paystack-api-ts').default;
 const config = require('../../config');
 const { distanceBtwPoints } = require('./../../scripts/utils');
@@ -222,6 +222,23 @@ class CartService {
           .map(([k, v]) => v.distanceCost)
           .reduce((t, c) => t + c, 0),
       },
+    };
+  };
+
+  static deleteItemInCart = async ({ account, productId }) => {
+    const { data } = await CartService.getCart({
+      account,
+    });
+
+    const item = data.find(
+      (e) => e.product._id.toString() === productId
+    );
+    if (!item) throw new ServiceError('item is not in the cart');
+
+    await models.Cart.deleteOne({ _id: item._id });
+
+    return {
+      message: 'item has been successfully removed from cart',
     };
   };
 }

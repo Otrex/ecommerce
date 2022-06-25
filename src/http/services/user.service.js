@@ -3,6 +3,7 @@ const { calcSkip, paginateResponse } = require('../../scripts/utils');
 const ObjectId = require('mongoose').Types.ObjectId;
 const config = require('../../config');
 const models = require('../models');
+const { omit } = require('lodash');
 
 class UserService {
   static suspendUser = async ({ accountId }) => {
@@ -33,19 +34,25 @@ class UserService {
 
   static searchForBusiness = async ({ query, page, limit }) => {
     const skip = calcSkip({ page, limit });
-
     const [result] = await models.Business.aggregate([
       {
         $lookup: {
-          from: models.Product.collection.collectionName,
+          from: models.Account.collection.collectionName,
           localField: 'accountId',
           foreignField: '_id',
-          as: 'account',
+          as: 'faccount',
         },
       },
       {
         $match: {
           name: { $regex: new RegExp(`${query}`, 'gi') },
+        },
+      },
+      { $addFields: { account: { $first: '$faccount' } } },
+      {
+        $project: {
+          faccount: 0,
+          accountId: 0,
         },
       },
       {
@@ -67,11 +74,21 @@ class UserService {
       {
         $project: {
           totalCount: 0,
+          faccount: 0,
+          accountId: 0,
         },
       },
     ]);
 
-    const data = result ? [result.businesses, result.count] : [[], 0];
+    const data = result
+      ? [
+          result.businesses.map((e) => ({
+            ...e,
+            account: omit(e.account, ['password']),
+          })),
+          result.count,
+        ]
+      : [[], 0];
 
     return paginateResponse(data, page, limit);
   };

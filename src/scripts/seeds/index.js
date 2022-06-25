@@ -57,6 +57,7 @@ exports.seedAdmin = async () => {
       isSuperAdmin: true,
       isEmailVerified: true,
       type: 'admin',
+      password: '1234567',
       emailVerifiedAt: new Date(),
       email: config.admin.email,
     });
