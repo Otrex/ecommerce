@@ -9,6 +9,9 @@ const feedbackSchema = new Schema({
   comment: {
     type: String,
   },
+  reply: {
+    type: String,
+  },
   customerId: {
     type: mongoose.Types.ObjectId,
     ref: 'Customer',

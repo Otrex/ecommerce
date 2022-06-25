@@ -245,6 +245,18 @@ describe('Product', () => {
       });
     });
 
+    it('get products feedback', async () => {
+      const res = await server
+        .get('/v2/products/feedback')
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product/Admin'],
+      });
+    });
+
     it('get products by categories', async () => {
       const res = await server.get(
         `/v1/public/categories/${categories[0]._id.toString()}/products?page=1&limit=20`
@@ -282,6 +294,18 @@ describe('Product', () => {
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product'],
+      });
+    });
+
+    it('it product reviews', async () => {
+      const res = await server
+        .get(`/v2/products/reviews/stats`)
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product/Admin'],
       });
     });
   });

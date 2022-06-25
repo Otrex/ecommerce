@@ -80,9 +80,18 @@ class ProductController {
     handler: ProductService.getFeedback,
   });
 
+  static getFeedback_Admin = RequestHandler({
+    validator: GetProductValidator,
+    handler: ProductService.getFeedback_Admin,
+  });
+
   static searchForProduct = RequestHandler({
     validator: SearchProductValidator,
     handler: ProductService.searchForProduct,
+  });
+
+  static getReviewGeneralStats = RequestHandler({
+    handler: ProductService.getReviewGeneralStats,
   });
 }
 

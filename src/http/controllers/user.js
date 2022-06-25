@@ -26,6 +26,11 @@ class UserController {
     validator: GetAccountPaginationValidator,
     handler: UserService.getCustomersData,
   });
+
+  static getBusinesses = RequestHandler({
+    validator: GetAccountPaginationValidator,
+    handler: UserService.getBusinesses,
+  });
 }
 
 module.exports = UserController;

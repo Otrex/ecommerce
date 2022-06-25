@@ -351,6 +351,36 @@ class ProductService {
     return paginateResponse([_products, count], page, limit);
   };
 
+  static getFeedback_Admin = async ({ page, limit }) => {
+    const query = {
+      status: PRODUCT_STATUS.APPROVED,
+    };
+
+    const skip = calcSkip({ page, limit });
+    const count = await models.Product.count(query);
+    const products = await models.Product.find(query, null, {
+      skip,
+      limit,
+    }).populate('categoryId');
+
+    const _products = products.map((product) => ({
+      ...omit(product.toJSON(), [
+        'reasonForDisapproval',
+        'handlingFee',
+        'creatorId',
+        'discount',
+      ]),
+      avgRating: product.feedback.length
+        ? product.feedback.reduce((t, e) => t + e.rating, 0) /
+          product.feedback.length
+        : 0,
+      noOfComments: product.feedback.length,
+      category: product.categoryId,
+    }));
+
+    return paginateResponse([_products, count], page, limit);
+  };
+
   static getProductsAdmin = async ({ page, limit }) => {
     const skip = calcSkip({ page, limit });
     const products = await models.Product.find({}, null, {
@@ -425,6 +455,50 @@ class ProductService {
       ? [result.products, result.count]
       : [[], 0];
     return paginateResponse(products, page, limit);
+  };
+
+  static getReviewGeneralStats = async () => {
+    const totalNoOfReviews = await models.Product.countDocuments({
+      $expr: { $gt: [{ $size: '$feedback' }, 0] },
+    });
+
+    const [totalCategoriesReviewed] = await models.Category.aggregate(
+      [
+        {
+          $lookup: {
+            from: models.Product.collection.collectionName,
+            localField: '_id',
+            foreignField: 'categoryId',
+            as: 'product',
+          },
+        },
+        { $unwind: '$product' },
+        {
+          $match: {
+            $expr: { $gt: [{ $size: '$product.feedback' }, 0] },
+          },
+        },
+        {
+          $group: {
+            _id: null,
+            total: { $sum: 1 },
+          },
+        },
+        { $project: { _id: 0 } },
+      ]
+    );
+
+    // TODO fix this for those with totalNoOfReviews
+    return {
+      data: {
+        totalNoOfReviews,
+        totalCustomerComments: totalNoOfReviews,
+        totalProductsReviewed: totalNoOfReviews,
+        totalCategoriesReviewed: totalCategoriesReviewed
+          ? totalCategoriesReviewed.total
+          : 0,
+      },
+    };
   };
 }
 

@@ -7,6 +7,15 @@ class UserRouter extends Router {
   register() {
     this.$router.use(this.$middleware.authentication());
     this.$router
+      .route('/vendors')
+      .get(
+        this.$middleware.authorization([
+          this.CONSTANTS.ACCOUNT_TYPES.ADMIN,
+        ]),
+        UserController.getBusinesses
+      );
+
+    this.$router
       .route('/customer-data')
       .get(
         this.$middleware.authorization([

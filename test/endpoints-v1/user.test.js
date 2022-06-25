@@ -100,5 +100,29 @@ describe('User', () => {
         tags: ['Admin/Search'],
       });
     });
+
+    it('search get customer data', async () => {
+      const res = await server
+        .get('/v2/users/customer-data')
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Users/Admin'],
+      });
+    });
+
+    it('search get businesses', async () => {
+      const res = await server
+        .get('/v2/users/vendors')
+        .set({ Authorization: `Bearer ${admin.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Users/Admin'],
+      });
+    });
   });
 });
