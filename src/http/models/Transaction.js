@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const timestamp = require('./plugins/timestamp');
+
 const {
   ORDER_STATUS,
   TRANSACTION_STATUS,
@@ -23,5 +23,4 @@ const TransactionSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-TransactionSchema.plugin(timestamp);
 module.exports = mongoose.model('Transaction', TransactionSchema);

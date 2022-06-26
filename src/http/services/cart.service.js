@@ -107,7 +107,7 @@ class CartService {
     const { totalCost, totalDistanceCost } = data;
     const amount = Math.ceil(totalCost * totalDistanceCost);
 
-    if (('' + amount).length > 7)
+    if (String(amount).length > 7)
       throw new ServiceError(
         'total cost has exceeded the a million and cant be carried out. Please contact support'
       );
@@ -115,36 +115,23 @@ class CartService {
       amount,
     });
 
-    try {
-      const paymentInit = await paystack.transaction.initialize({
-        metadata: { transactionId: transaction._id },
-        amount: `${amount * 100}`,
-        email: account.email,
-      });
+    const paymentInit = await paystack.transaction.initialize({
+      metadata: { transactionId: transaction._id },
+      amount: `${amount * 100}`,
+      email: account.email,
+    });
 
-      await models.Transaction.findByIdAndUpdate(transaction._id, {
-        reference: paymentInit.reference,
-      });
+    await models.Transaction.findByIdAndUpdate(transaction._id, {
+      reference: paymentInit.reference,
+    });
 
-      return {
-        data: {
-          authorizationUrl: paymentInit.authorizationUrl,
-          accessCode: paymentInit.accessCode,
-          transactionId: transaction.id,
-        },
-      };
-    } catch (err) {
-      if (config.app.env === APP_ENV.TEST) {
-        return {
-          data: {
-            authorizationUrl: 'http://test',
-            accessCode: 'paymentInit.accessCode',
-            transactionId: transaction.id,
-          },
-        };
-      }
-      throw new ServiceError('something went wrong with paystack');
-    }
+    return {
+      data: {
+        authorizationUrl: paymentInit.authorizationUrl,
+        accessCode: paymentInit.accessCode,
+        transactionId: transaction.id,
+      },
+    };
   };
 
   static getCheckoutDetails = async ({ account, createOrder }) => {
@@ -212,6 +199,7 @@ class CartService {
           distanceState[item.product._id.toString()];
         await models.Order.create({
           distance,
+          accountId: account._id,
           quantity: item.quantity,
           productId: item.product._id,
           address: customerAddress._id,

@@ -42,7 +42,8 @@ app.use(passport.initialize());
 // app.use(passport.session())
 
 /* ROUTES */
-app.use('/v1', require('./http/routes'));
+app.use('/v1', require('./http/routes/v1'));
+app.use('/v2', require('./http/routes/v2'));
 app.use('/healthz', (req, res) => res.send('Ok'));
 
 /* EXCEPTION HANDLERS */

@@ -8,25 +8,12 @@
 - bug bounty for beta testers 
 - pagination
 
-
+- reply to feedback
+- send query to account
 1 June
 
-- dissaprove product (A) Done
-- products
-  - product list (A)
-  - category list (A)
-  - total product endpoint (A)
-
-- search by product & categories (A)
 - revenue stats
-- customer summary (A)
-  - list of customer feedback
-  - list of customer data
-  - general summary
-    - total review, comments, categories reviews
-- vendor list (A)
-- search vendor by name (A)
-- suspend user (A)
+
 - dashboard stats (A)
   - gross products cost 
   - gross product sold cost 
@@ -34,8 +21,7 @@
   - active users (by month)
   - active vendors
 
-- list logistics (V)
-- set default logistics (V)
+
 - dashboard stats
 - overview (V)
 

@@ -1,7 +1,10 @@
 const express = require('express');
-const InfoController = require('../controllers/info');
-const { authentication, isAdmin } = require('../../middlewares/auth');
-const { TOKEN_FLAG } = require('../../constants');
+const InfoController = require('../../controllers/info');
+const {
+  authentication,
+  isAdmin,
+} = require('../../../middlewares/auth');
+const { TOKEN_FLAG } = require('../../../constants');
 const router = express.Router();
 
 router.route('/categories').get(InfoController.getCategories);

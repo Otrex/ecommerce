@@ -13,10 +13,9 @@
     "test": "APP_ENV=test mocha",
     "prepare": "npx sync-dotenv",
     "seed": "node ./src/providers/Seeder.js",
-    "seed:products": "APP_ENV=test node ./src/scripts/seeds/products.js"
+    "seed:products": "node ./src/scripts/seeds/products.js"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.4.7",
     "aws-sdk": "^2.1116.0",
     "bcrypt": "^5.0.1",
     "connect-mongo": "^4.6.0",
@@ -31,7 +30,6 @@
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
-    "mail-template-sender": "^1.0.8",
     "moment": "^2.29.2",
     "mongoose": "^5.12.12",
     "mongoose-seed": "^0.6.0",

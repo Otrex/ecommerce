@@ -5,7 +5,6 @@ const {
 } = require('../../constants');
 const { ServiceError } = require('../lib/exceptions');
 const ObjectId = require('mongoose').Types.ObjectId;
-const { mailer, mails } = require('../mails');
 const config = require('../../config');
 const models = require('../models');
 const uuid = require('uuid').v4;
@@ -20,11 +19,8 @@ const {
 const { DateUpdate } = require('../../core/Utils');
 const passport = require('passport');
 
-const { verification } = mails;
-
 class AuthService {
   static socialAuthHandler = (_, req, res) => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     passport.authenticate(
       'google',
       { session: false },
@@ -120,14 +116,7 @@ class AuthService {
       5
     );
 
-    if (config.app.env !== APP_ENV.TEST) {
-      verification.addTo(account.email).addData({
-        account,
-        timedToken,
-      });
-
-      mailer.send(verification);
-    }
+    // TODO send mail
 
     return {
       message: 'proceed to verifying your account',
@@ -155,6 +144,7 @@ class AuthService {
     const account = await models.Account.create({
       password: await bcryptHash(password),
       type: ACCOUNT_TYPES.BUSINESS,
+      isEmailVerified: true,
       phoneNumber,
       firstName,
       lastName,
@@ -179,16 +169,7 @@ class AuthService {
       5
     );
 
-    if (
-      ![APP_ENV.TEST, APP_ENV.DEVELOPMENT].includes(config.app.env)
-    ) {
-      verification.addTo(account.email).addData({
-        account,
-        timedToken,
-      });
-
-      mailer.send(verification);
-    }
+    // TODO send mail
 
     return {
       message: 'proceed to verifying your account',

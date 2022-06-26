@@ -9,7 +9,6 @@ const productData = [
   {
     imageUrl: 'http://placeimg.com/640/480',
     name: 'Rustic Concrete Pizza',
-    categoryId: '628d7714f5073f2014e02f43',
     price: 500,
     weight: 30,
     quantity: 10,
@@ -61,9 +60,10 @@ const run = async () => {
   }
 
   let categories = await Category.find({});
+
   if (!categories.length) {
     await seedCategories();
-    category = await Category.find({});
+    categories = await Category.find({});
   }
 
   for (let product of productData) {
@@ -71,7 +71,7 @@ const run = async () => {
       ...product,
       quantityLeft: product.quantity,
       creatorId: business._id,
-      category: categories[0]._id,
+      categoryId: categories[2]._id,
       status: PRODUCT_STATUS.APPROVED,
     });
   }

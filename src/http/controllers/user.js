@@ -2,6 +2,7 @@ const RequestHandler = require('.');
 const UserService = require('../services/user.service');
 const {
   GetAccountValidator,
+  GetAccountPaginationValidator,
   GetBusinessesPaginationValidator,
 } = require('../validators');
 
@@ -19,6 +20,16 @@ class UserController {
   static searchForBusinesses = RequestHandler({
     validator: GetBusinessesPaginationValidator,
     handler: UserService.searchForBusiness,
+  });
+
+  static getCustomersData = RequestHandler({
+    validator: GetAccountPaginationValidator,
+    handler: UserService.getCustomersData,
+  });
+
+  static getBusinesses = RequestHandler({
+    validator: GetAccountPaginationValidator,
+    handler: UserService.getBusinesses,
   });
 }
 

@@ -33,6 +33,7 @@ let buyer;
 let admin;
 let vendor;
 let categories;
+let company;
 before(async () => {
   vendor = await createAccountReturnToken(userBusiness);
   buyer = await createAccountReturnToken(userCustomer);
@@ -44,7 +45,7 @@ describe('Logistics', () => {
   describe('for logistics', () => {
     it('add logistics companies', async () => {
       const res = await server
-        .post('/v1/admin/logistics/new')
+        .post('/v2/logistics')
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({
           name: faker.name.findName(),
@@ -55,19 +56,32 @@ describe('Logistics', () => {
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
-        tags: ['Logistics/Admin'],
+        tags: ['V2/Logistics/Admin'],
       });
     });
 
     it('get all logistics companies', async () => {
       const res = await server
-        .get('/v1/vendor/logistics')
+        .get('/v2/logistics')
+        .set({ Authorization: `Bearer ${vendor.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      company = res.body.data;
+      documentation.addEndpoint(res, {
+        tags: ['V2/Logistics/Vendor'],
+      });
+    });
+
+    it('set default logistics company', async () => {
+      const res = await server
+        .patch(`/v2/logistics/${company[1]._id}/set-default`)
         .set({ Authorization: `Bearer ${vendor.token}` });
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
-        tags: ['Logistics/Vendor'],
+        tags: ['V2/Logistics/Vendor'],
       });
     });
   });

@@ -34,7 +34,7 @@ class LogisticsService {
     companyId,
     account,
   }) => {
-    let company = await models.Category.findOne({
+    let company = await models.Logistics.findOne({
       _id: new Types.ObjectId(companyId),
     });
 

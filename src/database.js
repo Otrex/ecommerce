@@ -9,7 +9,7 @@ const Logger = require('./core/Logger');
 
 const log = new Logger('database');
 const dbUri =
-  process.env.DB_URI ||
+  process.env.DB_URI.replace('<dbname>', config.db.name) ||
   `mongodb://${config.db.user}:${config.db.password}@${config.db.host}:${config.db.port}/${config.db.name}?authSource=${config.db.authSource}`;
 
 const connect = async () => {

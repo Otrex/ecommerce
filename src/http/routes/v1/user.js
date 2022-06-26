@@ -1,7 +1,10 @@
 const express = require('express');
-const UserController = require('../controllers/user');
-const { authentication, isAdmin } = require('../../middlewares/auth');
-const { TOKEN_FLAG } = require('../../constants');
+const UserController = require('../../controllers/user');
+const {
+  authentication,
+  isAdmin,
+} = require('../../../middlewares/auth');
+const { TOKEN_FLAG } = require('../../../constants');
 const router = express.Router();
 
 router.use(authentication(TOKEN_FLAG.AUTH));

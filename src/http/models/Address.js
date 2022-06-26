@@ -8,9 +8,21 @@ const addressSchema = new Schema({
   lng: {
     type: Number,
   },
-  label: {
+  fullAddress: {
     type: String,
   },
+  country: {
+    type: String,
+  },
+  city: {
+    type: String,
+  },
+  state: {
+    type: String,
+  },
+  street: {
+    type: String,
+  }
 });
 
 const address = mongoose.model('Address', addressSchema);

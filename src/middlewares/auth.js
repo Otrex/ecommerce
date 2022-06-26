@@ -15,7 +15,7 @@ module.exports = {
   authorization: (userTypes = [ACCOUNT_TYPES.CUSTOMER]) => {
     return (req, res, next) => {
       const { account } = req.session;
-      if (account.isSuperAdmin) next();
+      if (account.isSuperAdmin) return next();
       if (!userTypes.includes(account.type)) {
         return next(
           new AuthorizationError(
@@ -99,7 +99,12 @@ module.exports = {
           return next(new AuthenticationError('token is invalid'));
         }
 
-        req.session = { account };
+        req.session = {
+          account,
+          type: account.isSuperAdmin
+            ? ACCOUNT_TYPES.ADMIN
+            : account.type,
+        };
 
         return next();
       } catch (e) {

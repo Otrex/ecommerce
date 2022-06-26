@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Address = require('./Address');
-const timestamp = require('./plugins/timestamp');
 const { Schema } = mongoose;
 
 const customerSchema = new Schema({
@@ -17,7 +16,6 @@ const customerSchema = new Schema({
   },
 });
 
-customerSchema.plugin(timestamp);
 
 const customerModel = mongoose.model('Customer', customerSchema);
 module.exports = customerModel;

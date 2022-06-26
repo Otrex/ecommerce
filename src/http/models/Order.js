@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const timestamp = require('./plugins/timestamp');
 const { ORDER_STATUS } = require('../../constants');
 
 const orderSchema = new mongoose.Schema(
@@ -10,6 +9,10 @@ const orderSchema = new mongoose.Schema(
     productId: {
       type: mongoose.Types.ObjectId,
       ref: 'Product',
+    },
+    accountId: {
+      type: mongoose.Types.ObjectId,
+      ref: 'Account',
     },
     address: {
       type: mongoose.Types.ObjectId,
@@ -40,5 +43,4 @@ const orderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-orderSchema.plugin(timestamp);
 module.exports = mongoose.model('Order', orderSchema);

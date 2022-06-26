@@ -56,9 +56,10 @@ exports.seedAdmin = async () => {
     account = await Account.create({
       isSuperAdmin: true,
       isEmailVerified: true,
+      type: 'admin',
+      password: '1234567',
       emailVerifiedAt: new Date(),
       email: config.admin.email,
-      password: '1234',
     });
   }
 

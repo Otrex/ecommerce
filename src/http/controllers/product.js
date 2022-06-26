@@ -4,6 +4,8 @@ const {
   GetProductValidator,
   AddFeedbackValidator,
   LikeProductValidator,
+  SearchProductValidator,
+  GetCategoriesStats,
   CreateProductValidator,
   ApproveProductValidator,
   GetProductDetailsValidator,
@@ -63,9 +65,37 @@ class ProductController {
     handler: ProductService.addFeedback,
   });
 
+  static getCategoryStats = RequestHandler({
+    validator: GetCategoriesStats,
+    handler: ProductService.getCategoryStats,
+  });
+
+  static getProducts_Admin = RequestHandler({
+    validator: GetCategoriesStats,
+    handler: ProductService.getProductsAdmin,
+  });
+
   static getFeedback_Business = RequestHandler({
     validator: GetProductValidator,
     handler: ProductService.getFeedback,
+  });
+
+  static getFeedback_Admin = RequestHandler({
+    validator: GetProductValidator,
+    handler: ProductService.getFeedback_Admin,
+  });
+
+  static searchForProduct = RequestHandler({
+    validator: SearchProductValidator,
+    handler: ProductService.searchForProduct,
+  });
+
+  static getReviewGeneralStats = RequestHandler({
+    handler: ProductService.getReviewGeneralStats,
+  });
+
+  static grossProductStats = RequestHandler({
+    handler: ProductService.grossProductStats,
   });
 }
 

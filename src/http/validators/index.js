@@ -31,6 +31,12 @@ class AddCategoryValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     name: { type: 'string', trim: true, min: 1 },
+    description: {
+      type: 'string',
+      trim: true,
+      min: 1,
+      optional: true,
+    },
   };
 }
 
@@ -120,7 +126,7 @@ class GetBusinessProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     ...paginationSchemaFragment,
-    status: { type: 'string', min: 0, trim: true },
+    status: { type: 'string', min: 0, trim: true, default: '' },
   };
 }
 
@@ -146,10 +152,27 @@ class GetProductValidator extends GenericValidator {
   };
 }
 
+class SearchProductValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    ...paginationSchemaFragment,
+    query: { type: 'string', default: '' },
+  };
+}
+
+class GetCategoriesStats extends GetProductValidator {}
+
 class GetBusinessesPaginationValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
     query: { type: 'string', min: 0, trim: true },
+    ...paginationSchemaFragment,
+  };
+}
+
+class GetAccountPaginationValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
     ...paginationSchemaFragment,
   };
 }
@@ -178,7 +201,7 @@ class BusinessRegisterValidator extends GenericValidator {
           type: 'object',
           props: {
             lat: { type: 'number', convert: true },
-            label: { type: 'string', trim: true, min: 5 },
+            fullAddress: { type: 'string', trim: true, min: 5 },
             long: { type: 'number', convert: true },
           },
         },
@@ -266,8 +289,26 @@ class GetAccountValidator extends GenericValidator {
   };
 }
 
+// class AddLogisticsValidator extends GenericValidator {
+//   schema = {
+//     $$strict: 'remove',
+//     name: { type: 'string', trim: true, min: 1 },
+//     description: { type: 'string' },
+//     costPerUnit: { type: 'number', positive: true },
+//     isDefault: { type: 'boolean', optional: true, default: false },
+//   };
+// }
+
+// class SetDefaultLogisticsValidator extends GenericValidator {
+//   schema = {
+//     $$strict: 'remove',
+//     companyId: { type: 'objectID' },
+//   };
+// }
 module.exports = {
   LoginValidator,
+  AddLogisticsValidator,
+  SetDefaultLogisticsValidator,
   RegisterValidator,
   AddToCartValidator,
   GetAccountValidator,
@@ -276,6 +317,7 @@ module.exports = {
   AddLogisticsValidator,
   CreateDropOffValidator,
   PasswordResetValidator,
+  GetCategoriesStats,
   DeleteFromCartValidator,
   SetDefaultLogisticsValidator,
   InitPasswordResetValidator,
@@ -283,10 +325,12 @@ module.exports = {
   GetFavoriteProductValidator,
   GetProductByCategoryValidator,
   GetBusinessesPaginationValidator,
+  GetAccountPaginationValidator,
   ResendVerificationEmailValidator,
   GetBusinessProductValidator,
   CustomerRegisterValidator,
   BusinessRegisterValidator,
+  SearchProductValidator,
   ApproveProductValidator,
   CreateProductValidator,
   AddFeedbackValidator,
