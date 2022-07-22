@@ -155,7 +155,7 @@ class AuthService {
     const business = await models.Business.create({
       ...businessDetails,
       accountId: account._id,
-      address: await models.Address.create({ ...address }),
+      address: await models.Address.create({ ...(address || {}) }),
     });
 
     await models.BusinessPayment.create({
