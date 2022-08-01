@@ -64,7 +64,7 @@ class AuthService {
 
     let token;
     let tokenType;
-    if (account.isEmailVerified) {
+    if (account.isEmailVerified || account.type === ACCOUNT_TYPES.CUSTOMER) {
       tokenType = TOKEN_FLAG.AUTH;
       token = await generateJWTToken({
         accountId: account._id,
