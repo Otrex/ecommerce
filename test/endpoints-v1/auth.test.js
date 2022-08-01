@@ -64,7 +64,7 @@ describe('Authentication', () => {
           address: {
             lat: 324.43,
             long: 2424.42,
-            label: faker.address.country(),
+            fullAddress: faker.address.country(),
           },
         },
         paymentDetails: {

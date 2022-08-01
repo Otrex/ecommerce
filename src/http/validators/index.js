@@ -290,6 +290,18 @@ class GetAccountValidator extends GenericValidator {
   };
 }
 
+class UpdateAddressValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    fullAddress: { type: 'string', trim: true, min: 5 },
+    country: { type: 'string', optional: true },
+    state: { type: 'string', optional: true },
+    street: { type: 'string', optional: true },
+    long: { type: 'number', convert: true },
+    lat: { type: 'number', convert: true },
+  };
+}
+
 // class AddLogisticsValidator extends GenericValidator {
 //   schema = {
 //     $$strict: 'remove',
@@ -310,6 +322,7 @@ module.exports = {
   LoginValidator,
   AddLogisticsValidator,
   SetDefaultLogisticsValidator,
+  UpdateAddressValidator,
   RegisterValidator,
   AddToCartValidator,
   GetAccountValidator,

@@ -353,15 +353,19 @@ class UserService {
       await models.Customer.findByIdAndUpdate( user._id, { address: addressId });
     }
 
-    await models.Address.findByIdAndUpdate(addressId, {
+    const $address = await models.Address.findByIdAndUpdate(addressId, {
       lat,
       lng,
       fullAddress,
       country,
       street,
       state,
-    })
+    }, { new: true })
 
+    return {
+      data: $address,
+      message: "successful"
+    }
   }
 }
 

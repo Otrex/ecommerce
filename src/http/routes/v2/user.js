@@ -24,6 +24,15 @@ class UserRouter extends Router {
         UserController.getCustomersData
       );
 
+    this.$router.route('/address')
+      .patch(
+        this.$middleware.authorization([
+          this.CONSTANTS.ACCOUNT_TYPES.CUSTOMER,
+          this.CONSTANTS.ACCOUNT_TYPES.BUSINESS,
+        ]),
+        UserController.updateAddress
+      )
+
     return this;
   }
 }
