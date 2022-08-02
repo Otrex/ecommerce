@@ -13,6 +13,7 @@
     "test": "APP_ENV=test mocha",
     "prepare": "npx sync-dotenv",
     "seed": "node ./src/providers/Seeder.js",
+    "seed:all": "node ./src/scripts/seeds/index.js",
     "seed:products": "node ./src/scripts/seeds/products.js"
   },
   "dependencies": {

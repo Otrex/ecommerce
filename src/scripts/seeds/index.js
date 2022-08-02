@@ -69,8 +69,15 @@ exports.seedAdmin = async () => {
 };
 
 if (require.main === module) {
-  seedAdmin();
-  seedCategories();
-  seedLogistics();
+  const db = new DB();
+  db.connect()
+    .then(async () => {
+      await seedAdmin();
+      await seedCategories();
+      await seedLogistics();
+      console.log('Seeding Completed');
+    })
+    .catch(console.error)
+    .finally(() => process.exit(-1))
   // seed();
 }
