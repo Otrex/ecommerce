@@ -73,9 +73,9 @@ if (require.main === module) {
   const db = new DB();
   db.connect()
     .then(async () => {
-      await seedAdmin();
-      await seedCategories();
-      await seedLogistics();
+      await exports.seedAdmin();
+      await exports.seedCategories();
+      await exports.seedLogistics();
       console.log('Seeding Completed');
     })
     .catch(console.error)
