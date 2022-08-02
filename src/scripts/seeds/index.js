@@ -1,4 +1,5 @@
 const seeder = require('mongoose-seed');
+const { DB } = require('../../database');
 const Account = require('../../http/models/Account');
 const Category = require('../../http/models/Category');
 const { dbUri } = require('../../database');
