@@ -3,11 +3,21 @@ const UserService = require('../services/user.service');
 const {
   UpdateAddressValidator,
   GetAccountValidator,
+  UpdateCustomerValidator,
   GetAccountPaginationValidator,
+  UpdateBusinessValidator,
   GetBusinessesPaginationValidator,
 } = require('../validators');
 
 class UserController {
+  static getMe = RequestHandler({
+    handler: UserService.getMe,
+  });
+
+  static getProfile = RequestHandler({
+    handler: UserService.getProfile,
+  });
+
   static suspendUser = RequestHandler({
     validator: GetAccountValidator,
     handler: UserService.suspendUser,
@@ -36,6 +46,16 @@ class UserController {
   static updateAddress = RequestHandler({
     validator: UpdateAddressValidator,
     handler: UserService.setAddress,
+  });
+
+  static updateCustomer = RequestHandler({
+    validator: UpdateCustomerValidator,
+    handler: UserService.updateCustomerDetails,
+  });
+
+  static updateBusiness = RequestHandler({
+    validator: UpdateBusinessValidator,
+    handler: UserService.updateBusinessDetails,
   });
 }
 

@@ -73,4 +73,68 @@ describe('User Update test', () => {
       tags: ['V2/User'],
     });
   });
+
+  it('should update vendors profile', async () => {
+    const res = await server
+      .patch('/v2/users/vendors')
+      .set({ Authorization: `Bearer ${vendor.token}` })
+      .send({
+        "sellerDetails": {
+          "phoneNumber": "+2345678765456",
+          "fullName": "Carlo Feest"
+        },
+        "businessDetails": {
+          "type": "Realigned contextually-based structure",
+          "name": "Quality-focused zero tolerance attitude",
+          "cacNumber": "Virtual web-enabled forecast",
+          "state": "Texas",
+          "lga": "Illinois",
+        },
+        "paymentDetails": {
+          "accountNumber": "456789000987",
+          "bank": "Stand-alone transitional groupware",
+          "accountName": "Conrad Lesch",
+          "payoutFrequency": 5
+        }
+      });
+
+    documentation.addEndpoint(res, {
+      tags: ['V2/User/Update'],
+    });
+  });
+
+  it('should update vendors profile', async () => {
+    const res = await server
+      .patch('/v2/users/customer-data')
+      .set({ Authorization: `Bearer ${buyer.token}` })
+      .send({
+        "firstName": "Clovis",
+        "lastName": "Weber",
+        "gender": "male"
+      });
+
+    documentation.addEndpoint(res, {
+      tags: ['V2/User/Update'],
+    });
+  });
+
+  it('should get user details', async () => {
+    const res = await server
+      .get('/v2/users/me')
+      .set({ Authorization: `Bearer ${buyer.token}` });
+
+    documentation.addEndpoint(res, {
+      tags: ['V2/User/Me'],
+    });
+  });
+
+  it('should get profile', async () => {
+    const res = await server
+      .get('/v2/users/profile')
+      .set({ Authorization: `Bearer ${vendor.token}` });
+
+    documentation.addEndpoint(res, {
+      tags: ['V2/User/Profile'],
+    });
+  });
 });

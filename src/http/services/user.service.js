@@ -7,6 +7,63 @@ const { omit } = require('lodash');
 const { ACCOUNT_TYPES } = require('../../constants');
 
 class UserService {
+  static getMe = async ({ account }) => {
+    return {
+      data: {
+        ...(await models.Account.findById(account._id)).toJSON(),
+        password: undefined,
+      }
+    }
+  }
+
+  static getProfile = async ({ account }) => {
+    let profile;
+    if (account.type === ACCOUNT_TYPES.CUSTOMER) {
+      profile = await models.Customer
+        .findOne({ accountId: account._id })
+        .populate({
+          path: 'accountId',
+          select: ['-password']
+        })
+        .populate('address')
+        .exec()
+
+      if (!profile) throw new ServiceError('profile not found')
+
+      profile = {
+        ...profile.toJSON(),
+        accountId: undefined,
+        account: profile.accountId,
+      }
+    }
+
+    if (account.type === ACCOUNT_TYPES.BUSINESS) {
+      profile = await models.Business
+        .findOne({ accountId: account._id })
+        .populate({
+          path: 'accountId',
+          select: ['-password']
+        })
+        .populate('address')
+        .populate('logisticsId')
+        .exec();
+
+      if (!profile) throw new ServiceError('profile not found')
+
+      profile = {
+        ...profile.toJSON(),
+        accountId: undefined,
+        logisticsId: undefined,
+        account: profile.accountId,
+        logistics: profile.logisticsId
+      }
+    }
+
+    return {
+      data: profile,
+    }
+  }
+
   static suspendUser = async ({ accountId }) => {
     const account = await models.Account.findById(accountId);
     if (!account) throw new NotFoundError('account not found');
@@ -37,13 +94,15 @@ class UserService {
     firstName,
     lastName,
     gender,
-    accountId,
+    account,
   }) => {
     const accountExist = await models.Account.findOne({
-      _id: accountId,
+      _id: account._id,
     });
     if (!accountExist)
       throw new ServiceError('account already exist');
+
+    const accountId = accountExist._id;
 
     if (firstName) {
       await models.Account.findByIdAndUpdate(
@@ -81,19 +140,20 @@ class UserService {
     sellerDetails,
     businessDetails,
     paymentDetails,
-    accountId,
+    account,
   }) => {
     const { fullName, phoneNumber, email } = sellerDetails;
 
-    const accountExist = await models.Account.findOne({ email });
+    const accountExist = await models.Account.findOne({ _id: account._id });
     if (!accountExist)
       throw new ServiceError('account already exist');
 
+    const accountId = accountExist._id;
     const [firstName, lastName] = fullName.split(' ');
 
     if (sellerDetails) {
-      const account = await models.Account.findByIdAndUpdate(
-        accountId,
+      await models.Account.findByIdAndUpdate(
+        account._id,
         {
           ...sellerDetails,
           firstName,

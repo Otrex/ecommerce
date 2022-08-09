@@ -122,6 +122,15 @@ class CustomerRegisterValidator extends GenericValidator {
   };
 }
 
+class UpdateCustomerValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    firstName: { type: 'string', trim: true, min: 1, optional: true },
+    lastName: { type: 'string', trim: true, min: 1, optional: true  },
+    gender: { type: 'string', trim: true, min: 4, optional: true  },
+  };
+}
+
 class GetBusinessProductValidator extends GenericValidator {
   schema = {
     $$strict: 'remove',
@@ -215,6 +224,50 @@ class BusinessRegisterValidator extends GenericValidator {
         bank: { type: 'string', trim: true, min: 5 },
         accountName: { type: 'string', trim: true, min: 5 },
         payoutFrequency: { type: 'number', convert: true },
+      },
+    },
+  };
+}
+
+class UpdateBusinessValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    sellerDetails: {
+      type: 'object',
+      optional: true,
+      props: {
+        fullName: { type: 'string', trim: true, min: 5, optional: true },
+        phoneNumber: { type: 'string', trim: true, min: 5, optional: true },
+      },
+    },
+    businessDetails: {
+      type: 'object',
+      optional: true,
+      props: {
+        type: { type: 'string', trim: true, min: 5, optional: true },
+        name: { type: 'string', trim: true, min: 5,  optional: true },
+        cacNumber: { type: 'string', trim: true, min: 5,  optional: true },
+        state: { type: 'string', trim: true,  optional: true },
+        lga: { type: 'string', trim: true, min: 5,  optional: true },
+        address: {
+          type: 'object',
+          optional: true,
+          props: {
+            lat: { type: 'number', convert: true },
+            fullAddress: { type: 'string', trim: true, min: 5 },
+            long: { type: 'number', convert: true },
+          },
+        },
+      },
+    },
+    paymentDetails: {
+      type: 'object',
+      optional: true,
+      props: {
+        accountNumber: { type: 'string', trim: true, min: 5,  optional: true },
+        bank: { type: 'string', trim: true, min: 5,  optional: true },
+        accountName: { type: 'string', trim: true, min: 5,  optional: true },
+        payoutFrequency: { type: 'number', convert: true,  optional: true },
       },
     },
   };
@@ -329,6 +382,7 @@ class AddToWaitingListValidator extends GenericValidator {
 module.exports = {
   LoginValidator,
   AddLogisticsValidator,
+  UpdateCustomerValidator,
   SetDefaultLogisticsValidator,
   UpdateAddressValidator,
   RegisterValidator,
@@ -341,6 +395,7 @@ module.exports = {
   PasswordResetValidator,
   GetCategoriesStats,
   DeleteFromCartValidator,
+  UpdateBusinessValidator,
   SetDefaultLogisticsValidator,
   InitPasswordResetValidator,
   GetProductDetailsValidator,

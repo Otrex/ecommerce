@@ -6,6 +6,15 @@ class UserRouter extends Router {
 
   register() {
     this.$router.use(this.$middleware.authentication());
+    this.$router.get('/me', UserController.getMe);
+    this.$router.get(
+      '/profile',
+      this.$middleware.authorization([
+        this.CONSTANTS.ACCOUNT_TYPES.CUSTOMER,
+        this.CONSTANTS.ACCOUNT_TYPES.BUSINESS,
+      ]),
+      UserController.getProfile
+    );
     this.$router
       .route('/vendors')
       .get(
@@ -13,6 +22,12 @@ class UserRouter extends Router {
           this.CONSTANTS.ACCOUNT_TYPES.ADMIN,
         ]),
         UserController.getBusinesses
+      )
+      .patch(
+        this.$middleware.authorization([
+          this.CONSTANTS.ACCOUNT_TYPES.BUSINESS,
+        ]),
+        UserController.updateBusiness
       );
 
     this.$router
@@ -22,6 +37,12 @@ class UserRouter extends Router {
           this.CONSTANTS.ACCOUNT_TYPES.ADMIN,
         ]),
         UserController.getCustomersData
+      )
+      .patch(
+        this.$middleware.authorization([
+          this.CONSTANTS.ACCOUNT_TYPES.CUSTOMER,
+        ]),
+        UserController.updateCustomer
       );
 
     this.$router
