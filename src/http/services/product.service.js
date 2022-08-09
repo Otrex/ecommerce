@@ -541,14 +541,14 @@ class ProductService {
       { $project: { _id: 0 } },
     ]);
 
-    const startDate =  moment().subtract(16, 'week').toDate();
+    const startDate = moment().subtract(16, 'week').toDate();
     const chart = await models.Product.aggregate([
       {
         $match: {
           createdAt: {
-            $gte: startDate
-          }
-        }
+            $gte: startDate,
+          },
+        },
       },
       {
         $lookup: {
@@ -580,17 +580,15 @@ class ProductService {
         $project: {
           totalProductCost: 1,
           totalSoldProductCost: 1,
-          createdAt: 1
-        }
-      }
+          createdAt: 1,
+        },
+      },
     ]);
-
-    
 
     return {
       data: {
         grossStats: result ? result : null,
-        chart: filterDates(chart, "startOftheWeek"),
+        chart: filterDates(chart, 'startOftheWeek'),
         startDate,
       },
     };

@@ -8,7 +8,7 @@ const {
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const moment = require('moment');
-const { chain } = require('lodash')
+const { chain } = require('lodash');
 
 const models = require('../http/models');
 
@@ -99,16 +99,20 @@ exports.paginateResponse = (data = [[], 0], page, take) => {
   };
 };
 
-exports.filterDates = (dateArray = [], key = "day", startOf = "week") => {
+exports.filterDates = (
+  dateArray = [],
+  key = 'day',
+  startOf = 'week'
+) => {
   const occurrenceDay = (occurrence) => {
     return moment(occurrence.createdAt).startOf(startOf).format();
   };
 
-  const groupToDay = (group, day) => ({ [key] : day, group });
+  const groupToDay = (group, day) => ({ [key]: day, group });
   return chain(dateArray)
     .groupBy(occurrenceDay)
     .map(groupToDay)
-    .orderBy(key, "desc")
+    .orderBy(key, 'desc')
     .value();
 };
 

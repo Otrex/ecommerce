@@ -18,6 +18,7 @@ const {
 } = require('../../scripts/utils');
 const { DateUpdate } = require('../../core/Utils');
 const passport = require('passport');
+const mailService = require('./mail.service');
 
 class AuthService {
   static socialAuthHandler = (_, req, res) => {
@@ -64,7 +65,10 @@ class AuthService {
 
     let token;
     let tokenType;
-    if (account.isEmailVerified || account.type === ACCOUNT_TYPES.CUSTOMER) {
+    if (
+      account.isEmailVerified ||
+      account.type === ACCOUNT_TYPES.CUSTOMER
+    ) {
       tokenType = TOKEN_FLAG.AUTH;
       token = await generateJWTToken({
         accountId: account._id,
@@ -170,6 +174,11 @@ class AuthService {
     );
 
     // TODO send mail
+    mailService.sendVerificationMail(
+      email,
+      firstName,
+      timedToken.token
+    ).catch(console.log);
 
     return {
       message: 'proceed to verifying your account',

@@ -115,11 +115,15 @@ class CartService {
       amount,
     });
 
-    const paymentInit = await paystack.transaction.initialize({
-      metadata: { transactionId: transaction._id },
-      amount: `${amount * 100}`,
-      email: account.email,
-    });
+    try {
+      const paymentInit = await paystack.transaction.initialize({
+        metadata: { transactionId: transaction._id },
+        amount: `${amount * 100}`,
+        email: account.email,
+      });
+    } catch (err) {
+      throw new ServiceError(JSON.stringify(err.message))
+    }
 
     await models.Transaction.findByIdAndUpdate(transaction._id, {
       reference: paymentInit.reference,

@@ -10,6 +10,7 @@ module.exports = {
     frontendDomain: process.env.APP_FRONTEND_DOMAIN,
     frontendPath: process.env.APP_FRONTEND_PATH,
     bcryptRounds: 10,
+    email: process.env.APP_EMAIL,
   },
   db: {
     name:

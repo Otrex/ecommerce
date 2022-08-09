@@ -28,10 +28,33 @@ class SendChamp {
     });
   }
 
-  async sendEmail() {
+  async sendEmail(subject, user, template) {
     const emailUrl = 'https://api.sendchamp.com/api/v1/email/send';
 
-    await axios({});
+    await axios({
+      method: 'POST',
+      url: emailUrl,
+      headers: {
+        ...this.headers,
+      },
+      data: {
+        to: [
+          {
+            email: user?.email,
+            name: user?.firstName,
+          },
+        ],
+        from: {
+          email: config.app.email,
+          name: config.app.name,
+        },
+        message_body: {
+          type: 'text/html',
+          value: template,
+        },
+        subject,
+      },
+    });
   }
 }
 

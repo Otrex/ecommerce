@@ -302,6 +302,14 @@ class UpdateAddressValidator extends GenericValidator {
   };
 }
 
+class AddToWaitingListValidator extends GenericValidator {
+  schema = {
+    $$strict: 'remove',
+    email: { type: 'email' },
+    otherDetails: { type: 'any', optional: true },
+  };
+}
+
 // class AddLogisticsValidator extends GenericValidator {
 //   schema = {
 //     $$strict: 'remove',
@@ -344,6 +352,7 @@ module.exports = {
   GetBusinessProductValidator,
   CustomerRegisterValidator,
   BusinessRegisterValidator,
+  AddToWaitingListValidator,
   SearchProductValidator,
   ApproveProductValidator,
   CreateProductValidator,

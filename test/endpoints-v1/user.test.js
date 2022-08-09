@@ -94,7 +94,7 @@ describe('User', () => {
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({});
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Admin/Search'],
@@ -106,7 +106,7 @@ describe('User', () => {
         .get('/v2/users/customer-data')
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Users/Admin'],
@@ -118,7 +118,7 @@ describe('User', () => {
         .get('/v2/users/vendors')
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Users/Admin'],

@@ -22,7 +22,7 @@ const addressSchema = new Schema({
   },
   street: {
     type: String,
-  }
+  },
 });
 
 const address = mongoose.model('Address', addressSchema);

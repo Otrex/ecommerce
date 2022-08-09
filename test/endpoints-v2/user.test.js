@@ -42,33 +42,35 @@ before(async () => {
 });
 
 describe('User Update test', () => {
-  it ('should update vendors address', async () => {
-    const res = await server.patch('/v2/users/address')
-    .set({ Authorization: `Bearer ${vendor.token}` })
-    .send({
-      fullAddress: faker.address.streetAddress(),
-      country: faker.address.country(),
-      long: faker.address.longitude(),
-      street: faker.address.streetAddress(),
-      lat: faker.address.latitude(),
-      state: faker.address.state(),
-    });
-  })
+  it('should update vendors address', async () => {
+    const res = await server
+      .patch('/v2/users/address')
+      .set({ Authorization: `Bearer ${vendor.token}` })
+      .send({
+        fullAddress: faker.address.streetAddress(),
+        country: faker.address.country(),
+        long: faker.address.longitude(),
+        street: faker.address.streetAddress(),
+        lat: faker.address.latitude(),
+        state: faker.address.state(),
+      });
+  });
 
-  it ('should update vendors address', async () => {
-    const res = await server.patch('/v2/users/address')
-    .set({ Authorization: `Bearer ${buyer.token}` })
-    .send({
-      fullAddress: faker.address.streetAddress(),
-      country: faker.address.country(),
-      long: faker.address.longitude(),
-      street: faker.address.streetAddress(),
-      lat: faker.address.latitude(),
-      state: faker.address.state(),
-    });
+  it('should update vendors address', async () => {
+    const res = await server
+      .patch('/v2/users/address')
+      .set({ Authorization: `Bearer ${buyer.token}` })
+      .send({
+        fullAddress: faker.address.streetAddress(),
+        country: faker.address.country(),
+        long: faker.address.longitude(),
+        street: faker.address.streetAddress(),
+        lat: faker.address.latitude(),
+        state: faker.address.state(),
+      });
 
     documentation.addEndpoint(res, {
       tags: ['V2/User'],
     });
-  })
-})
+  });
+});

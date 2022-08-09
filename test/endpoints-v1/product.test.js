@@ -47,7 +47,7 @@ describe('Product', () => {
         .get('/v1/info/categories')
         .set({ Authorization: `Bearer ${result.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Categories'],
@@ -62,7 +62,7 @@ describe('Product', () => {
           name: faker.lorem.words(),
         });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Categories/Admin'],
@@ -88,7 +88,7 @@ describe('Product', () => {
           description: faker.lorem.sentences(),
         });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       product = res.body.data;
       documentation.addEndpoint(res, {
@@ -102,7 +102,7 @@ describe('Product', () => {
         .set({ Authorization: `Bearer ${admin.token}` })
         .send({});
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Admin'],
@@ -123,7 +123,7 @@ describe('Product', () => {
           reason: 'this is because it is the best',
         });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Admin'],
@@ -145,7 +145,7 @@ describe('Product', () => {
           rating: 4,
         });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Buyer'],
@@ -164,7 +164,7 @@ describe('Product', () => {
         .set({ Authorization: `Bearer ${buyer.token}` })
         .send({});
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Buyer'],
@@ -182,7 +182,7 @@ describe('Product', () => {
         `/v1/public/products/${product._id}`
       );
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product'],
@@ -200,7 +200,7 @@ describe('Product', () => {
         '/v1/public/products?page=1&limit=20'
       );
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product'],
@@ -212,7 +212,7 @@ describe('Product', () => {
         .get('/v1/buyer/products/favorites?page=1&limit=20')
         .set({ Authorization: `Bearer ${buyer.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Buyer'],
@@ -226,7 +226,7 @@ describe('Product', () => {
         )
         .set({ Authorization: `Bearer ${result.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Vendor'],
@@ -238,7 +238,7 @@ describe('Product', () => {
         .get('/v1/vendor/products/feedback')
         .set({ Authorization: `Bearer ${result.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product/Vendor'],
@@ -250,7 +250,7 @@ describe('Product', () => {
         .get('/v2/products/feedback')
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product/Admin'],
@@ -262,7 +262,7 @@ describe('Product', () => {
         `/v1/public/categories/${categories[0]._id.toString()}/products?page=1&limit=20`
       );
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['Product'],
@@ -280,7 +280,7 @@ describe('Product', () => {
         .get(`/v2/products/stats`)
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product/Admin'],
@@ -290,7 +290,7 @@ describe('Product', () => {
     it('it product search', async () => {
       const res = await server.get(`/v2/products/search`);
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product'],
@@ -302,7 +302,7 @@ describe('Product', () => {
         .get(`/v2/products/reviews/stats`)
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product/Admin'],
@@ -314,7 +314,7 @@ describe('Product', () => {
         .get(`/v2/products/gross/stats`)
         .set({ Authorization: `Bearer ${admin.token}` });
 
-      console.log(res.body, res.error);
+      // console.log(res.body, res.error);
       assert.equal(res.status, 200);
       documentation.addEndpoint(res, {
         tags: ['V2/Product/Admin'],
@@ -322,3 +322,19 @@ describe('Product', () => {
     });
   });
 });
+
+
+describe('WaitList', () => {
+  it('it should add to waitlist', async () => {
+    const res = await server.post(`/v1/public/waiting-list`).send({
+      email: faker.internet.email(),
+    });
+
+    console.log(res.body, res.error);
+    assert.equal(res.status, 200);
+    documentation.addEndpoint(res, {
+      tags: ['V1/WaitingList'],
+    });
+  });
+});
+

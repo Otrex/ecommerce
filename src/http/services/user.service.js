@@ -33,6 +33,109 @@ class UserService {
     };
   };
 
+  static updateCustomerDetails = async ({
+    firstName,
+    lastName,
+    gender,
+    accountId,
+  }) => {
+    const accountExist = await models.Account.findOne({
+      _id: accountId,
+    });
+    if (!accountExist)
+      throw new ServiceError('account already exist');
+
+    if (firstName) {
+      await models.Account.findByIdAndUpdate(
+        accountId,
+        {
+          firstName,
+        }
+      );
+    }
+
+    if (lastName) {
+      await models.Account.findByIdAndUpdate(
+        accountId,
+        {
+          lastName,
+        }
+      );
+    }
+
+    if (gender) {
+      await models.Customer.findOneAndUpdate(
+        { accountId: account._id },
+        {
+          gender,
+        }
+      );
+    }
+
+    return {
+      message: 'account update successful',
+    };
+  };
+
+  static updateBusinessDetails = async ({
+    sellerDetails,
+    businessDetails,
+    paymentDetails,
+    accountId,
+  }) => {
+    const { fullName, phoneNumber, email } = sellerDetails;
+
+    const accountExist = await models.Account.findOne({ email });
+    if (!accountExist)
+      throw new ServiceError('account already exist');
+
+    const [firstName, lastName] = fullName.split(' ');
+
+    if (sellerDetails) {
+      const account = await models.Account.findByIdAndUpdate(
+        accountId,
+        {
+          ...sellerDetails,
+          firstName,
+          lastName,
+        }
+      );
+    }
+
+    const business = await models.Business.findOne({ accountId });
+    if (!business) throw new ServiceError('business does not exists');
+
+    if (businessDetails) {
+      await models.Business.findOneAndUpdate(
+        { accountId },
+        {
+          ...businessDetails,
+        }
+      );
+
+      if (businessDetails.address) {
+        await models.Address.findByIdAndUpdate(
+          business.address,
+          businessDetails.address
+        );
+      }
+    }
+
+    if (paymentDetails) {
+      await models.BusinessPayment.findOneAndUpdate(
+        { businessId: business._id },
+        {
+          ...paymentDetails,
+        }
+      );
+    }
+
+    return {
+      message: 'account update successful',
+    };
+  };
+
+
   static searchForBusiness = async ({ query, page, limit }) => {
     const skip = calcSkip({ page, limit });
     const [result] = await models.Business.aggregate([
@@ -334,14 +437,26 @@ class UserService {
   };
 
   // NOT added to route
-  static setAddress = async ({ account, lat, lng, fullAddress, country, state, street }) => {
+  static setAddress = async ({
+    account,
+    lat,
+    lng,
+    fullAddress,
+    country,
+    state,
+    street,
+  }) => {
     let user;
     if (account.type === ACCOUNT_TYPES.BUSINESS) {
-      user = await models.Business.findOne({ accountId: account._id });
+      user = await models.Business.findOne({
+        accountId: account._id,
+      });
     }
 
     if (account.type === ACCOUNT_TYPES.CUSTOMER) {
-      user = await models.Customer.findOne({ accountId: account._id });
+      user = await models.Customer.findOne({
+        accountId: account._id,
+      });
     }
 
     if (!user) throw new NotFoundError('account not found');
@@ -350,23 +465,29 @@ class UserService {
 
     if (!addressId && account.type === ACCOUNT_TYPES.CUSTOMER) {
       addressId = await models.Address.create({});
-      await models.Customer.findByIdAndUpdate( user._id, { address: addressId });
+      await models.Customer.findByIdAndUpdate(user._id, {
+        address: addressId,
+      });
     }
 
-    const $address = await models.Address.findByIdAndUpdate(addressId, {
-      lat,
-      lng,
-      fullAddress,
-      country,
-      street,
-      state,
-    }, { new: true })
+    const $address = await models.Address.findByIdAndUpdate(
+      addressId,
+      {
+        lat,
+        lng,
+        fullAddress,
+        country,
+        street,
+        state,
+      },
+      { new: true }
+    );
 
     return {
       data: $address,
-      message: "successful"
-    }
-  }
+      message: 'successful',
+    };
+  };
 }
 
 module.exports = UserService;

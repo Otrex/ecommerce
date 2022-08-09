@@ -42,6 +42,7 @@ exports.seedCategories = async () => {
 };
 
 const logisticsCompanies = require('./data/logisticsCompanies');
+const { ACCOUNT_TYPES } = require('../../constants');
 exports.seedLogistics = async () => {
   await Promise.all(
     logisticsCompanies.map((log) => checkOrInsert(Logistics, log))
@@ -57,16 +58,12 @@ exports.seedAdmin = async () => {
     account = await Account.create({
       isSuperAdmin: true,
       isEmailVerified: true,
-      type: 'admin',
-      password: '1234567',
+      type: ACCOUNT_TYPES.ADMIN,
+      password: await bcryptHash(config.admin.password),
       emailVerifiedAt: new Date(),
       email: config.admin.email,
     });
   }
-
-  await Account.findByIdAndUpdate(account._id, {
-    password: await bcryptHash(config.admin.password),
-  });
 };
 
 if (require.main === module) {
@@ -79,6 +76,6 @@ if (require.main === module) {
       console.log('Seeding Completed');
     })
     .catch(console.error)
-    .finally(() => process.exit(-1))
+    .finally(() => process.exit(-1));
   // seed();
 }
