@@ -251,6 +251,83 @@ class ProductService {
     };
   };
 
+  // TODO :: ship out
+  static getCategoryStats_Vendor = async ({ account, page, limit }) => {
+    const skip = calcSkip({ page, limit });
+    const vendor = await models.Business.findOne({
+      accountId: account._id,
+    });
+    if (!vendor) throw new NotFoundError('vendor not found');
+
+    const [data] = await models.Category.aggregate([
+      {
+        $lookup: {
+          from: models.Product.collection.collectionName,
+          localField: '_id',
+          foreignField: 'categoryId',
+          as: 'product',
+          pipeline: [
+            {
+              $group: {
+                _id: null,
+                totalProducts: { $sum: 1 },
+                totalProductQuantity: { $sum: '$quantity' },
+              },
+            },
+            { $project: { _id: 0 } },
+          ],
+        },
+      },
+      {
+        $match: {
+          'product.creatorId': vendor._id,
+        }
+      },
+      {
+        $addFields: {
+          statistics: {
+            $arrayElemAt: ['$product', 0],
+          },
+        },
+      },
+      {
+        $project: {
+          product: 0,
+        },
+      },
+      {
+        $facet: {
+          categories: [{ $skip: skip }, { $limit: limit }],
+          totalCount: [
+            {
+              $count: 'count',
+            },
+          ],
+        },
+      },
+      { $unwind: '$totalCount' },
+      {
+        $addFields: {
+          count: '$totalCount.count',
+        },
+      },
+      {
+        $project: {
+          totalCount: 0,
+        },
+      },
+    ]);
+
+    const totalProducts = await models.Product.countDocuments();
+    const categories = data ? [data.categories, data.count] : [[], 0];
+    return {
+      data: {
+        categories: paginateResponse(categories, page, limit),
+        totalProducts,
+      },
+    };
+  };
+
   static getProductDetails = async ({ productId }) => {
     const product = await models.Product.findOne({ _id: productId });
     if (!product) throw new NotFoundError('product not found');

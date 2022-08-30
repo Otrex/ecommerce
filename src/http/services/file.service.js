@@ -13,15 +13,15 @@ class FileService {
   static fileHandler = async ({ contentType }) => {
     try {
       const key = `${generateNumbers(34)}-${
-        new Date().toISOString().split('.')[0]
+        new Date().getTime()
       }`;
 
       const s3Params = {
         Key: key,
-        Expires: 300,
+        Expires: 1200,
         Bucket: config.s3.bucket,
         ContentType: contentType,
-        ACL: 'public-read',
+        // ACL: 'public-read',
       };
 
       const url = await s3.getSignedUrlPromise('putObject', s3Params);

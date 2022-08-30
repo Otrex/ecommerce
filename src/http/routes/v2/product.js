@@ -40,8 +40,21 @@ class ProductRouter extends Router {
       .get(
         this.$middleware.authorization([
           this.CONSTANTS.ACCOUNT_TYPES.ADMIN,
+          this.CONSTANTS.ACCOUNT_TYPES.BUSINESS,
         ]),
-        ProductController.getCategoryStats
+        (req, res, next) => {
+          switch (req.session.type) {
+            case this.CONSTANTS.ACCOUNT_TYPES.BUSINESS:
+              return ProductController.getCategoryStats_Vendor(
+                req,
+                res,
+                next
+              );
+            case this.CONSTANTS.ACCOUNT_TYPES.ADMIN:
+              return ProductController.getCategoryStats(req, res, next);
+          }
+        }
+        
       );
 
     this.$router

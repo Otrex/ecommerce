@@ -97,6 +97,11 @@ class ProductController {
   static grossProductStats = RequestHandler({
     handler: ProductService.grossProductStats,
   });
+
+  static getCategoryStats_Vendor = RequestHandler({
+    validator: GetCategoriesStats,
+    handler: ProductService.getCategoryStats_Vendor,
+  })
 }
 
 module.exports = ProductController;

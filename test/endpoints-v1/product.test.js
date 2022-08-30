@@ -287,8 +287,20 @@ describe('Product', () => {
       });
     });
 
+    it('it get category details vendor', async () => {
+      const res = await server
+        .get(`/v2/products/stats`)
+        .set({ Authorization: `Bearer ${buyer.token}` });
+
+      console.log(res.body, res.error);
+      assert.equal(res.status, 200);
+      documentation.addEndpoint(res, {
+        tags: ['V2/Product/Admin'],
+      });
+    });
+
     it('it product search', async () => {
-      const res = await server.get(`/v2/products/search`);
+      const res = await server.get(`/v2/products/search?query=p&page=1&limit=20`);
 
       // console.log(res.body, res.error);
       assert.equal(res.status, 200);
