@@ -290,7 +290,7 @@ describe('Product', () => {
     it('it get category details vendor', async () => {
       const res = await server
         .get(`/v2/products/stats`)
-        .set({ Authorization: `Bearer ${buyer.token}` });
+        .set({ Authorization: `Bearer ${result.token}` });
 
       console.log(res.body, res.error);
       assert.equal(res.status, 200);
